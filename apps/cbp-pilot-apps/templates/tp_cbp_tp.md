@@ -14,8 +14,15 @@ title: CBP Test Plan
 </style>
 
 <center>
-(DRAFT) CBP Test Plan 2
+CBP Test Plan 2 (Draft GE 10)
 </center>
+
+
+<h2>1 Introduction</h2>
+
+<h3>1.1 Scope</h3>
+
+<h3>1.2 Background</h3>
 
 <div style="font-weight: bold;">
   <p style="text-align: center;">
@@ -24,12 +31,50 @@ title: CBP Test Plan
 </div>
 
 <div>
-  <p>{{project.system_info.system_short_name}} is a {% filter lower %}{{project.cbp_system_info.system_type.text}}{% endfilter %} hosted in the {{project.system_info.system_hosting.text}} environment.
+  <p>{{project.system_info.system_short_name}} is a {% filter lower %}{{project.system_info.system_type.text}}{% endfilter %} hosted in the {{project.system_info.system_hosting.text}} environment.
   </p>
   <p>
     {{project.system_info.system_description}}
   </p>
 </div>
+
+<h3>1.3 Project References</h3>
+
+[//]: # (Table 2: Project References. Contains columns for Document Name, Document Version/Date, and Document Location)
+
+<h2>2 Organizational Roles and Responsibilities</h2>
+
+[//]: # (Table 3: Organizational Roles and Responsibilities. Contains columns for Name, Team Role, Task, and Length of Project & Percentage of Time Allocated)
+
+<h2> 3 Schedule</h2>
+
+[//]: # (Security Test Schedule. Contains columns for Systems Test Step and Dates for System Testing Steps)
+
+<h2>4 Project Management</h2>
+
+<h3>4.1 Quality Assurance</h3>
+
+<h3>4.2 Configuration Management</h3>
+
+<h3>4.3 Schedule of Security Test</h3>
+
+<h3>4.4 Metrics and Measures</h3>
+
+<h3>4.5 Acquisition</h3>
+
+<h3>4.6 Training</h3>
+
+<h2>5 Security Test Environment</h2>
+
+<h3>5.1 Security Test Hardware/Software</h3>
+
+<h4>Listed Hardware</h4>
+
+<h4>Listed Software</h4>
+
+[//]: # (Table: Type, Name, Version)
+
+<h2>Control Test and Validation</h2>
 
 
 <div>
@@ -44,3 +89,4 @@ title: CBP Test Plan
   {% endif %}
 </div>
 
+<p>Other testing</p>
