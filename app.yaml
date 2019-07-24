@@ -1,0 +1,204 @@
+id: app
+title: System 3
+type: project
+version: 0.1.0
+icon: app.png
+introduction:
+  format: markdown
+  template: First attempt at the big CBP Q with the new files.
+catalog:
+  category: Draft
+  description:
+    long: |
+      New Compliance App
+      ==================
+
+      Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
+    short: First attempt at the big CBP Q with the new files.
+  source_url: ~
+  status: stub
+  vendor: GovReady
+  vendor_url: ~
+  version: 0.1.0
+
+outputs: 
+  - id: fisma_ssp_template
+    format: markdown
+    template: |
+      {% if not fisma_level.fisma_level %}
+        The team is currently working on determining the system impact level.
+
+      {% else %}
+        Your system's FISMA Level is **{{fisma_level.fisma_level.text}}**.
+
+        Information Types: {{fisma_level.information_types.text}}
+
+        Impact Level based on Information Types: {{fisma_level.information_types_level.text}}
+
+        PII Types: {{fisma_level.pii_types_collected.text}}
+
+        PII Impact Level: {{fisma_level.pii_impact_level.text}}
+
+        PHI? {{fisma_level.phi_has_any_phi.text}}
+
+      PHI Impact Level: {{fisma_level.phi_impact_level.text}}
+      {% endif %}
+
+questions:
+
+- id: ex_example1
+  title: Example1 Module
+  type: module
+  module-id: ex_example1
+  group: example
+- id: ex_example2
+  title: Example2 Module
+  type: module
+  module-id: ex_example2
+  group: example
+
+
+- id: fisma_level_part1
+  title: fisma_level Part 1 Module
+  type: module
+  module-id: fisma_level_part1
+  group: fisma_level
+- id: fisma_level_part2
+  title: fisma_level Part 2 Module
+  type: module
+  module-id: fisma_level_part2
+  group: fisma_level
+- id: fisma_level
+  title: Determine Your FISMA Level
+  type: module
+  module-id: fisma_level
+  group: fisma_level
+
+- id: pta_part1
+  title: PTA Part 1 Module
+  type: module
+  module-id: pta_part1
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_part2
+  title: PTA Part 2 Module
+  type: module
+  module-id: pta_part2
+  group: pta
+  impute:
+  - condition: 1 == 1
+    value: ~
+- id: pta_intro
+  title: Privacy Threshold Analysis (PTA) Overview
+  type: module
+  module-id: pta_intro
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_purpose
+  title: Purpose of the Information Collection
+  type: module
+  module-id: pta_purpose
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_poc_details
+  title: PTA POC Details
+  type: module
+  module-id: pta_poc_details
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_ic_forms
+  title: Questions
+  type: module
+  module-id: pta_ic_forms
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_info_description
+  title: Type of Information Collected
+  type: module
+  module-id: pta_info_description
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_info_storage
+  title: How Will DOS Store the Collected Information?
+  type: module
+  module-id: pta_info_storage
+  group: pta
+  impute:
+  - condition: project.fisma_level_part1.q1 != 'starwars'
+    value: ~
+- id: pta_form
+  title: View PTA Artifact
+  type: module
+  module-id: pta_form
+  icon: checkmark.png
+  placement: action-buttons
+
+
+- id: tp_part1
+  title: Test Plan Part 1 Module
+  type: module
+  module-id: tp_part1
+  group: tp
+  impute:
+  - condition: 1 == 1
+    value: ~
+- id: tp_part2
+  title: Test Plan Part 2 Module
+  type: module
+  module-id: tp_part2
+  group: tp
+  impute:
+  - condition: 1 == 1
+    value: ~
+
+- id: tp_introduction
+  title: Test Introduction
+  type: module
+  module-id: tp_introduction
+  group: tp
+  impute:
+  - condition: 1 == 1
+    value: ~
+
+- id: tp_project_management
+  title: Test Project Management
+  type: module
+  module-id: tp_project_management
+  group: tp
+  impute:
+  - condition: 1 == 1
+    value: ~
+
+- id: tp_roles_and_responsibilities
+  title: Test Roles and Responsibilities
+  type: module
+  module-id: tp_roles_and_responsibilities
+  group: tp
+  impute:
+  - condition: 1 == 1
+    value: ~
+
+- id: tp_test_environment
+  title: Test Environment
+  type: module
+  module-id: tp_test_environment
+  group: tp
+  impute:
+  - condition: 1 == 1
+    value: ~
+
+
+
+

@@ -1,0 +1,40 @@
+id: tp_project_management
+title: Test Project Management
+internal:
+  snippets:
+  - snippet: |
+      Update the Test Project Management snippet
+introduction:
+  format: markdown
+  template: Update the Test Project Management introduction content.
+output: []
+questions:
+- id: q1
+  title: Test completion criteria
+  prompt: "What is the Test Completion Criteria?\r\n\r\nThe team needs to agree up\
+    \ front the definition of a successful. \r\n\r\nIf all the high level bugs have\
+    \ been addressed we can move forward with deployment."
+  type: longtext
+- id: schedule
+  type: longtext
+  title: Test schedule
+  prompt: |
+    Describe the schedule for the test.
+- id: potential_risks
+  title: Potential Risks
+  prompt: "6. What are the potential risks?\r\n\r\nA risk could be not being able\
+    \ to deploy on time b/c we don't have access to environment. A risk is something\
+    \ that will hinder the progress of the test or create a security or mission issue\
+    \ because of the testing that is being done."
+  type: longtext
+- id: contingency_plans
+  title: Contingency plans
+  prompt: "What are the contingency plans? for the test?\r\n\r\nWhat are your contingency plans\
+    \ if something goes wrong with during the test. For each risk that could go wrong,\
+    \ this is how we are going to deal with it."
+  type: longtext
+- id: training
+  type: longtext
+  title: Training
+  prompt: |
+    Describe the training necessary for the test.

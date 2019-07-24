@@ -1,0 +1,25 @@
+id: pta_part1
+title: PTA Part 1 Module
+output:
+- format: markdown
+  title: What You Chose
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: What is your favorite science fiction franchise?
+  prompt: What is your favorite science fiction franchise?
+  type: choice
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q0
+  title: Include test
+  prompt: "Testing inclusion of FISMA text.\r\n\r\nGoing to include text below:\r\n{{project.fisma_level_part1.q1}}"
+  type: longtext
+  default: In FISMA Level 1, we selected, {{project.fisma_level_part1.q1.text}}

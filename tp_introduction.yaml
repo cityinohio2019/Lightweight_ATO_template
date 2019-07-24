@@ -1,0 +1,39 @@
+id: tp_introduction
+title: Test Plan Introduction
+internal:
+  snippets:
+  - snippet: |
+      Update the Test Plan Introduction snippet
+introduction:
+  format: markdown
+  template: This section introduces your test plan to others.
+output: []
+questions:
+- id: scope_starter
+  title: Select scope of test
+  prompt: Select the best fitting sample scope statement of your test.
+  type: choice
+  choices:
+  - key: feature_test
+    text: The scope of the Security Test Plan (SAP) is to test the features of the
+      system to ensure that is complete end-to-end integration testing of  with dependent
+      connections to secure working systems. It is also to ensure that all the entities
+      within the management, implementation, operational, and oversight responsibilities
+      have a clear understanding of their roles and associated functions with system_name.
+    help: Use this scope when testing features and functionality.
+  - key: vulnerability_test
+    text: The scope of the Security Test Plan (SAP) is to test the vulnerability of
+      the system to the threat environment int which the system will operate.
+    help: Use this scope when testing system vulnerabilities against known threats.
+- id: scope
+  title: Edit scope of test
+  prompt: Now edit the scope of the test to describe your test.
+  type: longtext
+  default: '{{scope_starter.text}}'
+- id: background
+  title: Background
+  prompt: "Background statement.\r\n\r\nWe've used your system description to draft
+    a background statement for your test plan.\r\n\r\nYou should add to or update
+    this statement to describe the background for this test."
+  type: longtext
+  default: (system description)

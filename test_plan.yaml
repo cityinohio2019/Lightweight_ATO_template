@@ -1,0 +1,8 @@
+id: test_plan
+title: Test Plan (Artifact)
+
+questions: []
+
+output:
+- templates/cbp_lato_test_plan_2.html
+- templates/cbp_lato_test_plan.html
