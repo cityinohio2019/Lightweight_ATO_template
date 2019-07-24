@@ -34,35 +34,35 @@ questions:
   title: Example1 Module
   type: module
   module-id: ex_example1
-  group: example
+  group: Example (Ignore Me)
 - id: ex_example2
   title: Example2 Module
   type: module
   module-id: ex_example2
-  group: example
+  group: Example (Ignore Me)
 
 
 - id: fisma_level_part1
   title: fisma_level Part 1 Module
   type: module
   module-id: fisma_level_part1
-  group: fisma_level
+  group: System Categorization
 - id: fisma_level_part2
   title: fisma_level Part 2 Module
   type: module
   module-id: fisma_level_part2
-  group: fisma_level
+  group: System Categorization
 - id: fisma_level
   title: Determine Your FISMA Level
   type: module
   module-id: fisma_level
-  group: fisma_level
+  group: System Categorization
 
 - id: pta_part1
   title: PTA Part 1 Module
   type: module
   module-id: pta_part1
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -70,7 +70,7 @@ questions:
   title: PTA Part 2 Module
   type: module
   module-id: pta_part2
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: 1 == 1
     value: ~
@@ -78,7 +78,7 @@ questions:
   title: Privacy Threshold Analysis (PTA) Overview
   type: module
   module-id: pta_intro
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -86,7 +86,7 @@ questions:
   title: Purpose of the Information Collection
   type: module
   module-id: pta_purpose
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -94,7 +94,7 @@ questions:
   title: PTA POC Details
   type: module
   module-id: pta_poc_details
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -102,7 +102,7 @@ questions:
   title: Questions
   type: module
   module-id: pta_ic_forms
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -110,7 +110,7 @@ questions:
   title: Type of Information Collected
   type: module
   module-id: pta_info_description
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -118,7 +118,7 @@ questions:
   title: How Will DOS Store the Collected Information?
   type: module
   module-id: pta_info_storage
-  group: pta
+  group: PTA (Privacy Threshold Analysis) 
   impute:
   - condition: project.fisma_level_part1.q1 != 'starwars'
     value: ~
@@ -127,6 +127,7 @@ questions:
   type: module
   module-id: pta_form
   icon: checkmark.png
+  group: PTA (Privacy Threshold Analysis)
   placement: action-buttons
 
 
@@ -134,7 +135,7 @@ questions:
   title: Test Plan Part 1 Module
   type: module
   module-id: tp_part1
-  group: tp
+  group: Test Plan
   impute:
   - condition: 1 == 1
     value: ~
@@ -142,7 +143,7 @@ questions:
   title: Test Plan Part 2 Module
   type: module
   module-id: tp_part2
-  group: tp
+  group: Test Plan
   impute:
   - condition: 1 == 1
     value: ~
@@ -151,7 +152,7 @@ questions:
   title: Test Introduction
   type: module
   module-id: tp_introduction
-  group: tp
+  group: Test Plan
   impute:
   - condition: 1 == 1
     value: ~
@@ -160,7 +161,7 @@ questions:
   title: Test Project Management
   type: module
   module-id: tp_project_management
-  group: tp
+  group: Test Plan
   impute:
   - condition: 1 == 1
     value: ~
@@ -169,7 +170,7 @@ questions:
   title: Test Roles and Responsibilities
   type: module
   module-id: tp_roles_and_responsibilities
-  group: tp
+  group: Test Plan
   impute:
   - condition: 1 == 1
     value: ~
@@ -178,10 +179,21 @@ questions:
   title: Test Environment
   type: module
   module-id: tp_test_environment
-  group: tp
+  group: Test Plan
   impute:
   - condition: 1 == 1
     value: ~
+
+- id: cp_q_set_1
+  module-id: cp_q_set_1
+  title: Question Set 1
+  type: module
+  group: Contingency Plan
+- id: cp_q_set_2
+  module-id: cp_q_set_2
+  title: Question Set 2
+  type: module
+  group: Contingency Plan
 
 
 - id: se_cace_elk_intro
@@ -189,6 +201,7 @@ questions:
   type: module
   module-id: se_cace_elk_intro
   icon: app.png
+  group: Hosting Environment - CACE
 
 
 output:
