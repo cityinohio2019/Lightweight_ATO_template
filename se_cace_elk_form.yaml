@@ -1,0 +1,15 @@
+id: se_cace_elk_form
+title: CACE-ELK Testing Plan Section
+version: 1
+
+questions:
+- id: dummy
+  title: dummy
+  prompt: dummy
+  type: raw
+  impute:
+    - condition: "true"
+      value: ~
+
+output:
+- templates/tp_cbp_tp.md

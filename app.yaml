@@ -1,11 +1,11 @@
 id: app
-title: System 3
+title: (CBP) IT System
 type: project
-version: 0.1.0
+version: 0.1.1
 icon: app.png
 introduction:
   format: markdown
-  template: First attempt at the big CBP Q with the new files.
+  template: IT System Questionnaires (Pilot)
 catalog:
   category: Draft
   description:
@@ -14,12 +14,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: First attempt at the big CBP Q with the new files.
-  source_url: ~
+    short: IT System Questionnaires (Pilot)
+  source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
-  vendor: GovReady
+  vendor: CBP
   vendor_url: ~
-  version: 0.1.0
+  version: 0.1.1
 
 questions:
 
@@ -28,19 +28,6 @@ questions:
   type: module
   module-id: system_info
   group: System Info
-
-
-- id: ex_example1
-  title: Example1 Module
-  type: module
-  module-id: ex_example1
-  group: Example (Ignore Me)
-- id: ex_example2
-  title: Example2 Module
-  type: module
-  module-id: ex_example2
-  group: Example (Ignore Me)
-
 
 - id: fisma_level_part1
   title: fisma_level Part 1 Module
@@ -126,7 +113,6 @@ questions:
   title: View PTA Artifact
   type: module
   module-id: pta_form
-  icon: checkmark.png
   group: PTA (Privacy Threshold Analysis)
   placement: action-buttons
 
@@ -195,14 +181,19 @@ questions:
   type: module
   group: Contingency Plan
 
-
-- id: se_cace_elk_intro
+- id: se_cace_elk
   title: CACE ELK (Elastic, Logstach, Kibana) introduction
   type: module
-  module-id: se_cace_elk_intro
+  module-id: se_cace_elk
   icon: app.png
   group: Hosting Environment - CACE
 
+- id: se_cace_elk_form
+  title: View Test Plan (CACE-ELK)
+  type: module
+  module-id: se_cace_elk_form
+  group: Hosting Environment - CACE
+  placement: action-buttons
 
 output:
 
@@ -227,6 +218,37 @@ output:
 
     PHI Impact Level: {{fisma_level.phi_impact_level.text}}
     {% endif %}
+
+
+- id: cbp_tp
+  format: markdown
+  title: CBP Test Plan
+  # filename: templates/tp_cbp_tp.md
+  placement: action-buttons
+  template: "<style type=\"text/css\" scoped>\n    h2 { border-bottom:1px solid #888;
+    }\n    h3 { border-bottom: 0.5px solid #aaa; }\n    h4 { margin-top: 15px; font-weight:
+    bold; font-size: 1em; }\n    blockquote { color: #666; font-size:0.8em; margin:
+    0 10px; }\n    .notice {color: red; font-size:3.0em; text-align:center; transform:
+    scaleY(.85);\n    font-weight: bold;}\n    table, th, td { border: 1px solid #888;
+    }\n    th, td { padding: 15px; text-align: left;}\n</style>\n\n<center>\n(DRAFT)
+    CBP Test Plan 2\n</center>\n\n<div style=\"font-weight: bold;\">\n  <p style=\"text-align:
+    center;\">\n    SYSTEM INFORMATION\n  </p>\n</div>\n\n<div>\n  <p>{{project.system_info.system_short_name}}
+    is a {{project.system_info.system_type.text}} hosted in the {{project.system_info.system_hosting.text}}
+    environment.\n  </p>\n  <p>\n    {{project.system_info.system_description}}\n
+    \ </p>\n</div>\n\n<div>\n  <p>\n    {{project.se_cace_elk.output_documents.nist_80053rev4_ssp_ac_6_9}}\n\n
+    <hr>
+    <div>
+      <h3>Test Plan Introduction</h3>{{project.se_cace_elk}}{% if project.se_cace_elk %}
+      {% for od in project.se_cace_elk.output_documents %}
+        <div style=\"margin: 12px 0 0 0;\">
+            {{project.se_cace_elk.output_documents[od]}}
+        </div>
+        <small style=\"color: #aaa;\">{{od}}</small>
+      {% endfor %}
+      {% endif %}
+    </div>
+    "
+
 
 - id: nist_80053rev4_ssp_ac_6_9
   title: NIST 800-53 rev4 SSP AC-6 (9)
