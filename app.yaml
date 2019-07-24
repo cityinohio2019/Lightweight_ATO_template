@@ -29,85 +29,86 @@ questions:
   module-id: system_info
   group: System Info
 
-- id: fisma_level_part1
-  title: fisma_level Part 1 Module
+- id: se_cace_elk
+  title: CACE ELK (Elastic, Logstach, Kibana) introduction
   type: module
-  module-id: fisma_level_part1
-  group: System Categorization
-- id: fisma_level_part2
-  title: fisma_level Part 2 Module
+  module-id: se_cace_elk
+  icon: app.png
+  group: Hosting Environment
+  impute:
+  - condition: project.system_info.system_hosting != 'cbp_cace'
+    value: ~
+
+- id: se_cace_elk_form
+  title: View Test Plan (CACE-ELK)
   type: module
-  module-id: fisma_level_part2
-  group: System Categorization
+  module-id: se_cace_elk_form
+  group: Hosting Environment - CACE
+  placement: action-buttons
+
+# - id: se_cbp_ds1
+#   title: CBP DS1 (Data Center 1)
+#   type: module
+#   module-id: se_cbp_ds1
+#   icon: app.png
+#   group: Hosting Environment
+#   impute:
+#     - condition: "project.system_info.system_hosting != 'cbp_ds1'"
+#       value: ~
+
 - id: fisma_level
   title: Determine Your FISMA Level
   type: module
   module-id: fisma_level
   group: System Categorization
 
-- id: pta_part1
-  title: PTA Part 1 Module
-  type: module
-  module-id: pta_part1
-  group: PTA (Privacy Threshold Analysis) 
-  impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
-    value: ~
-- id: pta_part2
-  title: PTA Part 2 Module
-  type: module
-  module-id: pta_part2
-  group: PTA (Privacy Threshold Analysis) 
-  impute:
-  - condition: 1 == 1
-    value: ~
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
   type: module
   module-id: pta_intro
-  group: PTA (Privacy Threshold Analysis) 
+  group: PTA (Privacy Threshold Analysis)
   impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
+  - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pta_purpose
   title: Purpose of the Information Collection
   type: module
   module-id: pta_purpose
-  group: PTA (Privacy Threshold Analysis) 
+  group: PTA (Privacy Threshold Analysis)
   impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
+  - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pta_poc_details
   title: PTA POC Details
   type: module
   module-id: pta_poc_details
-  group: PTA (Privacy Threshold Analysis) 
+  group: PTA (Privacy Threshold Analysis)
   impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
+  - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pta_ic_forms
   title: Questions
   type: module
   module-id: pta_ic_forms
-  group: PTA (Privacy Threshold Analysis) 
+  group: PTA (Privacy Threshold Analysis)
   impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
+  - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pta_info_description
   title: Type of Information Collected
   type: module
   module-id: pta_info_description
-  group: PTA (Privacy Threshold Analysis) 
+  group: PTA (Privacy Threshold Analysis)
   impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
+  - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pta_info_storage
   title: How Will DOS Store the Collected Information?
   type: module
   module-id: pta_info_storage
-  group: PTA (Privacy Threshold Analysis) 
+  group: PTA (Privacy Threshold Analysis)
   impute:
-  - condition: project.fisma_level_part1.q1 != 'starwars'
+  - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pta_form
   title: View PTA Artifact
@@ -115,7 +116,6 @@ questions:
   module-id: pta_form
   group: PTA (Privacy Threshold Analysis)
   placement: action-buttons
-
 
 - id: tp_part1
   title: Test Plan Part 1 Module
@@ -181,19 +181,6 @@ questions:
   type: module
   group: Contingency Plan
 
-- id: se_cace_elk
-  title: CACE ELK (Elastic, Logstach, Kibana) introduction
-  type: module
-  module-id: se_cace_elk
-  icon: app.png
-  group: Hosting Environment - CACE
-
-- id: se_cace_elk_form
-  title: View Test Plan (CACE-ELK)
-  type: module
-  module-id: se_cace_elk_form
-  group: Hosting Environment - CACE
-  placement: action-buttons
 
 output:
 

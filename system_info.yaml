@@ -12,7 +12,6 @@ output:
   format: markdown
   title: CBP System Information
   placement: action-buttons
-  # filename: templates/cbp_system_info.md
   template: |2
 
     <style>
@@ -56,32 +55,6 @@ output:
     </div>
 
     </div>
-- id: cbp_tp
-  format: markdown
-  title: CBP Test Plan
-  template: "<style type=\"text/css\" scoped>\n    h2 { border-bottom:1px solid #888;
-    }\n    h3 { border-bottom: 0.5px solid #aaa; }\n    h4 { margin-top: 15px; font-weight:
-    bold; font-size: 1em; }\n    blockquote { color: #666; font-size:0.8em; margin:
-    0 10px; }\n    .notice {color: red; font-size:3.0em; text-align:center; transform:
-    scaleY(.85);\n    font-weight: bold;}\n    table, th, td { border: 1px solid #888;
-    }\n    th, td { padding: 15px; text-align: left;}\n</style>\n\n<center>\n(DRAFT)
-    CBP Test Plan 2\n</center>\n\n<div style=\"font-weight: bold;\">\n  <p style=\"text-align:
-    center;\">\n    SYSTEM INFORMATION\n  </p>\n</div>\n\n<div>\n  <p>{{project.system_info.system_short_name}}
-    is a {{project.system_info.system_type.text}} hosted in the {{project.system_info.system_hosting.text}}
-    environment.\n  </p>\n  <p>\n    {{project.system_info.system_description}}\n
-    \ </p>\n</div>\n\n<div>\n  <p>\n    {{project.se_cace_elk.output_documents.nist_80053rev4_ssp_ac_6_9}}\n\n
-    <hr>
-    <div>
-      <h3>Test Plan Introduction</h3>{{project.se_cace_elk}}{% if project.se_cace_elk %}
-      {% for od in project.se_cace_elk.output_documents %}
-        <div style=\"margin: 12px 0 0 0;\">
-            {{project.se_cace_elk.output_documents[od]}}
-        </div>
-        <small style=\"color: #aaa;\">{{od}}</small>
-      {% endfor %}
-      {% endif %}
-    </div>
-    "
 questions:
 - id: system_name
   title: System Name
@@ -121,7 +94,7 @@ questions:
   choices:
   - key: cbp_cace
     text: CBP CACE
-    help: ' CBP''s AWS Cloud Environment'
+    help: 'CBP''s AWS Cloud Environment'
   - key: cbp_ds1
     text: CBP Data Center 1
 - id: system_org
@@ -136,3 +109,27 @@ questions:
   title: System PM
   prompt: Who is the Program Manager (PM) for {{system_short_name}}
   type: text
+- id: system_personal_data
+  title: System has personal data
+  prompt: "IMPORTANT: Does the IT System store or process data?\r\n\r\nAnswer \"Yes\"
+    if the {{system_name}} collects, stores, or processes information about individuals.
+    Answer  \"No\" if the system contains only publicly available information and
+    no information about individuals."
+  type: yesno
+- id: system_data
+  title: System Data
+  prompt: "Describe the data your IT System collects, stores, or processes.\r\n\r\nDescribe
+    in general terms the data that the {{system_name}} handles. Summarize why the
+    information is being collected or processed.\r\n{% if system_personal_data ==
+    \"yes\" %}Be sure to summarize what kind of personal data the system collects
+    and why. {% endif %}"
+  type: longtext
+- id: pta_needed
+  title: PTA Needed
+  prompt: "We've added a PTA (Privacy Threshold Analysis) task for you.\r\n\r\nBecause
+    {{system_name}} interacts with personal data, a PTA will need to be completed.
+    We've added a PTA to your tasks."
+  type: interstitial
+  impute:
+  - condition: system_personal_data == "no"
+    value: ~
