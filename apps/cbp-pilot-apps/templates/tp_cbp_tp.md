@@ -42,7 +42,7 @@ CBP Test Plan 2 (Draft GE 10)
 
 [//]: # (Table 2: Project References. Contains columns for Document Name, Document Version/Date, and Document Location)
 
-<h2>2 Organizational Roles and Responsibilities</h2>
+<h2>2 Roles and Responsibilities</h2>
 
 [//]: # (Table 3: Organizational Roles and Responsibilities. Contains columns for Name, Team Role, Task, and Length of Project & Percentage of Time Allocated)
 
@@ -50,27 +50,21 @@ CBP Test Plan 2 (Draft GE 10)
 
 [//]: # (Security Test Schedule. Contains columns for Systems Test Step and Dates for System Testing Steps)
 
-<h2>4 Project Management</h2>
+<h2>4 Scope of Testing</h2>
 
-<h3>4.1 Quality Assurance</h3>
+<h3>4.1 Controls to be Tested</h3>
 
-<h3>4.2 Configuration Management</h3>
+<h3>4.2 Controls Not to be Tested</h3>
 
-<h3>4.3 Schedule of Security Test</h3>
+<h3>4.3 Assumptions For Test Execution</h3>
 
-<h3>4.4 Metrics and Measures</h3>
+<h3>4.4 Test Completion Criteria</h3>
 
-<h3>4.5 Acquisition</h3>
+<h2>5 Test Strategy</h2>
 
-<h3>4.6 Training</h3>
+<h2>6 Security Test Results</h2>
 
-<h2>5 Security Test Environment</h2>
 
-<h3>5.1 Security Test Hardware/Software</h3>
-
-<h4>Listed Hardware</h4>
-
-<h4>Listed Software</h4>
 
 [//]: # (Table: Type, Name, Version)
 

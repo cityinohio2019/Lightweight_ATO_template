@@ -1,23 +1,65 @@
 id: tp_part1
 title: Test Plan Part 1 Module
-
-questions:
-- id: q1
-  title: What is your favorite science fiction franchise?
-  prompt: What is your favorite science fiction franchise?
-  type: choice
-  choices:
-    - key: startrek
-      text: Star Trek
-    - key: starwars
-      text: Star Wars
-    - key: lordoftherings
-      text: Lord of the Rings
-    - key: other
-      text: Other
-
 output:
 - format: markdown
   title: What You Chose
-  template: |
-    {{q1}}
+  template: '{{q1}}'
+questions:
+- id: q1
+  title: Introduction
+  prompt: This section highlights the Organizational Roles and Responsibilities for
+    your Security Test Plan.
+  type: interstitial
+  choices:
+  - key: startrek
+    text: Star Trek
+  - key: starwars
+    text: Star Wars
+  - key: lordoftherings
+    text: Lord of the Rings
+  - key: other
+    text: Other
+- id: q2
+  title: Roles and Responsibilities
+  prompt: How many people are there on your STP team?
+  type: choice
+  choices:
+  - key: ''
+    text: '1'
+  - key: ''
+    text: '2'
+  - key: ''
+    text: '3'
+  - key: ''
+    text: '4'
+  - key: ''
+    text: '5'
+  - key: ''
+    text: '6'
+  - key: ''
+    text: '7'
+  - key: ''
+    text: '8'
+  min: 1
+  max: 8
+- id: q0
+  title: Team Member 1 Name
+  prompt: Provide the name of Team Member 1.
+  type: text
+  placeholder: First Name Last Name
+- id: q3
+  title: Team Member 1 Role
+  prompt: Provide the Team Role for Team Member 1
+  type: text
+  placeholder: Ex. ISSO
+- id: q4
+  title: Team Member 1 Task
+  prompt: Provide the Task for Member 1
+  type: text
+  placeholder: Ex. CSD
+- id: q5
+  title: Length of Project & Percentage of Time Allocated of Team Member 1
+  prompt: Provide the length of time your team member has been on the project and
+    the percentage of time allocated.
+  type: text
+  placeholder: Ex. Life of Project, 100%
