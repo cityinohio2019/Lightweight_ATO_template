@@ -210,8 +210,8 @@ questions:
   type: yesno
 - id: q2b
   title: 2b. Which type(s) of individuals
-  prompt: "2b. From which type(s) of individuals does this form collect information?
-    (Check all that apply.) \n"
+  prompt: "2b. From which type(s) of individuals does this form collect information?\
+    \ (Check all that apply.) \n"
   type: multiple-choice
   choices:
   - key: members_of_the_public
@@ -271,11 +271,9 @@ questions:
   impute:
   - condition: '''other'' not in q2c'
     value: ~
-
 - id: q2d
   title: 2d. How do individuals complete the form
-  prompt: |
-    2d. How do individuals complete the form? (Check all that apply.)
+  prompt: 2d. How do individuals complete the form? (Check all that apply.)
   type: multiple-choice
   choices:
   - key: paper
@@ -285,9 +283,8 @@ questions:
     help: (e.g., Fillable PDF)
   - key: webform
     text: Online web form
-  min: 0
-  max: 5
-
+  min: 1
+  max: 3
 - id: q2d_link
   title: 2d. Link to the online web form
   prompt: |
@@ -360,9 +357,9 @@ questions:
     value: ~
 - id: q2g
   title: 2g. Specific authority to collect SPII elements
-  prompt: "2g. List the specific authority to collect SSN or these other SPII elements.\r\n\r\n\"Specific
-    authority\" are the laws and agency rules that justify the agency collection of
-    information."
+  prompt: "2g. List the specific authority to collect SSN or these other SPII elements.\r\
+    \n\r\n\"Specific authority\" are the laws and agency rules that justify the agency\
+    \ collection of information."
   type: longtext
 - id: q2h
   title: 2h. How will this information be used
