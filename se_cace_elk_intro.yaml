@@ -1,0 +1,15 @@
+id: se_cace_elk_intro
+title: CACE ELK Intro
+
+questions:
+
+- id: q1
+  title: Overview
+  prompt: |
+    CACE ELK Introduction
+
+    Placeholder for CACE ELK introduction...
+  type: interstitial
+
+outputs: []
+# - templates/pta_intro.md

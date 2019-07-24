@@ -1,0 +1,129 @@
+id: system_info
+title: CBP System Info
+internal:
+  snippets:
+  - snippet: |
+      CBP System Info (internal > snippets > snippet)
+introduction:
+  format: markdown
+  template: CBP System Info (Introduction > template)
+output:
+- id: cbp_tp
+  format: markdown
+  title: CBP Test Plan
+  filename: templates/tp_cbp_tp.md
+  template: "<style type=\"text/css\" scoped>\n    h2 { border-bottom:1px solid #888;
+    }\n    h3 { border-bottom: 0.5px solid #aaa; }\n    h4 { margin-top: 15px; font-weight:
+    bold; font-size: 1em; }\n    blockquote { color: #666; font-size:0.8em; margin:
+    0 10px; }\n    .notice {color: red; font-size:3.0em; text-align:center; transform:
+    scaleY(.85);\n    font-weight: bold;}\n    table, th, td { border: 1px solid #888;
+    }\n    th, td { padding: 15px; text-align: left;}\n</style>\n\n<center>\n(DRAFT)
+    CBP Test Plan 2\n</center>\n\n<div style=\"font-weight: bold;\">\n  <p style=\"text-align:
+    center;\">\n    SYSTEM INFORMATION\n  </p>\n</div>\n\n<div>\n  <p>{{project.cbp_system_info.system_short_name}}
+    is a {{project.cbp_system_info.system_type.text}} hosted in the {{project.cbp_system_info.system_hosting.text}}
+    environment.\n  </p>\n  <p>\n    {{project.cbp_system_info.system_description}}\n
+    \ </p>\n</div>\n\n<div>\n  <p>\n    {{project.audit_service.output_documents.nist_80053rev4_ssp_ac_6}}\n\n
+    \   {{project.audit_service.output_documents.nist_80053rev4_ssp_au_12_part_tbd}}\n
+    \ </p>\n</div>\n\n\n<hr style=\"margin-top: 30px;\">\n<div>\n\t<p>Authoring hint</p>\n\t<ol>\n\t\t<li>Look
+    at app.yaml</li>\n\t\t<li>Find the module id from which information will appear</li>\n\t\t<li>project.app_id.output_documents.ssp_template_control_number\n\t\t\t<br>project.infrastructure.output_documents.ssp_template_au_6|safe\n\t\t\t<br>project.audit_service.output_documents.nist_80053rev4_ssp_ac_6|safe\n\t\t</li>\n\t</ol>\n</div>\n"
+- id: cbp_system_info
+  format: markdown
+  title: CBP System Information
+  placement: action-buttons
+  filename: templates/cbp_system_info.md
+  template: |2
+
+    <style>
+      table {
+        min-width: 450px;
+      }
+
+      td {
+        padding: 8px;
+      }
+    </style>
+
+    <div style="width: 650px; margin: auto; font-family: TimesNewRoman, Times, serif; ">
+
+    <div style="font-weight: bold;">
+      <p style="text-align: center;">
+        SYSTEM INFORMATION
+      </p>
+    </div>
+
+    <div>
+      <p>{{system_short_name}} is a {{system_type.text}} hosted in the {{system_hosting.text}} environment.
+      </p>
+      <p>
+        {{system_description}}
+      </p>
+    </div>
+
+    <div style="text-align: center;">
+      <table border=1 style="margin:auto; font-family: TimesNewRoman, Times, serif; text-align: center;">
+        <tr>
+          <td>CBP Organization</td><td>{{system_org}}</td>
+        </tr>
+        <tr>
+          <td>System Owner</td><td>{{system_owner}}</td>
+        </tr>
+        <tr>
+          <td>Program Manager</td><td>{{system_pm}}</td>
+        </tr>
+      </table>
+    </div>
+
+    </div>
+questions:
+- id: system_name
+  title: System Name
+  prompt: What is the name of your IT System?
+  type: text
+- id: system_short_name
+  title: System Short Name
+  prompt: "What is the system's nickname or abbreviation?\r\n\r\nYou said the name
+    of your IT System was \"{{system_name}}.\" Most systems have an abbreviation of
+    short name."
+  type: text
+- id: system_description
+  title: System Description
+  prompt: "General system description.\r\n\r\nThis is your main description of the
+    IT System. Describe what system does and its general purpose to your organization.
+    (We'll get a more technical description later.)"
+  type: longtext
+  tags:
+  - system_description
+- id: system_type
+  title: System Type
+  prompt: What is the type of system?
+  type: choice
+  choices:
+  - key: web_app
+    text: Web application
+  - key: mobile_app
+    text: Mobile application
+    help: Primarily mobile application with backend
+  - key: cots
+    text: COTS
+- id: system_hosting
+  title: System Hosting
+  prompt: Where will the system be hosted?
+  type: choice
+  choices:
+  - key: cbp_cace
+    text: CBP CACE
+    help: ' CBP''s AWS Cloud Environment'
+  - key: cbp_ds1
+    text: CBP Data Center 1
+- id: system_org
+  title: System Organization
+  prompt: Which CBP business unit is responsible for {{system_short_name}}?
+  type: text
+- id: system_owner
+  title: System Owner
+  prompt: Who is the System Owner for {{system_short_name}}?
+  type: text
+- id: system_pm
+  title: System PM
+  prompt: Who is the Program Manager (PM) for {{system_short_name}}
+  type: text
