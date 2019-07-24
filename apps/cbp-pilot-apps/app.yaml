@@ -1,11 +1,11 @@
 id: app
-title: (CBP) IT System
+title: (CBP) IT System 
 type: project
 version: 0.1.2
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot)
+  template: IT System Questionnaires (Pilot) v0.1.2
 catalog:
   category: Draft
   description:
