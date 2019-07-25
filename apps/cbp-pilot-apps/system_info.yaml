@@ -94,9 +94,14 @@ questions:
   choices:
   - key: cbp_cace
     text: CBP CACE
-    help: 'CBP''s AWS Cloud Environment'
+    help: CBP's AWS Cloud Environment
   - key: cbp_ds1
     text: CBP Data Center 1
+- id: operational_system
+  title: Is Operational System
+  prompt: Do you plan to operate this system in production or to use production data
+    in development?
+  type: yesno
 - id: system_org
   title: System Organization
   prompt: Which CBP business unit is responsible for {{system_short_name}}?
@@ -126,10 +131,29 @@ questions:
   type: longtext
 - id: pta_needed
   title: PTA Needed
-  prompt: "We've added a PTA (Privacy Threshold Analysis) task for you.\r\n\r\nBecause
-    {{system_name}} interacts with personal data, a PTA will need to be completed.
-    We've added a PTA to your tasks."
+  prompt: |
+    We've added a PTA (Privacy Threshold Analysis) task for you.
+
+    Because {{system_name}} interacts with personal data, a PTA will need to be completed.
+    We've added a PTA to your tasks.
   type: interstitial
   impute:
   - condition: system_personal_data == "no"
     value: ~
+
+- id: other_plans
+  title: Other plans
+  prompt: |
+    We've these tasks for you because of your production plans:
+
+    * Test Plan
+    * Contingency Plan
+
+    Because {{system_name}} will either be in production or use production data
+    during development, you will need to complete a Test Plan and Contingency Plan.
+    We've added a PTA to your tasks.
+  type: interstitial
+  impute:
+  - condition: operational_system == "no"
+    value: ~
+

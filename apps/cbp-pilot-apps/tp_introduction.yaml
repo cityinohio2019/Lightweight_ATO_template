@@ -15,14 +15,17 @@ questions:
   type: choice
   choices:
   - key: feature_test
-    text: The scope of the Security Test Plan (STP) is to test the features of the
+    text: |
+      The scope of the Security Test Plan (STP) is to test the features of the
       system to ensure that is complete end-to-end integration testing of  with dependent
       connections to secure working systems. It is also to ensure that all the entities
       within the management, implementation, operational, and oversight responsibilities
-      have a clear understanding of their roles and associated functions with system_name.
+      have a clear understanding of their roles and associated functions with testing
+      the IT System.
     help: Use this scope when testing features and functionality.
   - key: vulnerability_test
-    text: The scope of the Security Test Plan (SAP) is to test the vulnerability of
+    text: |
+      The scope of the Security Test Plan (STP) is to test the vulnerability of
       the system to the threat environment int which the system will operate.
     help: Use this scope when testing system vulnerabilities against known threats.
 - id: scope
@@ -32,16 +35,20 @@ questions:
   default: '{{scope_starter.text}}'
 - id: background
   title: Background
-  prompt: "Background statement.\r\n\r\nWe've used your system description to draft\
-    \ a background statement for your test plan.\r\n\r\nYou should add to or update\
-    \ this statement to describe the background for this test."
+  prompt: "Background statement.\r\n\r\nYour background statement should briefly describe
+    the system to be tested and the purpose of the test.\r\n\r\n{% if project.system_info.system_description
+    %}\r\nWe've used your system description to get you started. Update to describe
+    the appropriately for test background.\r\n{% endif %}"
   type: longtext
-  default: (system description)
+  default: '{% if project.system_info.system_description %}{{project.system_info.system_description}}{%
+    endif %}'
 - id: q0
   title: Project References
-  prompt: List your Project References below. Include the the project document's name,
+  prompt: |
+    List your Project References below. Include the the project document's name,
     the document version/date, and the document location.
   type: longtext
-  help: Project References listed should have the names of the documents utilized
+  help: |
+    Project References listed should have the names of the documents utilized
     in the creation of this test plan. Each reference should have a corresponding
     document version and a date/location used to identify each document.
