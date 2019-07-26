@@ -1,0 +1,7 @@
+id: project_ssp
+title: System Security Plan
+
+questions: []
+
+output:
+- templates/ssp_v1.md

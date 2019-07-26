@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.3.5
+version: 0.1.3.6
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.3.5
+  template: IT System Questionnaires (Pilot) v0.1.3.6
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -119,7 +119,7 @@ catalog:
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.3.5
+  version: 0.1.3.6
 questions:
 - id: system_info
   title: System Profile
@@ -244,4 +244,11 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
-
+- id: project_ssp
+  module-id: project_ssp
+  title: System Security Plan
+  type: module
+  group: System Security Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
