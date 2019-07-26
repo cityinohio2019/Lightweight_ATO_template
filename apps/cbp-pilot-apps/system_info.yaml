@@ -57,7 +57,7 @@ output:
     </div>
 questions:
 - id: system_name
-  title: System Namex
+  title: System Name
   prompt: What is the name of your IT System?
   type: text
 - id: system_short_name
