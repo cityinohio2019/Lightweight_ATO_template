@@ -35,10 +35,10 @@ questions:
   default: '{{scope_starter.text}}'
 - id: background
   title: Background
-  prompt: "Background statement.\r\n\r\nYour background statement should briefly describe
-    the system to be tested and the purpose of the test.\r\n\r\n{% if project.system_info.system_description
-    %}\r\nWe've used your system description to get you started. Update to describe
-    the appropriately for test background.\r\n{% endif %}"
+  prompt: "Background statement.\r\n\r\nYour background statement should briefly describe\
+    \ the system to be tested and the purpose of the test.\r\n\r\n{% if project.system_info.system_description\
+    \ %}\r\nWe've used your system description to get you started. Update to describe\
+    \ the appropriately for test background.\r\n{% endif %}"
   type: longtext
   default: '{% if project.system_info.system_description %}{{project.system_info.system_description}}{%
     endif %}'
@@ -52,3 +52,11 @@ questions:
     Project References listed should have the names of the documents utilized
     in the creation of this test plan. Each reference should have a corresponding
     document version and a date/location used to identify each document.
+- id: module_complete_testplan_intro
+  title: Module Complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\n*Your scope*\
+    \ {{scope}}.\r\n\r\nSelecting \"Yes\" will mark the module as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'

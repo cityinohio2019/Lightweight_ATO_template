@@ -1,52 +1,11 @@
 id: pta_poc_details
 title: PTA POC Details
-
-questions:
-- id: intro
-  title: Introduction
-  prompt: |
-    In this section, let's collect some details on the project or program manager point of contact.
-  type: interstitial
-- id: poc_name
-  title: Project or Program Manager
-  prompt: |
-    Name of project or program manager:
-  type: text
-- id: poc_office
-  title: Office
-  prompt: |
-    {{poc_name}}
-
-    Office in which the {{poc_name}} is based:
-  type: text
-- id: poc_title
-  title: Title
-  prompt: |
-    {{poc_name}}, {{poc_office}}
-
-    {{poc_name}}'s title:
-  type: text
-- id: poc_phone
-  title: Phone
-  prompt: |
-    {{poc_name}}, {{poc_office}}, {{poc_title}}
-
-    {{poc_name}}'s phone:
-  type: text
-- id: poc_email
-  title: Email
-  prompt: |
-    {{poc_name}}, {{poc_office}}, {{poc_title}}, {{poc_phone}}
-
-    {{poc_name}}'s email:
-  type: email-address
-
 output:
 - id: poc_details
   title: Cover page
   format: html
   filename: templates/poc_details.md
-  template: |2
+  template: |2-
 
     <style>
       .dos-pta-form {
@@ -138,3 +97,52 @@ output:
       </div>
 
     </div>
+questions:
+- id: intro
+  title: Introduction
+  prompt: |
+    In this section, let's collect some details on the project or program manager point of contact.
+  type: interstitial
+- id: poc_name
+  title: Project or Program Manager
+  prompt: |
+    Name of project or program manager:
+  type: text
+- id: poc_office
+  title: Office
+  prompt: |
+    {{poc_name}}
+
+    Office in which the {{poc_name}} is based:
+  type: text
+- id: poc_title
+  title: Title
+  prompt: |
+    {{poc_name}}, {{poc_office}}
+
+    {{poc_name}}'s title:
+  type: text
+- id: poc_phone
+  title: Phone
+  prompt: |
+    {{poc_name}}, {{poc_office}}, {{poc_title}}
+
+    {{poc_name}}'s phone:
+  type: text
+- id: poc_email
+  title: Email
+  prompt: |
+    {{poc_name}}, {{poc_office}}, {{poc_title}}, {{poc_phone}}
+
+    {{poc_name}}'s email:
+  type: email-address
+- id: module_complete_pta_poc
+  title: Module complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\n{{poc_name}},will\
+    \ be the main point of contact on this PTA. You can contact them by phone at {{poc_phone}}\
+    \ and by email at {{poc_email}}.\r\n\r\nSelecting \"Yes\" will mark the module\
+    \ as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'

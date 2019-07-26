@@ -9,23 +9,14 @@ introduction:
   template: Update the Test Project Management introduction content.
 output: []
 questions:
-
-# Roles and Responsibility
 - id: roles_and_responsibilities
   title: Roles and Responsibilities
-  prompt: "What are the Roles and Responsibilities?\r\n\r\nWith every test plan there
-    should be a Roles and Responsibilities of the people doing the work. Example Test
-    Lead overseeing other testers; Tester you create test cases and execute test cases."
+  prompt: "What are the Roles and Responsibilities?\r\n\r\nWith every test plan there\
+    \ should be a Roles and Responsibilities of the people doing the work. Example\
+    \ Test Lead overseeing other testers; Tester you create test cases and execute\
+    \ test cases."
   type: longtext
   group: Roles and Responsibilities
-
-# - id: project_role
-#   title: Role
-#   module-id: project_role
-#   type: module-set
-#   comment: Multiple roles can be assigned
-
-# Schedule
 - id: test_schedule_introduction
   title: Introduction
   prompt: This is where we will ask about your Security Test Schedule.
@@ -60,18 +51,12 @@ questions:
   title: Test Results Report Delivery
   prompt: When are you scheduled to begin Test Results Report Delivery?
   type: date
-
-
-# Success Criteria
 - id: q1
   title: Test completion criteria
   prompt: "What is the Test Completion Criteria?\r\n\r\nThe team needs to agree up\
     \ front the definition of a successful. \r\n\r\nIf all the high level bugs have\
     \ been addressed we can move forward with deployment."
   type: longtext
-
-
-# Risk Management
 - id: potential_risks
   title: Potential Risks
   prompt: "6. What are the potential risks?\r\n\r\nA risk could be not being able\
@@ -82,9 +67,9 @@ questions:
   group: Risk Management
 - id: contingency_plans
   title: Contingency plans
-  prompt: "What are the contingency plans? for the test?\r\n\r\nWhat are your contingency plans\
-    \ if something goes wrong with during the test. For each risk that could go wrong,\
-    \ this is how we are going to deal with it."
+  prompt: "What are the contingency plans? for the test?\r\n\r\nWhat are your contingency\
+    \ plans if something goes wrong with during the test. For each risk that could\
+    \ go wrong, this is how we are going to deal with it."
   type: longtext
   group: Risk Management
 - id: training
@@ -93,3 +78,15 @@ questions:
   prompt: |
     Describe the training necessary for the test.
   group: Training
+- id: module_complete_testproject_management
+  title: Module Complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\n*Test Case\
+    \ Creation*<br>\r\n{{test_case_creation_start}}<br>\r\n*Test Case Review*<br>\r\
+    \n{{test_case_creation_start}}<br>\r\n*Test Case Execution*<br>\r\n{{test_case_execution_start}}<br>\r\
+    \n*Test Results Report Prep *<br>\r\n{{test_result_report_start}}<br>\r\n*Test\
+    \ Results Report Delivery*<br>\r\n{{test_result_report_delivery}}<br>\r\n\r\n\
+    Selecting \"Yes\" will mark the module as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'

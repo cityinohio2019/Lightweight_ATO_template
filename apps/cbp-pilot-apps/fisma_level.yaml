@@ -116,6 +116,8 @@ questions:
     text: Transfers to State/Local Governments
   - key: D.26
     text: Direct Services for Citizens
+  min: 0
+  max: ~
 - id: information_type_category_C_2_1
   title: Controls and Oversight Information Types
   prompt: |
@@ -151,6 +153,8 @@ questions:
   impute:
   - condition: '"C.2.1" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_2
   title: Regulatory Development Information Types
   prompt: |
@@ -186,6 +190,8 @@ questions:
   impute:
   - condition: '"C.2.2" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_3
   title: Planning and Budgeting Information Types
   prompt: |
@@ -277,6 +283,8 @@ questions:
   impute:
   - condition: '"C.2.3" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_4
   title: Internal Risk Management and Mitigation Information Types
   prompt: |
@@ -303,6 +311,8 @@ questions:
   impute:
   - condition: '"C.2.4" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_5
   title: Revenue Collection Information Types
   prompt: |
@@ -336,6 +346,8 @@ questions:
   impute:
   - condition: '"C.2.5" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_6
   title: Public Affairs Information Types
   prompt: |
@@ -368,6 +380,8 @@ questions:
   impute:
   - condition: '"C.2.6" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_7
   title: Legislative Relations Information Types
   prompt: |
@@ -398,6 +412,8 @@ questions:
   impute:
   - condition: '"C.2.7" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_2_8
   title: General Government Information Types
   prompt: |
@@ -524,6 +540,8 @@ questions:
   impute:
   - condition: '"C.2.8" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_3_1
   title: Administrative Management Information Types
   prompt: |
@@ -594,6 +612,8 @@ questions:
   impute:
   - condition: '"C.3.1" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_3_2
   title: Financial Management Information Types
   prompt: |
@@ -670,6 +690,8 @@ questions:
   impute:
   - condition: '"C.3.2" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_3_3
   title: Human Resource Management Information Types
   prompt: |
@@ -807,6 +829,8 @@ questions:
   impute:
   - condition: '"C.3.3" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_3_4
   title: Supply Chain Management Information Types
   prompt: |
@@ -838,6 +862,8 @@ questions:
   impute:
   - condition: '"C.3.4" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_C_3_5
   title: Information and Technology Management Information Types
   prompt: |
@@ -926,6 +952,8 @@ questions:
   impute:
   - condition: '"C.3.5" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_2
   title: Homeland Security Information Types
   prompt: |
@@ -1009,6 +1037,8 @@ questions:
   impute:
   - condition: '"D.2" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_4
   title: Disaster Management Information Types
   prompt: |
@@ -1067,6 +1097,8 @@ questions:
   impute:
   - condition: '"D.4" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_5
   title: International Affairs and Commerce Information Types
   prompt: |
@@ -1135,6 +1167,8 @@ questions:
   impute:
   - condition: '"D.5" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_6
   title: Natural Resources Information Types
   prompt: |
@@ -1190,6 +1224,8 @@ questions:
   impute:
   - condition: '"D.6" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_7
   title: Energy Information Types
   prompt: |
@@ -1245,6 +1281,8 @@ questions:
   impute:
   - condition: '"D.7" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_8
   title: Environmental Management Information Types
   prompt: |
@@ -1288,6 +1326,8 @@ questions:
   impute:
   - condition: '"D.8" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_9
   title: Economic Development Information Types
   prompt: |
@@ -1344,6 +1384,8 @@ questions:
   impute:
   - condition: '"D.9" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_10
   title: Community and Social Services Information Types
   prompt: |
@@ -1411,6 +1453,8 @@ questions:
   impute:
   - condition: '"D.10" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_11
   title: Transportation Information Types
   prompt: |
@@ -1460,6 +1504,8 @@ questions:
   impute:
   - condition: '"D.11" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_12
   title: Education Information Types
   prompt: |
@@ -1511,6 +1557,8 @@ questions:
   impute:
   - condition: '"D.12" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_13
   title: Workforce Management Information Types
   prompt: |
@@ -1554,6 +1602,8 @@ questions:
   impute:
   - condition: '"D.13" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_14
   title: Health Information Types
   prompt: |
@@ -1625,6 +1675,8 @@ questions:
   impute:
   - condition: '"D.14" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_15
   title: Income Security Information Types
   prompt: |
@@ -1689,6 +1741,8 @@ questions:
   impute:
   - condition: '"D.15" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_16
   title: Law Enforcement Information Types
   prompt: |
@@ -1776,6 +1830,8 @@ questions:
   impute:
   - condition: '"D.16" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_17
   title: Litigation and Judicial Activities Information Types
   prompt: |
@@ -1830,6 +1886,8 @@ questions:
   impute:
   - condition: '"D.17" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_18
   title: Federal Correctional Activities Information Types
   prompt: |
@@ -1861,6 +1919,8 @@ questions:
   impute:
   - condition: '"D.18" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_19
   title: General Sciences and Innovation Information Types
   prompt: |
@@ -1897,6 +1957,8 @@ questions:
   impute:
   - condition: '"D.19" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_20
   title: Knowledge Creation and Management Information Types
   prompt: |
@@ -1950,6 +2012,8 @@ questions:
   impute:
   - condition: '"D.20" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_21
   title: Regulatory Compliance and Enforcement Information Types
   prompt: |
@@ -1986,6 +2050,8 @@ questions:
   impute:
   - condition: '"D.21" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_22
   title: Public Goods Creation and Management Information Types
   prompt: |
@@ -2046,6 +2112,8 @@ questions:
   impute:
   - condition: '"D.22" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_23
   title: Federal Financial Assistance Information Types
   prompt: |
@@ -2086,6 +2154,8 @@ questions:
   impute:
   - condition: '"D.23" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_24
   title: Credit and Insurance Information Types
   prompt: |
@@ -2126,6 +2196,8 @@ questions:
   impute:
   - condition: '"D.24" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_25
   title: Transfers to State/Local Governments Information Types
   prompt: |
@@ -2165,6 +2237,8 @@ questions:
   impute:
   - condition: '"D.25" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_type_category_D_26
   title: Direct Services for Citizens Information Types
   prompt: |
@@ -2201,6 +2275,8 @@ questions:
   impute:
   - condition: '"D.26" not in information_types_categories'
     value: []
+  min: 0
+  max: ~
 - id: information_types
   title: Information types contained in the system
   type: multiple-choice
@@ -2566,6 +2642,8 @@ questions:
       or []) + (information_type_category_D_24 or []) + (information_type_category_D_25
       or []) + (information_type_category_D_26 or [])
   prompt: '[not used, always imputed]'
+  min: 0
+  max: ~
 - id: information_types_confidentiality_provisional
   title: Provisional confidentiality impact level
   prompt: '[not used, always imputed]'
@@ -16838,6 +16916,8 @@ questions:
       above (e.g., date of birth, place of birth, race, religion, weight, activities,
       geographical indicators, employment information, medical information, education
       information, financial information)
+  min: 0
+  max: ~
 - id: pii_impact_level
   title: Impact level of a loss of confidentiality of Personally Identifiable Information
   type: choice
@@ -17039,3 +17119,11 @@ questions:
     Protected Health Information: {{phi_has_any_phi.text}}
 
     Protected Health Information Impact Level: {{phi_impact_level.text}}
+- id: module_complete_fisma
+  title: Module Complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\nSelecting \"\
+    Yes\" will mark the module as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'

@@ -15,3 +15,11 @@ questions:
     \ front the definition of a successful. \r\n\r\nIf all the high level bugs have\
     \ been addressed we can move forward with deployment."
   type: longtext
+- id: module_complete_testenv
+  title: Module Complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\nSelecting \"\
+    Yes\" will mark the module as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'

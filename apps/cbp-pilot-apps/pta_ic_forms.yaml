@@ -385,3 +385,13 @@ questions:
   impute:
   - condition: q2i != 'yes'
     value: ~
+- id: module_complete_pta_questions
+  title: Module Complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\nIn this section\
+    \ you completed a series of questions involving how data is collected and store\
+    \ as well as how notice is given.\r\n\r\nSelecting \"Yes\" will mark the module\
+    \ as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'

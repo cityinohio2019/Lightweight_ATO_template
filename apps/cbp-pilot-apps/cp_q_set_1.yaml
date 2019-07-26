@@ -17,7 +17,11 @@ questions:
   type: text
   title: New Question Title 2
   prompt: Enter some text.
-- id: q0
-  type: text
-  title: New Question Title
-  prompt: Enter some text.
+- id: module_complete_qset1
+  title: Module Complete?
+  prompt: "Congratulations on reaching the end of this module! \r\n\r\nSelecting \"\
+    Yes\" will mark the module as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'
