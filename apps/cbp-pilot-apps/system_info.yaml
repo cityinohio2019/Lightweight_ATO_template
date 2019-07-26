@@ -57,21 +57,25 @@ output:
     </div>
 questions:
 - id: system_name
-  title: System Name
+  title: System Namex
   prompt: What is the name of your IT System?
   type: text
 - id: system_short_name
   title: System Short Name
-  prompt: "What is the system's nickname or abbreviation?\r\n\r\nGreat! The full name\
-    \ of IT System is \"**{{system_name}}**.\" What about a short name,  acronym or\
-    \ nickname  for your IT System?"
+  prompt: |-
+    What is the system's nickname or abbreviation?
+
+    Great! The full name of IT System is "**{{system_name}}**." What about a short name,  acronym or nickname  for your IT System?
   type: text
 - id: system_description
   title: System Description
-  prompt: "General system description.\r\n\r\nDescribe what system does and its general\
-    \ purpose to your organization. (This is your main description of {% if system_short_name\
-    \ %} {{system_short_name}}{% else %}your IT System {% endif %}. We'll get a more\
-    \ technical description later.)"
+  prompt: >-
+    General system description.
+
+
+    Describe what system does and its general purpose to your organization. (This
+    is your main description of {% if system_short_name %} {{system_short_name}}{%
+    else %}your IT System {% endif %}. We'll get a more technical description later.)
   type: longtext
   tags:
   - system_description
@@ -116,18 +120,25 @@ questions:
   type: text
 - id: system_personal_data
   title: System has personal data
-  prompt: "IMPORTANT: Does the IT System store or process data?\r\n\r\nAnswer \"Yes\"\
-    \ if the {{system_name}} collects, stores, or processes information about individuals.\
-    \ Answer  \"No\" if the system contains only publicly available information and\
-    \ no information about individuals."
+  prompt: >-
+    IMPORTANT: Does the IT System store or process data?
+
+
+    Answer "Yes" if the {{system_name}} collects, stores, or processes information
+    about individuals. Answer  "No" if the system contains only publicly available
+    information and no information about individuals.
   type: yesno
 - id: system_data
   title: System Data
-  prompt: "Describe the data your IT System collects, stores, or processes.\r\n\r\n\
-    Describe in general terms the data that the {{system_name}} handles. Summarize\
-    \ why the information is being collected or processed.\r\n{% if system_personal_data\
-    \ == \"yes\" %}Be sure to summarize what kind of personal data the system collects\
-    \ and why. {% endif %}"
+  prompt: >-
+    Describe the data your IT System collects, stores, or processes.
+
+
+    Describe in general terms the data that the {{system_name}} handles. Summarize
+    why the information is being collected or processed.
+
+    {% if system_personal_data == "yes" %}Be sure to summarize what kind of personal
+    data the system collects and why. {% endif %}
   type: longtext
 - id: pta_needed
   title: PTA Needed
@@ -142,10 +153,14 @@ questions:
     value: ~
 - id: other_plans
   title: Other plans
-  prompt: "We've these tasks for you because of your production plans:\r\n\r\n* Test\
-    \ Plan\r\n* Contingency Plan\r\n\r\nBecause {{system_name}} will either be in\
-    \ production or use production data\r\nduring development, you will need to complete\
-    \ a Test Plan and Contingency Plan."
+  prompt: |-
+    We've these tasks for you because of your production plans:
+
+    * Test Plan
+    * Contingency Plan
+
+    Because {{system_name}} will either be in production or use production data
+    during development, you will need to complete a Test Plan and Contingency Plan.
   type: interstitial
   impute:
   - condition: operational_system == "no"
@@ -159,18 +174,17 @@ questions:
     itself?
 - id: module_complete
   title: Module Complete?
-  prompt: |
-    Congratulations on reaching the end of this module! 
+  prompt: |-
+    Congratulations on reaching the end of this module!  Here are some highlights:
 
-    Here are some highlights:
+    System Name: {{system_name}}
 
-    *System Name:* {{system_name}}
+    System Description:
+    {{system_description}}
 
-    *System Description:* {{system_description}}
+    Operational? {{operational_system}}
 
-    *Operational?* {{operational_system}}
-
-    *Has personal data?* {{system_personal_data}}
+    Has personal data? {{system_personal_data}}
 
     <br>
     <h1>Would you like to mark this module as complete?</h1>
