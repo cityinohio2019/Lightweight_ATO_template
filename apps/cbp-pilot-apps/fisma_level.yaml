@@ -17039,3 +17039,13 @@ questions:
     Protected Health Information: {{phi_has_any_phi.text}}
 
     Protected Health Information Impact Level: {{phi_impact_level.text}}
+- id: module_complete
+  title: Module Complete?
+  prompt: |
+    Congratulations on reaching the end of this module!
+
+    Selecting "Yes" will mark the module as finished."
+  type: choice
+  choices:
+  - key: complete
+    text: 'Yes'
