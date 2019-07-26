@@ -1,0 +1,589 @@
+id: cp_questionnaire
+title: Contingency Plan (Edit by Section)
+internal:
+  snippets:
+  - snippet: |
+      Contingency Plan questionnaire (snippet)
+introduction:
+  format: markdown
+  template: |
+    Contingency Plan
+
+    In this module, we'll assist you in preparing a Contingency Plan document
+    prior to the occurence of a disruption the guidelines and procedures for a 
+    service disruption including:
+
+    * notification and actication
+    * recovery
+    * reconstitution
+
+questions:
+- id: q01_pre
+  title: Introduction and Purpose (pre)
+  prompt: |
+    Will you leverage the template Introduction and Purpose statement used for CACE information systems?
+
+    Agency Contingency Plan Introduction Boilerplate
+
+    > Information systems are vital to {{project.system_info.system_name}}
+    > mission/business functions; therefore, it is critical that services provided by
+    > {{project.system_info.system_name}} are able to operate effectively without excessive
+    > interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
+    > procedures to recover {{project.system_info.system_name}} quickly and
+    > effectively following a service distruption
+
+    > One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
+    > obviate the need to resort to performing IT functions using manual methods. If manual methods
+    > are the only alternative; however, every effort should be made to continue IT functions and
+    > processes manually.
+
+    > The nature of unprecedent disruptions can create confusion, and often predisposes an
+    > otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
+    > of efficiency, it is important to descrease real-time process engineering by documenting,
+    > notification and actication guidelines and procedures, recovery guidelines and procedures, and
+    > reconstitutio guidelines and procedures prior to the occurence of a disruption. During the 
+    > notification/activation phase, appropriate personnel are apprised of current conditions and
+    > damage assessment begins. During the recovery phase, appropriate personnel take a course of
+    > action to recover the {{project.system_info.system_name}} components at a 
+    > site other than the the one that experienced the disruption. In the final, reconstitution phase,
+    > actions are taken to restore IT system processing capabilities to normal operations.
+
+  type: choice
+  choices:
+    - key: "yes"
+      text: "Yes"
+    - key: "yes_edit"
+      text: Yes, but I will edit the template language.
+    - key: "no"
+      text: "No"
+- id: q01
+  title: Introduction and Purpose
+  prompt: >
+    {% if q01_pre == 'yes_edit' %}
+    Edit your Introduction and Purpose statement.
+    {% endif %}
+    {% if q01_pre == 'no' %}
+    Write your Introduction and Purpose statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q01_pre == 'yes_edit' %}
+    Information systems are vital to {{project.system_info.system_name}}
+    mission/business functions; therefore, it is critical that services provided by
+    {{project.system_info.system_name}} are able to operate effectively without excessive
+    interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
+    procedures to recover {{project.system_info.system_name}} quickly and
+    effectively following a service distruption
+
+    One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
+    obviate the need to resort to performing IT functions using manual methods. If manual methods
+    are the only alternative; however, every effort should be made to continue IT functions and
+    processes manually.
+
+    The nature of unprecedent disruptions can create confusion, and often predisposes an
+    otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
+    of efficiency, it is important to descrease real-time process engineering by documenting,
+    notification and actication guidelines and procedures, recovery guidelines and procedures, and
+    reconstitutio guidelines and procedures prior to the occurence of a disruption. During the 
+    notification/activation phase, appropriate personnel are apprised of current conditions and
+    damage assessment begins. During the recovery phase, appropriate personnel take a course of
+    action to recover the {{project.system_info.system_name}} components at a 
+    site other than the the one that experienced the disruption. In the final, reconstitution phase,
+    actions are taken to restore IT system processing capabilities to normal operations.
+    {% endif %}
+  examples:
+  - example: |
+      Information systems are vital to {{project.system_info.system_name}}
+      mission/business functions; therefore, it is critical that services provided by
+      {{project.system_info.system_name}} are able to operate effectively without excessive
+      interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
+      procedures to recover {{project.system_info.system_name}} quickly and
+      effectively following a service distruption
+
+      One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
+      obviate the need to resort to performing IT functions using manual methods. If manual methods
+      are the only alternative; however, every effort should be made to continue IT functions and
+      processes manually.
+
+      The nature of unprecedent disruptions can create confusion, and often predisposes an
+      otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
+      of efficiency, it is important to descrease real-time process engineering by documenting,
+      notification and actication guidelines and procedures, recovery guidelines and procedures, and
+      reconstitutio guidelines and procedures prior to the occurence of a disruption. During the 
+      notification/activation phase, appropriate personnel are apprised of current conditions and
+      damage assessment begins. During the recovery phase, appropriate personnel take a course of
+      action to recover the {{project.system_info.system_name}} components at a 
+      site other than the the one that experienced the disruption. In the final, reconstitution phase,
+      actions are taken to restore IT system processing capabilities to normal operations.
+
+  impute:
+  - condition: q01_pre == 'yes'
+    value: |
+      Information systems are vital to {{project.system_info.system_name}}
+      mission/business functions; therefore, it is critical that services provided by
+      {{project.system_info.system_name}} are able to operate effectively without excessive
+      interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
+      procedures to recover {{project.system_info.system_name}} quickly and
+      effectively following a service distruption
+
+      One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
+      obviate the need to resort to performing IT functions using manual methods. If manual methods
+      are the only alternative; however, every effort should be made to continue IT functions and
+      processes manually.
+
+      The nature of unprecedent disruptions can create confusion, and often predisposes an
+      otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
+      of efficiency, it is important to descrease real-time process engineering by documenting,
+      notification and actication guidelines and procedures, recovery guidelines and procedures, and
+      reconstitutio guidelines and procedures prior to the occurence of a disruption. During the
+      notification/activation phase, appropriate personnel are apprised of current conditions and
+      damage assessment begins. During the recovery phase, appropriate personnel take a course of
+      action to recover the {{project.system_info.system_name}} components at a
+      site other than the the one that experienced the disruption. In the final, reconstitution phase,
+      actions are taken to restore IT system processing capabilities to normal operations.
+
+- id: q02_pre
+  title: Applicable Laws and regulations (pre)
+  prompt: |
+    Will you leverage the template applicable Laws and Regulations language used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q03_pre
+  title: Applicable Standards and Guidance (pre)
+  prompt: |
+    Will you leverage the template Applicable Standards and Guidance language used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q04_pre
+  title: Information System Name and Identifier (pre)
+  prompt: |
+    Will you leverage the template Information System Name and Identifier language used for CACE information systems?
+
+    Will the identifier be unique for every system name?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q05_pre
+  title: Scope (pre)
+  prompt: |
+    Will you leverage template Scope  language used for CACE infromation systems?
+
+    Will procedures be in place to maintain operations or assets from disruptions at primary work site, Amazon Web Services (AWS) U.S. East/West IaaS infrastructure and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q06_pre
+  title: Assumptons (pre)
+  prompt: |
+    Will you leverage template Assumptions language used for CACE information systems?
+
+    Have all potential disruptions been included and addressed in the  ITCP?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q07_pre
+  title: Concept of Operations (pre)
+  prompt: |
+    Will you leverage the template concept of operations statement used for CACE information systems? 
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q08_pre
+  title: System Description (pre)
+  prompt: |
+    Will you leverage the template system description statement used for system profile questionnaire? 
+
+    Does this effort include the modernization of the legacy applications and systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q09_pre
+  title: Three Phases (pre)
+  prompt: |
+    Will you leverage the template Three Phases (Activation and Notification, Recovery, and Reconstitution) statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q10_pre
+  title: Data Backup Readines Information (pre)
+  prompt: |
+    Will you leverage the template Data Backup Readines Information statement used for CACE information systems?  Have all backup system components, and authorized-personnel been identified?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q11_pre
+  title: Site Readiness Information (pre)
+  prompt: |
+    Will you leverage the template Site Readiness Information statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q12_pre
+  title: Roles and Responsibilities (pre)
+  prompt: |
+    Will you leverage the template Roles and Responsibilities statement used for CACE information systems?  Have personnel been trained in accordance with their assigned roles and responsibilities?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q13_pre
+  title: Plan Distribution and Availability (pre)
+  prompt: |
+    Will you leverage template Plan Distribution and Availability language used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q14_pre
+  title: Line of Succession/Alternates Roles (pre)
+  prompt: |
+    Will you leverage template Line of Succession/Alternates Roles language used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q15_pre
+  title: Activation and Notification (pre)
+  prompt: |
+    Will you leverage the template Activation and Notification statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q16_pre
+  title: Activation Criteria and Procedure (pre)
+  prompt: |
+    Will you leverage the template Activation Criteria and Procedure statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q17_pre
+  title: Notification Instructions (pre)
+  prompt: |
+    Will you leverage the template Notification Instructions statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q18_pre
+  title: Outage Assessment (pre)
+  prompt: |
+    Will you leverage the template Outage Assessment statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q19_pre
+  title: Recovery (pre)
+  prompt: |
+    Will you leverage the template Recovery statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q20_pre
+  title: Sequence of Recovery Operations (pre)
+  prompt: |
+    Will you leverage the template Sequence of Recovery Operations statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q21_pre
+  title: Recovery Procedures (pre)
+  prompt: |
+    Will you leverage the template Recovery Procedures statement used for CACE information systems?
+    What procdedures will you follow if the system goes down?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q23_pre
+  title: Recovery Escalation Notices / Awareness (pre)
+  prompt: |
+    Will you leverage the template Recovery Escalation Notices / Awareness statement used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q24_pre
+  title: Reconstitution (pre)
+  prompt: |
+    Will you leverage template Reconstitution language used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q25_pre
+  title: Data Validation Testing (pre)
+  prompt: |
+    Will you leverage template Data Validation Testing language used for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q26_pre
+  title: Functional Validation Testing (pre)
+  prompt: |
+    Will you leverage template Functional Validation Testing language for CACE information system?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q27_pre
+  title: Recovery Declaration (pre)
+  prompt: |
+    Will you leverage template Recovery Declaration language for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q28_pre
+  title: User Notification (pre)
+  prompt: |
+    Will you leverage template User Notification language for CACE information system?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q29_pre
+  title: Cleanup (pre)
+  prompt: |
+    Will you leverage template Cleanup language for CACE information systems?
+
+    Will you employ cleanup-process template language consistent with those used with CACE information systems?\nWill you include a roles and responsibilities table leveraging template CACE infromation system language?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q30_pre
+  title: Returning Backup Media (pre)
+  prompt: |
+    Will you leverage template Returning Backup Media language for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q31_pre
+  title: Backing Up Restored Systems (pre)
+  prompt: |
+    Will you leverage template Backing Up Restored Systemslanguage for CACE information systems?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q32_pre
+  title: Event Documentation (pre)
+  prompt: |
+    Will you leverage template Event Documentation language for CACE information systems?\nWill you include a roles and responsibilities table leveraging template CACE infromation system language?
+
+    DEFAULT LANGUAGE GOES HERE
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+- id: q33_pre
+  title: Contingency Plan Testing (pre)
+  prompt: |
+    Will you leverage the template Contingency Plan Testing language used for CACE information systems?
+  type: choice
+  choices:
+    - key: yes
+      text: yes
+    - key: yes_edit
+      text: Yes, but I will edit the template language.
+    - key: no
+      text: No
+
+

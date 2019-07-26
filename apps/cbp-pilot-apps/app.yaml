@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.3.8
+version: 0.1.4.0
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.3.8
+  template: IT System Questionnaires (Pilot) v0.1.4.0
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -106,6 +106,109 @@ output:
   template: |2
 
     "ELK configuration settings."
+
+
+- id: cp_ssp_nist80053r4_AC_2
+  title: NIST 800-53r4 AC-2 Account Management
+  format: markdown
+  template: |
+    {% if project.general_info.exists != "yes" %}The following controls will be in place with the completion of the Rules of Behavior.{% endif %}
+
+    {{project.rob.applies_to}}
+
+    {{project.general_info.obtain}}
+
+- id: cp_ssp_nist80053r4_AT_2
+  title: NIST 800-53r4 AT-2 Security Awareness Training
+  format: markdown
+  template: >+
+    {% if project.general_info.exists != "yes" %}The following controls will be in place with the completion of the Rules of Behavior.{% endif %}
+
+    The organization Rules of Behavior (officially titled _{{project.general_info.official_name}}_) {% if project.general_info.exists == "yes" %}describes{% else %}will describe{% endif %} general responsibilities and expected media protection behavior of personnel with access to organization IT resources.
+
+- id: cp_ssp_nist80053r4_MP_1
+  title: NIST 800-53r4 MP-1 Media Protection Policy And Procedures
+  format: markdown
+  template: >+
+    {% if project.general_info.exists != "yes" %}The following controls will be in place with the completion of the Rules of Behavior.{% endif %}
+
+    Media protection policy and procedures {% if project.general_info.exists == "yes" %}are{% else %}will be{% endif %} documented in System Security Plan and the IT System Rules of Behavior. These documents provide the roles and responsibilities for media protection policies and procedures as it pertains to clearing, sanitization, disposal, and storage of media.
+
+- id: cp_ssp_nist80053r4_PL_4
+  title: NIST 800-53r4 PL-4 Rules of Behavior
+  format: markdown
+  template: >+
+    {% if project.general_info.exists == 'yes' %}
+
+    {{project.general_info.organization}} implements Control PL-4 with its Rules of Behavior document
+    officially titled _{{project.general_info.official_name}}_.
+    The Rules of Behavior describes users' responsibilities and expected behavior when using {{organization}} IT resources.
+    {{project.rob.applies_to}}
+
+    The Rules of Behavior doucement is maintained as a {{project.general_info.source_repo.text}}. {{project.general_info.source_repo_identifier}}
+
+    The {{project.general_info.role_owner}} maintains the Rules of Behavior and reviews
+    the Rules of Behavior {{project.general_info.review_frequency.text}}.
+
+
+    {{project.general_info.obtain}}
+
+    {% if project.general_info.source_public == 'yes' %}
+    The Rules of Behavior is available publicly online at [{{project.general_info.source_public_url}}]({{project.general_info.source_public_url}}).
+    {% else %}
+    The Rules of Behavior is not available publicly online.
+    {% endif %}
+
+    {% else %}
+
+    {{project.general_info.organization}} will implement Control PL-4 with Rules of Behavior document
+    officially titled _{{project.general_info.official_name}}_.
+    The Rules of Behavior will describe users' responsibilities and expected behavior when using {{organization}} IT resources.
+    {{project.rob.applies_to}}
+
+    The Rules of Behavior doucement will be maintained as a {{project.general_info.source_repo.text}}. {{project.general_info.source_repo_identifier}}
+
+    The {{project.general_info.role_owner}} will maintain the Rules of Behavior and review
+    them {{project.general_info.review_frequency.text}}.
+
+
+    {{project.general_info.obtain}}
+
+    {% if project.general_info.source_public == 'yes' %}
+    The Rules of Behavior will be available publicly online at [{{project.general_info.source_public_url}}]({{project.general_info.source_public_url}}).
+    {% else %}
+    The Rules of Behavior will not be available publicly online.
+    {% endif %}
+
+    {% endif %}
+
+- id: cp_ssp_nist80053r4_PS_6
+  title: NIST 800-53r4 PS-6 Access Agreements
+  format: markdown
+  template: >+
+    {% if project.general_info.exists != "yes" %}The following controls will be in place with the completion of the Rules of Behavior.{% endif %}
+
+    The Department {% if project.general_info.exists == "yes" %}has implemented{% else %}will implement{% endif %} a formalized process for user account administration which requires applicable personnel requesting access to organization IT resources read and agree to the Rules of Behavior found in the document officially titled _{{project.general_info.official_name}}_.
+
+- id: cp_ssp_nist80053r4_PS_7
+  title: NIST 800-53r4 PS-7 Third-Party Personnel Security
+  format: markdown
+  template: >+
+    {% if project.general_info.exists != "yes" %}The following controls will be in place with the completion of the Rules of Behavior.{% endif %}
+
+    All contractor support personnel are required to meet the same personnel security policy requirements as {{organization}} personnel who have privileged access to the IT System. Third party providers {% if project.general_info.exists == "yes" %}are required{% else %}will be required{% endif %} to review and sign the Rules of Behavior found in the document officially titled _{{project.general_info.official_name}}_ prior to being granted access to the system.
+
+- id: cp_ssp_nist80053r4_SA_7
+  title: NIST 800-53r4 SA-7 User-Installed Software
+  format: markdown
+  template: |+
+    {% if project.general_info.exists != "yes" %}The following controls will be in place with the completion of the Rules of Behavior.{% endif %}
+
+    {{organization}} {% if project.general_info.exists == "yes" %}uses{% else %}will use{% endif %} the Rules of Behavior (officially titled _{{project.general_info.official_name}}_) to document and set forth appropriate activities on an information system.
+
+
+
+
 catalog:
   category: Draft
   description:
@@ -114,12 +217,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.3.8
+    short: IT System Questionnaires (Pilot) v0.1.4.0
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.3.8
+  version: 0.1.4.0
 questions:
 - id: system_info
   title: System Profile
@@ -225,25 +328,43 @@ questions:
   type: module
   module-id: test_plan
   group: Test Plan
-  impute:
-  - condition: project.system_info.operational_system != 'yes'
-    value: ~
-- id: cp_q_set_1
-  module-id: cp_q_set_1
-  title: Question Set 1
+  # impute:
+  # - condition: project.system_info.operational_system != 'yes'
+  #   value: ~
+
+- id: cp_questionnaire
+  title: Contingency Plan (Edit by Section)
   type: module
+  module-id: cp_questionnaire
   group: Contingency Plan
-  impute:
-  - condition: project.system_info.operational_system != 'yes'
-    value: ~
-- id: cp_q_set_2
-  module-id: cp_q_set_2
-  title: Question Set 2
+
+- id: cp_general_info
+  title: General Information
   type: module
+  module-id: cp_general_info
   group: Contingency Plan
-  impute:
-  - condition: project.system_info.operational_system != 'yes'
-    value: ~
+  # impute:
+  # - condition: project.system_info.operational_system != 'yes'
+  #   value: ~
+
+- id: cp_form
+  title: Contingency Plan Document
+  type: module
+  module-id: cp_form
+  group: Contingency Plan
+  # impute:
+  # - condition: project.system_info.operational_system != 'yes'
+  #   value: ~
+
+- id: cp_controls_80053r4
+  title: 800-53r4 Controls
+  type: module
+  module-id: cp_controls_80053r4
+  group: Contingency Plan
+  # impute:
+  # - condition: project.system_info.operational_system != 'yes'
+  #   value: ~
+
 - id: ssp_intro
   module-id: ssp_intro
   title: System Security Plan
@@ -252,3 +373,22 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
+
+deprecated-to-delete:
+- id: cp_q_set_1
+  module-id: cp_q_set_1
+  title: Question Set 1
+  type: module
+  group: Contingency Plan
+  # impute:
+  # - condition: project.system_info.operational_system != 'yes'
+  #   value: ~
+- id: cp_q_set_2
+  module-id: cp_q_set_2
+  title: Question Set 2
+  type: module
+  group: Contingency Plan
+  # impute:
+  # - condition: project.system_info.operational_system != 'yes'
+  #   value: ~
+
