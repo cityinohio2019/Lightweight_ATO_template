@@ -159,28 +159,24 @@ questions:
     itself?
 - id: module_complete
   title: Module Complete?
-  prompt: "Congratulations on reaching the end of this module! \r\n\r\nHere are some\
-    \ highlights of the provided information:\r\n\r\n**System Name:** <br> {{system_name}}<br><br>\r\
-    \n**System Description:** {{system_description}}<br>\r\n**System Organization:**<br>{{system_org}}<br><br>\r\
-    \n**System PM:**<br>{{system_pm}}<br><br><br><br>\r\n\r\n<h1>Would you like to\
-    \ mark this module as complete?</h1>\r\n\r\nSelecting \"Yes\" will mark the module\
-    \ as finished."
+  prompt: |
+    Congratulations on reaching the end of this module! 
+
+    Here are some highlights:
+
+    *System Name:* {{system_name}}
+
+    *System Description:* {{system_description}}
+
+    *Operational?* {{operational_system}}
+
+    *Has personal data?* {{system_personal_data}}
+
+    <br>
+    <h1>Would you like to mark this module as complete?</h1>
+
+    Selecting "Yes" will mark the module as finished.
   type: choice
   choices:
   - key: complete
     text: 'Yes'
-- id: module_complete_yes
-  title: Congrats!
-  prompt: <h1>We have marked this module complete.</h1>
-  type: interstitial
-  impute:
-  - condition: module_complete == "no"
-    value: ~
-- id: module_complete_no
-  title: Module Not Yet Completed
-  prompt: No Worries! <p>Everything you have entered so far has been saved. Return
-    to the module to continue the questionnaire when you can.</p>
-  type: interstitial
-  impute:
-  - condition: module_complete == "yes"
-    value: ~
