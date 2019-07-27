@@ -58,8 +58,9 @@ output:
 questions:
 - id: system_name
   title: System Name
-  prompt: What is the name of your IT System?
+  prompt: What is the FULL name of your IT System?
   type: text
+  help: Enter the full or official name, not acronym
 - id: system_short_name
   title: System Short Name
   prompt: |-
@@ -165,11 +166,11 @@ questions:
   impute:
   - condition: operational_system == "no"
     value: ~
-- id: feedback
+- id: feedback_exists
   title: Feedback or Other Information
   prompt: Is there any information that you feel should be included in this assessment
     that was not present?
-  type: longtext
+  type: yesno
   help: Information that should be included but was not? Any thoughts on the form
     itself?
 - id: module_complete
@@ -194,3 +195,10 @@ questions:
   choices:
   - key: complete
     text: 'Yes'
+- id: feedback
+  title: Feedback
+  prompt: Please include your additional information here?
+  type: longtext
+  impute:
+  - condition: feedback_exists == 'no'
+    value: ~
