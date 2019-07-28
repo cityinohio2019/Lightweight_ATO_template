@@ -6,7 +6,7 @@ internal:
       Update the Test Plan Introduction snippet
 introduction:
   format: markdown
-  template: This section introduces your test plan to others.
+  template: This section introduces your Test Plan to others.
 output: []
 questions:
 - id: scope_starter
@@ -16,8 +16,8 @@ questions:
   choices:
   - key: feature_test
     text: |
-      The scope of the Security Test Plan (STP) is to test the features of the
-      system to ensure that is complete end-to-end integration testing of  with dependent
+      The scope of the Security Test Plan (STP) is to test the features of the information
+      system to ensure that the test is complete end-to-end integration test with dependent
       connections to secure working systems. It is also to ensure that all the entities
       within the management, implementation, operational, and oversight responsibilities
       have a clear understanding of their roles and associated functions with testing
@@ -26,7 +26,7 @@ questions:
   - key: vulnerability_test
     text: |
       The scope of the Security Test Plan (STP) is to test the vulnerability of
-      the system to the threat environment int which the system will operate.
+      the system to the threat environment in which the system will operate.
     help: Use this scope when testing system vulnerabilities against known threats.
 - id: scope
   title: Edit scope of test
@@ -35,10 +35,16 @@ questions:
   default: '{{scope_starter.text}}'
 - id: background
   title: Background
-  prompt: "Background statement.\r\n\r\nYour background statement should briefly describe
-    the system to be tested and the purpose of the test.\r\n\r\n{% if project.system_info.system_description
-    %}\r\nWe've used your system description to get you started. Update to describe
-    the appropriately for test background.\r\n{% endif %}"
+  prompt: |
+    Background statement.
+
+    Your background statement should briefly describe
+    the system to be tested and the purpose of the test.
+
+    {% if project.system_info.system_description %}
+    We've used your system description to get you started. Please provide any updates.
+    {% endif %}
+
   type: longtext
   default: '{% if project.system_info.system_description %}{{project.system_info.system_description}}{%
     endif %}'
@@ -48,6 +54,19 @@ questions:
     List your Project References below. Include the the project document's name,
     the document version/date, and the document location.
   type: longtext
+  examples:
+    example: Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
+    example: Management of Federal Information Resources [OMB Circular A-130]
+    example: Records Management by Federal Agencies [44 USC 31]
+    example: Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
+    example: Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
+    example: "Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]"
+    example: Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+    example: Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
+    example: Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
+    example: Risk Management Guide for Information Technology Systems [NIST 800-30]
+    example: Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
+
   help: |
     Project References listed should have the names of the documents utilized
     in the creation of this test plan. Each reference should have a corresponding

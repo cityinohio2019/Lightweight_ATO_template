@@ -133,7 +133,7 @@ format: html
   </div>
 
   <div class="cell-full">
-    f. Does this form collect Social Security number (SSN) or other element that is stand-alone Sensitive Personally Identifiable Information (SPII)? <i>Check all that apply.</i>
+    f. Does this form collect Social Security Number (SSN) or other element that is stand-alone Sensitive Personally Identifiable Information (SPII)? <i>Check all that apply.</i>
   </div>
   <div class="cell-full">
     <ul>
@@ -161,7 +161,7 @@ format: html
   </div>
 
   <div class="cell-full">
-    i. Are individuals provided notice at the time of collection by DOS?<i>(Does the records subject have notice of the collection or is form filled out by third party?)</i>
+    i. Are individuals provided notice at the time of collection by DOS?<i>(Does the records subject have notice of the collection or is the form filled out by third party?)</i>
   </div>
   <div class="cell-full">
     {{ q2i }}{% if q2i == "yes" %} <i>Please describe how notices is provided.</i>: {{ q2i_describe }}{% endif %}

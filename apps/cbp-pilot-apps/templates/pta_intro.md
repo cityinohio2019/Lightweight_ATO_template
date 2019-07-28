@@ -11,7 +11,7 @@ format: html
 </p>
 
 <p style="text-align: center;">
-  This form serves as the official determination by the DOS Privacy Office to identify the privacy compliance requirements for all Departmental uses of personally identifiable information (PII).
+  This form serves as the official determination by the DOS Privacy Office to identify the privacy compliance requirements for all Departmental uses of Personally Identifiable Information (PII).
 </p>
 </div>
 

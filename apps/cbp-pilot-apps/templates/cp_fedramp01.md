@@ -10,6 +10,18 @@ source: https://www.fedramp.gov/assets/resources/templates/SSP-A06-FedRAMP-ISCP-
     font-weight: bold;
   }
 
+  table {
+    margin: auto;
+  }
+
+  td, th {
+    padding: 8px;
+  }
+
+  th {
+    background-color: #ddd;
+  }
+
 </style>
 
 # Cover Page
@@ -49,12 +61,12 @@ The following standards and guidance are useful for understanding contigency pla
 
 ## 1.3 Information System Name and Identifier
 
-This ISCP applies to the [[Information System Name]]; (Information System Abbreviation) which has a unique identifier as noted in Table 1‑3 Information System Name and Title.
+This ISCP applies to the [[Information System Name]] (Information System Abbreviation) which has a unique identifier as noted in Table 1‑3 Information System Name and Title.
 
 Table 1‑3 Information System Name and Title
 
 <table border="1">
-  <tr><td> Unique Identifier </td><td> Information System Name </td><td> Information System Abbreviation </td></tr>
+  <tr><th> Unique Identifier </th><th> Information System Name </th><th> Information System Abbreviation </th></tr>
   <tr><td> [[SYSTEM_ID]]     </td><td> [[Information System Name]] </td><td> [[SYSTEM_SHORT_NAME]] </td></tr>
 </table>
 
@@ -73,14 +85,14 @@ This ITCP does not apply to the following situations:
 
 ## 1.5 Assumptions
 
-{{q05}}
+{{project.cp_questionnaire.q05}}
 
 <!--
 - The Uninterruptable Power Supply (UPS) will keep the system up and running for after _Enter Number_ .
 - The generators will kick in after _Enter Number_ from time of a power failure.
 - Current backups of the application software and data are intact and available at the offsite storage facility in _Enter City_, _Enter State_.
 - The backup storage capability is approved and has been accepted by the Authorizing Official (AO).
-- The [[Information System Name]]; is inoperable if it cannot be recovered within _Enter Number_ RTO hours.
+- The [[Information System Name]] is inoperable if it cannot be recovered within _Enter Number_ RTO hours.
 - Key personnel have been identified and are trained annually in their roles.
 - Key personnel are available to activate the ISCP.
 - CSP Name defines circumstances that can inhibit recovery and reconstitution to a known state.
@@ -88,65 +100,58 @@ This ITCP does not apply to the following situations:
 
 # 2 Concept of Operations
 
-This section provides details about the [[Information System Name]];, an overview of the three phases of the ISCP (Activation and Notification, Recovery, and Reconstitution), and a description of the roles and responsibilities of key personnel during contingency operations.
+This section provides details about the [[Information System Name]], an overview of the three phases of the ISCP (Activation and Notification, Recovery, and Reconstitution), and a description of the roles and responsibilities of key personnel during contingency operations.
 
 ## 2.1 System Description
 
-Instruction: Provide a general description of the system architecture and components.  Include a network diagram that indicates interconnections with other systems.  Ensure that this section is consistent with information found in the **System Security Plan**.  Provide a network diagram and any other diagrams in HAppendix – Diagrams.
-Delete this instruction from your final version of this document.
+{{project.cp_questionnaire.q08}}
 
 ## 2.2 Three Phases
 
-This plan has been developed to recover and reconstitute the [[Information System Name]]; using a three-phased approach.  The approach ensures that system recovery and reconstitution efforts are performed in a methodical sequence to maximize the effectiveness of the recovery and reconstitution efforts and minimize system outage time due to errors and omissions.  The three system recovery phases consist of activation and notification, recovery, and reconstitution.
+{{project.cp_questionnaire.q09}}
 
-1. **Activation and Notification Phase**.  Activation of the ISCP occurs after a disruption, outage, or disaster that may reasonably extend beyond the RTO established for a system.  The outage event may result in severe damage to the facility that houses the system, severe damage or loss of equipment, or other damage that typically results in long-term loss.
-Once the ISCP is activated, the information system stakeholders are notified of a possible long-term outage, and a thorough outage assessment is performed for the information system.  Information from the outage assessment is analyzed and may be used to modify recovery procedures specific to the cause of the outage.
-2. **Recovery Phase.**  The Recovery phase details the activities and procedures for recovery of the affected system.  Activities and procedures are written at a level such that an appropriately skilled technician can recover the system without intimate system knowledge.  This phase includes notification and awareness escalation procedures for communication of recovery status to system stakeholders.
-3. **Reconstitution.**  The Reconstitution phase defines the actions taken to test and validate system capability and functionality at the original or new permanent location.  This phase consists of two major activities: validating data and operational functionality followed by deactivation of the plan.
+[DIAGRAM 1 - TO DO]
 
-During validation, the system is tested and validated as operational prior to returning operation to its normal state.  Validation procedures include functionality or regression testing, concurrent processing, and/or data validation.  The system is declared recovered and operational by upon successful completion of validation testing.
+[DIAGRAM 2 - TO DO]
 
-Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
+[DIAGRAM 3 - TO DO]
 
 ## 2.3 Data Backup Readiness Information
 
 A common understanding of data backup definitions is necessary in order to ensure that data restoration is successful.  CSP Name recognizes different types of backups, which have different purposes, and those definitions are found in Table 2‑1 Backup Types.
 
-Table 2‑1 Backup Types
+Table 2‑1 Backup System Components
 
-| Backup Type | Descriptio --- |
-| Full Backup | A full backup is the starting point for all other types of backup and contains all the data in the folders and files that are selected to be backed up.  Because full backup stores all files and folders, frequent full backups result in faster and simpler restore operations. |
-| Differential Backup | Differential backup contains all files that have changed since the last FULL backup.  The advantage of a differential backup is that it shortens restore time compared to a full back up or an incremental backup.  However, if the differential backup is performed too many times, the size of the differential backup might grow to be larger than the baseline full backup. |
-| Incremental Backup | Incremental backup stores all files that have changed since the last FULL, DIFFERENTIAL OR INCREMENTAL backup.  The advantage of an incremental backup is that it takes the least time to complete.  However, during a restore operation, each incremental backup must be processed, which may result in a lengthy restore job. |
-| Mirror Backup | Mirror backup is identical to a full backup, with the exception that the files are not compressed in zip files and they cannot be protected with a password.  A mirror backup is most frequently used to create an exact copy of the source data. |
+<table border="1">
+<tr><td>Backup Type</td><td>Description</td></tr>
+<tr><td>Full Backup</td><td>A full backup is the starting point for all other types of backup and contains all the data in the folders and files that are selected to be backed up.  Because full backup stores all files and folders, frequent full backups result in faster and simpler restore operations.</td></tr>
+<tr><td>Differential Backup</td><td>Differential backup contains all files that have changed since the last FULL backup.  The advantage of a differential backup is that it shortens restore time compared to a full back up or an incremental backup.  However, if the differential backup is performed too many times, the size of the differential backup might grow to be larger than the baseline full backup.</td></tr>
+<tr><td>Incremental Backup</td><td>Incremental backup stores all files that have changed since the last FULL, DIFFERENTIAL OR INCREMENTAL backup.  The advantage of an incremental backup is that it takes the least time to complete.  However, during a restore operation, each incremental backup must be processed, which may result in a lengthy restore job.</td></tr>
+<tr><td>Mirror Backup</td><td>Mirror backup is identical to a full backup, with the exception that the files are not compressed in zip files and they cannot be protected with a password.  A mirror backup is most frequently used to create an exact copy of the source data.</td></tr>
+</table>
 
-The hardware and software components used to create the [[Information System Name]]; backups are noted in Table 2‑2 Backup System Components.
+The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
 
 Table 2‑2 Backup System Components
 
-| System/Component | Descriptio --- |
-| Software Used | Click here to enter text. |
-| Hardware Used | Click here to enter text. |
-| Frequency | Click here to enter text. |
-| Backup Type | Click here to enter text. |
-| Retention Period | Click here to enter text. |
-
-Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]]; system software and data.
+<table border="1">
+<tr><td>System/Component</td><td>Description</td></tr>
+<tr><td>Software Used</td><td>Click here to enter text.</td></tr>
+<tr><td>Hardware Used</td><td>Click here to enter text.</td></tr>
+<tr><td>Frequency</td><td>Click here to enter text.</td></tr>
+<tr><td>Backup Type</td><td>Click here to enter text.</td></tr>
+<tr><td>Retention Period</td><td>Click here to enter text.</td></tr>
+</table>
+Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
 
 Table 2‑3 Back-Up Storage Location
-
-| Back Up Storag
-| Site Name | Click here to enter text. |
-| Street Address | Click here to enter text. |
-| City, State, Zip Code | Click here to enter text. |
-
+<table border="1">
+<tr><td>Site Name</td><td>Click here to enter text.</td></tr>
+<tr><td>Street Address</td><td>Click here to enter text.</td></tr>
+<tr><td>City, State, Zip Code</td><td>Click here to enter text.</td></tr>
+</table>
 Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.
 
-CSP Name maintains both an online and offline (portable) set of backup copies of the following types of data on site at their primary location:
-
-- User-level information
-- System-level information
-- Information system documentation including security information.
 
 ## 2.4 Site Readiness Information
 
@@ -154,24 +159,28 @@ CSP Name recognizes different types of alternate sites, which are defined in Tab
 
 Table 2‑4 Alternative Site Types
 
-| Type of Site | Descriptio --- |
-| Cold Sites | Cold Sites are typically facilities with adequate space and infrastructure (electric power, telecommunications connections, and environmental controls) to support information system recovery activities. |
-| Warm Sites | Warm Sites are partially equipped office spaces that contain some or all of the system hardware, software, telecommunications, and power sources. |
-| Hot Sites | Hot Sites are facilities appropriately sized to support system requirements and configured with the necessary system hardware, supporting infrastructure, and support personnel. |
-| Mirrored Sites | Mirrored Sites are fully redundant facilities with automated real-time information mirroring.  Mirrored sites are identical to the primary site in all technical respects. |
+<table border="1">
+<tr></td>Type of Site  </td><td>Description |
+<tr></td>Cold Sites    </td><td>Cold Sites are typically facilities with adequate space and infrastructure (electric power, telecommunications connections, and environmental controls) to support information system recovery activities.</td></tr>
+<tr></td>Warm Sites    </td><td>Warm Sites are partially equipped office spaces that contain some or all of the system hardware, software, telecommunications, and power sources.</td></tr>
+<tr></td>Hot Sites     </td><td>Hot Sites are facilities appropriately sized to support system requirements and configured with the necessary system hardware, supporting infrastructure, and support personnel.</td></tr>
+<tr></td>Mirrored Sites</td><td>Mirrored Sites are fully redundant facilities with automated real-time information mirroring.  Mirrored sites are identical to the primary site in all technical respects.</td></tr>
+</table>
 
-Alternate facilities have been established for the [[Information System Name]]; as noted in Table 2‑4 Alternative Site Types.
+Alternate facilities have been established for the [[Information System Name]] as noted in Table 2‑4 Alternative Site Types.
 
 Table 2‑5 Primary and Alternative Site Locations
 
-| Designation | Site Name | Site Type | Addres --- | --- | --- |
-| Primary Site |   |   |   |
-| Alternate Site |   |   |   |
-| Alternate Site |   |   |   |
+<table border="1">
+<tr></td>Designation   </td><td>Site Name</td><td>Site Type</td><td>Addres</td></tr>
+<tr></td>Primary Site  </td><td>         </td><td>         </td><td>      </td></tr>
+<tr></td>Alternate Site</td><td>         </td><td>         </td><td>      </td></tr>
+<tr></td>Alternate Site</td><td>         </td><td>         </td><td>      </td></tr>
+</table>
 
 ## 2.5 Roles and Responsibilities
 
-CSP Name establishes multiple roles and responsibilities for responding to outages, disruptions, and disasters for the [[Information System Name]];.  Individuals who are assigned roles for recovery operations collectively make up the Contingency Plan Team and are trained annually in their duties.  Contingency Plan Team members are chosen based on their skills and knowledge.
+CSP Name establishes multiple roles and responsibilities for responding to outages, disruptions, and disasters for the [[Information System Name]].  Individuals who are assigned roles for recovery operations collectively make up the Contingency Plan Team and are trained annually in their duties.  Contingency Plan Team members are chosen based on their skills and knowledge.
 
 Instruction: Describe each team and role responsible for executing or supporting system recovery and reconstitution.  Include responsibilities for each team/role including leadership roles.  FedRAMP has established default roles and a small set of default responsibilities which must be edited and modified to match the actual organizational role names, responsibilities, and associated duties for the organization.
 Delete this instruction from your final version of this document.
@@ -313,22 +322,22 @@ Contingency Plan Team members are obligated to inform the Contingency Planning C
 
 ### 2.5.10 Line of Succession/Alternates Roles
 
-The CSP Name sets forth an order of succession, in coordination with the order set forth by the organization to ensure that decision-making authority for the [[Information System Name]]; ISCP is uninterrupted.
+The CSP Name sets forth an order of succession, in coordination with the order set forth by the organization to ensure that decision-making authority for the [[Information System Name]] ISCP is uninterrupted.
 
 In order to preserve the continuity of operations, individuals designated as key personnel have been assigned an individual who can assume the key personnel&#39;s position if the key personnel is not able to perform their duties.  Alternate key personnel are named in a line of succession and are notified and trained to assume their alternate role, should the need arise.  The line of succession for key personnel can be found in BAppendix – Key Personnel and Team Member Contact List.
 
 1. 3Activation and Notification
 
-The activation and notification phase defines initial actions taken once the [[Information System Name]]; disruption has been detected or appears to be imminent.  This phase includes activities to notify recovery personnel, conduct an outage assessment, and activate the ISCP.
+The activation and notification phase defines initial actions taken once the [[Information System Name]] disruption has been detected or appears to be imminent.  This phase includes activities to notify recovery personnel, conduct an outage assessment, and activate the ISCP.
 
-At the completion of the Activation and Notification Phase, key [[Information System Name]]; ISCP staff will be prepared to perform recovery measures to restore system functions.
+At the completion of the Activation and Notification Phase, key [[Information System Name]] ISCP staff will be prepared to perform recovery measures to restore system functions.
 
 ## 3.1 Activation Criteria and Procedure
 
-The [[Information System Name]]; ISCP may be activated if one or more of the following criteria are met:
+The [[Information System Name]] ISCP may be activated if one or more of the following criteria are met:
 
-1. The type of outage indicates [[Information System Name]]; will be down for more than _Enter Number_ RTO hours.
-2. The facility housing [[Information System Name]]; is damaged and may not be available within _Enter Number_ RTO hours
+1. The type of outage indicates [[Information System Name]] will be down for more than _Enter Number_ RTO hours.
+2. The facility housing [[Information System Name]] is damaged and may not be available within _Enter Number_ RTO hours
 3. Other criteria, as appropriate.
 
 Personnel/roles listed in Table 3‑1 Personnel Authorized to Activate the ISCP are authorized to activate the ISCP.
@@ -355,11 +364,11 @@ Delete this instruction from your final version of this document.
 
 ## 4 Recovery
 
-The recovery phase provides formal recovery operations that begin after the ISCP has been activated, outage assessments have been completed (if possible), personnel have been notified, and appropriate teams have been mobilized.  Recovery phase activities focus on implementing recovery strategies to restore system capabilities, repair damage, and resume operational capabilities at the original or an alternate location.  At the completion of the recovery phase, [[Information System Name]]; will be functional and capable of performing the functions identified in Section 4.1Sequence of Recovery Operations of the plan.
+The recovery phase provides formal recovery operations that begin after the ISCP has been activated, outage assessments have been completed (if possible), personnel have been notified, and appropriate teams have been mobilized.  Recovery phase activities focus on implementing recovery strategies to restore system capabilities, repair damage, and resume operational capabilities at the original or an alternate location.  At the completion of the recovery phase, [[Information System Name]] will be functional and capable of performing the functions identified in Section 4.1Sequence of Recovery Operations of the plan.
 
 ## 4.1 Sequence of Recovery Operations
 
-The following activities occur during recovery of [[Information System Name]];:
+The following activities occur during recovery of [[Information System Name]]:
 
 Instruction: Modify the following list as appropriate for the system recovery strategy.
 Delete this instruction from your final version of this document.
@@ -373,7 +382,7 @@ Delete this instruction from your final version of this document.
 
 ## 4.2 Recovery Procedures
 
-The following procedures are provided for recovery of [[Information System Name]]; at the original or established alternate location.  Recovery procedures are outlined per team and must be executed in the sequence presented to maintain an efficient recovery effort.
+The following procedures are provided for recovery of [[Information System Name]] at the original or established alternate location.  Recovery procedures are outlined per team and must be executed in the sequence presented to maintain an efficient recovery effort.
 
 Instruction:  Provide general procedures for the recovery of the system from backup media.  Specific keystroke-level procedures may be provided in an appendix.  If specific procedures are provided in an appendix, a reference to that appendix must be included in this section.  Teams or persons responsible for each procedure must be identified.
 Delete this instruction from your final version of this document.
@@ -406,7 +415,7 @@ Delete this instruction from your final version of this document.
 
 ## 5.3 Recovery Declaration
 
-Upon successfully completing testing and validation, the _Insert role name_ will formally declare recovery efforts complete, and that [[Information System Name]]; is in normal operations.  [[Information System Name]]; business and technical POCs will be notified of the declaration by the Contingency Plan Coordinator.  The recovery declaration statement notifies the Contingency Plan Team and executive management that the [[Information System Name]]; has returned to normal operations.
+Upon successfully completing testing and validation, the _Insert role name_ will formally declare recovery efforts complete, and that [[Information System Name]] is in normal operations.  [[Information System Name]] business and technical POCs will be notified of the declaration by the Contingency Plan Coordinator.  The recovery declaration statement notifies the Contingency Plan Team and executive management that the [[Information System Name]] has returned to normal operations.
 
 ## 5.4 User Notification
 
@@ -465,7 +474,7 @@ Table 5‑2 Event Documentation Responsibility
 
 1. 6Contingency Plan Testing
 
-Contingency Plan operational tests of the [[Information System Name]]; are performed annually.  A Contingency Plan Test Report is documented after each annual test.  A template for the Contingency Plan Test Report is found in GAppendix – Contingency Plan Test Report.
+Contingency Plan operational tests of the [[Information System Name]] are performed annually.  A Contingency Plan Test Report is documented after each annual test.  A template for the Contingency Plan Test Report is found in GAppendix – Contingency Plan Test Report.
 
 # Appendices
 
@@ -666,7 +675,7 @@ Instruction: This section should reference the system&#39;s Integrated Inventory
 
 Delete this instruction from your final version of this document.
 
-The Integrated Inventory Workbook, also provided as Attachment 13 of the [[_System Name_]]; System Security Plan, provides the complete listing of system components addressed by this Information System Contingency Plan.
+The Integrated Inventory Workbook, also provided as Attachment 13 of the [[_System Name_]] System Security Plan, provides the complete listing of system components addressed by this Information System Contingency Plan.
 
 The Inventory Template Link can be found on this page: [Templates](https://www.fedramp.gov/resources/templates-3/)
 

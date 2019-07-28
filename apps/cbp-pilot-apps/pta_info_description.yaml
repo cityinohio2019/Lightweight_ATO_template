@@ -83,13 +83,13 @@ questions:
 - id: spii
   title: Sensitive Personally Identifiable Information (SPII)
   prompt: |
-    Does the app collect Social Security number (SSN) or other elements that are stand-alone Sensitive Personally Identifiable Information (SPII)?
+    Does the app collect Social Security Number (SSN) or other elements that are stand-alone Sensitive Personally Identifiable Information (SPII)?
 
     Check all that apply.
   type: multiple-choice
   choices:
   - key: ssn
-    text: Social Security number
+    text: Social Security Number
   - key: alien_number
     text: Alien Number (A-Number)
   - key: tin

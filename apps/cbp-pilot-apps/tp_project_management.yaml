@@ -13,10 +13,16 @@ questions:
 # Roles and Responsibility
 - id: roles_and_responsibilities
   title: Roles and Responsibilities
-  prompt: "What are the Roles and Responsibilities?\r\n\r\nWith every test plan there
-    should be a Roles and Responsibilities of the people doing the work. Example Test
-    Lead overseeing other testers; Tester you create test cases and execute test cases."
+  prompt: |
+    What are the Roles and Responsibilities?
+
+    With every test plan there should be a Roles and Responsibilities of the
+    people doing the work. 
+
   type: longtext
+  examples:
+    example: Test Lead oversees other testers.
+    example: Tester creates test cases and execute test cases.
   group: Roles and Responsibilities
 
 # - id: project_role
@@ -28,13 +34,13 @@ questions:
 # Schedule
 - id: test_schedule_introduction
   title: Introduction
-  prompt: This is where we will ask about your Security Test Schedule.
+  prompt: This section will cover the Security Test Schedule.
   type: interstitial
 - id: test_schedule_description
   type: longtext
   title: Test schedule
   prompt: |
-    Describe the schedule for the test.
+    Describe the test type, testing date, and who will recording test results.
   group: Schedule
 - id: test_case_creation_start
   title: Test Case Creation
@@ -65,26 +71,33 @@ questions:
 # Success Criteria
 - id: q1
   title: Test completion criteria
-  prompt: "What is the Test Completion Criteria?\r\n\r\nThe team needs to agree up\
-    \ front the definition of a successful. \r\n\r\nIf all the high level bugs have\
-    \ been addressed we can move forward with deployment."
-  type: longtext
+  prompt: |
+    What is the Test Completion Criteria?
 
+    The project team should determine the definition of a successful test
+    in advance of testing. Once all critical bugs are remediated, the system
+    should move into production.
+  type: longtext
 
 # Risk Management
 - id: potential_risks
   title: Potential Risks
-  prompt: "6. What are the potential risks?\r\n\r\nA risk could be not being able\
-    \ to deploy on time b/c we don't have access to environment. A risk is something\
-    \ that will hinder the progress of the test or create a security or mission issue\
-    \ because of the testing that is being done."
+  prompt: |
+    What are the potential risks?
+
+    An example of a risk, is not being able to deploy the information
+    system on time because of lack of access to the environment. A risk
+    is something that will hinder the progress of the test or create a security
+    or mission issue because of the testing that is being done.
   type: longtext
   group: Risk Management
 - id: contingency_plans
   title: Contingency plans
-  prompt: "What are the contingency plans? for the test?\r\n\r\nWhat are your contingency plans\
-    \ if something goes wrong with during the test. For each risk that could go wrong,\
-    \ this is how we are going to deal with it."
+  prompt: |
+    What are the contingency plans for the test?
+
+    Describe your contingency plns if something goes wrong during the
+    test. For each risk that could go wrong, what is the mitigation plan?
   type: longtext
   group: Risk Management
 - id: training

@@ -74,7 +74,7 @@ questions:
     General system description.
 
 
-    Describe what system does and its general purpose to your organization. (This
+    Describe what the system does and its general purpose to your organization. (This
     is your main description of {% if system_short_name %} {{system_short_name}}{%
     else %}your IT System {% endif %}. We'll get a more technical description later.)
   type: longtext
@@ -155,7 +155,7 @@ questions:
 - id: other_plans
   title: Other plans
   prompt: |-
-    We've these tasks for you because of your production plans:
+    We've added these tasks for you because of your production plans:
 
     * Test Plan
     * Contingency Plan
@@ -176,19 +176,19 @@ questions:
 - id: module_complete
   title: Module Complete?
   prompt: |-
-    Congratulations on reaching the end of this module!  Here are some highlights:
+    Congratulations on reaching the end of this module! Here are some highlights:
 
-    System Name: {{system_name}}
+        System Name: {{system_name}}
 
-    System Description:
-    {{system_description}}
+        System Description:
+        {{system_description}}
 
-    Operational? {{operational_system}}
+        Operational? {{operational_system}}
 
-    Has personal data? {{system_personal_data}}
+        Has personal data? {{system_personal_data}}
 
-    <br>
-    <h1>Mark this module as complete?</h1>
+
+    <h1><em>Mark this module as complete?</em></h1>
 
     Selecting "Yes" will mark the module as finished.
   type: choice
