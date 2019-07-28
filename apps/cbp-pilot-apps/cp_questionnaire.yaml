@@ -23,7 +23,7 @@ questions:
   prompt: |
     Will you leverage the template Introduction and Purpose statement used for CACE information systems?
 
-    Agency Contingency Plan Introduction Boilerplate
+    Agency boilerplate:
 
     > Information systems are vital to {{project.system_info.system_name}}
     > mission/business functions; therefore, it is critical that services provided by
@@ -142,12 +142,17 @@ questions:
       site other than the the one that experienced the disruption. In the final, reconstitution phase,
       actions are taken to restore IT system processing capabilities to normal operations.
 
+
 - id: q02_pre
-  title: Applicable Laws and regulations (pre)
+  title: Applicable Laws and Regulations (pre)
   prompt: |
     Will you leverage the template applicable Laws and Regulations language used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    Agency boilerplate:
+
+    > * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
+    > * Management of Federal Information Resources [OMB Circular A-130]
+    > * Records Management by Federal Agencies [44 USC 31]
   type: choice
   choices:
     - key: yes
@@ -156,12 +161,49 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q02
+  title: Applicable Laws and Regulations
+  prompt: >
+    {% if q02_pre == 'yes_edit' %}
+    Edit your Applicable Laws and Regulations statement.
+    {% endif %}
+    {% if q02_pre == 'no' %}
+    Write your Applicable Laws and Regulations statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q02_pre == 'yes_edit' %}
+    * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
+    * Management of Federal Information Resources [OMB Circular A-130]
+    * Records Management by Federal Agencies [44 USC 31]
+    {% endif %}
+  examples:
+  - example: |
+      * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
+      * Management of Federal Information Resources [OMB Circular A-130]
+      * Records Management by Federal Agencies [44 USC 31]
+  impute:
+  - condition: q02_pre == 'yes'
+    value: |
+      * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
+      * Management of Federal Information Resources [OMB Circular A-130]
+      * Records Management by Federal Agencies [44 USC 31]
+
 - id: q03_pre
   title: Applicable Standards and Guidance (pre)
   prompt: |
     Will you leverage the template Applicable Standards and Guidance language used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    Agency boilerplate:
+
+    > * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
+    > * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
+    > * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
+    > * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+    > * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
+    > * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
+    > * Risk Management Guide for Information Technology Systems [NIST 800-30]
+    > * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
   type: choice
   choices:
     - key: yes
@@ -170,14 +212,64 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q03
+  title: Applicable Standards and Guidance
+  prompt: >
+    {% if q03_pre == 'yes_edit' %}
+    Edit your Applicable Standards and Guidance statement.
+    {% endif %}
+    {% if q03_pre == 'no' %}
+    Write your Applicable Standards and Guidance statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q03_pre == 'yes_edit' %}
+    * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
+    * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
+    * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
+    * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+    * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
+    * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
+    * Risk Management Guide for Information Technology Systems [NIST 800-30]
+    * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
+    {% endif %}
+  examples:
+  - example: |
+      * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
+      * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
+      * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
+      * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+      * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
+      * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
+      * Risk Management Guide for Information Technology Systems [NIST 800-30]
+      * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
+      * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
+      * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
+      * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+      * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
+      * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
+      * Risk Management Guide for Information Technology Systems [NIST 800-30]
+      * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
+
 - id: q04_pre
-  title: Information System Name and Identifier (pre)
+  title: Scope (pre)
   prompt: |
     Will you leverage the template Information System Name and Identifier language used for CACE information systems?
 
-    Will the identifier be unique for every system name?
+    This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
 
-    DEFAULT LANGUAGE GOES HERE
+    > * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+    > * Disruption at the [VENDOR_PRIMARY_SITE]
+    > * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
+
+    > This ITCP does not apply to the following situations:
+
+    > * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
+    > * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
   type: choice
   choices:
     - key: yes
@@ -186,14 +278,83 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q04
+  title: Scope
+  prompt: >
+    {% if q04_pre == 'yes_edit' %}
+    Edit your Scope statement.
+    {% endif %}
+    {% if q04_pre == 'no' %}
+    Write your Scope statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q04_pre == 'yes_edit' %}
+    This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
+
+    * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+    * Disruption at the [VENDOR_PRIMARY_SITE]
+    * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
+
+    This ITCP does not apply to the following situations:
+
+    * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
+    * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
+    {% endif %}
+  examples:
+  - example: |
+      This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
+
+      * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+      * Disruption at the [VENDOR_PRIMARY_SITE]
+      * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
+
+      This ITCP does not apply to the following situations:
+
+      * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
+      * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
+  impute:
+  - condition: q04_pre == 'yes'
+    value: |
+      This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
+
+      * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+      * Disruption at the [VENDOR_PRIMARY_SITE]
+      * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
+
+      This ITCP does not apply to the following situations:
+
+      * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
+      * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
+
 - id: q05_pre
-  title: Scope (pre)
+  title: Assumptions (pre)
   prompt: |
-    Will you leverage template Scope  language used for CACE infromation systems?
+    Will you leverage template Assumptions language used for CACE infromation systems?
 
-    Will procedures be in place to maintain operations or assets from disruptions at primary work site, Amazon Web Services (AWS) U.S. East/West IaaS infrastructure and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
+    Agency boilerplate:
 
-    DEFAULT LANGUAGE GOES HERE
+    > Will procedures be in place to maintain operations or assets from disruptions at primary work site, Amazon Web Services (AWS) U.S. East/West IaaS infrastructure and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
+
+    > The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+
+    > Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+
+    > Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+
+    > * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
+    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
+    > * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+
+    > Disruption at [[VENDOR_DATACENTER]]:
+
+    > * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
+    > * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
+    > The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
+
+    > Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
+
+    > * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
   type: choice
   choices:
     - key: yes
@@ -202,28 +363,106 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q05
+  title: Assumptions
+  prompt: >
+    {% if q05_pre == 'yes_edit' %}
+    Edit your Assumptions statement.
+    {% endif %}
+    {% if q05_pre == 'no' %}
+    Write your Assumptions statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q05_pre == 'yes_edit' %}
+    The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+
+    Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+
+    Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+
+    * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
+    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
+    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+
+    Disruption at [[VENDOR_DATACENTER]]:
+
+    * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
+    * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
+    The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
+
+    Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
+
+    * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
+    {% endif %}
+  examples:
+  - example: |
+      The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+
+      Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+
+      Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+
+      * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
+      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
+      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+
+      Disruption at [[VENDOR_DATACENTER]]:
+
+      * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
+      * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
+      The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
+
+      Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
+
+      * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
+  impute:
+  - condition: q05_pre == 'yes'
+    value: |
+      The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+
+      Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+
+      Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+
+      * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
+      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
+      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+
+      Disruption at [[VENDOR_DATACENTER]]:
+
+      * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
+      * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
+      The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
+
+      Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
+
+      * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
+
 - id: q06_pre
-  title: Assumptons (pre)
+  title: All potential disruptions listed?
   prompt: |
-    Will you leverage template Assumptions language used for CACE information systems?
+    Have all potential disruptions been included and addressed in the ITCP?
+  type: yesno
+- id: q06
+  title: Additional potential disruptions
+  prompt: |
+    List any additional disruptions...
 
-    Have all potential disruptions been included and addressed in the  ITCP?
+    Please add your disruptions in bullet list format.
+  type: longtext
+  impute:
+  - condition: q06_pre == 'yes'
+    value: ~
 
-    DEFAULT LANGUAGE GOES HERE
-  type: choice
-  choices:
-    - key: yes
-      text: yes
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: no
-      text: No
 - id: q07_pre
   title: Concept of Operations (pre)
   prompt: |
     Will you leverage the template concept of operations statement used for CACE information systems? 
 
-    DEFAULT LANGUAGE GOES HERE
+    Agency boilerplate:
+
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -232,6 +471,30 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q08_pre
   title: System Description (pre)
   prompt: |
@@ -239,7 +502,7 @@ questions:
 
     Does this effort include the modernization of the legacy applications and systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -248,12 +511,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q09_pre
   title: Three Phases (pre)
   prompt: |
     Will you leverage the template Three Phases (Activation and Notification, Recovery, and Reconstitution) statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -262,12 +549,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q10_pre
   title: Data Backup Readines Information (pre)
   prompt: |
     Will you leverage the template Data Backup Readines Information statement used for CACE information systems?  Have all backup system components, and authorized-personnel been identified?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -276,12 +587,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q11_pre
   title: Site Readiness Information (pre)
   prompt: |
     Will you leverage the template Site Readiness Information statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -290,12 +625,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q12_pre
   title: Roles and Responsibilities (pre)
   prompt: |
     Will you leverage the template Roles and Responsibilities statement used for CACE information systems?  Have personnel been trained in accordance with their assigned roles and responsibilities?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -304,12 +663,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q13_pre
   title: Plan Distribution and Availability (pre)
   prompt: |
     Will you leverage template Plan Distribution and Availability language used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -318,12 +701,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q14_pre
   title: Line of Succession/Alternates Roles (pre)
   prompt: |
     Will you leverage template Line of Succession/Alternates Roles language used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -332,12 +739,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q15_pre
   title: Activation and Notification (pre)
   prompt: |
     Will you leverage the template Activation and Notification statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -346,12 +777,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q16_pre
   title: Activation Criteria and Procedure (pre)
   prompt: |
     Will you leverage the template Activation Criteria and Procedure statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -360,12 +815,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q17_pre
   title: Notification Instructions (pre)
   prompt: |
     Will you leverage the template Notification Instructions statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -374,12 +853,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q18_pre
   title: Outage Assessment (pre)
   prompt: |
     Will you leverage the template Outage Assessment statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -388,12 +891,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q19_pre
   title: Recovery (pre)
   prompt: |
     Will you leverage the template Recovery statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -402,12 +929,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q20_pre
   title: Sequence of Recovery Operations (pre)
   prompt: |
     Will you leverage the template Sequence of Recovery Operations statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -416,13 +967,37 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q21_pre
   title: Recovery Procedures (pre)
   prompt: |
     Will you leverage the template Recovery Procedures statement used for CACE information systems?
     What procdedures will you follow if the system goes down?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -431,12 +1006,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q23_pre
   title: Recovery Escalation Notices / Awareness (pre)
   prompt: |
     Will you leverage the template Recovery Escalation Notices / Awareness statement used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -445,12 +1044,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q24_pre
   title: Reconstitution (pre)
   prompt: |
     Will you leverage template Reconstitution language used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -459,12 +1082,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q25_pre
   title: Data Validation Testing (pre)
   prompt: |
     Will you leverage template Data Validation Testing language used for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -473,12 +1120,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q26_pre
   title: Functional Validation Testing (pre)
   prompt: |
     Will you leverage template Functional Validation Testing language for CACE information system?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -487,12 +1158,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q27_pre
   title: Recovery Declaration (pre)
   prompt: |
     Will you leverage template Recovery Declaration language for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -501,12 +1196,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q28_pre
   title: User Notification (pre)
   prompt: |
     Will you leverage template User Notification language for CACE information system?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -515,6 +1234,30 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q29_pre
   title: Cleanup (pre)
   prompt: |
@@ -522,7 +1265,7 @@ questions:
 
     Will you employ cleanup-process template language consistent with those used with CACE information systems?\nWill you include a roles and responsibilities table leveraging template CACE infromation system language?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -531,12 +1274,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q30_pre
   title: Returning Backup Media (pre)
   prompt: |
     Will you leverage template Returning Backup Media language for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -545,12 +1312,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q31_pre
   title: Backing Up Restored Systems (pre)
   prompt: |
     Will you leverage template Backing Up Restored Systemslanguage for CACE information systems?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -559,12 +1350,36 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
+      Agency boilerplate:
+
 - id: q32_pre
   title: Event Documentation (pre)
   prompt: |
     Will you leverage template Event Documentation language for CACE information systems?\nWill you include a roles and responsibilities table leveraging template CACE infromation system language?
 
-    DEFAULT LANGUAGE GOES HERE
+    DEFAULT_CONTENT
   type: choice
   choices:
     - key: yes
@@ -573,6 +1388,28 @@ questions:
       text: Yes, but I will edit the template language.
     - key: no
       text: No
+- id: q0x
+  title: SECTION
+  prompt: >
+    {% if q0x_pre == 'yes_edit' %}
+    Edit your SECTION statement.
+    {% endif %}
+    {% if q0x_pre == 'no' %}
+    Write your SECTION statement.
+    {% endif %}
+  type: longtext
+  default: |
+    {% if q0x_pre == 'yes_edit' %}
+    DEFAULT_CONTENT
+    {% endif %}
+  examples:
+  - example: |
+      DEFAULT_CONTENT
+  impute:
+  - condition: q0x_pre == 'yes'
+    value: |
+      DEFAULT_CONTENT
+
 - id: q33_pre
   title: Contingency Plan Testing (pre)
   prompt: |

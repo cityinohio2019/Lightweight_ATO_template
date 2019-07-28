@@ -347,10 +347,10 @@ questions:
   # - condition: project.system_info.operational_system != 'yes'
   #   value: ~
 
-- id: cp_form
+- id: cp_fedramp01
   title: Contingency Plan Document
   type: module
-  module-id: cp_form
+  module-id: cp_fedramp01
   group: Contingency Plan
   # impute:
   # - condition: project.system_info.operational_system != 'yes'
