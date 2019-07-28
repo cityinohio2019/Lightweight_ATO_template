@@ -115,7 +115,6 @@ questions:
       action to recover the {{project.system_info.system_name}} components at a 
       site other than the the one that experienced the disruption. In the final, reconstitution phase,
       actions are taken to restore IT system processing capabilities to normal operations.
-
   impute:
   - condition: q01_pre == 'yes'
     value: |
@@ -155,15 +154,15 @@ questions:
     > * Records Management by Federal Agencies [44 USC 31]
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q02
   title: Applicable Laws and Regulations
-  prompt: >
+  prompt: |
     {% if q02_pre == 'yes_edit' %}
     Edit your Applicable Laws and Regulations statement.
     {% endif %}
@@ -206,12 +205,12 @@ questions:
     > * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q03
   title: Applicable Standards and Guidance
   prompt: >
@@ -244,7 +243,7 @@ questions:
       * Risk Management Guide for Information Technology Systems [NIST 800-30]
       * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
   impute:
-  - condition: q0x_pre == 'yes'
+  - condition: q03_pre == 'yes'
     value: |
       * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
       * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
@@ -274,12 +273,12 @@ questions:
     > * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q04
   title: Scope
   prompt: >
@@ -338,15 +337,15 @@ questions:
 
     > Will procedures be in place to maintain operations or assets from disruptions at primary work site, Amazon Web Services (AWS) U.S. East/West IaaS infrastructure and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
 
-    > The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+    > The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
 
     > Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
 
     > Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
 
     > * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
-    > * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
+    > * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
 
     > Disruption at [[VENDOR_DATACENTER]]:
 
@@ -359,12 +358,12 @@ questions:
     > * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q05
   title: Assumptions
   prompt: >
@@ -377,15 +376,15 @@ questions:
   type: longtext
   default: |
     {% if q05_pre == 'yes_edit' %}
-    The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+    The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
 
     Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
 
     Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
 
     * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
-    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
+    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
 
     Disruption at [[VENDOR_DATACENTER]]:
 
@@ -399,15 +398,15 @@ questions:
     {% endif %}
   examples:
   - example: |
-      The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+      The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
 
       Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
 
       Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
 
       * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
-      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
+      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
 
       Disruption at [[VENDOR_DATACENTER]]:
 
@@ -421,15 +420,15 @@ questions:
   impute:
   - condition: q05_pre == 'yes'
     value: |
-      The following assumptions have been made about the [[Information System Name]] when developing this Contigency Plan:
+      The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
 
       Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
 
       Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
 
       * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their contigency planning roles.
-      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contigency Plan.
+      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
+      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
 
       Disruption at [[VENDOR_DATACENTER]]:
 
@@ -460,19 +459,19 @@ questions:
 - id: q08_pre
   title: System Description (pre)
   prompt: |
-    Will you leverage your existing System Description for the Contigency Plan?
+    Will you leverage your existing System Description for the Contingency Plan?
 
     Your general System Description of {{project.system_info.system_short_name}}:
 
     > {{project.system_info.system_description|safe}}
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q08
   title: System Description
   prompt: >
@@ -514,12 +513,12 @@ questions:
     > Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q09
   title: Phases
   prompt: >
@@ -569,6 +568,35 @@ questions:
       
       Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
 
+- id: q10_backup_system_components
+  title: Backup System Components
+  type: longtext
+  prompt: |
+    Describe the hardware and software used to create backups.
+
+    Briefly outline the major hardware and software components used to back up the {{project.system_info.system_short_name}} IT System.
+
+    You do not need to describe how backups of any sub-systems or general service systems used by {{project.system_info.system_short_name}}.
+  default: |
+    <pre>System/Component:
+      Description
+
+    Software Used:
+      UPDATE WITH A DESCRIPTION OF SOFTWARE USED
+
+    Hardware Used:
+      UPDATE WITH A DESCRIPTION OF HARDWARE USED
+
+    Frequency:
+      UPDATE WITH DESCRIPTION OF FREQUENCY
+
+    Backup Type:
+      UPDATE WITH DESCRIPTION OF BACKUP TYPE
+
+    Retention Period:
+      UPDATE WITH DESCRIPTION OF RETENTION PERIOD
+    </pre>
+
 - id: q10_pre
   title: Data Backup Readines Information (pre)
   prompt: |
@@ -611,23 +639,7 @@ questions:
     > 
     > Table 2‑2 Backup System Components
     > 
-    >      System/Component:
-    >        Description
-    >
-    >      Software Used:
-    >        Click here to enter text.
-    >
-    >      Hardware Used:
-    >        Click here to enter text.
-    >
-    >      Frequency:
-    >        Click here to enter text.
-    >
-    >      Backup Type:
-    >        Click here to enter text.
-    >
-    >      Retention Period:
-    >        Click here to enter text.
+    >      {{q10_backup_system_components}}
     > 
     > Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
     > 
@@ -644,12 +656,12 @@ questions:
 
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q10
   title: Backup Readines Information
   prompt: >
@@ -670,23 +682,7 @@ questions:
     
     Table 2‑2 Backup System Components
     
-         System/Component:
-           Description
-    
-         Software Used:
-           Click here to enter text.
-    
-         Hardware Used:
-           Click here to enter text.
-    
-         Frequency:
-           Click here to enter text.
-    
-         Backup Type:
-           Click here to enter text.
-    
-         Retention Period:
-           Click here to enter text.
+         {{q10_backup_system_components}}
     
     Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
     
@@ -737,23 +733,7 @@ questions:
       
       Table 2‑2 Backup System Components
       
-           System/Component:
-             Description
-      
-           Software Used:
-             Click here to enter text.
-      
-           Hardware Used:
-             Click here to enter text.
-      
-           Frequency:
-             Click here to enter text.
-      
-           Backup Type:
-             Click here to enter text.
-      
-           Retention Period:
-             Click here to enter text.
+           {{q10_backup_system_components}}
       
       Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
       
@@ -843,12 +823,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -881,12 +861,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -919,12 +899,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -957,12 +937,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -995,12 +975,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1033,12 +1013,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1071,12 +1051,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1109,12 +1089,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1147,12 +1127,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1185,12 +1165,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1224,12 +1204,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1262,12 +1242,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1300,12 +1280,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1338,12 +1318,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1376,12 +1356,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1414,12 +1394,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1452,12 +1432,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1492,12 +1472,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1530,12 +1510,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1568,12 +1548,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1606,12 +1586,12 @@ questions:
     DEFAULT_CONTENT
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 - id: q0x
   title: SECTION
   prompt: >
@@ -1640,11 +1620,11 @@ questions:
     Will you leverage the template Contingency Plan Testing language used for CACE information systems?
   type: choice
   choices:
-    - key: yes
-      text: yes
+    - key: "yes"
+      text: "Yes"
     - key: yes_edit
       text: Yes, but I will edit the template language.
-    - key: no
-      text: No
+    - key: "no"
+      text: "No"
 
 

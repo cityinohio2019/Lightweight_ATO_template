@@ -134,14 +134,13 @@ The hardware and software components used to create the [[Information System Nam
 
 Table 2‑2 Backup System Components
 
-<table border="1">
-<tr><td>System/Component</td><td>Description</td></tr>
-<tr><td>Software Used</td><td>Click here to enter text.</td></tr>
-<tr><td>Hardware Used</td><td>Click here to enter text.</td></tr>
-<tr><td>Frequency</td><td>Click here to enter text.</td></tr>
-<tr><td>Backup Type</td><td>Click here to enter text.</td></tr>
-<tr><td>Retention Period</td><td>Click here to enter text.</td></tr>
-</table>
+The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
+
+Table 2‑2 Backup System Components
+
+{{project.cp_questionnaire.q10_backup_system_components|safe}}
+
+
 Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
 
 Table 2‑3 Back-Up Storage Location
