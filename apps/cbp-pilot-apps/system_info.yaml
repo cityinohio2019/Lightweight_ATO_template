@@ -188,7 +188,7 @@ questions:
     Has personal data? {{system_personal_data}}
 
     <br>
-    <h1>Would you like to mark this module as complete?</h1>
+    <h1>Mark this module as complete?</h1>
 
     Selecting "Yes" will mark the module as finished.
   type: choice
