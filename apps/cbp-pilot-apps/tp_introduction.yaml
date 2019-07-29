@@ -55,17 +55,17 @@ questions:
     the document version/date, and the document location.
   type: longtext
   examples:
-    example: Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
-    example: Management of Federal Information Resources [OMB Circular A-130]
-    example: Records Management by Federal Agencies [44 USC 31]
-    example: Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
-    example: Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
-    example: "Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]"
-    example: Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
-    example: Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
-    example: Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
-    example: Risk Management Guide for Information Technology Systems [NIST 800-30]
-    example: Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
+    - example: Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
+    - example: Management of Federal Information Resources [OMB Circular A-130]
+    - example: Records Management by Federal Agencies [44 USC 31]
+    - example: Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
+    - example: Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
+    - example: "Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]"
+    - example: Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+    - example: Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
+    - example: Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
+    - example: Risk Management Guide for Information Technology Systems [NIST 800-30]
+    - example: Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
 
   help: |
     Project References listed should have the names of the documents utilized

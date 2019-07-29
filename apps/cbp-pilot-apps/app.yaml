@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.4.2
+version: 0.1.4.4
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.4.2
+  template: IT System Questionnaires (Pilot) v0.1.4.4
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -207,8 +207,6 @@ output:
     {{organization}} {% if project.general_info.exists == "yes" %}uses{% else %}will use{% endif %} the Rules of Behavior (officially titled _{{project.general_info.official_name}}_) to document and set forth appropriate activities on an information system.
 
 
-
-
 catalog:
   category: Draft
   description:
@@ -217,12 +215,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.4.2
+    short: IT System Questionnaires (Pilot) v0.1.4.4
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.4.2
+  version: 0.1.4.4
 questions:
 - id: system_info
   title: System Profile
@@ -326,11 +324,11 @@ questions:
 - id: tp_plan
   title: Test Plan Document
   type: module
-  module-id: test_plan
+  module-id: tp_document
   group: Test Plan
-  # impute:
-  # - condition: project.system_info.operational_system != 'yes'
-  #   value: ~
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
 
 - id: cp_questionnaire
   title: Contingency Plan (Edit by Section)
@@ -343,6 +341,9 @@ questions:
   type: module
   module-id: cp_general_info
   group: Contingency Plan
+  impute:
+  - condition: 1 == 1
+    value: ~
   # impute:
   # - condition: project.system_info.operational_system != 'yes'
   #   value: ~
@@ -352,18 +353,18 @@ questions:
   type: module
   module-id: cp_fedramp01
   group: Contingency Plan
-  # impute:
-  # - condition: project.system_info.operational_system != 'yes'
-  #   value: ~
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
 
 - id: cp_controls_80053r4
   title: 800-53r4 Controls
   type: module
   module-id: cp_controls_80053r4
   group: Contingency Plan
-  # impute:
-  # - condition: project.system_info.operational_system != 'yes'
-  #   value: ~
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
 
 - id: ssp_intro
   module-id: ssp_intro

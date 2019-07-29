@@ -21,8 +21,8 @@ questions:
 
   type: longtext
   examples:
-    example: Test Lead oversees other testers.
-    example: Tester creates test cases and execute test cases.
+    - example: Test Lead oversees other testers.
+    - example: Tester creates test cases and execute test cases.
   group: Roles and Responsibilities
 
 # - id: project_role
