@@ -109,7 +109,7 @@ questions:
   type: yesno
 - id: system_org
   title: System Organization
-  prompt: Which CBP business unit is responsible for {{system_short_name}}?
+  prompt: Which CBP business unit is responsible for the {{system_short_name}}?
   type: text
 - id: system_owner
   title: System Owner
@@ -117,7 +117,7 @@ questions:
   type: text
 - id: system_pm
   title: System PM
-  prompt: Who is the Program Manager (PM) for {{system_short_name}}
+  prompt: Who is the Program Manager (PM) for {{system_short_name}}?
   type: text
 - id: system_personal_data
   title: System has personal data

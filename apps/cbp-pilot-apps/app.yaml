@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.4.4
+version: 0.1.5.0
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.4.4
+  template: IT System Questionnaires (Pilot) v0.1.5.0
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -215,12 +215,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.4.4
+    short: IT System Questionnaires (Pilot) v0.1.5.0
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.4.4
+  version: 0.1.5.0
 questions:
 - id: system_info
   title: System Profile
@@ -335,6 +335,9 @@ questions:
   type: module
   module-id: cp_questionnaire
   group: Contingency Plan
+  impute:
+  - condition: 1 == 1
+    value: ~
 
 - id: cp_general_info
   title: General Information
@@ -344,9 +347,6 @@ questions:
   impute:
   - condition: 1 == 1
     value: ~
-  # impute:
-  # - condition: project.system_info.operational_system != 'yes'
-  #   value: ~
 
 - id: cp_fedramp01
   title: Contingency Plan Document
@@ -363,7 +363,7 @@ questions:
   module-id: cp_controls_80053r4
   group: Contingency Plan
   impute:
-  - condition: project.system_info.operational_system != 'yes'
+  - condition: 1 == 1
     value: ~
 
 - id: ssp_intro

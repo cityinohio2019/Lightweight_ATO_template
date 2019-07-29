@@ -174,8 +174,8 @@ output:
     </div>
 questions:
 - id: q1
-  title: 1. Purpose of the Information Collection or Form
-  prompt: |
+  title: 1. Purpose of the Information Collection or Form.
+  prompt: |-
     Purpose of the Information Collection or Form
 
     The next few questions will ask about the purpose of the information collection or form.
@@ -197,11 +197,8 @@ questions:
     If this information will be stored and used by a specific DOS component, list the component-specific authorities.
   type: longtext
 - id: q2
-  title: 2. Describe the IC/Form
-  prompt: |
-    2. Describe the IC/Form
-
-    In the next few questions, describe the IC/form.
+  title: 2. Describe the IC/Form.
+  prompt: In the next few questions, describe the IC/form.
   type: interstitial
 - id: q2a
   title: 2a. Collecting "Personally Identifiable Information" (PII)
@@ -357,9 +354,10 @@ questions:
     value: ~
 - id: q2g
   title: 2g. Specific authority to collect SPII elements
-  prompt: "2g. List the specific authority to collect SSN or these other SPII elements.\r\
-    \n\r\n\"Specific authority\" are the laws and agency rules that justify the agency\
-    \ collection of information."
+  prompt: |-
+    2g. List the specific authority to collect SSN or these other SPII elements.
+
+    "Specific authority" are the laws and agency rules that justify the agency collection of information.
   type: longtext
 - id: q2h
   title: 2h. How will this information be used

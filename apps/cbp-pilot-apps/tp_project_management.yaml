@@ -9,31 +9,19 @@ introduction:
   template: Update the Test Project Management introduction content.
 output: []
 questions:
-
-# Roles and Responsibility
 - id: roles_and_responsibilities
   title: Roles and Responsibilities
-  prompt: |
+  prompt: |-
     What are the Roles and Responsibilities?
 
-    With every test plan there should be a Roles and Responsibilities of the
-    people doing the work. 
-
+    With every test plan there should be a Roles and Responsibilities policies and procedures for all staff.
   type: longtext
   examples:
-    - example: Test Lead oversees other testers.
-    - example: Tester creates test cases and execute test cases.
+  - example: Test Lead oversees other testers.
+  - example: Tester creates test cases and execute test cases.
   group: Roles and Responsibilities
-
-# - id: project_role
-#   title: Role
-#   module-id: project_role
-#   type: module-set
-#   comment: Multiple roles can be assigned
-
-# Schedule
 - id: test_schedule_introduction
-  title: Introduction
+  title: Introduction to Schedule
   prompt: This section will cover the Security Test Schedule.
   type: interstitial
 - id: test_schedule_description
@@ -66,20 +54,15 @@ questions:
   title: Test Results Report Delivery
   prompt: When are you scheduled to begin Test Results Report Delivery?
   type: date
-
-
-# Success Criteria
 - id: q1
-  title: Test completion criteria
-  prompt: |
+  title: Test Completion Criteria
+  prompt: |-
     What is the Test Completion Criteria?
 
     The project team should determine the definition of a successful test
     in advance of testing. Once all critical bugs are remediated, the system
     should move into production.
   type: longtext
-
-# Risk Management
 - id: potential_risks
   title: Potential Risks
   prompt: |
@@ -92,11 +75,11 @@ questions:
   type: longtext
   group: Risk Management
 - id: contingency_plans
-  title: Contingency plans
-  prompt: |
-    What are the contingency plans for the test?
+  title: Contingency Plans
+  prompt: |-
+    What are the contingency plan(s) for the test?
 
-    Describe your contingency plns if something goes wrong during the
+    Describe your contingency plan(s) if something goes wrong during the
     test. For each risk that could go wrong, what is the mitigation plan?
   type: longtext
   group: Risk Management
