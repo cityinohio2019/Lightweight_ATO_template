@@ -61,13 +61,13 @@ The following standards and guidance are useful for understanding contigency pla
 
 ## 1.3 Information System Name and Identifier
 
-This ISCP applies to the [[Information System Name]] (Information System Abbreviation) which has a unique identifier as noted in Table 1‑3 Information System Name and Title.
+This ISCP applies to the {{project.system_info.system_name}} (Information System Abbreviation) which has a unique identifier as noted in Table 1‑3 Information System Name and Title.
 
 Table 1‑3 Information System Name and Title
 
 <table border="1">
   <tr><th> Unique Identifier </th><th> Information System Name </th><th> Information System Abbreviation </th></tr>
-  <tr><td> [[SYSTEM_ID]]     </td><td> [[Information System Name]] </td><td> [[SYSTEM_SHORT_NAME]] </td></tr>
+  <tr><td> [[SYSTEM_ID]]     </td><td> {{project.system_info.system_name}} </td><td> [[SYSTEM_SHORT_NAME]] </td></tr>
 </table>
 
 ## 1.4 Scope
@@ -92,7 +92,7 @@ This ITCP does not apply to the following situations:
 - The generators will kick in after _Enter Number_ from time of a power failure.
 - Current backups of the application software and data are intact and available at the offsite storage facility in _Enter City_, _Enter State_.
 - The backup storage capability is approved and has been accepted by the Authorizing Official (AO).
-- The [[Information System Name]] is inoperable if it cannot be recovered within _Enter Number_ RTO hours.
+- The {{project.system_info.system_name}} is inoperable if it cannot be recovered within _Enter Number_ RTO hours.
 - Key personnel have been identified and are trained annually in their roles.
 - Key personnel are available to activate the ISCP.
 - CSP Name defines circumstances that can inhibit recovery and reconstitution to a known state.
@@ -100,7 +100,7 @@ This ITCP does not apply to the following situations:
 
 # 2 Concept of Operations
 
-This section provides details about the [[Information System Name]], an overview of the three phases of the ISCP (Activation and Notification, Recovery, and Reconstitution), and a description of the roles and responsibilities of key personnel during contingency operations.
+This section provides details about the {{project.system_info.system_name}}, an overview of the three phases of the ISCP (Activation and Notification, Recovery, and Reconstitution), and a description of the roles and responsibilities of key personnel during contingency operations.
 
 ## 2.1 System Description
 
@@ -130,18 +130,18 @@ Table 2‑1 Backup System Components
 <tr><td>Mirror Backup</td><td>Mirror backup is identical to a full backup, with the exception that the files are not compressed in zip files and they cannot be protected with a password.  A mirror backup is most frequently used to create an exact copy of the source data.</td></tr>
 </table>
 
-The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
+The hardware and software components used to create the {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.
 
 Table 2‑2 Backup System Components
 
-The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
+The hardware and software components used to create the {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.
 
 Table 2‑2 Backup System Components
 
 {{project.cp_questionnaire.q10_backup_system_components|safe}}
 
 
-Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
+Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the {{project.system_info.system_name}} system software and data.
 
 Table 2‑3 Back-Up Storage Location
 <table border="1">
@@ -166,7 +166,7 @@ Table 2‑4 Alternative Site Types
 <tr></td>Mirrored Sites</td><td>Mirrored Sites are fully redundant facilities with automated real-time information mirroring.  Mirrored sites are identical to the primary site in all technical respects.</td></tr>
 </table>
 
-Alternate facilities have been established for the [[Information System Name]] as noted in Table 2‑4 Alternative Site Types.
+Alternate facilities have been established for the {{project.system_info.system_name}} as noted in Table 2‑4 Alternative Site Types.
 
 Table 2‑5 Primary and Alternative Site Locations
 
@@ -179,7 +179,7 @@ Table 2‑5 Primary and Alternative Site Locations
 
 ## 2.5 Roles and Responsibilities
 
-CSP Name establishes multiple roles and responsibilities for responding to outages, disruptions, and disasters for the [[Information System Name]].  Individuals who are assigned roles for recovery operations collectively make up the Contingency Plan Team and are trained annually in their duties.  Contingency Plan Team members are chosen based on their skills and knowledge.
+CSP Name establishes multiple roles and responsibilities for responding to outages, disruptions, and disasters for the {{project.system_info.system_name}}.  Individuals who are assigned roles for recovery operations collectively make up the Contingency Plan Team and are trained annually in their duties.  Contingency Plan Team members are chosen based on their skills and knowledge.
 
 Instruction: Describe each team and role responsible for executing or supporting system recovery and reconstitution.  Include responsibilities for each team/role including leadership roles.  FedRAMP has established default roles and a small set of default responsibilities which must be edited and modified to match the actual organizational role names, responsibilities, and associated duties for the organization.
 Delete this instruction from your final version of this document.
@@ -188,38 +188,13 @@ The Contingency Plan Team consists of personnel who have been selected to perfor
 
 ### 2.5.1 Contingency Planning Director (CPD)
 
-The Contingency Planning Director (CPD) is a member of senior management and owns the responsibility for all facets of contingency and disaster recovery planning and execution.
-
-The CPD performs the following duties:
-
-- Makes the decision on whether or not to activate the ISCP
-- Provides the initial notification to activate the ISCP
-- Reviews and approves the ISCP
-- Reviews and approves the Business Impact Analysis (BIA)
-- Notifies the Contingency Plan Team leads and members as necessary
-- Advises other Contingency Plan Team leads and members as appropriate
-- Issues a recovery declaration statement after the system has returned to normal operations
-- Designates key personnel
+{{project.cp_questionnaire.q12}}
 
 ### 2.5.2 Contingency Planning Coordinator (CPC)
 
-The CPC performs the following duties:
+{{project.cp_questionniare.q12cpc}}
 
-- Develops and documents the ISCP under direction of the CPD
-- Uses the BIA to prioritize recovery of components
-- Updates the ISCP annually
-- Ensures that annual ISCP training is conducted
-- Facilitates periodic ISCP testing exercises
-- Distributes copies of the plan to team members
-- Authorizes travel and housing arrangements for team members
-- Manages and monitors the overall recovery process
-- Leads the contingency response effort once the plan has been activated
-- Advises the Procurement and Logistics Coordinator on whether to order new equipment
-- Receives updates and status reports from team members
-- Sends out communications about the recovery
-- Advises the CPD on status as necessary
-- Designates key personnel
-
+<!-- SKIPPING FOR PURPOSES OF TEST
 ### 2.5.3 Outage and Damage Assessment Lead (ODAL)
 
 The ODAL performs the following duties:
@@ -298,46 +273,31 @@ The PLC performs the following duties:
 - Arranging for travel and lodging of staff to the alternate site as needed
 - Procures telephone equipment and leased lines as needed
 - Procures alternate communications for teams as needed
+-->
 
 ### 2.5.8 Security Coordinator (SC)
 
-The Security Coordinator performs the following duties:
-
-- Provides training for employees in facility emergency procedures and measures
-- Provides physical security, access control, and safety measures to support recovery effort
-- Cordons off the facility including offices to restrict unauthorized access
-- Coordinates with the building management and the CPC for authorized personnel access
-- Coordinates and manages additional physical security/guards as needed
-- Acts as a liaison with emergency personnel, such as fire and police departments
-- Provides assistance to officials in investigating the damaged facility/site
-- Ensures that data room/center at alternate site has locks (access controls) on the doors
-- Coordinates and secures the transportation of files, reports, and equipment in coordination with the CPC
+{{project.cp_questionnaire.q12sc}}
 
 ### 2.5.9 Plan Distribution and Availability
 
-During a disaster situation, the availability of the contingency plan is essential to the success of the restoration efforts.  The Contingency Plan Team has immediate access to the plan upon notification of an emergency.  The Contingency Plan Coordinator ensures that a copy of the most current version of the Contingency Plan is maintained at CSP Name&#39;s facility.  This plan has been distributed to all personnel listed in BAppendix – Key Personnel and Team Member Contact List.
-
-Contingency Plan Team members are obligated to inform the Contingency Planning Coordinator, if and when, they no longer require a copy of the plan.  In addition, each recipient of the plan is obligated to return or destroy any portion of the plan that is no longer needed and upon termination from CSP Name.
+{{project.cp_questionnaire.q13}}
 
 ### 2.5.10 Line of Succession/Alternates Roles
 
-The CSP Name sets forth an order of succession, in coordination with the order set forth by the organization to ensure that decision-making authority for the [[Information System Name]] ISCP is uninterrupted.
+The CSP Name sets forth an order of succession, in coordination with the order set forth by the organization to ensure that decision-making authority for the {{project.system_info.system_name}} ISCP is uninterrupted.
 
 In order to preserve the continuity of operations, individuals designated as key personnel have been assigned an individual who can assume the key personnel&#39;s position if the key personnel is not able to perform their duties.  Alternate key personnel are named in a line of succession and are notified and trained to assume their alternate role, should the need arise.  The line of succession for key personnel can be found in BAppendix – Key Personnel and Team Member Contact List.
 
-1. 3Activation and Notification
+# 3 Activation and Notification
 
-The activation and notification phase defines initial actions taken once the [[Information System Name]] disruption has been detected or appears to be imminent.  This phase includes activities to notify recovery personnel, conduct an outage assessment, and activate the ISCP.
+The activation and notification phase defines initial actions taken once the {{project.system_info.system_name}} disruption has been detected or appears to be imminent.  This phase includes activities to notify recovery personnel, conduct an outage assessment, and activate the ISCP.
 
-At the completion of the Activation and Notification Phase, key [[Information System Name]] ISCP staff will be prepared to perform recovery measures to restore system functions.
+At the completion of the Activation and Notification Phase, key {{project.system_info.system_name}} ISCP staff will be prepared to perform recovery measures to restore system functions.
 
 ## 3.1 Activation Criteria and Procedure
 
-The [[Information System Name]] ISCP may be activated if one or more of the following criteria are met:
-
-1. The type of outage indicates [[Information System Name]] will be down for more than _Enter Number_ RTO hours.
-2. The facility housing [[Information System Name]] is damaged and may not be available within _Enter Number_ RTO hours
-3. Other criteria, as appropriate.
+{{project.cp_questionnaire.q16}}
 
 Personnel/roles listed in Table 3‑1 Personnel Authorized to Activate the ISCP are authorized to activate the ISCP.
 
@@ -350,24 +310,24 @@ Table 3‑1 Personnel Authorized to Activate the ISCP
 
 ## 3.2 Notification Instructions
 
-Instruction: Describe established notifications procedures.  Notification procedures must include who makes the initial notifications, the sequence in which personnel are notified and the method of notification (e.g., email blast, call tree, text messaging, automated notification system, etc.). Delete this instruction from your final version of this document.
+{{project.cp_questionnaire.q17_notification_instructions}}
 
 Contact information for key personnel is located in BAppendix – Key Personnel and Team Member Contact List.
 
 ## 3.3 Outage Assessment
 
-Following notification, a thorough outage assessment is necessary to determine the extent of the disruption, any damage, and expected recovery time.  This outage assessment is conducted by _Insert role name_.  Assessment results are provided to the Contingency Planning Coordinator to assist in the coordination of the recovery effort.
+Following notification, a thorough outage assessment is necessary to determine the extent of the disruption, any damage, and expected recovery time.  This outage assessment is conducted by {{project.cp_questionnaire.q17_outage_assessment_role}}.  Assessment results are provided to the Contingency Planning Coordinator to assist in the coordination of the recovery effort.
 
-Instruction: Outline detailed procedures to include how to determine the cause of the outage; identification of potential for additional disruption or damage; assessment of affected physical area(s); and determination of the physical infrastructure status, IS equipment functionality, and inventory.  Procedures must include notation of items that will be needed to be replaced and estimated time to restore service to normal operations.
-Delete this instruction from your final version of this document.
+{{project.cp_questionnaire.q17_outage_assessment}}
 
+<!--
 ## 4 Recovery
 
-The recovery phase provides formal recovery operations that begin after the ISCP has been activated, outage assessments have been completed (if possible), personnel have been notified, and appropriate teams have been mobilized.  Recovery phase activities focus on implementing recovery strategies to restore system capabilities, repair damage, and resume operational capabilities at the original or an alternate location.  At the completion of the recovery phase, [[Information System Name]] will be functional and capable of performing the functions identified in Section 4.1Sequence of Recovery Operations of the plan.
+The recovery phase provides formal recovery operations that begin after the ISCP has been activated, outage assessments have been completed (if possible), personnel have been notified, and appropriate teams have been mobilized.  Recovery phase activities focus on implementing recovery strategies to restore system capabilities, repair damage, and resume operational capabilities at the original or an alternate location.  At the completion of the recovery phase, {{project.system_info.system_name}} will be functional and capable of performing the functions identified in Section 4.1Sequence of Recovery Operations of the plan.
 
 ## 4.1 Sequence of Recovery Operations
 
-The following activities occur during recovery of [[Information System Name]]:
+The following activities occur during recovery of {{project.system_info.system_name}}:
 
 Instruction: Modify the following list as appropriate for the system recovery strategy.
 Delete this instruction from your final version of this document.
@@ -381,7 +341,7 @@ Delete this instruction from your final version of this document.
 
 ## 4.2 Recovery Procedures
 
-The following procedures are provided for recovery of [[Information System Name]] at the original or established alternate location.  Recovery procedures are outlined per team and must be executed in the sequence presented to maintain an efficient recovery effort.
+The following procedures are provided for recovery of {{project.system_info.system_name}} at the original or established alternate location.  Recovery procedures are outlined per team and must be executed in the sequence presented to maintain an efficient recovery effort.
 
 Instruction:  Provide general procedures for the recovery of the system from backup media.  Specific keystroke-level procedures may be provided in an appendix.  If specific procedures are provided in an appendix, a reference to that appendix must be included in this section.  Teams or persons responsible for each procedure must be identified.
 Delete this instruction from your final version of this document.
@@ -414,7 +374,7 @@ Delete this instruction from your final version of this document.
 
 ## 5.3 Recovery Declaration
 
-Upon successfully completing testing and validation, the _Insert role name_ will formally declare recovery efforts complete, and that [[Information System Name]] is in normal operations.  [[Information System Name]] business and technical POCs will be notified of the declaration by the Contingency Plan Coordinator.  The recovery declaration statement notifies the Contingency Plan Team and executive management that the [[Information System Name]] has returned to normal operations.
+Upon successfully completing testing and validation, the _Insert role name_ will formally declare recovery efforts complete, and that {{project.system_info.system_name}} is in normal operations.  {{project.system_info.system_name}} business and technical POCs will be notified of the declaration by the Contingency Plan Coordinator.  The recovery declaration statement notifies the Contingency Plan Team and executive management that the {{project.system_info.system_name}} has returned to normal operations.
 
 ## 5.4 User Notification
 
@@ -471,10 +431,12 @@ Table 5‑2 Event Documentation Responsibility
 | Click here to enter text. | Lessons learned |
 | Click here to enter text. | After Action Report |
 
-1. 6Contingency Plan Testing
+# 6 Contingency Plan Testing
 
-Contingency Plan operational tests of the [[Information System Name]] are performed annually.  A Contingency Plan Test Report is documented after each annual test.  A template for the Contingency Plan Test Report is found in GAppendix – Contingency Plan Test Report.
+Contingency Plan operational tests of the {{project.system_info.system_name}} are performed annually.  A Contingency Plan Test Report is documented after each annual test.  A template for the Contingency Plan Test Report is found in GAppendix – Contingency Plan Test Report.
+-->
 
+<!--
 # Appendices
 
 Appendix A Acronyms and Definitions
@@ -723,3 +685,4 @@ Table L‑9 Associated Plans and Procedures
 
 Instruction: Insert Business Impact Analysis here.  Please see NIST SP 800-34, Revision 1 for more information on how to conduct a Business Impact Analysis.
 Delete this instruction from your final version of this document.
+-->

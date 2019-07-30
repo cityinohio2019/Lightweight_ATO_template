@@ -178,16 +178,11 @@ questions:
   prompt: |-
     Congratulations on reaching the end of this module! Here are some highlights:
 
-        System Name: {{system_name}}
-
+        System Name: "{{system_name}}"
+        Operational? "{{operational_system}}"
+        Has personal data? "{{system_personal_data}}"
         System Description:
         {{system_description}}
-
-        Operational? {{operational_system}}
-
-        Has personal data? {{system_personal_data}}
-
-
     <h1><em>Mark this module as complete?</em></h1>
 
     Selecting "Yes" will mark the module as finished.
