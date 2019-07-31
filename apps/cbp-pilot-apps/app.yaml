@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.5.2
+version: 0.1.5.3
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.5.2
+  template: IT System Questionnaires (Pilot) v0.1.5.3
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -215,12 +215,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.5.2
+    short: IT System Questionnaires (Pilot) v0.1.5.3
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.5.2
+  version: 0.1.5.3
 questions:
 - id: system_info
   title: System Profile
@@ -330,10 +330,43 @@ questions:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
 
+
+- id: cp_introduction
+  title: Contingency Plan Introduction
+  type: module
+  module-id: cp_introduction
+  group: Contingency Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
 - id: cp_questionnaire
-  title: Contingency Plan (Edit by Section)
+  title: Contingency Plan Concept of Operations
   type: module
   module-id: cp_questionnaire
+  group: Contingency Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: cp_activation
+  title: Contingency Plan Activation and Notification
+  type: module
+  module-id: cp_activation
+  group: Contingency Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: cp_recovery
+  title: Contingency Plan Recovery
+  type: module
+  module-id: cp_recovery
+  group: Contingency Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: cp_reconstitution
+  title: Contingency Plan Reconstitution
+  type: module
+  module-id: cp_reconstitution
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
