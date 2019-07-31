@@ -220,7 +220,7 @@ catalog:
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.6.0
+  version: 0.1.6.1
 questions:
 - id: system_info
   title: System Profile
