@@ -9,9 +9,8 @@ title: Test Plan Document
     blockquote { color: #666; font-size:0.8em; margin: 0 10px; }
     .notice {color: red; font-size:3.0em; text-align:center; transform: scaleY(.85);
     font-weight: bold;}
-    table { border: none; }
-    th, td { border: 1px solid #888; }
-    th, td { padding: 15px; text-align: left;}
+    table { border: none; border-collapse: collapse; }
+    th, td { border: 1px solid #888; padding: 15px; text-align: left;}
     @media all {
         .page-break     { display: none; }
     }
@@ -104,7 +103,7 @@ title: Test Plan Document
 
   <p>{{project.tp_project_management.test_schedule_description}}</p>
 
-  <table border=1>
+  <table>
   <tr><td>Event                        </td><td>Start Date       </td></tr>
   <tr><td>Test Case Creation Start</td><td>{{project.tp_project_management.test_case_creation_start}}</td></tr>
   <tr><td>Test Case Review Start</td><td>{{project.tp_project_management.teset_case_review_start}}</td></tr>
