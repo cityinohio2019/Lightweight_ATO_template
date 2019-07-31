@@ -73,7 +73,6 @@ questions:
   prompt: >-
     General system description.
 
-
     Describe what the system does and its general purpose to your organization. (This
     is your main description of {% if system_short_name %} {{system_short_name}}{%
     else %}your IT System {% endif %}. We'll get a more technical description later.)
@@ -173,6 +172,14 @@ questions:
   type: yesno
   help: Information that should be included but was not? Any thoughts on the form
     itself?
+- id: feedback
+  title: Feedback
+  prompt: Please include your additional information here?
+  type: longtext
+  impute:
+  - condition: feedback_exists == "no"
+    value: ~
+
 - id: module_complete
   title: Module Complete?
   prompt: |-
@@ -190,10 +197,6 @@ questions:
   choices:
   - key: complete
     text: 'Yes'
-- id: feedback
-  title: Feedback
-  prompt: Please include your additional information here?
-  type: longtext
-  impute:
-  - condition: feedback_exists == 'no'
-    value: ~
+  ask-first:
+   - feedback_exists
+   - feedback

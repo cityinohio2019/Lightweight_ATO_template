@@ -1,5 +1,5 @@
 id: cp_questionnaire
-title: Contingency Plan (Edit by Section)
+title: Contingency Plan Concept of Operations
 internal:
   snippets:
   - snippet: |
@@ -7,567 +7,193 @@ internal:
 introduction:
   format: markdown
   template: |
-    Contingency Plan
-
-    In this module, we'll assist you in preparing a Contingency Plan document
-    prior to the occurence of a disruption the guidelines and procedures for a 
-    service disruption including:
-
-    * notification and activation
-    * recovery
-    * reconstitution
-
+    Next we'll gather information regarding the Concept of Operations for your Contingency Plan.
 questions:
-- id: q01_pre
-  title: Introduction and Purpose (pre)
-  prompt: |
-    Will you leverage the template Introduction and Purpose statement used for CACE information systems?
-
-    Agency boilerplate:
-
-    > Information systems are vital to {{project.system_info.system_name}}
-    > mission/business functions; therefore, it is critical that services provided by
-    > {{project.system_info.system_name}} are able to operate effectively without excessive
-    > interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
-    > procedures to recover {{project.system_info.system_name}} quickly and
-    > effectively following a service distruption
-
-    > One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
-    > obviate the need to resort to performing IT functions using manual methods. If manual methods
-    > are the only alternative; however, every effort should be made to continue IT functions and
-    > processes manually.
-
-    > The nature of unprecedent disruptions can create confusion, and often predisposes an
-    > otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
-    > of efficiency, it is important to descrease real-time process engineering by documenting,
-    > notification and activation guidelines and procedures, recovery guidelines and procedures, and
-    > reconstitutio guidelines and procedures prior to the occurence of a disruption. During the 
-    > notification/activation phase, appropriate personnel are apprised of current conditions and
-    > damage assessment begins. During the recovery phase, appropriate personnel take a course of
-    > action to recover the {{project.system_info.system_name}} components at a 
-    > site other than the the one that experienced the disruption. In the final, reconstitution phase,
-    > actions are taken to restore IT system processing capabilities to normal operations.
-
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: "yes_edit"
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q01
-  title: Introduction and Purpose
-  prompt: >
-    {% if q01_pre == 'yes_edit' %}
-    Edit your Introduction and Purpose statement.
-    {% endif %}
-    {% if q01_pre == 'no' %}
-    Write your Introduction and Purpose statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q01_pre == 'yes_edit' %}
-    Information systems are vital to {{project.system_info.system_name}}
-    mission/business functions; therefore, it is critical that services provided by
-    {{project.system_info.system_name}} are able to operate effectively without excessive
-    interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
-    procedures to recover {{project.system_info.system_name}} quickly and
-    effectively following a service distruption
-
-    One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
-    obviate the need to resort to performing IT functions using manual methods. If manual methods
-    are the only alternative; however, every effort should be made to continue IT functions and
-    processes manually.
-
-    The nature of unprecedent disruptions can create confusion, and often predisposes an
-    otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
-    of efficiency, it is important to descrease real-time process engineering by documenting,
-    notification and activation guidelines and procedures, recovery guidelines and procedures, and
-    reconstitutio guidelines and procedures prior to the occurence of a disruption. During the 
-    notification/activation phase, appropriate personnel are apprised of current conditions and
-    damage assessment begins. During the recovery phase, appropriate personnel take a course of
-    action to recover the {{project.system_info.system_name}} components at a 
-    site other than the the one that experienced the disruption. In the final, reconstitution phase,
-    actions are taken to restore IT system processing capabilities to normal operations.
-    {% endif %}
-  examples:
-  - example: |
-      Information systems are vital to {{project.system_info.system_name}}
-      mission/business functions; therefore, it is critical that services provided by
-      {{project.system_info.system_name}} are able to operate effectively without excessive
-      interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
-      procedures to recover {{project.system_info.system_name}} quickly and
-      effectively following a service distruption
-
-      One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
-      obviate the need to resort to performing IT functions using manual methods. If manual methods
-      are the only alternative; however, every effort should be made to continue IT functions and
-      processes manually.
-
-      The nature of unprecedent disruptions can create confusion, and often predisposes an
-      otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
-      of efficiency, it is important to descrease real-time process engineering by documenting,
-      notification and activation guidelines and procedures, recovery guidelines and procedures, and
-      reconstitutio guidelines and procedures prior to the occurence of a disruption. During the 
-      notification/activation phase, appropriate personnel are apprised of current conditions and
-      damage assessment begins. During the recovery phase, appropriate personnel take a course of
-      action to recover the {{project.system_info.system_name}} components at a 
-      site other than the the one that experienced the disruption. In the final, reconstitution phase,
-      actions are taken to restore IT system processing capabilities to normal operations.
-  impute:
-  - condition: q01_pre == 'yes'
-    value: |
-      Information systems are vital to {{project.system_info.system_name}}
-      mission/business functions; therefore, it is critical that services provided by
-      {{project.system_info.system_name}} are able to operate effectively without excessive
-      interruption. This Information Technology Contingency Plan (ITCP) establishes comprehensive
-      procedures to recover {{project.system_info.system_name}} quickly and
-      effectively following a service distruption
-
-      One of the goals of an IT Contingency Plan is to establish procedures and mechanisms that
-      obviate the need to resort to performing IT functions using manual methods. If manual methods
-      are the only alternative; however, every effort should be made to continue IT functions and
-      processes manually.
-
-      The nature of unprecedent disruptions can create confusion, and often predisposes an
-      otherwise competent IT staff towards less efficient practices. In order to maintain a normal level
-      of efficiency, it is important to descrease real-time process engineering by documenting,
-      notification and activation guidelines and procedures, recovery guidelines and procedures, and
-      reconstitutio guidelines and procedures prior to the occurence of a disruption. During the
-      notification/activation phase, appropriate personnel are apprised of current conditions and
-      damage assessment begins. During the recovery phase, appropriate personnel take a course of
-      action to recover the {{project.system_info.system_name}} components at a
-      site other than the the one that experienced the disruption. In the final, reconstitution phase,
-      actions are taken to restore IT system processing capabilities to normal operations.
-
-
-- id: q02_pre
-  title: Applicable Laws and Regulations (pre)
-  prompt: |
-    Will you leverage the template applicable Laws and Regulations language used for CACE information systems?
-
-    Agency boilerplate:
-
-    > * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
-    > * Management of Federal Information Resources [OMB Circular A-130]
-    > * Records Management by Federal Agencies [44 USC 31]
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q02
-  title: Applicable Laws and Regulations
-  prompt: |
-    {% if q02_pre == 'yes_edit' %}
-    Edit your Applicable Laws and Regulations statement.
-    {% endif %}
-    {% if q02_pre == 'no' %}
-    Write your Applicable Laws and Regulations statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q02_pre == 'yes_edit' %}
-    * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
-    * Management of Federal Information Resources [OMB Circular A-130]
-    * Records Management by Federal Agencies [44 USC 31]
-    {% endif %}
-  examples:
-  - example: |
-      * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
-      * Management of Federal Information Resources [OMB Circular A-130]
-      * Records Management by Federal Agencies [44 USC 31]
-  impute:
-  - condition: q02_pre == 'yes'
-    value: |
-      * Federal Information Security Management Act (FISMA) of 2002 [Title III, PL 107-347]
-      * Management of Federal Information Resources [OMB Circular A-130]
-      * Records Management by Federal Agencies [44 USC 31]
-
-- id: q03_pre
-  title: Applicable Standards and Guidance (pre)
-  prompt: |
-    Will you leverage the template Applicable Standards and Guidance language used for CACE information systems?
-
-    Agency boilerplate:
-
-    > * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
-    > * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
-    > * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
-    > * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
-    > * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
-    > * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
-    > * Risk Management Guide for Information Technology Systems [NIST 800-30]
-    > * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q03
-  title: Applicable Standards and Guidance
-  prompt: >
-    {% if q03_pre == 'yes_edit' %}
-    Edit your Applicable Standards and Guidance statement.
-    {% endif %}
-    {% if q03_pre == 'no' %}
-    Write your Applicable Standards and Guidance statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q03_pre == 'yes_edit' %}
-    * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
-    * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
-    * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
-    * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
-    * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
-    * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
-    * Risk Management Guide for Information Technology Systems [NIST 800-30]
-    * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
-    {% endif %}
-  examples:
-  - example: |
-      * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
-      * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
-      * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
-      * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
-      * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
-      * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
-      * Risk Management Guide for Information Technology Systems [NIST 800-30]
-      * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
-  impute:
-  - condition: q03_pre == 'yes'
-    value: |
-      * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
-      * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
-      * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
-      * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
-      * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
-      * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
-      * Risk Management Guide for Information Technology Systems [NIST 800-30]
-      * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
-
-- id: q04_pre
-  title: Scope (pre)
-  prompt: |
-    Will you leverage the template Information System Name and Identifier language used for CACE information systems?
-
-    Agency boilerplate:
-
-    > This ISCP has been developed for ISA which is classified as a [[SYSTEM_LEVEL]] impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
-
-    > * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
-    > * Disruption at the [VENDOR_PRIMARY_SITE]
-    > * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
-
-    > This ITCP does not apply to the following situations:
-
-    > * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
-    > * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q04
-  title: Scope
-  prompt: >
-    {% if q04_pre == 'yes_edit' %}
-    Edit your Scope statement.
-    {% endif %}
-    {% if q04_pre == 'no' %}
-    Write your Scope statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q04_pre == 'yes_edit' %}
-    This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
-
-    * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
-    * Disruption at the [VENDOR_PRIMARY_SITE]
-    * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
-
-    This ITCP does not apply to the following situations:
-
-    * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
-    * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
-    {% endif %}
-  examples:
-  - example: |
-      This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
-
-      * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
-      * Disruption at the [VENDOR_PRIMARY_SITE]
-      * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
-
-      This ITCP does not apply to the following situations:
-
-      * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
-      * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
-  impute:
-  - condition: q04_pre == 'yes'
-    value: |
-      This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
-
-      * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
-      * Disruption at the [VENDOR_PRIMARY_SITE]
-      * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
-
-      This ITCP does not apply to the following situations:
-
-      * **Overall recovery and continuity of business operations.** The Business Resumption Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
-      * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is appended to this plan. As stated, this appended plan addresses occupant emergencies and is not the information system Contingency Plan.
-
-- id: q05_pre
-  title: Assumptions (pre)
-  prompt: |
-    Will you leverage template Assumptions language used for CACE infromation systems?
-
-    Agency boilerplate:
-
-    > Will procedures be in place to maintain operations or assets from disruptions at primary work site, Amazon Web Services (AWS) U.S. East/West IaaS infrastructure and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
-
-    > The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
-
-    > Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
-
-    > Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
-
-    > * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
-    > * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
-
-    > Disruption at [[VENDOR_DATACENTER]]:
-
-    > * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
-    > * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
-    > The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
-
-    > Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
-
-    > * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q05
-  title: Assumptions
-  prompt: >
-    {% if q05_pre == 'yes_edit' %}
-    Edit your Assumptions statement.
-    {% endif %}
-    {% if q05_pre == 'no' %}
-    Write your Assumptions statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q05_pre == 'yes_edit' %}
-    The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
-
-    Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
-
-    Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
-
-    * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
-    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
-
-    Disruption at [[VENDOR_DATACENTER]]:
-
-    * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
-    * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
-    The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
-
-    Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
-
-    * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
-    {% endif %}
-  examples:
-  - example: |
-      The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
-
-      Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
-
-      Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
-
-      * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
-      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
-
-      Disruption at [[VENDOR_DATACENTER]]:
-
-      * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
-      * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
-      The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
-
-      Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
-
-      * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
-  impute:
-  - condition: q05_pre == 'yes'
-    value: |
-      The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
-
-      Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
-
-      Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
-
-      * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
-      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
-
-      Disruption at [[VENDOR_DATACENTER]]:
-
-      * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
-      * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
-      The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
-
-      Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
-
-      * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
-
-- id: q06_pre
-  title: All potential disruptions listed?
-  prompt: |
-    Have all potential disruptions been included and addressed in the ITCP?
-  type: yesno
-- id: q06
-  title: Additional potential disruptions
-  prompt: |
-    List any additional disruptions...
-
-    Please add your disruptions in bullet list format.
-  type: longtext
-  impute:
-  - condition: q06_pre == 'yes'
-    value: ~
-
-- id: q08_pre
-  title: System Description (pre)
-  prompt: |
-    Will you leverage your existing System Description for the Contingency Plan?
-
-    Your general System Description of {{project.system_info.system_short_name}}:
-
-    > {{project.system_info.system_description|safe}}
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q08
-  title: System Description
-  prompt: >
-    {% if q08_pre == 'yes_edit' %}
-    Edit your System Description.
-    {% endif %}
-    {% if q08_pre == 'no' %}
-    Write your System Description.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q08_pre == 'yes_edit' %}
-    {{project.system_info.system_description|safe|striptags}}
-    {% endif %}
-  examples:
-  - example: |
-      {{project.system_info.system_description|safe}}
-  impute:
-  - condition: q08_pre == 'yes'
-    value: |
-      {{project.system_info.system_description|safe}}
 
 - id: q09_pre
   title: Three Phases (pre)
-  prompt: |
-    Will you leverage the template Three Phases (Activation and Notification, Recovery, and Reconstitution) statement used for CACE information systems?
-
-    Agency boilerplate:
-
-    > This plan has been developed to recover and reconstitute the [[Information System Name]]; using a three-phased approach.  The approach ensures that system recovery and reconstitution efforts are performed in a methodical sequence to maximize the effectiveness of the recovery and reconstitution efforts and minimize system outage time due to errors and omissions.  The three system recovery phases consist of activation and notification, recovery, and reconstitution.
-    > 
-    > 1. **Activation and Notification Phase**.  Activation of the ISCP occurs after a disruption, outage, or disaster that may reasonably extend beyond the RTO established for a system.  The outage event may result in severe damage to the facility that houses the system, severe damage or loss of equipment, or other damage that typically results in long-term loss.
-    > Once the ISCP is activated, the information system stakeholders are notified of a possible long-term outage, and a thorough outage assessment is performed for the information system.  Information from the outage assessment is analyzed and may be used to modify recovery procedures specific to the cause of the outage.
-    > 2. **Recovery Phase.**  The Recovery phase details the activities and procedures for recovery of the affected system.  Activities and procedures are written at a level such that an appropriately skilled technician can recover the system without intimate system knowledge.  This phase includes notification and awareness escalation procedures for communication of recovery status to system stakeholders.
-    > 3. **Reconstitution.**  The Reconstitution phase defines the actions taken to test and validate system capability and functionality at the original or new permanent location.  This phase consists of two major activities: validating data and operational functionality followed by deactivation of the plan.
-    > 
-    > During validation, the system is tested and validated as operational prior to returning operation to its normal state.  Validation procedures include functionality or regression testing, concurrent processing, and/or data validation.  The system is declared recovered and operational by upon successful completion of validation testing.
-    > 
-    > Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
+  prompt: "Will you leverage the template Three Phases (Activation and Notification,
+    Recovery, and Reconstitution) statement used for CACE information systems?\n\nAgency
+    boilerplate:\n\n> This plan has been developed to recover and reconstitute the
+    [[Information System Name]]; using a three-phased approach.  The approach ensures
+    that system recovery and reconstitution efforts are performed in a methodical
+    sequence to maximize the effectiveness of the recovery and reconstitution efforts
+    and minimize system outage time due to errors and omissions.  The three system
+    recovery phases consist of activation and notification, recovery, and reconstitution.\n>
+    \n> 1. **Activation and Notification Phase**.  Activation of the ISCP occurs after
+    a disruption, outage, or disaster that may reasonably extend beyond the RTO established
+    for a system.  The outage event may result in severe damage to the facility that
+    houses the system, severe damage or loss of equipment, or other damage that typically
+    results in long-term loss.\n> Once the ISCP is activated, the information system
+    stakeholders are notified of a possible long-term outage, and a thorough outage
+    assessment is performed for the information system.  Information from the outage
+    assessment is analyzed and may be used to modify recovery procedures specific
+    to the cause of the outage.\n> 2. **Recovery Phase.**  The Recovery phase details
+    the activities and procedures for recovery of the affected system.  Activities
+    and procedures are written at a level such that an appropriately skilled technician
+    can recover the system without intimate system knowledge.  This phase includes
+    notification and awareness escalation procedures for communication of recovery
+    status to system stakeholders.\n> 3. **Reconstitution.**  The Reconstitution phase
+    defines the actions taken to test and validate system capability and functionality
+    at the original or new permanent location.  This phase consists of two major activities:
+    validating data and operational functionality followed by deactivation of the
+    plan.\n> \n> During validation, the system is tested and validated as operational
+    prior to returning operation to its normal state.  Validation procedures include
+    functionality or regression testing, concurrent processing, and/or data validation.
+    \ The system is declared recovered and operational by upon successful completion
+    of validation testing.\n> \n> Deactivation includes activities to notify users
+    of system operational status.  This phase also addresses recovery effort documentation,
+    activity log finalization, incorporation of lessons learned into plan updates,
+    and readying resources for any future events.\n"
   type: choice
   choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
+  - key: 'yes'
+    text: 'Yes'
+  - key: yes_edit
+    text: Yes, but I will edit the template language.
+  - key: 'no'
+    text: 'No'
 - id: q09
   title: Phases
-  prompt: >
-    {% if q09_pre == 'yes_edit' %}
-    Edit your Phases statement.
-    {% endif %}
-    {% if q09_pre == 'no' %}
-    Write your Phases statement.
-    {% endif %}
+  prompt: |
+    {% if q09_pre == 'yes_edit' %} Edit your Phases statement. {% endif %} {% if q09_pre == 'no' %} Write your Phases statement. {% endif %}
   type: longtext
-  default: |
+  default: >
     {% if q09_pre == 'yes_edit' %}
-    This plan has been developed to recover and reconstitute the [[Information System Name]]; using a three-phased approach.  The approach ensures that system recovery and reconstitution efforts are performed in a methodical sequence to maximize the effectiveness of the recovery and reconstitution efforts and minimize system outage time due to errors and omissions.  The three system recovery phases consist of activation and notification, recovery, and reconstitution.
-    
-    1. **Activation and Notification Phase**.  Activation of the ISCP occurs after a disruption, outage, or disaster that may reasonably extend beyond the RTO established for a system.  The outage event may result in severe damage to the facility that houses the system, severe damage or loss of equipment, or other damage that typically results in long-term loss.
-    Once the ISCP is activated, the information system stakeholders are notified of a possible long-term outage, and a thorough outage assessment is performed for the information system.  Information from the outage assessment is analyzed and may be used to modify recovery procedures specific to the cause of the outage.
-    2. **Recovery Phase.**  The Recovery phase details the activities and procedures for recovery of the affected system.  Activities and procedures are written at a level such that an appropriately skilled technician can recover the system without intimate system knowledge.  This phase includes notification and awareness escalation procedures for communication of recovery status to system stakeholders.
-    3. **Reconstitution.**  The Reconstitution phase defines the actions taken to test and validate system capability and functionality at the original or new permanent location.  This phase consists of two major activities: validating data and operational functionality followed by deactivation of the plan.
-    
-    During validation, the system is tested and validated as operational prior to returning operation to its normal state.  Validation procedures include functionality or regression testing, concurrent processing, and/or data validation.  The system is declared recovered and operational by upon successful completion of validation testing.
-    
-    Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
+
+    This plan has been developed to recover and reconstitute the [[Information System
+    Name]]; using a three-phased approach.  The approach ensures that system recovery
+    and reconstitution efforts are performed in a methodical sequence to maximize
+    the effectiveness of the recovery and reconstitution efforts and minimize system
+    outage time due to errors and omissions.  The three system recovery phases consist
+    of activation and notification, recovery, and reconstitution.
+
+
+    1. **Activation and Notification Phase**.  Activation of the ISCP occurs after
+    a disruption, outage, or disaster that may reasonably extend beyond the RTO established
+    for a system.  The outage event may result in severe damage to the facility that
+    houses the system, severe damage or loss of equipment, or other damage that typically
+    results in long-term loss.
+
+    Once the ISCP is activated, the information system stakeholders are notified of
+    a possible long-term outage, and a thorough outage assessment is performed for
+    the information system.  Information from the outage assessment is analyzed and
+    may be used to modify recovery procedures specific to the cause of the outage.
+
+    2. **Recovery Phase.**  The Recovery phase details the activities and procedures
+    for recovery of the affected system.  Activities and procedures are written at
+    a level such that an appropriately skilled technician can recover the system without
+    intimate system knowledge.  This phase includes notification and awareness escalation
+    procedures for communication of recovery status to system stakeholders.
+
+    3. **Reconstitution.**  The Reconstitution phase defines the actions taken to
+    test and validate system capability and functionality at the original or new permanent
+    location.  This phase consists of two major activities: validating data and operational
+    functionality followed by deactivation of the plan.
+
+
+    During validation, the system is tested and validated as operational prior to
+    returning operation to its normal state.  Validation procedures include functionality
+    or regression testing, concurrent processing, and/or data validation.  The system
+    is declared recovered and operational by upon successful completion of validation
+    testing.
+
+
+    Deactivation includes activities to notify users of system operational status. 
+    This phase also addresses recovery effort documentation, activity log finalization,
+    incorporation of lessons learned into plan updates, and readying resources for
+    any future events.
+
     {% endif %}
   examples:
-  - example: |
-      This plan has been developed to recover and reconstitute the [[Information System Name]]; using a three-phased approach.  The approach ensures that system recovery and reconstitution efforts are performed in a methodical sequence to maximize the effectiveness of the recovery and reconstitution efforts and minimize system outage time due to errors and omissions.  The three system recovery phases consist of activation and notification, recovery, and reconstitution.
-      
-      1. **Activation and Notification Phase**.  Activation of the ISCP occurs after a disruption, outage, or disaster that may reasonably extend beyond the RTO established for a system.  The outage event may result in severe damage to the facility that houses the system, severe damage or loss of equipment, or other damage that typically results in long-term loss.
-      Once the ISCP is activated, the information system stakeholders are notified of a possible long-term outage, and a thorough outage assessment is performed for the information system.  Information from the outage assessment is analyzed and may be used to modify recovery procedures specific to the cause of the outage.
-      2. **Recovery Phase.**  The Recovery phase details the activities and procedures for recovery of the affected system.  Activities and procedures are written at a level such that an appropriately skilled technician can recover the system without intimate system knowledge.  This phase includes notification and awareness escalation procedures for communication of recovery status to system stakeholders.
-      3. **Reconstitution.**  The Reconstitution phase defines the actions taken to test and validate system capability and functionality at the original or new permanent location.  This phase consists of two major activities: validating data and operational functionality followed by deactivation of the plan.
-      
-      During validation, the system is tested and validated as operational prior to returning operation to its normal state.  Validation procedures include functionality or regression testing, concurrent processing, and/or data validation.  The system is declared recovered and operational by upon successful completion of validation testing.
-      
-      Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
+  - example: >
+      This plan has been developed to recover and reconstitute the [[Information System
+      Name]]; using a three-phased approach.  The approach ensures that system recovery
+      and reconstitution efforts are performed in a methodical sequence to maximize
+      the effectiveness of the recovery and reconstitution efforts and minimize system
+      outage time due to errors and omissions.  The three system recovery phases consist
+      of activation and notification, recovery, and reconstitution.
+
+
+      1. **Activation and Notification Phase**.  Activation of the ISCP occurs after
+      a disruption, outage, or disaster that may reasonably extend beyond the RTO
+      established for a system.  The outage event may result in severe damage to the
+      facility that houses the system, severe damage or loss of equipment, or other
+      damage that typically results in long-term loss.
+
+      Once the ISCP is activated, the information system stakeholders are notified
+      of a possible long-term outage, and a thorough outage assessment is performed
+      for the information system.  Information from the outage assessment is analyzed
+      and may be used to modify recovery procedures specific to the cause of the outage.
+
+      2. **Recovery Phase.**  The Recovery phase details the activities and procedures
+      for recovery of the affected system.  Activities and procedures are written
+      at a level such that an appropriately skilled technician can recover the system
+      without intimate system knowledge.  This phase includes notification and awareness
+      escalation procedures for communication of recovery status to system stakeholders.
+
+      3. **Reconstitution.**  The Reconstitution phase defines the actions taken to
+      test and validate system capability and functionality at the original or new
+      permanent location.  This phase consists of two major activities: validating
+      data and operational functionality followed by deactivation of the plan.
+
+
+      During validation, the system is tested and validated as operational prior to
+      returning operation to its normal state.  Validation procedures include functionality
+      or regression testing, concurrent processing, and/or data validation.  The system
+      is declared recovered and operational by upon successful completion of validation
+      testing.
+
+
+      Deactivation includes activities to notify users of system operational status. 
+      This phase also addresses recovery effort documentation, activity log finalization,
+      incorporation of lessons learned into plan updates, and readying resources for
+      any future events.
   impute:
   - condition: q09_pre == 'yes'
-    value: |
-      This plan has been developed to recover and reconstitute the [[Information System Name]]; using a three-phased approach.  The approach ensures that system recovery and reconstitution efforts are performed in a methodical sequence to maximize the effectiveness of the recovery and reconstitution efforts and minimize system outage time due to errors and omissions.  The three system recovery phases consist of activation and notification, recovery, and reconstitution.
-      
-      1. **Activation and Notification Phase**.  Activation of the ISCP occurs after a disruption, outage, or disaster that may reasonably extend beyond the RTO established for a system.  The outage event may result in severe damage to the facility that houses the system, severe damage or loss of equipment, or other damage that typically results in long-term loss.
-      Once the ISCP is activated, the information system stakeholders are notified of a possible long-term outage, and a thorough outage assessment is performed for the information system.  Information from the outage assessment is analyzed and may be used to modify recovery procedures specific to the cause of the outage.
-      2. **Recovery Phase.**  The Recovery phase details the activities and procedures for recovery of the affected system.  Activities and procedures are written at a level such that an appropriately skilled technician can recover the system without intimate system knowledge.  This phase includes notification and awareness escalation procedures for communication of recovery status to system stakeholders.
-      3. **Reconstitution.**  The Reconstitution phase defines the actions taken to test and validate system capability and functionality at the original or new permanent location.  This phase consists of two major activities: validating data and operational functionality followed by deactivation of the plan.
-      
-      During validation, the system is tested and validated as operational prior to returning operation to its normal state.  Validation procedures include functionality or regression testing, concurrent processing, and/or data validation.  The system is declared recovered and operational by upon successful completion of validation testing.
-      
-      Deactivation includes activities to notify users of system operational status.  This phase also addresses recovery effort documentation, activity log finalization, incorporation of lessons learned into plan updates, and readying resources for any future events.
+    value: >
+      This plan has been developed to recover and reconstitute the [[Information System
+      Name]]; using a three-phased approach.  The approach ensures that system recovery
+      and reconstitution efforts are performed in a methodical sequence to maximize
+      the effectiveness of the recovery and reconstitution efforts and minimize system
+      outage time due to errors and omissions.  The three system recovery phases consist
+      of activation and notification, recovery, and reconstitution.
 
+
+      1. **Activation and Notification Phase**.  Activation of the ISCP occurs after
+      a disruption, outage, or disaster that may reasonably extend beyond the RTO
+      established for a system.  The outage event may result in severe damage to the
+      facility that houses the system, severe damage or loss of equipment, or other
+      damage that typically results in long-term loss.
+
+      Once the ISCP is activated, the information system stakeholders are notified
+      of a possible long-term outage, and a thorough outage assessment is performed
+      for the information system.  Information from the outage assessment is analyzed
+      and may be used to modify recovery procedures specific to the cause of the outage.
+
+      2. **Recovery Phase.**  The Recovery phase details the activities and procedures
+      for recovery of the affected system.  Activities and procedures are written
+      at a level such that an appropriately skilled technician can recover the system
+      without intimate system knowledge.  This phase includes notification and awareness
+      escalation procedures for communication of recovery status to system stakeholders.
+
+      3. **Reconstitution.**  The Reconstitution phase defines the actions taken to
+      test and validate system capability and functionality at the original or new
+      permanent location.  This phase consists of two major activities: validating
+      data and operational functionality followed by deactivation of the plan.
+
+
+      During validation, the system is tested and validated as operational prior to
+      returning operation to its normal state.  Validation procedures include functionality
+      or regression testing, concurrent processing, and/or data validation.  The system
+      is declared recovered and operational by upon successful completion of validation
+      testing.
+
+
+      Deactivation includes activities to notify users of system operational status. 
+      This phase also addresses recovery effort documentation, activity log finalization,
+      incorporation of lessons learned into plan updates, and readying resources for
+      any future events.
 - id: q10_backup_system_components
   title: Backup System Components
   type: longtext
@@ -596,298 +222,165 @@ questions:
     Retention Period:
       UPDATE WITH DESCRIPTION OF RETENTION PERIOD
     </pre>
-
 - id: q10_pre
   title: Data Backup Readines Information (pre)
-  prompt: |
-    Will you leverage the template Data Backup Readines Information statement used for CACE information systems?  Have all backup system components, and authorized-personnel been identified?
-
-    Agency boilerplate:
-
-    > A common understanding of data backup definitions is necessary in order to ensure that data restoration is successful.  CSP Name recognizes different types of backups, which have different purposes, and those definitions are found in Table 2‑1 Backup Types.
-    > 
-    > Table 2‑1 Backup System Components
-    > 
-    >      Backup Type:
-    >        Description
-    >      
-    >      Full Backup:
-    >        A full backup is the starting point for all other types of backup and contains
-    >        all the data in the folders and files that are selected to be backed up.
-    >        Because full backup stores all files and folders, frequent full backups result in
-    >        faster and simpler restore operations.
-    >      
-    >      Differential Backup:
-    >        Differential backup contains all files that have changed since the last FULL backup.
-    >        The advantage of a differential backup is that it shortens restore time compared
-    >        to a full back up or an incremental backup.  However, if the differential backup
-    >        is performed too many times, the size of the differential backup might grow to be
-    >        larger than the baseline full backup.
-    >      
-    >      Incremental Backup:
-    >        Incremental backup stores all files that have changed since the last FULL,
-    >        DIFFERENTIAL OR INCREMENTAL backup.  The advantage of an incremental backup
-    >        is that it takes the least time to complete.  However, during a restore operation,
-    >        each incremental backup must be processed, which may result in a lengthy restore job.
-    >      
-    >      Mirror Backup:
-    >        Mirror backup is identical to a full backup, with the exception that the files are
-    >        not compressed in zip files and they cannot be protected with a password.  A mirror
-    >        backup is most frequently used to create an exact copy of the source data.
-    > 
-    > The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
-    > 
-    > Table 2‑2 Backup System Components
-    > 
-    >      {{q10_backup_system_components}}
-    > 
-    > Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
-    > 
-    > Table 2‑3 Back-Up Storage Location
-    > 
-    >      Site Name:
-    >        Click here to enter text.
-    >      Street Address:
-    >        Click here to enter text.
-    >      City, State, Zip Code:
-    >        Click here to enter text.
-    > 
-    > Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.
-
+  prompt: "Will you leverage the template Data Backup Readines Information statement
+    used for CACE information systems?  Have all backup system components, and authorized-personnel
+    been identified?\n\nAgency boilerplate:\n\n> A common understanding of data backup
+    definitions is necessary in order to ensure that data restoration is successful.
+    \ CSP Name recognizes different types of backups, which have different purposes,
+    and those definitions are found in Table 2‑1 Backup Types.\n> \n> Table 2‑1 Backup
+    System Components\n> \n>      Backup Type:\n>        Description\n>      \n>      Full
+    Backup:\n>        A full backup is the starting point for all other types of backup
+    and contains\n>        all the data in the folders and files that are selected
+    to be backed up.\n>        Because full backup stores all files and folders, frequent
+    full backups result in\n>        faster and simpler restore operations.\n>      \n>
+    \     Differential Backup:\n>        Differential backup contains all files that
+    have changed since the last FULL backup.\n>        The advantage of a differential
+    backup is that it shortens restore time compared\n>        to a full back up or
+    an incremental backup.  However, if the differential backup\n>        is performed
+    too many times, the size of the differential backup might grow to be\n>        larger
+    than the baseline full backup.\n>      \n>      Incremental Backup:\n>        Incremental
+    backup stores all files that have changed since the last FULL,\n>        DIFFERENTIAL
+    OR INCREMENTAL backup.  The advantage of an incremental backup\n>        is that
+    it takes the least time to complete.  However, during a restore operation,\n>
+    \       each incremental backup must be processed, which may result in a lengthy
+    restore job.\n>      \n>      Mirror Backup:\n>        Mirror backup is identical
+    to a full backup, with the exception that the files are\n>        not compressed
+    in zip files and they cannot be protected with a password.  A mirror\n>        backup
+    is most frequently used to create an exact copy of the source data.\n> \n> The
+    hardware and software components used to create the [[Information System Name]]
+    backups are noted in Table 2‑2 Backup System Components.\n> \n> Table 2‑2 Backup
+    System Components\n> \n>      {{q10_backup_system_components}}\n> \n> Table 2‑3
+    Back-Up Storage Location shows the offsite storage facility location of current
+    backups of the [[Information System Name]] system software and data.\n> \n> Table
+    2‑3 Back-Up Storage Location\n> \n>      Site Name:\n>        Click here to enter
+    text.\n>      Street Address:\n>        Click here to enter text.\n>      City,
+    State, Zip Code:\n>        Click here to enter text.\n> \n> Personnel who are
+    authorized to retrieve backups from the offsite storage location, and may authorize
+    the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.\n"
   type: choice
   choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
+  - key: 'yes'
+    text: 'Yes'
+  - key: yes_edit
+    text: Yes, but I will edit the template language.
+  - key: 'no'
+    text: 'No'
 - id: q10
   title: Backup Readines Information
   prompt: >
-    {% if q10_pre == 'yes_edit' %}
-    Edit your Backup Readines Information statement.
-    {% endif %}
-    {% if q10_pre == 'no' %}
-    Write your Backup Readines Information statement.
+    {% if q10_pre == 'yes_edit' %} Edit your Backup Readines Information statement.
+    {% endif %} {% if q10_pre == 'no' %} Write your Backup Readines Information statement.
     {% endif %}
   type: longtext
-  default: |
-    {% if q10_pre == 'yes_edit' %}
-    A common understanding of data backup definitions is necessary in order to ensure that data restoration is successful.  CSP Name recognizes different types of backups, which have different purposes, and those definitions are found in Table 2‑1 Backup Types.
-    
-    Table 2‑1 Backup System Components
-        
-    The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
-    
-    Table 2‑2 Backup System Components
-    
-         {{q10_backup_system_components}}
-    
-    Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
-    
-    Table 2‑3 Back-Up Storage Location
-    
-         Site Name:
-           Click here to enter text.
-         Street Address:
-           Click here to enter text.
-         City, State, Zip Code:
-           Click here to enter text.
-    
-    Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.
-
-    {% endif %}
+  default: "{% if q10_pre == 'yes_edit' %}\nA common understanding of data backup
+    definitions is necessary in order to ensure that data restoration is successful.
+    \ CSP Name recognizes different types of backups, which have different purposes,
+    and those definitions are found in Table 2‑1 Backup Types.\n\nTable 2‑1 Backup
+    System Components\n    \nThe hardware and software components used to create the
+    [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.\n\nTable
+    2‑2 Backup System Components\n\n     {{q10_backup_system_components}}\n\nTable
+    2‑3 Back-Up Storage Location shows the offsite storage facility location of current
+    backups of the [[Information System Name]] system software and data.\n\nTable
+    2‑3 Back-Up Storage Location\n\n     Site Name:\n       Click here to enter text.\n
+    \    Street Address:\n       Click here to enter text.\n     City, State, Zip
+    Code:\n       Click here to enter text.\n\nPersonnel who are authorized to retrieve
+    backups from the offsite storage location, and may authorize the delivery of backups,
+    are noted in D.1Appendix – Alternate Storage Site Information.\n\n{% endif %}\n"
   examples:
-  - example: |
-      Table 2‑1 Backup System Components
-      
-           Backup Type:
-             Description
-           
-           Full Backup:
-             A full backup is the starting point for all other types of backup and contains
-             all the data in the folders and files that are selected to be backed up.
-             Because full backup stores all files and folders, frequent full backups result in
-             faster and simpler restore operations.
-           
-           Differential Backup:
-             Differential backup contains all files that have changed since the last FULL backup.
-             The advantage of a differential backup is that it shortens restore time compared
-             to a full back up or an incremental backup.  However, if the differential backup
-             is performed too many times, the size of the differential backup might grow to be
-             larger than the baseline full backup.
-           
-           Incremental Backup:
-             Incremental backup stores all files that have changed since the last FULL,
-             DIFFERENTIAL OR INCREMENTAL backup.  The advantage of an incremental backup
-             is that it takes the least time to complete.  However, during a restore operation,
-             each incremental backup must be processed, which may result in a lengthy restore job.
-           
-           Mirror Backup:
-             Mirror backup is identical to a full backup, with the exception that the files are
-             not compressed in zip files and they cannot be protected with a password.  A mirror
-             backup is most frequently used to create an exact copy of the source data.
-      
-      The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
-      
-      Table 2‑2 Backup System Components
-      
-           {{q10_backup_system_components}}
-      
-      Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
-      
-      Table 2‑3 Back-Up Storage Location
-      
-           Site Name:
-             Click here to enter text.
-           Street Address:
-             Click here to enter text.
-           City, State, Zip Code:
-             Click here to enter text.
-      
-      Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.
-
+  - example: "Table 2‑1 Backup System Components\n\n     Backup Type:\n       Description\n
+      \    \n     Full Backup:\n       A full backup is the starting point for all
+      other types of backup and contains\n       all the data in the folders and files
+      that are selected to be backed up.\n       Because full backup stores all files
+      and folders, frequent full backups result in\n       faster and simpler restore
+      operations.\n     \n     Differential Backup:\n       Differential backup contains
+      all files that have changed since the last FULL backup.\n       The advantage
+      of a differential backup is that it shortens restore time compared\n       to
+      a full back up or an incremental backup.  However, if the differential backup\n
+      \      is performed too many times, the size of the differential backup might
+      grow to be\n       larger than the baseline full backup.\n     \n     Incremental
+      Backup:\n       Incremental backup stores all files that have changed since
+      the last FULL,\n       DIFFERENTIAL OR INCREMENTAL backup.  The advantage of
+      an incremental backup\n       is that it takes the least time to complete.  However,
+      during a restore operation,\n       each incremental backup must be processed,
+      which may result in a lengthy restore job.\n     \n     Mirror Backup:\n       Mirror
+      backup is identical to a full backup, with the exception that the files are\n
+      \      not compressed in zip files and they cannot be protected with a password.
+      \ A mirror\n       backup is most frequently used to create an exact copy of
+      the source data.\n\nThe hardware and software components used to create the
+      [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.\n\nTable
+      2‑2 Backup System Components\n\n     {{q10_backup_system_components}}\n\nTable
+      2‑3 Back-Up Storage Location shows the offsite storage facility location of
+      current backups of the [[Information System Name]] system software and data.\n\nTable
+      2‑3 Back-Up Storage Location\n\n     Site Name:\n       Click here to enter
+      text.\n     Street Address:\n       Click here to enter text.\n     City, State,
+      Zip Code:\n       Click here to enter text.\n\nPersonnel who are authorized
+      to retrieve backups from the offsite storage location, and may authorize the
+      delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.\n"
   impute:
   - condition: q10_pre == 'yes'
-    value: |
-      Table 2‑1 Backup System Components
-      
-           Backup Type:
-             Description
-           
-           Full Backup:
-             A full backup is the starting point for all other types of backup and contains
-             all the data in the folders and files that are selected to be backed up.
-             Because full backup stores all files and folders, frequent full backups result in
-             faster and simpler restore operations.
-           
-           Differential Backup:
-             Differential backup contains all files that have changed since the last FULL backup.
-             The advantage of a differential backup is that it shortens restore time compared
-             to a full back up or an incremental backup.  However, if the differential backup
-             is performed too many times, the size of the differential backup might grow to be
-             larger than the baseline full backup.
-           
-           Incremental Backup:
-             Incremental backup stores all files that have changed since the last FULL,
-             DIFFERENTIAL OR INCREMENTAL backup.  The advantage of an incremental backup
-             is that it takes the least time to complete.  However, during a restore operation,
-             each incremental backup must be processed, which may result in a lengthy restore job.
-           
-           Mirror Backup:
-             Mirror backup is identical to a full backup, with the exception that the files are
-             not compressed in zip files and they cannot be protected with a password.  A mirror
-             backup is most frequently used to create an exact copy of the source data.
-      
-      The hardware and software components used to create the [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.
-      
-      Table 2‑2 Backup System Components
-      
-           System/Component:
-             Description
-      
-           Software Used:
-             Click here to enter text.
-      
-           Hardware Used:
-             Click here to enter text.
-      
-           Frequency:
-             Click here to enter text.
-      
-           Backup Type:
-             Click here to enter text.
-      
-           Retention Period:
-             Click here to enter text.
-      
-      Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the [[Information System Name]] system software and data.
-      
-      Table 2‑3 Back-Up Storage Location
-      
-           Site Name:
-             Click here to enter text.
-           Street Address:
-             Click here to enter text.
-           City, State, Zip Code:
-             Click here to enter text.
-      
-      Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.
-
-# - id: q11_pre
-#   title: Site Readiness Information (pre)
-#   prompt: |
-#     Will you leverage the template Site Readiness Information statement used for CACE information systems?
-
-#     DEFAULT_CONTENT
-#   type: choice
-#   choices:
-#     - key: "yes"
-#       text: "Yes"
-#     - key: yes_edit
-#       text: Yes, but I will edit the template language.
-#     - key: "no"
-#       text: "No"
-# - id: q0x
-#   title: SECTION
-#   prompt: >
-#     {% if q0x_pre == 'yes_edit' %}
-#     Edit your SECTION statement.
-#     {% endif %}
-#     {% if q0x_pre == 'no' %}
-#     Write your SECTION statement.
-#     {% endif %}
-#   type: longtext
-#   default: |
-#     {% if q0x_pre == 'yes_edit' %}
-#     DEFAULT_CONTENT
-#     {% endif %}
-#   examples:
-#   - example: |
-#       DEFAULT_CONTENT
-#   impute:
-#   - condition: q0x_pre == 'yes'
-#     value: |
-#       DEFAULT_CONTENT
-
-#       Agency boilerplate:
+    value: "Table 2‑1 Backup System Components\n\n     Backup Type:\n       Description\n
+      \    \n     Full Backup:\n       A full backup is the starting point for all
+      other types of backup and contains\n       all the data in the folders and files
+      that are selected to be backed up.\n       Because full backup stores all files
+      and folders, frequent full backups result in\n       faster and simpler restore
+      operations.\n     \n     Differential Backup:\n       Differential backup contains
+      all files that have changed since the last FULL backup.\n       The advantage
+      of a differential backup is that it shortens restore time compared\n       to
+      a full back up or an incremental backup.  However, if the differential backup\n
+      \      is performed too many times, the size of the differential backup might
+      grow to be\n       larger than the baseline full backup.\n     \n     Incremental
+      Backup:\n       Incremental backup stores all files that have changed since
+      the last FULL,\n       DIFFERENTIAL OR INCREMENTAL backup.  The advantage of
+      an incremental backup\n       is that it takes the least time to complete.  However,
+      during a restore operation,\n       each incremental backup must be processed,
+      which may result in a lengthy restore job.\n     \n     Mirror Backup:\n       Mirror
+      backup is identical to a full backup, with the exception that the files are\n
+      \      not compressed in zip files and they cannot be protected with a password.
+      \ A mirror\n       backup is most frequently used to create an exact copy of
+      the source data.\n\nThe hardware and software components used to create the
+      [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.\n\nTable
+      2‑2 Backup System Components\n\n     System/Component:\n       Description\n\n
+      \    Software Used:\n       Click here to enter text.\n\n     Hardware Used:\n
+      \      Click here to enter text.\n\n     Frequency:\n       Click here to enter
+      text.\n\n     Backup Type:\n       Click here to enter text.\n\n     Retention
+      Period:\n       Click here to enter text.\n\nTable 2‑3 Back-Up Storage Location
+      shows the offsite storage facility location of current backups of the [[Information
+      System Name]] system software and data.\n\nTable 2‑3 Back-Up Storage Location\n\n
+      \    Site Name:\n       Click here to enter text.\n     Street Address:\n       Click
+      here to enter text.\n     City, State, Zip Code:\n       Click here to enter
+      text.\n\nPersonnel who are authorized to retrieve backups from the offsite storage
+      location, and may authorize the delivery of backups, are noted in D.1Appendix
+      – Alternate Storage Site Information.\n"
 
 - id: q12_pre
   title: CP Director (pre)
-  prompt: |
-    Will you leverage the template Contingency Plan Director statement used for CACE information systems?  Have personnel been trained in accordance with their assigned roles and responsibilities?
-
-    Agency boilerplate:
-
-    > The Contingency Planning Director (CPD) is a member of senior management and owns the responsibility for all facets of contingency and disaster recovery planning and execution.
-    > 
-    > The CPD performs the following duties:
-    > 
-    > - Makes the decision on whether or not to activate the ISCP
-    > - Provides the initial notification to activate the ISCP
-    > - Reviews and approves the ISCP
-    > - Reviews and approves the Business Impact Analysis (BIA)
-    > - Notifies the Contingency Plan Team leads and members as necessary
-    > - Advises other Contingency Plan Team leads and members as appropriate
-    > - Issues a recovery declaration statement after the system has returned to normal operations
-    > - Designates key personnel
+  prompt: "Will you leverage the template Contingency Plan Director statement used
+    for CACE information systems?  Have personnel been trained in accordance with
+    their assigned roles and responsibilities?\n\nAgency boilerplate:\n\n> The Contingency
+    Planning Director (CPD) is a member of senior management and owns the responsibility
+    for all facets of contingency and disaster recovery planning and execution.\n>
+    \n> The CPD performs the following duties:\n> \n> - Makes the decision on whether
+    or not to activate the ISCP\n> - Provides the initial notification to activate
+    the ISCP\n> - Reviews and approves the ISCP\n> - Reviews and approves the Business
+    Impact Analysis (BIA)\n> - Notifies the Contingency Plan Team leads and members
+    as necessary\n> - Advises other Contingency Plan Team leads and members as appropriate\n>
+    - Issues a recovery declaration statement after the system has returned to normal
+    operations\n> - Designates key personnel\n"
   type: choice
   choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
+  - key: 'yes'
+    text: 'Yes'
+  - key: yes_edit
+    text: Yes, but I will edit the template language.
+  - key: 'no'
+    text: 'No'
 - id: q12
   title: CP Director
   prompt: >
-    {% if q12_pre == 'yes_edit' %}
-    Edit your Contingency Plan Director statement.
-    {% endif %}
-    {% if q12_pre == 'no' %}
-    Write your Contingency Plan Director statement.
+    {% if q12_pre == 'yes_edit' %} Edit your Contingency Plan Director statement.
+    {% endif %} {% if q12_pre == 'no' %} Write your Contingency Plan Director statement.
     {% endif %}
   type: longtext
   default: |
@@ -934,47 +427,35 @@ questions:
       - Advises other Contingency Plan Team leads and members as appropriate
       - Issues a recovery declaration statement after the system has returned to normal operations
       - Designates key personnel
-
 - id: q12cpc_pre
   title: CP Coordinator (pre)
-  prompt: |
-    Will you leverage the template Contingency Plan Coordinator statement used for CACE information systems?  Have personnel been trained in accordance with their assigned roles and responsibilities?
-
-    Agency boilerplate:
-
-    > The CPC performs the following duties:
-    > 
-    > - Develops and documents the ISCP under direction of the CPD
-    > - Uses the BIA to prioritize recovery of components
-    > - Updates the ISCP annually
-    > - Ensures that annual ISCP training is conducted
-    > - Facilitates periodic ISCP testing exercises
-    > - Distributes copies of the plan to team members
-    > - Authorizes travel and housing arrangements for team members
-    > - Manages and monitors the overall recovery process
-    > - Leads the contingency response effort once the plan has been activated
-    > - Advises the Procurement and Logistics Coordinator on whether to order new equipment
-    > - Receives updates and status reports from team members
-    > - Sends out communications about the recovery
-    > - Advises the CPD on status as necessary
-    > - Designates key personnel
+  prompt: "Will you leverage the template Contingency Plan Coordinator statement used
+    for CACE information systems?  Have personnel been trained in accordance with
+    their assigned roles and responsibilities?\n\nAgency boilerplate:\n\n> The CPC
+    performs the following duties:\n> \n> - Develops and documents the ISCP under
+    direction of the CPD\n> - Uses the BIA to prioritize recovery of components\n>
+    - Updates the ISCP annually\n> - Ensures that annual ISCP training is conducted\n>
+    - Facilitates periodic ISCP testing exercises\n> - Distributes copies of the plan
+    to team members\n> - Authorizes travel and housing arrangements for team members\n>
+    - Manages and monitors the overall recovery process\n> - Leads the contingency
+    response effort once the plan has been activated\n> - Advises the Procurement
+    and Logistics Coordinator on whether to order new equipment\n> - Receives updates
+    and status reports from team members\n> - Sends out communications about the recovery\n>
+    - Advises the CPD on status as necessary\n> - Designates key personnel\n"
   type: choice
   choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
+  - key: 'yes'
+    text: 'Yes'
+  - key: yes_edit
+    text: Yes, but I will edit the template language.
+  - key: 'no'
+    text: 'No'
 - id: q12cpc
   title: CP Coordinator
   prompt: >
-    {% if q12cpc_pre == 'yes_edit' %}
-    Edit your Contingency Plan Coordinator statement.
-    {% endif %}
-    {% if q12cpc_pre == 'no' %}
-    Write your Contingency Plan Coordinator statement.
-    {% endif %}
+    {% if q12cpc_pre == 'yes_edit' %} Edit your Contingency Plan Coordinator statement.
+    {% endif %} {% if q12cpc_pre == 'no' %} Write your Contingency Plan Coordinator
+    statement. {% endif %}
   type: longtext
   default: |
     {% if q12cpc_pre == 'yes_edit' %}
@@ -1032,42 +513,36 @@ questions:
       - Sends out communications about the recovery
       - Advises the CPD on status as necessary
       - Designates key personnel
-
 - id: q12sc_pre
   title: CP Security Coordinator (pre)
-  prompt: |
-    Will you leverage the template Contingency Plan Security Coordinator statement used for CACE information systems?  Have personnel been trained in accordance with their assigned roles and responsibilities?
-
-    Agency boilerplate:
-
-    > The Security Coordinator performs the following duties:
-    > 
-    > - Provides training for employees in facility emergency procedures and measures
-    > - Provides physical security, access control, and safety measures to support recovery effort
-    > - Cordons off the facility including offices to restrict unauthorized access
-    > - Coordinates with the building management and the CPC for authorized personnel access
-    > - Coordinates and manages additional physical security/guards as needed
-    > - Acts as a liaison with emergency personnel, such as fire and police departments
-    > - Provides assistance to officials in investigating the damaged facility/site
-    > - Ensures that data room/center at alternate site has locks (access controls) on the doors
-    > - Coordinates and secures the transportation of files, reports, and equipment in coordination with the CPC
+  prompt: "Will you leverage the template Contingency Plan Security Coordinator statement
+    used for CACE information systems?  Have personnel been trained in accordance
+    with their assigned roles and responsibilities?\n\nAgency boilerplate:\n\n> The
+    Security Coordinator performs the following duties:\n> \n> - Provides training
+    for employees in facility emergency procedures and measures\n> - Provides physical
+    security, access control, and safety measures to support recovery effort\n> -
+    Cordons off the facility including offices to restrict unauthorized access\n>
+    - Coordinates with the building management and the CPC for authorized personnel
+    access\n> - Coordinates and manages additional physical security/guards as needed\n>
+    - Acts as a liaison with emergency personnel, such as fire and police departments\n>
+    - Provides assistance to officials in investigating the damaged facility/site\n>
+    - Ensures that data room/center at alternate site has locks (access controls)
+    on the doors\n> - Coordinates and secures the transportation of files, reports,
+    and equipment in coordination with the CPC\n"
   type: choice
   choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
+  - key: 'yes'
+    text: 'Yes'
+  - key: yes_edit
+    text: Yes, but I will edit the template language.
+  - key: 'no'
+    text: 'No'
 - id: q12sc
   title: CP Security Coordinator
   prompt: >
-    {% if q12sc_pre == 'yes_edit' %}
-    Edit your Contingency Plan Security Coordinator statement.
-    {% endif %}
-    {% if q12sc_pre == 'no' %}
-    Write your Contingency Plan Security Coordinator statement.
-    {% endif %}
+    {% if q12sc_pre == 'yes_edit' %} Edit your Contingency Plan Security Coordinator
+    statement. {% endif %} {% if q12sc_pre == 'no' %} Write your Contingency Plan
+    Security Coordinator statement. {% endif %}
   type: longtext
   default: |
     {% if q12sc_pre == 'yes_edit' %}
@@ -1096,7 +571,6 @@ questions:
       - Provides assistance to officials in investigating the damaged facility/site
       - Ensures that data room/center at alternate site has locks (access controls) on the doors
       - Coordinates and secures the transportation of files, reports, and equipment in coordination with the CPC
-
   impute:
   - condition: q12sc_pre == 'yes'
     value: |
@@ -1111,718 +585,3 @@ questions:
       - Provides assistance to officials in investigating the damaged facility/site
       - Ensures that data room/center at alternate site has locks (access controls) on the doors
       - Coordinates and secures the transportation of files, reports, and equipment in coordination with the CPC
-
-- id: q13_pre
-  title: Plan Distribution and Availability (pre)
-  prompt: |
-    Will you leverage template Plan Distribution and Availability language used for CACE information systems?
-
-    > During a disaster situation, the availability of the contingency plan is essential to the success of the restoration efforts.  The Contingency Plan Team has immediate access to the plan upon notification of an emergency.  The Contingency Plan Coordinator ensures that a copy of the most current version of the Contingency Plan is maintained at CSP Name’s facility.  This plan has been distributed to all personnel listed in B Appendix – Key Personnel and Team Member Contact List.
-
-    > Contingency Plan Team members are obligated to inform the Contingency Planning Coordinator, if and when, they no longer require a copy of the plan.  In addition, each recipient of the plan is obligated to return or destroy any portion of the plan that is no longer needed and upon termination from CSP Name.
-
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q13
-  title: Plan Distribution and Availability
-  prompt: >
-    {% if q13_pre == 'yes_edit' %}
-    Edit your Plan Distribution and Availability statement.
-    {% endif %}
-    {% if q13_pre == 'no' %}
-    Write your Plan Distribution and Availability statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q13_pre == 'yes_edit' %}
-    During a disaster situation, the availability of the contingency plan is essential to the success of the restoration efforts.  The Contingency Plan Team has immediate access to the plan upon notification of an emergency.  The Contingency Plan Coordinator ensures that a copy of the most current version of the Contingency Plan is maintained at CSP Name’s facility.  This plan has been distributed to all personnel listed in B Appendix – Key Personnel and Team Member Contact List.
-
-    Contingency Plan Team members are obligated to inform the Contingency Planning Coordinator, if and when, they no longer require a copy of the plan.  In addition, each recipient of the plan is obligated to return or destroy any portion of the plan that is no longer needed and upon termination from CSP Name.
-
-    {% endif %}
-  examples:
-  - example: |
-      During a disaster situation, the availability of the contingency plan is essential to the success of the restoration efforts.  The Contingency Plan Team has immediate access to the plan upon notification of an emergency.  The Contingency Plan Coordinator ensures that a copy of the most current version of the Contingency Plan is maintained at CSP Name’s facility.  This plan has been distributed to all personnel listed in B Appendix – Key Personnel and Team Member Contact List.
-
-      Contingency Plan Team members are obligated to inform the Contingency Planning Coordinator, if and when, they no longer require a copy of the plan.  In addition, each recipient of the plan is obligated to return or destroy any portion of the plan that is no longer needed and upon termination from CSP Name.
-
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      During a disaster situation, the availability of the contingency plan is essential to the success of the restoration efforts.  The Contingency Plan Team has immediate access to the plan upon notification of an emergency.  The Contingency Plan Coordinator ensures that a copy of the most current version of the Contingency Plan is maintained at CSP Name’s facility.  This plan has been distributed to all personnel listed in B Appendix – Key Personnel and Team Member Contact List.
-
-      Contingency Plan Team members are obligated to inform the Contingency Planning Coordinator, if and when, they no longer require a copy of the plan.  In addition, each recipient of the plan is obligated to return or destroy any portion of the plan that is no longer needed and upon termination from CSP Name.
-
-- id: q14_pre
-  title: Line of Succession/Alternates Roles (pre)
-  prompt: |
-    Will you leverage template Line of Succession/Alternates Roles language used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q16_pre
-  title: Activation Criteria and Procedure (pre)
-  prompt: |
-    Will you leverage the template Activation Criteria and Procedure statement used for CACE information systems?
-
-    > The {{project.system_info.system_name}} ISCP may be activated if one or more of the following criteria are met:
-    > 
-    > 1. The type of outage indicates {{project.system_info.system_name}} will be down for more than _Enter Number_ RTO hours.
-    > 2. The facility housing {{project.system_info.system_name}} is damaged and may not be available within _Enter Number_ RTO hours
-    > 3. Other criteria, as appropriate.
-
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q16
-  title: Activation Criteria and Procedure
-  prompt: >
-    {% if q16_pre == 'yes_edit' %}
-    Edit your Activation Criteria and Procedure statement.
-    {% endif %}
-    {% if q16_pre == 'no' %}
-    Write your Activation Criteria and Procedure statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q16_pre == 'yes_edit' %}
-    The {{project.system_info.system_name}} ISCP may be activated if one or more of the following criteria are met:
-
-    1. The type of outage indicates {{project.system_info.system_name}} will be down for more than _Enter Number_ RTO hours.
-    2. The facility housing {{project.system_info.system_name}} is damaged and may not be available within _Enter Number_ RTO hours
-    3. Other criteria, as appropriate.
-
-    {% endif %}
-  examples:
-  - example: |
-      The {{project.system_info.system_name}} ISCP may be activated if one or more of the following criteria are met:
-
-      1. The type of outage indicates {{project.system_info.system_name}} will be down for more than _Enter Number_ RTO hours.
-      2. The facility housing {{project.system_info.system_name}} is damaged and may not be available within _Enter Number_ RTO hours
-      3. Other criteria, as appropriate.
-
-  impute:
-  - condition: q16_pre == 'yes'
-    value: |
-      The {{project.system_info.system_name}} ISCP may be activated if one or more of the following criteria are met:
-
-      1. The type of outage indicates {{project.system_info.system_name}} will be down for more than _Enter Number_ RTO hours.
-      2. The facility housing {{project.system_info.system_name}} is damaged and may not be available within _Enter Number_ RTO hours
-      3. Other criteria, as appropriate.
-
-- id: q17_notification_instructions
-  title: Notification Instructions
-  prompt: |
-    Describe established notifications procedures.
-
-    Notification procedures must include who makes the initial notifications, the sequence in which personnel are notified and the method of notification (e.g., email blast, call tree, text messaging, automated notification system, etc.). Delete this instruction from your final version of this document.
-  type: longtext
-
-#### completed through here
-
-- id: q17_outage_assessment_role
-  title: Outage Assessment Role
-  prompt: |
-    What organizational role conducts the Outage Assessment?
-
-    Following notification, a thorough outage assessment is necessary to determine the extent of the disruption, any damage, and expected recovery time.  This outage assessment is conducted by what organizational role? Do not give a person's name.
-  type: text
-
-- id: q17_outage_assessment
-  title: Outage Assessment Procedure
-  prompt: |
-    Describe Outage Assessment procedures.
-
-    Outline detailed procedures to include how to determine the cause of the outage; identification of potential for additional disruption or damage; assessment of affected physical area(s); and determination of the physical infrastructure status, IS equipment functionality, and inventory.  Procedures must include notation of items that will be needed to be replaced and estimated time to restore service to normal operations.
-  type: longtext
-
-
-- id: q18_pre
-  title: Outage Assessment (pre)
-  prompt: |
-    Will you leverage the template Outage Assessment statement used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q19_pre
-  title: Recovery (pre)
-  prompt: |
-    Will you leverage the template Recovery statement used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q20_pre
-  title: Sequence of Recovery Operations (pre)
-  prompt: |
-    Will you leverage the template Sequence of Recovery Operations statement used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q21_pre
-  title: Recovery Procedures (pre)
-  prompt: |
-    Will you leverage the template Recovery Procedures statement used for CACE information systems?
-    What procdedures will you follow if the system goes down?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q23_pre
-  title: Recovery Escalation Notices / Awareness (pre)
-  prompt: |
-    Will you leverage the template Recovery Escalation Notices / Awareness statement used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q24_pre
-  title: Reconstitution (pre)
-  prompt: |
-    Will you leverage template Reconstitution language used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q25_pre
-  title: Data Validation Testing (pre)
-  prompt: |
-    Will you leverage template Data Validation Testing language used for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q26_pre
-  title: Functional Validation Testing (pre)
-  prompt: |
-    Will you leverage template Functional Validation Testing language for CACE information system?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q27_pre
-  title: Recovery Declaration (pre)
-  prompt: |
-    Will you leverage template Recovery Declaration language for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q28_pre
-  title: User Notification (pre)
-  prompt: |
-    Will you leverage template User Notification language for CACE information system?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q29_pre
-  title: Cleanup (pre)
-  prompt: |
-    Will you leverage template Cleanup language for CACE information systems?
-
-    Will you employ cleanup-process template language consistent with those used with CACE information systems?\nWill you include a roles and responsibilities table leveraging template CACE infromation system language?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q30_pre
-  title: Returning Backup Media (pre)
-  prompt: |
-    Will you leverage template Returning Backup Media language for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q31_pre
-  title: Backing Up Restored Systems (pre)
-  prompt: |
-    Will you leverage template Backing Up Restored Systemslanguage for CACE information systems?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-      Agency boilerplate:
-
-- id: q32_pre
-  title: Event Documentation (pre)
-  prompt: |
-    Will you leverage template Event Documentation language for CACE information systems?\nWill you include a roles and responsibilities table leveraging template CACE infromation system language?
-
-    DEFAULT_CONTENT
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-- id: q0x
-  title: SECTION
-  prompt: >
-    {% if q0x_pre == 'yes_edit' %}
-    Edit your SECTION statement.
-    {% endif %}
-    {% if q0x_pre == 'no' %}
-    Write your SECTION statement.
-    {% endif %}
-  type: longtext
-  default: |
-    {% if q0x_pre == 'yes_edit' %}
-    DEFAULT_CONTENT
-    {% endif %}
-  examples:
-  - example: |
-      DEFAULT_CONTENT
-  impute:
-  - condition: q0x_pre == 'yes'
-    value: |
-      DEFAULT_CONTENT
-
-- id: q33_pre
-  title: Contingency Plan Testing (pre)
-  prompt: |
-    Will you leverage the template Contingency Plan Testing language used for CACE information systems?
-  type: choice
-  choices:
-    - key: "yes"
-      text: "Yes"
-    - key: yes_edit
-      text: Yes, but I will edit the template language.
-    - key: "no"
-      text: "No"
-
-
