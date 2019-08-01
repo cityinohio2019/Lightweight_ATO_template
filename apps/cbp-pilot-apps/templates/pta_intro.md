@@ -3,6 +3,66 @@ title: Cover page
 format: html
 ...
 
+<style type="text/css" scoped>
+    h2 { border-bottom:1px solid #888; }
+    h3 { border-bottom: 0.5px solid #aaa; }
+    h4 { margin-top: 15px; font-weight: bold; font-size: 1em; }
+    blockquote { color: #666; font-size:0.8em; margin: 0 10px; }
+    .notice {color: red; font-size:3.0em; text-align:center; transform: scaleY(.85);
+    font-weight: bold;}
+    table { border: none; border-collapse: collapse; }
+    th, td { border: 1px solid #888; padding: 15px; text-align: left;}
+    @media all {
+        .page-break     { display: none; }
+    }
+
+    @media print {
+        h1.title {
+            /* v-center, need absolute */
+            position: absolute; /* repeats once */
+            bottom: 50%;
+            /* h-center, for element with absolute positioning */
+            left: 0;
+            right: 0;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .footer {
+            position: fixed; /* repeats on every page */
+            bottom: 0;
+        }
+        table.footer {
+            width: 100%;
+        }
+        table.footer, table.footer td {
+            border: none;
+            padding: 0px;
+            padding-bottom: .1em;
+        }
+        .page-break { display: block; page-break-after: always; }
+    }
+</style>
+
+<center>
+<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
+<h1 class="title"><br/>Privacy Threshold Analysis (PTA)</h1>
+</center>
+
+
+<div class="page-break">
+  <table class="footer">
+    <tr>
+      <td width="33%"><strong>PTA</strong></td>
+      <td width="34%" align="center"><strong>LIMITED OFFICIAL USE</strong></td>
+      <td width="33%" align="right"><!-- page number --></td>
+    </tr><tr>
+      <td colspan="3" align="center">Privacy Threshold Analysis</td>
+    </tr>
+  </table>
+</div>
+
+
+
 <div style="width: 650px; margin: auto;">
 
 <div style="font-family: TimesNewRoman, Times, serif; font-weight: bold;">
