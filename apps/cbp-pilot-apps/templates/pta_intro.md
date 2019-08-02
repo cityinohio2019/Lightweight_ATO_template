@@ -12,56 +12,7 @@ format: html
     font-weight: bold;}
     table { border: none; border-collapse: collapse; }
     th, td { border: 1px solid #888; padding: 15px; text-align: left;}
-    @media all {
-        .page-break     { display: none; }
-    }
-
-    @media print {
-        h1.title {
-            /* v-center, need absolute */
-            position: absolute; /* repeats once */
-            bottom: 50%;
-            /* h-center, for element with absolute positioning */
-            left: 0;
-            right: 0;
-            margin-left: 20%;
-            margin-right: 20%;
-        }
-        .footer {
-            position: fixed; /* repeats on every page */
-            bottom: 0;
-        }
-        table.footer {
-            width: 95%;
-            display: table;
-        }
-        table.footer td {
-            border: none;
-            padding: 0px;
-            padding-bottom: .1em;
-        }
-        .page-break { display: block; page-break-after: always; }
-    }
 </style>
-
-<center>
-<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
-<h1 class="title"><br/>Privacy Threshold Analysis</h1>
-</center>
-
-<div class="page-break">
-  <table class="footer">
-    <tr>
-      <td width="33%"><strong></strong></td>
-      <td width="34%" style="text-align: center;"><strong>LIMITED OFFICIAL USE</strong></td>
-      <td width="33%" style="text-align: right;"> <!-- page number --></td>
-    </tr><tr>
-      <td colspan="3">Privacy Threshold Analysis</td>
-    </tr>
-  </table>
-</div>
-
-
 
 <div style="width: 650px; margin: auto;">
 

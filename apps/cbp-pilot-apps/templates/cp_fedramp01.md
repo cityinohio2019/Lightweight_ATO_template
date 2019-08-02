@@ -33,9 +33,10 @@ source: https://www.fedramp.gov/assets/resources/templates/SSP-A06-FedRAMP-ISCP-
             bottom: 0;
         }
         table.footer {
-            width: 100%;
+            width: 95%;
+            display: table;
         }
-        table.footer, table.footer td {
+        table.footer td {
             border: none;
             padding: 0px;
             padding-bottom: .1em;
@@ -46,18 +47,17 @@ source: https://www.fedramp.gov/assets/resources/templates/SSP-A06-FedRAMP-ISCP-
 
 <center>
 <img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
-<h1 class="title"><br/>Contingency Plan</h1>
+<h1 class="title">{{project.system_info.system_name}}<br/>Contingency Plan</h1>
 </center>
-
 
 <div class="page-break">
   <table class="footer">
     <tr>
-      <td width="33%"><strong>Contingency Plan</strong></td>
-      <td width="34%" align="center"><strong>LIMITED OFFICIAL USE</strong></td>
-      <td width="33%" align="right"><!-- page number --></td>
+      <td width="33%"><strong>{{project.system_info.system_short_name}}</strong></td>
+      <td width="34%" style="text-align: center;"><strong>LIMITED OFFICIAL USE</strong></td>
+      <td width="33%" style="text-align: right;"> <!-- page number --></td>
     </tr><tr>
-      <td colspan="3" align="center">Contingency Plan</td>
+      <td colspan="3">Contingency Plan</td>
     </tr>
   </table>
 </div>
