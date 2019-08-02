@@ -32,9 +32,10 @@ format: html
             bottom: 0;
         }
         table.footer {
-            width: 100%;
+            width: 95%;
+            display: table;
         }
-        table.footer, table.footer td {
+        table.footer td {
             border: none;
             padding: 0px;
             padding-bottom: .1em;
@@ -45,18 +46,17 @@ format: html
 
 <center>
 <img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
-<h1 class="title"><br/>Privacy Threshold Analysis (PTA)</h1>
+<h1 class="title"><br/>Privacy Threshold Analysis</h1>
 </center>
-
 
 <div class="page-break">
   <table class="footer">
     <tr>
-      <td width="33%"><strong>PTA</strong></td>
-      <td width="34%" align="center"><strong>LIMITED OFFICIAL USE</strong></td>
-      <td width="33%" align="right"><!-- page number --></td>
+      <td width="33%"><strong></strong></td>
+      <td width="34%" style="text-align: center;"><strong>LIMITED OFFICIAL USE</strong></td>
+      <td width="33%" style="text-align: right;"> <!-- page number --></td>
     </tr><tr>
-      <td colspan="3" align="center">Privacy Threshold Analysis</td>
+      <td colspan="3">Privacy Threshold Analysis</td>
     </tr>
   </table>
 </div>
