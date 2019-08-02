@@ -1,4 +1,4 @@
-id: pta_form
+id: pta_printable
 title: Privacy Threshold Analysis Document
 version: 1
 output:
@@ -17,8 +17,4 @@ output:
     {{project.pta_ic_forms.output_documents.ic_forms_pta|safe}}
 
     {{project.pta_info_storage.output_documents.info_storage|safe}}
-questions:
-- id: q0
-  type: text
-  title: New Question Title
-  prompt: Enter some text.
+questions: []

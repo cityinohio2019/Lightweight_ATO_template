@@ -289,10 +289,10 @@ questions:
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
-- id: pta_form
+- id: pta_printable
   title: Privacy Threshold Analysis Document
   type: module
-  module-id: pta_form
+  module-id: pta_printable
   group: PTA (Privacy Threshold Analysis)
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
