@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.6.2
+version: 0.1.6.2.2
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.6.2
+  template: IT System Questionnaires (Pilot) v0.1.6.2.2
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -215,12 +215,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.6.2
+    short: IT System Questionnaires (Pilot) v0.1.6.2.2
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.6.2
+  version: 0.1.6.2.2
 questions:
 - id: system_info
   title: System Profile
@@ -230,8 +230,8 @@ questions:
 - id: se_cace_elk
   title: CACE ELK (Elastic, Logstach, Kibana) introduction
   type: module
+  icon: se_cace_icon.png
   module-id: se_cace_elk
-  icon: app.png
   group: Hosting Environment
   impute:
   - condition: project.system_info.system_hosting != 'cbp_cace'
@@ -244,6 +244,7 @@ questions:
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
   type: module
+  icon: pta_icon.png
   module-id: pta_intro
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -252,6 +253,7 @@ questions:
 - id: pta_purpose
   title: Purpose of the Information Collection
   type: module
+  icon: pta_icon.png
   module-id: pta_purpose
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -260,6 +262,7 @@ questions:
 - id: pta_poc_details
   title: PTA POC Details
   type: module
+  icon: pta_icon.png
   module-id: pta_poc_details
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -268,6 +271,7 @@ questions:
 - id: pta_ic_forms
   title: Questions
   type: module
+  icon: pta_icon.png
   module-id: pta_ic_forms
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -276,6 +280,7 @@ questions:
 - id: pta_info_description
   title: Type of Information Collected
   type: module
+  icon: pta_icon.png
   module-id: pta_info_description
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -284,6 +289,7 @@ questions:
 - id: pta_info_storage
   title: How Will DOS Store the Collected Information?
   type: module
+  icon: pta_icon.png
   module-id: pta_info_storage
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -292,6 +298,7 @@ questions:
 - id: pta_printable
   title: Privacy Threshold Analysis Document
   type: module
+  icon: pta_icon.png
   module-id: pta_printable
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -301,6 +308,7 @@ questions:
   title: Test Introduction
   type: module
   module-id: tp_introduction
+  icon: tp_icon.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -309,6 +317,7 @@ questions:
   title: Test Project Management
   type: module
   module-id: tp_project_management
+  icon: tp_icon.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -317,24 +326,26 @@ questions:
   title: Test Environment
   type: module
   module-id: tp_test_environment
+  icon: tp_icon.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
-- id: tp_plan
+- id: tp_printable
   title: Test Plan Document
   type: module
-  module-id: tp_document
+  module-id: tp_printable
+  icon: tp_icon.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
-
 
 - id: cp_introduction
   title: Contingency Plan Introduction
   type: module
   module-id: cp_introduction
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -343,6 +354,7 @@ questions:
   title: Contingency Plan Concept of Operations
   type: module
   module-id: cp_questionnaire
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -351,6 +363,7 @@ questions:
   title: Contingency Plan Activation and Notification
   type: module
   module-id: cp_activation
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -359,6 +372,7 @@ questions:
   title: Contingency Plan Recovery
   type: module
   module-id: cp_recovery
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -367,6 +381,7 @@ questions:
   title: Contingency Plan Reconstitution
   type: module
   module-id: cp_reconstitution
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -376,6 +391,7 @@ questions:
   title: General Information
   type: module
   module-id: cp_general_info
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: 1 == 1
@@ -385,6 +401,7 @@ questions:
   title: Contingency Plan Document
   type: module
   module-id: cp_fedramp01
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -394,13 +411,52 @@ questions:
   title: 800-53r4 Controls
   type: module
   module-id: cp_controls_80053r4
+  icon: cp_icon.png
   group: Contingency Plan
   impute:
   - condition: 1 == 1
     value: ~
 
+- id: se_cace_auditing_splunk_elk
+  title: CACE – Auditing (Splunk, ELK)
+  type: module
+  icon: aws_cloud_elk_icon.png
+  module-id: se_cace_auditing_splunk_elk
+  group: Hosting Environment
+  impute:
+  - condition: project.system_info.system_hosting != 'cbp_cace'
+    value: ~
+- id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
+  title: CACE - CI/CD (Jenkins, GitLab, Aqua, SonarQube)
+  type: module
+  icon: se_cace_icon.png
+  module-id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
+  group: Hosting Environment
+  impute:
+  - condition: project.system_info.system_hosting != 'cbp_cace'
+    value: ~
+- id: se_ciso_policy_soc_stp
+  title: CISO (Policy, SOC, STP)
+  type: module
+  icon: se_cace_icon.png
+  module-id: se_ciso_policy_soc_stp
+  group: Hosting Environment
+  impute:
+  - condition: project.system_info.system_hosting != 'cbp_cace'
+    value: ~
+- id: se_sams_system
+  title: SAMS SYSTEM
+  type: module
+  icon: se_cace_icon.png
+  module-id: se_sams_system
+  group: Hosting Environment
+  impute:
+  - condition: project.system_info.system_hosting != 'cbp_cace'
+    value: ~
+
 - id: ssp_intro
   module-id: ssp_intro
+  icon: ssp_icon.png
   title: System Security Plan
   type: module
   group: System Security Plan
@@ -411,6 +467,7 @@ questions:
 deprecated-to-delete:
 - id: cp_q_set_1
   module-id: cp_q_set_1
+  icon: cp_icon.png
   title: Question Set 1
   type: module
   group: Contingency Plan
@@ -419,6 +476,7 @@ deprecated-to-delete:
   #   value: ~
 - id: cp_q_set_2
   module-id: cp_q_set_2
+  icon: cp_icon.png
   title: Question Set 2
   type: module
   group: Contingency Plan

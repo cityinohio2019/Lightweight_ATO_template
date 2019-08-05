@@ -14,4 +14,4 @@ questions:
   type: interstitial
 
 output:
-- templates/cp_fedramp01.md
+- templates/cp_printable.md
