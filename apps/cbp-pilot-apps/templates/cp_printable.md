@@ -114,7 +114,7 @@ This ISCP has been developed for ISA which is classified as a impact system, in 
 
 * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
 * Disruption at the [[VENDOR_PRIMARY_SITE]]
-* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the {{project.system_info.system_hosting.text}}.
+* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
 
 This ITCP does not apply to the following situations:
 

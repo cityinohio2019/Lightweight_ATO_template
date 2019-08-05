@@ -118,6 +118,29 @@ questions:
   title: System PM
   prompt: Who is the Program Manager (PM) for {{system_short_name}}?
   type: text
+- id: system_admin_team
+  title: System Admin Team
+  prompt: What team will administer the system?
+  type: text
+  help: Systems in production typically have a team that administer it.
+  impute:
+  - condition: operational_system == "no"
+    value: ~
+- id: system_admin_short_name
+  title: System Admin Team Short Name
+  prompt: What is a short name or acronym used for the System Admin Team?
+  type: text
+  impute:
+  - condition: operational_system == "no"
+    value: ~
+- id: primary_agency_admin_site
+  title: Primary Agency Admin Site
+  prompt: Where is your System Admin Team based?
+  type: text
+  help: Name of the facility, location, or admin site
+  impute:
+  - condition: operational_system == "no"
+    value: ~
 - id: system_personal_data
   title: System has personal data
   prompt: >-
@@ -179,7 +202,6 @@ questions:
   impute:
   - condition: feedback_exists == "no"
     value: ~
-
 - id: module_complete
   title: Module Complete?
   prompt: |-
@@ -198,5 +220,5 @@ questions:
   - key: complete
     text: 'Yes'
   ask-first:
-   - feedback_exists
-   - feedback
+  - feedback_exists
+  - feedback

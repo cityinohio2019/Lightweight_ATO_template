@@ -467,16 +467,16 @@ questions:
     > Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
 
-    > Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+    > Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
 
-    > * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot
+    > * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot
     be recovered withing 48 hours.
 
-    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform
+    > * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform
     engineers) will be identified and trained in their Contingency planning roles.
 
-    > * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the
+    > * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the
     {{project.system_info.system_short_name}} Contingency Plan.
 
 
@@ -522,11 +522,11 @@ questions:
 
     Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
-    Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+    Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
-    * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform engineers) will be identified and trained in their Contingency planning roles.
-    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the {{project.system_info.system_short_name}} Contingency Plan.
+    * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot be recovered withing 48 hours.
+    * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform engineers) will be identified and trained in their Contingency planning roles.
+    * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the {{project.system_info.system_short_name}} Contingency Plan.
 
     Disruption at {{project.system_info.system_hosting.text}}:
 
@@ -547,16 +547,16 @@ questions:
       Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
 
-      Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+      Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
 
-      * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot
+      * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot
       be recovered withing 48 hours.
 
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform
+      * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform
       engineers) will be identified and trained in their Contingency planning roles.
 
-      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the
+      * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the
       {{project.system_info.system_short_name}} Contingency Plan.
 
 
@@ -592,16 +592,16 @@ questions:
       Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
 
-      Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
+      Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
 
-      * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot
+      * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot
       be recovered withing 48 hours.
 
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform
+      * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform
       engineers) will be identified and trained in their Contingency planning roles.
 
-      * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the
+      * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the
       {{project.system_info.system_short_name}} Contingency Plan.
 
 
