@@ -7,7 +7,7 @@ internal:
 introduction:
   format: markdown
   template: |
-    In the following questions, we'll summarize the Recovery Phase of your Contigency Plan.
+    In the following questions, we'll summarize the Recovery Phase of your Contingency Plan.
 questions:
 
 - id: q20_pre

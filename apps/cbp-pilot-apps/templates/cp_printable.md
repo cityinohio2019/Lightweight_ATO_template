@@ -87,13 +87,13 @@ CONTINGENCY PLAN APPROVALS
 
 ## 1.1 Applicable Laws and Regulations
 
-The laws and regulations and regulations are applicable to contigency planning:
+The laws and regulations and regulations are applicable to Contingency planning:
 
 {{project.cp_introduction.q02}}
 
 ## 1.2 Applicable Standards and Guidance
 
-The following standards and guidance are useful for understanding contigency planning:
+The following standards and guidance are useful for understanding Contingency planning:
 
 {{project.cp_introduction.q03}}
 
