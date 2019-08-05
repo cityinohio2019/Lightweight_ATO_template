@@ -1,15 +1,5 @@
 id: se_sams_system
-outputs:
-- format: markdown
-  id: nist_80053rev4_ssp_AC_11_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_11_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_11_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_11_a_1
+output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_11_a_2
   template: |
@@ -33,26 +23,6 @@ outputs:
     The SAMS application team reviews accounts once per month.
   title: NIST 800-53 rev4 SSP AC_2_j_2
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_2_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_j_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_2_j_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_j_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_2_j_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_c
-  template: |
-    Conditions for role or group membership are described in the SAMS Account Management SOP.
-  title: NIST 800-53 rev4 SSP AC_2_c
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_c
   template: |
     Conditions for role or group membership are described in the SAMS Account Management SOP.
@@ -62,16 +32,6 @@ outputs:
   template: |
     Each authorized account is specified within the application, the database and the OS.
   title: NIST 800-53 rev4 SSP AC_2_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_d_1
-  template: |
-    Each authorized account is specified within the application, the database and the OS.
-  title: NIST 800-53 rev4 SSP AC_2_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_d_2
-  template: |
-    Each authorized specified within the application, the database and the OS has an associated role and group assignment.
-  title: NIST 800-53 rev4 SSP AC_2_d_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_d_2
   template: |
@@ -85,28 +45,10 @@ outputs:
     and privileges.
   title: NIST 800-53 rev4 SSP AC_2_d_3
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_d_3
-  template: >
-    Each authorized account specified within the application, the database and the
-    OS has an associated role and group assignment which dictates the accounts rights
-    and privileges.
-  title: NIST 800-53 rev4 SSP AC_2_d_3
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_d_4
   template: |
     All attributes associated with each authorized account specified within the application, the database and the OS technologies.
   title: NIST 800-53 rev4 SSP AC_2_d_4
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_d_4
-  template: |
-    All attributes associated with each authorized account specified within the application, the database and the OS technologies.
-  title: NIST 800-53 rev4 SSP AC_2_d_4
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_e_1
-  template: >
-    The Emerging Technology Team approves application privileged users with application
-    regular user accounts approved by the individual's management.
-  title: NIST 800-53 rev4 SSP AC_2_e_1
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_e_1
   template: >
@@ -119,25 +61,10 @@ outputs:
     Account approvals will be documented within the access request forms and tracking system.
   title: NIST 800-53 rev4 SSP AC_2_e_2
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_e_2
-  template: |
-    Account approvals will be documented within the access request forms and tracking system.
-  title: NIST 800-53 rev4 SSP AC_2_e_2
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_a
   template: |
     Procedures for creating information system accounts and described in the SAMS Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_1_a
-  template: |
-    Procedures for creating information system accounts and described in the SAMS Account Management SOP.
-  title: NIST 800-53 rev4 SSP AC_2_f_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_1_b
-  template: |
-    Procedures for enabling information system accounts and described in the SAMS Account Management SOP.
-  title: NIST 800-53 rev4 SSP AC_2_f_1_b
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_b
   template: |
@@ -149,25 +76,10 @@ outputs:
     Procedures for modifying information system accounts and described in the SAMS Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_c
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_1_c
-  template: |
-    Procedures for modifying information system accounts and described in the SAMS Account Management SOP.
-  title: NIST 800-53 rev4 SSP AC_2_f_1_c
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_d
   template: |
     Procedures for disabling information system accounts and described in the SAMS Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_d
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_1_d
-  template: |
-    Procedures for disabling information system accounts and described in the SAMS Account Management SOP.
-  title: NIST 800-53 rev4 SSP AC_2_f_1_d
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_1_e
-  template: |
-    Procedures for removing information system accounts and described in the SAMS Account Management SOP.
-  title: NIST 800-53 rev4 SSP AC_2_f_1_e
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_e
   template: |
@@ -179,25 +91,10 @@ outputs:
     Evidence for creating information system accounts are found within the account request forms and ticketing system.
   title: NIST 800-53 rev4 SSP AC_2_f_2_a
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_2_a
-  template: |
-    Evidence for creating information system accounts are found within the account request forms and ticketing system.
-  title: NIST 800-53 rev4 SSP AC_2_f_2_a
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_f_2_b
   template: |
     Evidence for enabling information system accounts are found within the account request forms and ticketing system.
   title: NIST 800-53 rev4 SSP AC_2_f_2_b
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_2_b
-  template: |
-    Evidence for enabling information system accounts are found within the account request forms and ticketing system.
-  title: NIST 800-53 rev4 SSP AC_2_f_2_b
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_2_c
-  template: |
-    Evidence for modification information system accounts are found within the account request forms and ticketing system.
-  title: NIST 800-53 rev4 SSP AC_2_f_2_c
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_2_c
   template: |
@@ -209,16 +106,6 @@ outputs:
     Evidence for disabling information system accounts are found within the account request forms and ticketing system.
   title: NIST 800-53 rev4 SSP AC_2_f_2_d
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_2_d
-  template: |
-    Evidence for disabling information system accounts are found within the account request forms and ticketing system.
-  title: NIST 800-53 rev4 SSP AC_2_f_2_d
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_f_2_e
-  template: |
-    Evidence for removing information system accounts are found within the account request forms and ticketing system.
-  title: NIST 800-53 rev4 SSP AC_2_f_2_e
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_f_2_e
   template: |
     Evidence for removing information system accounts are found within the account request forms and ticketing system.
@@ -229,25 +116,10 @@ outputs:
     Logs and administration consoles are used to monitor information system accounts.
   title: NIST 800-53 rev4 SSP AC_2_g
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_g
-  template: |
-    Logs and administration consoles are used to monitor information system accounts.
-  title: NIST 800-53 rev4 SSP AC_2_g
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_h_1
   template: |
     The appropriate account approvers also send the notifications to the account administrators when an account is no longer required.
   title: NIST 800-53 rev4 SSP AC_2_h_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_h_1
-  template: |
-    The appropriate account approvers also send the notifications to the account administrators when an account is no longer required.
-  title: NIST 800-53 rev4 SSP AC_2_h_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_h_2
-  template: |
-    The appropriate account approvers also send the notifications to the account administrators when users are terminated or transferred.
-  title: NIST 800-53 rev4 SSP AC_2_h_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_h_2
   template: |
@@ -260,17 +132,6 @@ outputs:
     when individual information system usage or need to know changes.
   title: NIST 800-53 rev4 SSP AC_2_h_3
 - format: markdown
-  id: nist_80053rev4_ssp_AC_2_h_3
-  template: >
-    The appropriate account approvers also send the notifications to the account administrators
-    when individual information system usage or need to know changes.
-  title: NIST 800-53 rev4 SSP AC_2_h_3
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_i_1
-  template: |
-    Account administrators only implement accounts with valid access authorizations.
-  title: NIST 800-53 rev4 SSP AC_2_i_1
-- format: markdown
   id: nist_80053rev4_ssp_AC_2_i_1
   template: |
     Account administrators only implement accounts with valid access authorizations.
@@ -280,16 +141,6 @@ outputs:
   template: |
     Account administrators only implement accounts with valid access authorizations that include intended system usage.
   title: NIST 800-53 rev4 SSP AC_2_i_2
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_i_2
-  template: |
-    Account administrators only implement accounts with valid access authorizations that include intended system usage.
-  title: NIST 800-53 rev4 SSP AC_2_i_2
-- format: markdown
-  id: nist_80053rev4_ssp_AC_2_i_3
-  template: |
-    Not Applicable
-  title: NIST 800-53 rev4 SSP AC_2_i_3
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_i_3
   template: |
@@ -300,31 +151,6 @@ outputs:
   template: |
     Not Applicable
   title: NIST 800-53 rev4 SSP AC_2_k
-- format: markdown
-  id: nist_80053rev4_ssp_AC_23_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_23_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_23_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_23_2
-- format: markdown
-  id: nist_80053rev4_ssp_AC_23_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_23_3
-- format: markdown
-  id: nist_80053rev4_ssp_AC_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_3
-- format: markdown
-  id: nist_80053rev4_ssp_AC_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_3
 - format: markdown
   id: nist_80053rev4_ssp_AC_3_DHS_5_1_1_d
   template: |
@@ -349,16 +175,6 @@ outputs:
     SAMS enforces information flow at the system level through access control policies via application accounts and database accounts.
   title: NIST 800-53 rev4 SSP AC_4_2
 - format: markdown
-  id: nist_80053rev4_ssp_AC_4_21_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_4_21_1
-- format: markdown
-  id: nist_80053rev4_ssp_AC_4_21_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AC_4_21_2
-- format: markdown
   id: nist_80053rev4_ssp_AC_6
   template: >
     The ISSO employs the principle of least privilege, allowing only authorized access
@@ -372,36 +188,6 @@ outputs:
     configure access permissions) has been identified, logged, and audited.
   title: NIST 800-53 rev4 SSP AC_6_9
 - format: markdown
-  id: nist_80053rev4_ssp_AU_12_DHS_5_3_g
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_12_DHS_5_3_g
-- format: markdown
-  id: nist_80053rev4_ssp_AU_12_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_12_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_AU_12_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_12_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_AU_12_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_12_c
-- format: markdown
-  id: nist_80053rev4_ssp_AU_12_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_12_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_AU_12_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_12_b_1
-- format: markdown
   id: nist_80053rev4_ssp_AU_2_a_2
   template: >
     The ISSO has configured ELK such that privileged functionality (e.g. ability to
@@ -412,31 +198,6 @@ outputs:
   template: |
     The ISSO audits the subset of auditable events.
   title: NIST 800-53 rev4 SSP AU_2_d_2
-- format: markdown
-  id: nist_80053rev4_ssp_AU_2_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_2_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_AU_2_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_AU_2_d_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_2_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_AU_2_d_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_2_d_3
-- format: markdown
-  id: nist_80053rev4_ssp_AU_2_d_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_2_d_3
 - format: markdown
   id: nist_80053rev4_ssp_AU_2_b
   template: |
@@ -450,45 +211,10 @@ outputs:
     frequency.
   title: NIST 800-53 rev4 SSP AU_6_a_3
 - format: markdown
-  id: nist_80053rev4_ssp_AU_6_DHS_5_3_h
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_6_DHS_5_3_h
-- format: markdown
-  id: nist_80053rev4_ssp_AU_6_DHS_5_3_i
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_6_DHS_5_3_i
-- format: markdown
-  id: nist_80053rev4_ssp_AU_6_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_6_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_AU_6_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_6_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_AU_6_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP AU_6_a_2
-- format: markdown
   id: nist_80053rev4_ssp_AU_6_DHS_5_4_6_f
   template: |
     Not Applicable: Mail servers are not within the SAMS boundary.
   title: NIST 800-53 rev4 SSP AU_6_DHS_5_4_6_f
-- format: markdown
-  id: nist_80053rev4_ssp_AU_6_DHS_5_4_6_f
-  template: |
-    Not Applicable: Mail servers are not within the SAMS boundary.
-  title: NIST 800-53 rev4 SSP AU_6_DHS_5_4_6_f
-- format: markdown
-  id: nist_80053rev4_ssp_AU_6_b_1
-  template: |
-    The SAMS ISSO is to report analysis to the System Owner.
-  title: NIST 800-53 rev4 SSP AU_6_b_1
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_b_1
   template: |
@@ -525,46 +251,6 @@ outputs:
     The system reviews and updates Interconnection Security Agreements.
   title: NIST 800-53 rev4 SSP CA_3_c_2
 - format: markdown
-  id: nist_80053rev4_ssp_CA_3_c_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_3_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_DHS_2_2_8_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_DHS_2_2_8_d
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_b_2_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_b_2_a
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_b_2_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_b_2_b
-- format: markdown
-  id: nist_80053rev4_ssp_CA_5_b_2_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_5_b_2_c
-- format: markdown
   id: nist_80053rev4_ssp_CA_7_b_3
   template: >
     The ISSO develops the SAMS continuous monitoring strategy that includes establishment
@@ -577,40 +263,10 @@ outputs:
     of the organization-defined frequencies for monitoring.
   title: NIST 800-53 rev4 SSP CA_7_b_4
 - format: markdown
-  id: nist_80053rev4_ssp_CA_7_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_7_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_c_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_7_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_c_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_7_c_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_c_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CA_7_c_2
-- format: markdown
   id: nist_80053rev4_ssp_CA_7_a_1
   template: |
     The SAMS Continuous Monitoring (ISCM) CONOPS defines metrics to be used to implement continuous monitoring of SAMS.
   title: NIST 800-53 rev4 SSP CA_7_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_a_1
-  template: |
-    The SAMS Continuous Monitoring (ISCM) CONOPS defines metrics to be used to implement continuous monitoring of SAMS.
-  title: NIST 800-53 rev4 SSP CA_7_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_a_2
-  template: |
-    The SAMS ISCM CONOPS defines how its metrics are monitored.
-  title: NIST 800-53 rev4 SSP CA_7_a_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_a_2
   template: |
@@ -622,16 +278,6 @@ outputs:
     The SAMS ISSO is responsible for implementing the SAMS ISCM.
   title: NIST 800-53 rev4 SSP CA_7_a_3
 - format: markdown
-  id: nist_80053rev4_ssp_CA_7_a_3
-  template: |
-    The SAMS ISSO is responsible for implementing the SAMS ISCM.
-  title: NIST 800-53 rev4 SSP CA_7_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_b_1
-  template: |
-    Frequency of monitoring is defined in the SAMS ISCM CONOPS.
-  title: NIST 800-53 rev4 SSP CA_7_b_1
-- format: markdown
   id: nist_80053rev4_ssp_CA_7_b_1
   template: |
     Frequency of monitoring is defined in the SAMS ISCM CONOPS.
@@ -642,26 +288,10 @@ outputs:
     The SAMS ISSO develops the continuous monitoring strategy that includes ongoing security status monitoring of ISCM metrics.
   title: NIST 800-53 rev4 SSP CA_7_d_1
 - format: markdown
-  id: nist_80053rev4_ssp_CA_7_d_1
-  template: |
-    The SAMS ISSO develops the continuous monitoring strategy that includes ongoing security status monitoring of ISCM metrics.
-  title: NIST 800-53 rev4 SSP CA_7_d_1
-- format: markdown
   id: nist_80053rev4_ssp_CA_7_d_2
   template: |
     The SAMS ISSO implements the continuous monitoring strategy that includes ongoing security status monitoring of ISCM metrics.
   title: NIST 800-53 rev4 SSP CA_7_d_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_d_2
-  template: |
-    The SAMS ISSO implements the continuous monitoring strategy that includes ongoing security status monitoring of ISCM metrics.
-  title: NIST 800-53 rev4 SSP CA_7_d_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_e_1
-  template: >
-    The SAMS ISSO develops the correlation and analysis of security-related information
-    generated by assessments and monitoring as part of the SAMS ISCM CONOPS.
-  title: NIST 800-53 rev4 SSP CA_7_e_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_e_1
   template: >
@@ -675,29 +305,11 @@ outputs:
     generated by assessments and monitoring as part of the SAMS ISCM CONOPS.
   title: NIST 800-53 rev4 SSP CA_7_e_2
 - format: markdown
-  id: nist_80053rev4_ssp_CA_7_e_2
-  template: >
-    The SAMS ISSO implements the correlation and analysis of security-related information
-    generated by assessments and monitoring as part of the SAMS ISCM CONOPS.
-  title: NIST 800-53 rev4 SSP CA_7_e_2
-- format: markdown
   id: nist_80053rev4_ssp_CA_7_f_1
   template: >
     The SAMS ISSO develops a continuous monitoring strategy that includes response
     actions to address results of the analysis of security-related information.
   title: NIST 800-53 rev4 SSP CA_7_f_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_f_1
-  template: >
-    The SAMS ISSO develops a continuous monitoring strategy that includes response
-    actions to address results of the analysis of security-related information.
-  title: NIST 800-53 rev4 SSP CA_7_f_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_f_2
-  template: >
-    The SAMS ISSO implements a continuous monitoring strategy that includes response
-    actions to address results of the analysis of security-related information.
-  title: NIST 800-53 rev4 SSP CA_7_f_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_f_2
   template: >
@@ -711,30 +323,11 @@ outputs:
     of the organization and information system are to be reported.
   title: NIST 800-53 rev4 SSP CA_7_g_1
 - format: markdown
-  id: nist_80053rev4_ssp_CA_7_g_1
-  template: >
-    The SAMS ISCM CONOPS defines the personnel or roles to whom the security status
-    of the organization and information system are to be reported.
-  title: NIST 800-53 rev4 SSP CA_7_g_1
-- format: markdown
   id: nist_80053rev4_ssp_CA_7_g_2
   template: >
     The SAMS ISCM CONOPS defines the frequency to report the security status of the
     organization and information system to organization-defined personnel or roles.
   title: NIST 800-53 rev4 SSP CA_7_g_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_g_2
-  template: >
-    The SAMS ISCM CONOPS defines the frequency to report the security status of the
-    organization and information system to organization-defined personnel or roles.
-  title: NIST 800-53 rev4 SSP CA_7_g_2
-- format: markdown
-  id: nist_80053rev4_ssp_CA_7_g_3
-  template: >
-    The SAMS ISSO develops a continuous monitoring strategy that includes reporting
-    the security status of the organization or information system to organizational-defined
-    personnel or roles with the organization-defined frequency.
-  title: NIST 800-53 rev4 SSP CA_7_g_3
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_g_3
   template: >
@@ -751,28 +344,10 @@ outputs:
     the organizational continuous monitoring strategy.
   title: NIST 800-53 rev4 SSP CA_7_g_4
 - format: markdown
-  id: nist_80053rev4_ssp_CA_7_g_4
-  template: >
-    The SAMS ISSO implements a continuous monitoring program that includes reporting
-    the security status of the organization and information system to organization-defined
-    personnel or roles with the organization-defined frequency in accordance with
-    the organizational continuous monitoring strategy.
-  title: NIST 800-53 rev4 SSP CA_7_g_4
-- format: markdown
   id: nist_80053rev4_ssp_CA_8_1
   template: |
     The information systems shall define on what system components penetration testing will be conducted.
   title: NIST 800-53 rev4 SSP CA_8_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_8_1
-  template: |
-    The information systems shall define on what system components penetration testing will be conducted.
-  title: NIST 800-53 rev4 SSP CA_8_1
-- format: markdown
-  id: nist_80053rev4_ssp_CA_8_2
-  template: |
-    The information systems shall define the frequency in which petration testing will be conducted.
-  title: NIST 800-53 rev4 SSP CA_8_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_8_2
   template: |
@@ -793,11 +368,6 @@ outputs:
   template: |
     The application utilizes CBP GitLab to maintain and documents a current baseline configuration of the information system
   title: NIST 800-53 rev4 SSP CM_2_2
-- format: markdown
-  id: nist_80053rev4_ssp_CM_2_DHS_4_12_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_2_DHS_4_12_b
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_2_c
   template: |
@@ -842,155 +412,10 @@ outputs:
     The application utilizes CBP GitLab to control configuration changes which are managed and reviewed.
   title: NIST 800-53 rev4 SSP CM_6_d_2
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_3_7_e
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_3_7_e
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_3_7_f
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_3_7_f
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_4_12_f
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_4_12_f
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_4_12_j
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_4_12_j
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_4_5_2_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_4_5_2_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_4_8_4_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_4_8_4_a
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_5_4_5_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_5_4_5_d
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_DHS_5_4_5_e
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_DHS_5_4_5_e
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_1_1_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_1_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_c_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_c_3
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_d_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_1_1_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_1_1_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_1_1_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_1_1_c
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_1_2_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_1_2_a
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_1_2_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_1_2_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_c_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_c_1_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_c_1_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_6_c_5
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_6_c_5
-- format: markdown
   id: nist_80053rev4_ssp_CM_7_a
   template: |
     The system is configured on the principle of least privileged across all layers
   title: NIST 800-53 rev4 SSP CM_7_a
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_2_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_2_a
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_2_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_2_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_2_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_2_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_2_d
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_1_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_1_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_1_b
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_1_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_1_c
-- format: markdown
-  id: nist_80053rev4_ssp_CM_7_b_1_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_7_b_1_d
 - format: markdown
   id: nist_80053rev4_ssp_CM_8_a_1
   template: |
@@ -1033,16 +458,6 @@ outputs:
     The organization reviews and updates the information system components inventory
     with the defined frequency in accordance with the DHS 4300A and CBP 1400-05D documents.
   title: NIST 800-53 rev4 SSP CM_8_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_CM_8_DHS_4_12_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_8_DHS_4_12_c
-- format: markdown
-  id: nist_80053rev4_ssp_CM_8_DHS_4_6_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CM_8_DHS_4_6_a
 - format: markdown
   id: nist_80053rev4_ssp_CP_2_a_1
   template: >
@@ -1149,21 +564,6 @@ outputs:
     key contingency personnel and organizational elements.
   title: NIST 800-53 rev4 SSP CP_2_f_2
 - format: markdown
-  id: nist_80053rev4_ssp_CP_2_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CP_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_CP_2_d_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CP_2_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_CP_2_d_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP CP_2_d_1
-- format: markdown
   id: nist_80053rev4_ssp_CP_2_e_1
   template: >
     The information system shall update the contingency plan to address changes to
@@ -1192,18 +592,6 @@ outputs:
     organizational readiness to execute the plan
   title: NIST 800-53 rev4 SSP CP_4_a_3
 - format: markdown
-  id: nist_80053rev4_ssp_CP_4_a_3
-  template: >
-    The information system shall tests the contingency plan with DHS/CBP-defined frequency,
-    using DHS/CBP-defined tests to determine the effectiveness of the plan and the
-    organizational readiness to execute the plan
-  title: NIST 800-53 rev4 SSP CP_4_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_CP_4_b
-  template: |
-    The information system reviews the contingency plan test results
-  title: NIST 800-53 rev4 SSP CP_4_b
-- format: markdown
   id: nist_80053rev4_ssp_CP_4_b
   template: |
     The information system reviews the contingency plan test results
@@ -1219,65 +607,10 @@ outputs:
     SAMS implements compliant encryption standards on the components within its system boundary.
   title: NIST 800-53 rev4 SSP IA_2_8
 - format: markdown
-  id: nist_80053rev4_ssp_IA_2_12_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_12_1
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_12_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_12_2
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_2
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_DHS_5_1_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_DHS_5_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_DHS_5_1_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_DHS_5_1_d
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_1
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_9
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_9
-- format: markdown
-  id: nist_80053rev4_ssp_IA_2_9
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IA_2_9
-- format: markdown
   id: nist_80053rev4_ssp_IR_4_a_1
   template: |
     The information system implements an incident handling capability for security incidents that includes: preparation.
   title: NIST 800-53 rev4 SSP IR_4_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_a_1
-  template: |
-    The information system implements an incident handling capability for security incidents that includes: preparation.
-  title: NIST 800-53 rev4 SSP IR_4_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_a_2
-  template: |
-    The information system implements an incident handling capability for security incidents that includes: detection and analysis.
-  title: NIST 800-53 rev4 SSP IR_4_a_2
 - format: markdown
   id: nist_80053rev4_ssp_IR_4_a_2
   template: |
@@ -1289,25 +622,10 @@ outputs:
     The information system implements an incident handling capability for security incidents that includes: containment.
   title: NIST 800-53 rev4 SSP IR_4_a_3
 - format: markdown
-  id: nist_80053rev4_ssp_IR_4_a_3
-  template: |
-    The information system implements an incident handling capability for security incidents that includes: containment.
-  title: NIST 800-53 rev4 SSP IR_4_a_3
-- format: markdown
   id: nist_80053rev4_ssp_IR_4_a_4
   template: |
     The information system implements an incident handling capability for security incidents that includes: erradication.
   title: NIST 800-53 rev4 SSP IR_4_a_4
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_a_4
-  template: |
-    The information system implements an incident handling capability for security incidents that includes: erradication.
-  title: NIST 800-53 rev4 SSP IR_4_a_4
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_a_5
-  template: |
-    The information system implements an incident handling capability for security incidents that includes: recovery.
-  title: NIST 800-53 rev4 SSP IR_4_a_5
 - format: markdown
   id: nist_80053rev4_ssp_IR_4_a_5
   template: |
@@ -1319,25 +637,10 @@ outputs:
     The information system coordinates incident handling activities with contingency planning activities.
   title: NIST 800-53 rev4 SSP IR_4_b
 - format: markdown
-  id: nist_80053rev4_ssp_IR_4_b
-  template: |
-    The information system coordinates incident handling activities with contingency planning activities.
-  title: NIST 800-53 rev4 SSP IR_4_b
-- format: markdown
   id: nist_80053rev4_ssp_IR_4_c_1_a
   template: |
     The information system incorporates lessons learned from ongoing incident handling activities into: incident response procedures.
   title: NIST 800-53 rev4 SSP IR_4_c_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_c_1_a
-  template: |
-    The information system incorporates lessons learned from ongoing incident handling activities into: incident response procedures.
-  title: NIST 800-53 rev4 SSP IR_4_c_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_c_1_b
-  template: |
-    The information system incorporates lessons learned from ongoing incident handling activities into: training.
-  title: NIST 800-53 rev4 SSP IR_4_c_1_b
 - format: markdown
   id: nist_80053rev4_ssp_IR_4_c_1_b
   template: |
@@ -1349,16 +652,6 @@ outputs:
     The information system incorporates lessons learned from ongoing incident handling activities into: esting/exercises.
   title: NIST 800-53 rev4 SSP IR_4_c_1_c
 - format: markdown
-  id: nist_80053rev4_ssp_IR_4_c_1_c
-  template: |
-    The information system incorporates lessons learned from ongoing incident handling activities into: esting/exercises.
-  title: NIST 800-53 rev4 SSP IR_4_c_1_c
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_c_2_a
-  template: |
-    The information system  implements the resulting changes accordingly to: incident response procedures.
-  title: NIST 800-53 rev4 SSP IR_4_c_2_a
-- format: markdown
   id: nist_80053rev4_ssp_IR_4_c_2_a
   template: |
     The information system  implements the resulting changes accordingly to: incident response procedures.
@@ -1369,25 +662,10 @@ outputs:
     The information system  implements the resulting changes accordingly to: training.
   title: NIST 800-53 rev4 SSP IR_4_c_2_b
 - format: markdown
-  id: nist_80053rev4_ssp_IR_4_c_2_b
-  template: |
-    The information system  implements the resulting changes accordingly to: training.
-  title: NIST 800-53 rev4 SSP IR_4_c_2_b
-- format: markdown
   id: nist_80053rev4_ssp_IR_4_c_2_c
   template: |
     The information system  implements the resulting changes accordingly to: testing/excercises.
   title: NIST 800-53 rev4 SSP IR_4_c_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_IR_4_c_2_c
-  template: |
-    The information system  implements the resulting changes accordingly to: testing/excercises.
-  title: NIST 800-53 rev4 SSP IR_4_c_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_IR_5_1
-  template: |
-    The information system tracks information system security incidents.
-  title: NIST 800-53 rev4 SSP IR_5_1
 - format: markdown
   id: nist_80053rev4_ssp_IR_5_1
   template: |
@@ -1399,27 +677,6 @@ outputs:
     The information system documents information system security incidents.
   title: NIST 800-53 rev4 SSP IR_5_2
 - format: markdown
-  id: nist_80053rev4_ssp_IR_6_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IR_6_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_IR_6_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IR_6_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_IR_6_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP IR_6_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_IR_6_a_1
-  template: >
-    The information system defines the time period within which personnel report suspected
-    security incidents to the organizational incident response capability.
-  title: NIST 800-53 rev4 SSP IR_6_a_1
-- format: markdown
   id: nist_80053rev4_ssp_IR_6_a_1
   template: >
     The information system defines the time period within which personnel report suspected
@@ -1430,36 +687,6 @@ outputs:
   template: |
     The information system staff shall report security incident information to DHS/CBP-defined authorities.
   title: NIST 800-53 rev4 SSP IR_6_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_MP_4_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP MP_4_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_MP_4
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP MP_4
-- format: markdown
-  id: nist_80053rev4_ssp_MP_4_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP MP_4_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_MP_4_a_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP MP_4_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_MP_4_a_4
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP MP_4_a_4
-- format: markdown
-  id: nist_80053rev4_ssp_MP_4_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP MP_4_b
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_1
   template: |
@@ -1482,16 +709,6 @@ outputs:
     The information system  reviews the security plan according to DHS/CBP-defined frequency.
   title: NIST 800-53 rev4 SSP PL_2_c_2
 - format: markdown
-  id: nist_80053rev4_ssp_PL_2_c_2
-  template: |
-    The information system  reviews the security plan according to DHS/CBP-defined frequency.
-  title: NIST 800-53 rev4 SSP PL_2_c_2
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_2
-  template: |
-    The information system develops a security plan that explicitly defines the authorization boundary for the system.
-  title: NIST 800-53 rev4 SSP PL_2_a_2
-- format: markdown
   id: nist_80053rev4_ssp_PL_2_a_2
   template: |
     The information system develops a security plan that explicitly defines the authorization boundary for the system.
@@ -1502,18 +719,6 @@ outputs:
     The information system develops a security plan that describes the operational
     context of the information system in terms of missions and business processes.
   title: NIST 800-53 rev4 SSP PL_2_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_3
-  template: >
-    The information system develops a security plan that describes the operational
-    context of the information system in terms of missions and business processes.
-  title: NIST 800-53 rev4 SSP PL_2_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_4
-  template: >
-    The information system develops a security plan that provides the security categorization
-    of the information system including supporting rationale.
-  title: NIST 800-53 rev4 SSP PL_2_a_4
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_4
   template: >
@@ -1528,18 +733,6 @@ outputs:
     other information systems.
   title: NIST 800-53 rev4 SSP PL_2_a_5
 - format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_5
-  template: >
-    The information system develops a security plan that describes the operational
-    environment for the information system and relationships with or connections to
-    other information systems.
-  title: NIST 800-53 rev4 SSP PL_2_a_5
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_6
-  template: |
-    The information system develops a security plan that provides an overview of the security requirements for the system.
-  title: NIST 800-53 rev4 SSP PL_2_a_6
-- format: markdown
   id: nist_80053rev4_ssp_PL_2_a_6
   template: |
     The information system develops a security plan that provides an overview of the security requirements for the system.
@@ -1549,18 +742,6 @@ outputs:
   template: |
     The information system develops a security plan that identifies any relevant overlays, if applicable.
   title: NIST 800-53 rev4 SSP PL_2_a_7
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_7
-  template: |
-    The information system develops a security plan that identifies any relevant overlays, if applicable.
-  title: NIST 800-53 rev4 SSP PL_2_a_7
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_a_8
-  template: >
-    The information system develops a security plan that describes the security controls
-    in place or planned for meeting those requirements including a rationale for the
-    tailoring and supplemental decisions.
-  title: NIST 800-53 rev4 SSP PL_2_a_8
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_8
   template: >
@@ -1576,19 +757,6 @@ outputs:
     to the plan are to be communicated.
   title: NIST 800-53 rev4 SSP PL_2_b_1
 - format: markdown
-  id: nist_80053rev4_ssp_PL_2_b_1
-  template: >
-    The information system develops a security plan that defines personnel or roles
-    to whom copies of the security plan are to be distributed and subsequent changes
-    to the plan are to be communicated.
-  title: NIST 800-53 rev4 SSP PL_2_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_b_2
-  template: >
-    The information system distributes copies of the security plan and communicates
-    subsequent changes to the plan to organization-defined personnel or roles.
-  title: NIST 800-53 rev4 SSP PL_2_b_2
-- format: markdown
   id: nist_80053rev4_ssp_PL_2_b_2
   template: >
     The information system distributes copies of the security plan and communicates
@@ -1600,16 +768,6 @@ outputs:
     The information system updates the plan to address changes to the information system/environment of operation.
   title: NIST 800-53 rev4 SSP PL_2_d_1
 - format: markdown
-  id: nist_80053rev4_ssp_PL_2_d_1
-  template: |
-    The information system updates the plan to address changes to the information system/environment of operation.
-  title: NIST 800-53 rev4 SSP PL_2_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_d_2
-  template: |
-    The information system updates the plan to address problems identified during plan implementation.
-  title: NIST 800-53 rev4 SSP PL_2_d_2
-- format: markdown
   id: nist_80053rev4_ssp_PL_2_d_2
   template: |
     The information system updates the plan to address problems identified during plan implementation.
@@ -1619,16 +777,6 @@ outputs:
   template: |
     The information system updates the plan to address problems identified during security control assessments.
   title: NIST 800-53 rev4 SSP PL_2_d_3
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_d_3
-  template: |
-    The information system updates the plan to address problems identified during security control assessments.
-  title: NIST 800-53 rev4 SSP PL_2_d_3
-- format: markdown
-  id: nist_80053rev4_ssp_PL_2_e_1
-  template: |
-    The information system  protects the security plan from unauthorized disclosure.
-  title: NIST 800-53 rev4 SSP PL_2_e_1
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_e_1
   template: |
@@ -1640,51 +788,10 @@ outputs:
     The information system protects the security plan from unauthorized modification.
   title: NIST 800-53 rev4 SSP PL_2_e_2
 - format: markdown
-  id: nist_80053rev4_ssp_PL_8_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP PL_8_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP PL_8_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_a_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP PL_8_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP PL_8_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP PL_8_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP PL_8_b_2
-- format: markdown
   id: nist_80053rev4_ssp_PL_8_c_1
   template: |
     The information system ensures that planned information security architecture changes are reflected in the security plan.
   title: NIST 800-53 rev4 SSP PL_8_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_c_1
-  template: |
-    The information system ensures that planned information security architecture changes are reflected in the security plan.
-  title: NIST 800-53 rev4 SSP PL_8_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_PL_8_c_2
-  template: >
-    The information system ensures that planned information security architecture
-    changes are reflected in: the security Concept of Operations (CONOPS).
-  title: NIST 800-53 rev4 SSP PL_8_c_2
 - format: markdown
   id: nist_80053rev4_ssp_PL_8_c_2
   template: >
@@ -1697,21 +804,6 @@ outputs:
     The information system ensures that planned information security architecture
     changes are reflected in the organizational procurements/acquisitions.
   title: NIST 800-53 rev4 SSP PL_8_c_3
-- format: markdown
-  id: nist_80053rev4_ssp_RA_2_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_2_a
-- format: markdown
-  id: nist_80053rev4_ssp_RA_2_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_RA_2_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_2_c
 - format: markdown
   id: nist_80053rev4_ssp_RA_2_b
   template: >
@@ -1746,23 +838,6 @@ outputs:
     The information system updates the risk assessment: whenever there are other conditions that may impact the security state of the system.
   title: NIST 800-53 rev4 SSP RA_3_e_2_c
 - format: markdown
-  id: nist_80053rev4_ssp_RA_3_e_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_3_e_1
-- format: markdown
-  id: nist_80053rev4_ssp_RA_3_e_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_3_e_1
-- format: markdown
-  id: nist_80053rev4_ssp_RA_3_a_1
-  template: >
-    The information system conducts an assessment of risk, including the likelihood
-    and magnitude of harm, from the unauthorized access, use, disclosure, disruption,
-    modification, or destruction of: the information system.
-  title: NIST 800-53 rev4 SSP RA_3_a_1
-- format: markdown
   id: nist_80053rev4_ssp_RA_3_a_1
   template: >
     The information system conducts an assessment of risk, including the likelihood
@@ -1778,20 +853,6 @@ outputs:
     or transmits.
   title: NIST 800-53 rev4 SSP RA_3_a_2
 - format: markdown
-  id: nist_80053rev4_ssp_RA_3_a_2
-  template: >
-    The information system conducts an assessment of risk, including the likelihood
-    and magnitude of harm, from the unauthorized access, use, disclosure, disruption,
-    modification, or destruction of: the information the system processes, stores,
-    or transmits.
-  title: NIST 800-53 rev4 SSP RA_3_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_RA_3_b_1
-  template: >
-    The information system defines a document in which risk assessment results are
-    to be documented (if not documented in the security plan or risk assessment report).
-  title: NIST 800-53 rev4 SSP RA_3_b_1
-- format: markdown
   id: nist_80053rev4_ssp_RA_3_b_1
   template: >
     The information system defines a document in which risk assessment results are
@@ -1803,16 +864,6 @@ outputs:
     The information system documents risk assessment results in the security plan.
   title: NIST 800-53 rev4 SSP RA_3_b_2_a
 - format: markdown
-  id: nist_80053rev4_ssp_RA_3_b_2_a
-  template: |
-    The information system documents risk assessment results in the security plan.
-  title: NIST 800-53 rev4 SSP RA_3_b_2_a
-- format: markdown
-  id: nist_80053rev4_ssp_RA_3_b_2_b
-  template: |
-    The information system documents risk assessment results in  the risk assessment report.
-  title: NIST 800-53 rev4 SSP RA_3_b_2_b
-- format: markdown
   id: nist_80053rev4_ssp_RA_3_b_2_b
   template: |
     The information system documents risk assessment results in  the risk assessment report.
@@ -1822,16 +873,6 @@ outputs:
   template: |
     The information system documents risk assessment results in the organization-defined document.
   title: NIST 800-53 rev4 SSP RA_3_b_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_RA_3_b_2_c
-  template: |
-    The information system documents risk assessment results in the organization-defined document.
-  title: NIST 800-53 rev4 SSP RA_3_b_2_c
-- format: markdown
-  id: nist_80053rev4_ssp_RA_3_c_2
-  template: |
-    The information system reviews risk assessment results with the organization-defined frequency.
-  title: NIST 800-53 rev4 SSP RA_3_c_2
 - format: markdown
   id: nist_80053rev4_ssp_RA_3_c_2
   template: |
@@ -1925,33 +966,6 @@ outputs:
     in other information systems (i.e., systemic weaknesses or deficiencies).
   title: NIST 800-53 rev4 SSP RA_5_e_3
 - format: markdown
-  id: nist_80053rev4_ssp_RA_5_a_1_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_5_a_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_RA_5_a_1_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_5_a_1_b
-- format: markdown
-  id: nist_80053rev4_ssp_RA_5_d_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_5_d_2
-- format: markdown
-  id: nist_80053rev4_ssp_RA_5_d_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP RA_5_d_2
-- format: markdown
-  id: nist_80053rev4_ssp_RA_5_a_3_a
-  template: >
-    When new vulnerabilities potentially affecting the system/applications are identified
-    and reported, the information system scans for vulnerabilities in: the information
-    system.
-  title: NIST 800-53 rev4 SSP RA_5_a_3_a
-- format: markdown
   id: nist_80053rev4_ssp_RA_5_a_3_a
   template: >
     When new vulnerabilities potentially affecting the system/applications are identified
@@ -1964,17 +978,6 @@ outputs:
     When new vulnerabilities potentially affecting the system/applications are identified
     and reported, the information system scans for vulnerabilities in: hosted applications.
   title: NIST 800-53 rev4 SSP RA_5_a_3_b
-- format: markdown
-  id: nist_80053rev4_ssp_RA_5_a_3_b
-  template: >
-    When new vulnerabilities potentially affecting the system/applications are identified
-    and reported, the information system scans for vulnerabilities in: hosted applications.
-  title: NIST 800-53 rev4 SSP RA_5_a_3_b
-- format: markdown
-  id: nist_80053rev4_ssp_RA_5_c_1
-  template: |
-    The information system analyzes vulnerability scan reports.
-  title: NIST 800-53 rev4 SSP RA_5_c_1
 - format: markdown
   id: nist_80053rev4_ssp_RA_5_c_1
   template: |
@@ -1991,28 +994,11 @@ outputs:
     The application utilizes SonarQube for code analysis as well as Aqua for security vulnerability scans.
   title: NIST 800-53 rev4 SSP SA_11_1
 - format: markdown
-  id: nist_80053rev4_ssp_SA_11_1
-  template: |
-    The application utilizes SonarQube for code analysis as well as Aqua for security vulnerability scans.
-  title: NIST 800-53 rev4 SSP SA_11_1
-- format: markdown
   id: nist_80053rev4_ssp_SA_22_a
   template: >
     The information system replaces information system components when support for
     the components is no longer available from the developer, vendor, or manufacturer.
   title: NIST 800-53 rev4 SSP SA_22_a
-- format: markdown
-  id: nist_80053rev4_ssp_SA_22_a
-  template: >
-    The information system replaces information system components when support for
-    the components is no longer available from the developer, vendor, or manufacturer.
-  title: NIST 800-53 rev4 SSP SA_22_a
-- format: markdown
-  id: nist_80053rev4_ssp_SA_22_b_1
-  template: >
-    The information system provides justification for the continued use of unsupported
-    system components required to satisfy mission/business needs.
-  title: NIST 800-53 rev4 SSP SA_22_b_1
 - format: markdown
   id: nist_80053rev4_ssp_SA_22_b_1
   template: >
@@ -2025,41 +1011,6 @@ outputs:
     The information system documents approval for the continued use of unsupported system components required to satisfy mission/business needs.
   title: NIST 800-53 rev4 SSP SA_22_b_2
 - format: markdown
-  id: nist_80053rev4_ssp_SA_9_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_SA_9_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_SA_9_a_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_SA_9_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_SA_9_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_SA_9_c_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_SA_9_c_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SA_9_c_2
-- format: markdown
   id: nist_80053rev4_ssp_SC_12_DHS_5_5_3_a
   template: |
     The system certificates are requested from the DHS CA. DIMC certificates are used at the application layer and certificates are not shared
@@ -2070,90 +1021,10 @@ outputs:
     The system certificates are requested from the DHS CA. DIMC certificates are used at the application layer and certificates are not shared
   title: NIST 800-53 rev4 SSP SC_12_DHS_5_5_3_i
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_DHS_4_6_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_DHS_4_6_b
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_DHS_5_5_3_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_DHS_5_5_3_b
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_DHS_5_5_3_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_DHS_5_5_3_c
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_1_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_1_a
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_1_b
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_1_b
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_1_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_1_c
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_1_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_1_d
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_1_e
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_1_e
-- format: markdown
-  id: nist_80053rev4_ssp_SC_12_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_12_2
-- format: markdown
   id: nist_80053rev4_ssp_SC_13_DHS_5_5_1_b
   template: |
     The system develops and maintains encryption plans for sensitive information systems
   title: NIST 800-53 rev4 SSP SC_13_DHS_5_5_1_b
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_DHS_5_4_6_k
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_DHS_5_4_6_k
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_DHS_5_5_1_c
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_DHS_5_5_1_c
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_DHS_5_5_2_v
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_DHS_5_5_2_v
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_DHS_5_7_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_DHS_5_7_d
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_3
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_13_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_13_2
 - format: markdown
   id: nist_80053rev4_ssp_SC_18_c_2
   template: |
@@ -2165,132 +1036,12 @@ outputs:
     The system controls the use of mobile code by using an integrated Jenkins pipeline
   title: NIST 800-53 rev4 SSP SC_18_c_3
 - format: markdown
-  id: nist_80053rev4_ssp_SC_18_a
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_18_a
-- format: markdown
-  id: nist_80053rev4_ssp_SC_18_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_18_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_18_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_18_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_SC_18_c_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_18_c_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_23
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_23
-- format: markdown
-  id: nist_80053rev4_ssp_SC_23_3_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_23_3_2
-- format: markdown
-  id: nist_80053rev4_ssp_SC_23_3_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_23_3_3
-- format: markdown
-  id: nist_80053rev4_ssp_SC_23_3_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_23_3_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_24_4
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_24_4
-- format: markdown
-  id: nist_80053rev4_ssp_SC_24_5
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_24_5
-- format: markdown
-  id: nist_80053rev4_ssp_SC_24_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_24_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_24_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_24_2
-- format: markdown
-  id: nist_80053rev4_ssp_SC_24_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_24_3
-- format: markdown
   id: nist_80053rev4_ssp_SC_28_1_3
   template: >
     The system utilizes AES 256 for data at rest and TLS 1.2 for data in transit to
     prevent unauthorized disclosure and modification of organization-defined information
     on organization-defined information system components.
   title: NIST 800-53 rev4 SSP SC_28_1_3
-- format: markdown
-  id: nist_80053rev4_ssp_SC_28_1_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_28_1_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_28_1_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_28_1_2
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_a_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_a_3
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_a_4
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_a_4
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_SC_7_C
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_7_C
-- format: markdown
-  id: nist_80053rev4_ssp_SC_8_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_8_1
-- format: markdown
-  id: nist_80053rev4_ssp_SC_8_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SC_8_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_10_1
   template: >
@@ -2365,51 +1116,6 @@ outputs:
     DEV, SAT and then PROD
   title: NIST 800-53 rev4 SSP SI_2_c_4
 - format: markdown
-  id: nist_80053rev4_ssp_SI_2_3_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_2_3_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_2_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_2_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_2_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_2_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_SI_2_d
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_2_d
-- format: markdown
-  id: nist_80053rev4_ssp_SI_13_a_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_13_a_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_13_a_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_13_a_2
-- format: markdown
-  id: nist_80053rev4_ssp_SI_13_b_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_13_b_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_13_b_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_13_b_2
-- format: markdown
-  id: nist_80053rev4_ssp_SI_13_b_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_13_b_3
-- format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_1
   template: |
     The SAMS ISCM CONOPS defines monitoring objectives to detect attacks and indicators of potential attacks on SAMS.
@@ -2450,70 +1156,10 @@ outputs:
     The SAMS ISSO provides system monitoring information to the defined personnel per the standard operating procedure defined frequencies.
   title: NIST 800-53 rev4 SSP SI_4_g_4_b
 - format: markdown
-  id: nist_80053rev4_ssp_SI_4_d_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_d_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_d_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_d_2
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_d_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_d_3
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_a_2_1
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_a_2_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_a_2_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_a_2_2
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_a_2_3
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_a_2_3
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_c_2
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_c_2
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_e
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_e
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_f
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_f
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_f
-  template: |
-    Null
-  title: NIST 800-53 rev4 SSP SI_4_f
-- format: markdown
   id: nist_80053rev4_ssp_SI_4_g_1
   template: |
     The SAMS ISCM CONOPS defines personnel or roles to whom information system monitoring information is to be provided.
   title: NIST 800-53 rev4 SSP SI_4_g_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_g_1
-  template: |
-    The SAMS ISCM CONOPS defines personnel or roles to whom information system monitoring information is to be provided.
-  title: NIST 800-53 rev4 SSP SI_4_g_1
-- format: markdown
-  id: nist_80053rev4_ssp_SI_4_g_2
-  template: |
-    The SAMS ISCM CONOPS defines information system monitoring information to be provided to organization-defined personnel or roles.
-  title: NIST 800-53 rev4 SSP SI_4_g_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_2
   template: |

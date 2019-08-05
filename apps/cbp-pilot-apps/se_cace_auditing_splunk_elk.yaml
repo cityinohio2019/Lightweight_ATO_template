@@ -1,5 +1,5 @@
 id: se_cace_auditing_splunk_elk
-outputs:
+output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_j_2
   template: |

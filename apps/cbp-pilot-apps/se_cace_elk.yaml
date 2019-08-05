@@ -5,7 +5,7 @@ output:
   title: NIST 800-53 rev4 SSP AC-6 (9)
   format: markdown
   template: >2
-
+    GREG ADDING TEXT
     CACE (ELK): ELK is implemented to audit the execution of privileged functionality
     at the application level. The ISSO has configured ELK such that privileged functionality
     (e.g. ability to configure access permissions) has been identified, logged, and

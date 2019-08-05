@@ -1,5 +1,5 @@
 id: se_ciso_policy_soc_stp
-outputs:
+output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_11_a_1
   template: |

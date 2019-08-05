@@ -1,5 +1,5 @@
 id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
-outputs:
+output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_a_2
   template: |
