@@ -324,7 +324,7 @@ questions:
     > * Disruption at the [VENDOR_PRIMARY_SITE]
 
     > * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct
-    circuits that connect users to the [[VENDOR_DATACENTER]].
+    circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 
     > This ITCP does not apply to the following situations:
@@ -369,7 +369,7 @@ questions:
     * Disruption at the [VENDOR_PRIMARY_SITE]
 
     * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits
-    that connect users to the [[VENDOR_DATACENTER]].
+    that connect users to the {{project.system_info.system_hosting.text}}.
 
 
     This ITCP does not apply to the following situations:
@@ -402,7 +402,7 @@ questions:
       * Disruption at the [VENDOR_PRIMARY_SITE]
 
       * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct
-      circuits that connect users to the [[VENDOR_DATACENTER]].
+      circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 
       This ITCP does not apply to the following situations:
@@ -434,7 +434,7 @@ questions:
       * Disruption at the [VENDOR_PRIMARY_SITE]
 
       * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct
-      circuits that connect users to the [[VENDOR_DATACENTER]].
+      circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 
       This ITCP does not apply to the following situations:
@@ -464,7 +464,7 @@ questions:
     when developing this Contingency Plan:
 
 
-    > Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+    > Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
 
     > Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
@@ -473,14 +473,14 @@ questions:
     > * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot
     be recovered withing 48 hours.
 
-    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform
+    > * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform
     engineers) will be identified and trained in their Contingency planning roles.
 
     > * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the
-    [[SYSTEM_SHORT_NAME]] Contingency Plan.
+    {{project.system_info.system_short_name}} Contingency Plan.
 
 
-    > Disruption at [[VENDOR_DATACENTER]]:
+    > Disruption at {{project.system_info.system_hosting.text}}:
 
 
     > * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable
@@ -488,7 +488,7 @@ questions:
     and fire department assistance are, or may not be fully operational at the the
     time of the service disruption.
 
-    > * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data
+    > * Current backups of the {{project.system_info.system_short_name}} applicable software and data
     are intact and avaialble at the offsite storage facility located within other
     [[VENDOR_DATACENTER_ALTSITE]].
 
@@ -520,18 +520,18 @@ questions:
     {% if q05_pre == 'yes_edit' %}
     The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
 
-    Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+    Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
     Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
 
     * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot be recovered withing 48 hours.
-    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform engineers) will be identified and trained in their Contingency planning roles.
-    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the [[SYSTEM_SHORT_NAME]] Contingency Plan.
+    * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform engineers) will be identified and trained in their Contingency planning roles.
+    * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the {{project.system_info.system_short_name}} Contingency Plan.
 
-    Disruption at [[VENDOR_DATACENTER]]:
+    Disruption at {{project.system_info.system_hosting.text}}:
 
     * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
-    * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
+    * Current backups of the {{project.system_info.system_short_name}} applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
     The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
 
     Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
@@ -544,7 +544,7 @@ questions:
       when developing this Contingency Plan:
 
 
-      Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+      Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
 
       Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
@@ -553,14 +553,14 @@ questions:
       * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot
       be recovered withing 48 hours.
 
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform
+      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform
       engineers) will be identified and trained in their Contingency planning roles.
 
       * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the
-      [[SYSTEM_SHORT_NAME]] Contingency Plan.
+      {{project.system_info.system_short_name}} Contingency Plan.
 
 
-      Disruption at [[VENDOR_DATACENTER]]:
+      Disruption at {{project.system_info.system_hosting.text}}:
 
 
       * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable
@@ -568,7 +568,7 @@ questions:
       and fire department assistance are, or may not be fully operational at the the
       time of the service disruption.
 
-      * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data
+      * Current backups of the {{project.system_info.system_short_name}} applicable software and data
       are intact and avaialble at the offsite storage facility located within other
       [[VENDOR_DATACENTER_ALTSITE]].
 
@@ -589,7 +589,7 @@ questions:
       when developing this Contingency Plan:
 
 
-      Section 6 of this ITCP will outline the table top exercise for [[SYSTEM_SHORT_NAME]].
+      Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
 
       Disruption at the [[AGENCY_PRIMARY_ADMIN_SITE]]:
@@ -598,14 +598,14 @@ questions:
       * The [[AGENCY_PRIMARY_ADMIN_SITE]] primary work site is inoperable and cannot
       be recovered withing 48 hours.
 
-      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., [[SYSTEM_SHORT_NAME]] platform
+      * Key [[ADMIN_TEAM_FULL_NAME]] team members (e.g., {{project.system_info.system_short_name}} platform
       engineers) will be identified and trained in their Contingency planning roles.
 
       * Key [[ADMIN_TEAM_SHORT_NAME]] team member will be available to activate the
-      [[SYSTEM_SHORT_NAME]] Contingency Plan.
+      {{project.system_info.system_short_name}} Contingency Plan.
 
 
-      Disruption at [[VENDOR_DATACENTER]]:
+      Disruption at {{project.system_info.system_hosting.text}}:
 
 
       * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable
@@ -613,7 +613,7 @@ questions:
       and fire department assistance are, or may not be fully operational at the the
       time of the service disruption.
 
-      * Current backups of the [[SYSTEM_SHORT_NAME]] applicable software and data
+      * Current backups of the {{project.system_info.system_short_name}} applicable software and data
       are intact and avaialble at the offsite storage facility located within other
       [[VENDOR_DATACENTER_ALTSITE]].
 

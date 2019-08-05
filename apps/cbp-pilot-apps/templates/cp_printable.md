@@ -105,7 +105,7 @@ Table 1‑3 Information System Name and Title
 
 <table border="1">
   <tr><th> Unique Identifier </th><th> Information System Name </th><th> Information System Abbreviation </th></tr>
-  <tr><td> [[SYSTEM_ID]]     </td><td> {{project.system_info.system_name}} </td><td> [[SYSTEM_SHORT_NAME]] </td></tr>
+  <tr><td> [[SYSTEM_ID]]     </td><td> {{project.system_info.system_name}} </td><td> {{project.system_info.system_short_name}} </td></tr>
 </table>
 
 ## 1.4 Scope
@@ -114,7 +114,7 @@ This ISCP has been developed for ISA which is classified as a impact system, in 
 
 * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
 * Disruption at the [[VENDOR_PRIMARY_SITE]]
-* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the [[VENDOR_DATACENTER]].
+* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 This ITCP does not apply to the following situations:
 
