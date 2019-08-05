@@ -4,12 +4,11 @@ output:
 - id: nist_80053rev4_ssp_ac_6_9
   title: NIST 800-53 rev4 SSP AC-6 (9)
   format: markdown
-  template: >2
-    GREG ADDING TEXT
-    CACE (ELK): ELK is implemented to audit the execution of privileged functionality
-    at the application level. The ISSO has configured ELK such that privileged functionality
-    (e.g. ability to configure access permissions) has been identified, logged, and
-    audited.
+  template: >
+    GREG ADDING TEXT CACE (ELK): ELK is implemented to audit the execution of privileged
+    functionality at the application level. The ISSO has configured ELK such that
+    privileged functionality (e.g. ability to configure access permissions) has been
+    identified, logged, and audited.
 - id: nist_80053rev4_ssp_ac_6_9_test
   title: NIST 800-53 rev4 SSP AC-6(9) Test
   format: markdown
@@ -57,10 +56,10 @@ output:
 - id: nist_80053rev4_ssp_au_12_dhs_5_3_g
   title: NIST 800-53 rev4 SSP AU-12 (DHS-5.3.g)
   format: markdown
-  template: "\nCACE (ELK): ELK has been configured such that whenever an audit processing
-    failure occurs on logs from the application layer error messages are automatically
-    emailed to the CBP SOD. If audit capacity is reached the application logs are
-    configured to overwrite the oldest data first. \n"
+  template: "\nCACE (ELK): ELK has been configured such that whenever an audit processing\
+    \ failure occurs on logs from the application layer error messages are automatically\
+    \ emailed to the CBP SOD. If audit capacity is reached the application logs are\
+    \ configured to overwrite the oldest data first. \n"
 - id: nist_80053rev4_ssp_au_12_dhs_5_3_g_test
   title: NIST 800-53 rev4 SSP AU-12 (DHS-5.3.g) Test
   format: markdown
@@ -82,9 +81,10 @@ output:
 questions:
 - id: q1
   title: Overview
-  prompt: "Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).\r\n\r\nLet's
-    get some information about your IT System in CACE, and we'll prepare draft controls
-    that you will be inheriting."
+  prompt: |-
+    Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).
+
+    Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
   type: interstitial
 - id: auditing_option
   title: Auditing option
@@ -95,3 +95,22 @@ questions:
     text: CACE ELK
   - key: case_splunk
     text: CACE Splunk
+- id: cace_team
+  title: Primary CACE Team
+  prompt: Who is your Primary CACE Team?
+  type: text
+  choices:
+  - key: 'cace_team_option_1 '
+    text: ' CACE Team'
+  - key: 'cace_team_option_2 '
+    text: ' Other'
+- id: cace_facility
+  title: Primary CACE Facility
+  prompt: Where is {{cace_team}} based?
+  type: text
+  help: Think the name of the facility, location, or admin site.
+- id: vendor_datacenter
+  title: VENDOR DATACENTER
+  prompt: Where is the datacenter?
+  type: text
+  help: US-EAST 1, for example

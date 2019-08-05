@@ -483,8 +483,8 @@ questions:
     > Disruption at {{project.system_info.system_hosting.text}}:
 
 
-    > * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable
-    pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
+    > * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable
+    power supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
     and fire department assistance are, or may not be fully operational at the the
     time of the service disruption.
 
@@ -492,7 +492,7 @@ questions:
     are intact and avaialble at the offsite storage facility located within other
     [[VENDOR_DATACENTER_ALTSITE]].
 
-    > The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP
+    > The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP
     certified.
 
 
@@ -530,9 +530,9 @@ questions:
 
     Disruption at {{project.system_info.system_hosting.text}}:
 
-    * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
+    * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
     * Current backups of the {{project.system_info.system_short_name}} applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
-    The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP certified.
+    The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP certified.
 
     Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
 
@@ -563,7 +563,7 @@ questions:
       Disruption at {{project.system_info.system_hosting.text}}:
 
 
-      * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable
+      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable
       pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
       and fire department assistance are, or may not be fully operational at the the
       time of the service disruption.
@@ -572,7 +572,7 @@ questions:
       are intact and avaialble at the offsite storage facility located within other
       [[VENDOR_DATACENTER_ALTSITE]].
 
-      The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP
+      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP
       certified.
 
 
@@ -608,7 +608,7 @@ questions:
       Disruption at {{project.system_info.system_hosting.text}}:
 
 
-      * Preventive controls at the [[ VENDOR_DATACENTER ]], such as generators, uninterruptable
+      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable
       pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
       and fire department assistance are, or may not be fully operational at the the
       time of the service disruption.
@@ -617,7 +617,7 @@ questions:
       are intact and avaialble at the offsite storage facility located within other
       [[VENDOR_DATACENTER_ALTSITE]].
 
-      The [[ VENDOR_DATACENTER ]] including its backup storage capabilities are FedRAMP
+      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP
       certified.
 
 
