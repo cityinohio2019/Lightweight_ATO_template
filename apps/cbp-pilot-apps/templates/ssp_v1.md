@@ -74,9 +74,9 @@ Level 1c clearance.</p>
 
 %}
   {# Are we changing families? #}
-  {% if ctl.split("_")[0] != meta["current_family"] %}
-    {% set var_ignore = meta.update({"current_family":ctl.split("_")[0]}) %}
-    <h2 style="margin-bottom: 30px;">{{meta["current_family"]}}</h2>
+  {% if ctl.split("_")[0].upper() != meta["current_family"].upper() %}
+    {% set var_ignore = meta.update({"current_family": ctl.split("_")[0].upper()}) %}
+    <h2 style="margin-bottom: 30px;">{{meta["current_family"]|upper}}</h2>
   {% endif %}
   {% set ctl_od_title = "nist_80053rev4_ssp_{}".format(ctl) %}
   {% set odl = ctl_od_title.split('_') %}
