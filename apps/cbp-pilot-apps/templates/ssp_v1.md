@@ -3,7 +3,7 @@ format: markdown
 title: SSP v1
 ...
 <style type="text/css" scoped>
-  h2 { border-bottom:1px solid #888; }
+  h2 { border-bottom:1px solid #888; color: red; }
   h3 { border-bottom:0.5px solid #aaa; }
   h4 { font-weight:bold; font-size:0.9em; }
   blockquote { color: #666; font-size:0.8em;}
@@ -59,6 +59,29 @@ Level 1c clearance.</p>
 {{project.system_info.output_documents.system_info}}
 
 <!-- /System Information -->
+
+<h2>1.  INFORMATION SYSTEM NAME/TITLE</h2>
+
+This System Security Plan provides an overview of the security requirements for the Information System Name (Enter Information System Abbreviation) and describes the controls in place or planned for implementation to provide a level of security appropriate for the information to be transmitted, processed or stored by the system.  Information security is vital to our critical infrastructure and its effective performance and protection is a key component of our national security program.  Proper management of information technology systems is essential to ensure the confidentiality, integrity and availability of the data transmitted, processed or stored by the Enter Information System Abbreviation information system.
+
+The security safeguards implemented for the Enter Information System Abbreviation system meet the policy and control requirements set forth in this System Security Plan.  All systems are subject to monitoring consistent with applicable laws, regulations, agency policies, procedures and practices.
+
+<div style="text-align:center;">Table 1 1. Information System Name and Title</div>
+
+<!-- Information System Table goes -->
+
+
+<h2>2.  INFORMATION SYSTEM CATEGORIZATION</h2>
+
+The overall information system sensitivity categorization is recorded in Table 2 1. Security Categorization that follows.  Directions for attaching the FIPS 199 document may be found in the following section: Attachment 10, FIPS 199.
+
+
+<div style="text-align:center;">Table 2 1. Security Categorization</div>
+
+<!-- security categorization table goes here -->
+
+
+
 
 <!-- Testing links -->
 <a id="controls" name="controls"></a>
