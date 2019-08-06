@@ -3,29 +3,72 @@ format: markdown
 title: SSP v1
 ...
 <style type="text/css" scoped>
-  h2 { border-bottom:1px solid #888; color: red; }
-  h3 { border-bottom:0.5px solid #aaa; }
-  h4 { font-weight:bold; font-size:0.9em; }
-  blockquote { color: #666; font-size:0.8em;}
-  .notice {color: red; font-size:3.0em; text-align:center; transform: scaleY(.85);
-  font-weight: bold;}
-  table, th, td { border: 1px solid #888; }
-  th, td { padding: 15px; text-align: left;}
+    h2 { border-bottom:1px solid #888; }
+    h3 { border-bottom: 0.5px solid #aaa; }
+    h4 { margin-top: 15px; font-weight: bold; font-size: 1em; }
+    blockquote { color: #666; font-size:0.8em; margin: 0 10px; }
+    .notice {color: red; font-size:3.0em; text-align:center; transform: scaleY(.85);
+    font-weight: bold;}
+    table { border: none; border-collapse: collapse; }
+    th, td { border: 1px solid #888; padding: 15px; text-align: left;}
+    @media all {
+        .page-break     { display: none; }
+    }
 
-  .soft {
-    color: #aaa;
-  }
+    @media print {
+        h1.title {
+            /* v-center, need absolute */
+            position: absolute; /* repeats once */
+            bottom: 50%;
+            /* h-center, for element with absolute positioning */
+            left: 0;
+            right: 0;
+            margin-left: 20%;
+            margin-right: 20%;
+        }
+        .footer {
+            position: fixed; /* repeats on every page */
+            bottom: 0;
+        }
+        table.footer {
+            width: 95%;
+            display: table;
+        }
+        table.footer td {
+            border: none;
+            padding: 0px;
+            padding-bottom: .1em;
+        }
+        .page-break { display: block; page-break-after: always; }
+    }
 </style>
 
 <!-- Cover page -->
 <center>
+
+<center>
+<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
+<h1 class="title">{{project.system_info.system_name}}<br/>System Security Plan</h1>
+</center>
+
+<div class="page-break">
+  <table class="footer">
+    <tr>
+      <td width="33%"><strong>{{project.system_info.system_short_name}}</strong></td>
+      <td width="34%" style="text-align: center;"><strong>LIMITED OFFICIAL USE</strong></td>
+      <td width="33%" style="text-align: right;"> <!-- page number --></td>
+    </tr><tr>
+      <td colspan="3">Security Test Plan</td>
+    </tr>
+  </table>
+</div>
 
 FOR OFFICIAL USE ONLY
 
 DEPARTMENT OF HOMELAND SECURITY
 
 
-{{ project.system_profile.system_basics.system_name }}
+{{project.system_profile.system_basics.system_name}}
 System Security Plan (SSP)
 
 **Updated (Date Information)**
@@ -66,19 +109,132 @@ This System Security Plan provides an overview of the security requirements for 
 
 The security safeguards implemented for the Enter Information System Abbreviation system meet the policy and control requirements set forth in this System Security Plan.  All systems are subject to monitoring consistent with applicable laws, regulations, agency policies, procedures and practices.
 
-<div style="text-align:center;">Table 1 1. Information System Name and Title</div>
+<div style="text-align:center;">Table 1-1. Information System Name and Title</div>
 
 <!-- Information System Table goes -->
+<table border = "1">
+    <tr>
+      <td><strong>Unique Identifier</strong></td>
+      <td><strong>Information System Name</strong></td>
+      <td><strong>Information System Abbreviation</strong></td>
+    </tr>
+    <tr>
+      <td>[[FedRAMP_Application_Number]]</td>
+      <td>{{project.system_info.system_name}}</td>
+      <td>{{project.system_info.system_short_name</td>
+    </tr>
+</table>
 
 
 <h2>2.  INFORMATION SYSTEM CATEGORIZATION</h2>
 
 The overall information system sensitivity categorization is recorded in Table 2 1. Security Categorization that follows.  Directions for attaching the FIPS 199 document may be found in the following section: Attachment 10, FIPS 199.
 
-
-<div style="text-align:center;">Table 2 1. Security Categorization</div>
+<div style="text-align:center;">Table 2-1. Security Categorization</div>
 
 <!-- security categorization table goes here -->
+<table border = "1">
+    <tr>
+      <td><strong>System Sensitivity Level</strong></td>
+      <td>[[Security_Categorization_Level]]</td>
+    </tr>
+</table>
+
+<h3>2.1 Information Types</h3>
+
+This section describes how the information types used by the information system are categorized for confidentiality, integrity and availability sensitivity levels.
+
+The following tables identify the information types that are input, stored, processed and/or output from Enter Information System Abbreviation.  The selection of the information types is based on guidance provided by Office of Management and Budget (OMB) Federal Enterprise Architecture Program Management Office Business Reference Model 2.0 and FIPS Pub 199, Standards for Security Categorization of Federal Information and Information Systems which is based on NIST Special Publication (SP) 800-60, Guide for Mapping Types of Information and Information Systems to Security Categories.  
+
+The tables also identify the security impact levels for confidentiality, integrity and availability for each of the information types expressed as low, moderate, or high.  The security impact levels are based on the potential impact definitions for each of the security objectives (i.e., confidentiality, integrity and availability) discussed in NIST SP 800-60 and FIPS Pub 199.  
+The potential impact is low if— 
+
+• The loss of confidentiality, integrity, or availability could be expected to have a limited adverse effect on organizational operations, organizational assets, or individuals.
+• A limited adverse effect means that, for example, the loss of confidentiality, integrity, or availability might: (i) cause a degradation in mission capability to an extent and duration that the organization is able to perform its primary functions, but the effectiveness of the functions is noticeably reduced; (ii) result in minor damage to organizational assets; (iii) result in minor financial loss; or (iv) result in minor harm to individuals.
+
+The potential impact is moderate if— 
+
+• The loss of confidentiality, integrity, or availability could be expected to have a serious adverse effect on organizational operations, organizational assets, or individuals.  
+• A serious adverse effect means that, for example, the loss of confidentiality, integrity, or availability might: (i) cause a significant degradation in mission capability to an extent and duration that the organization is able to perform its primary functions, but the effectiveness of the functions is significantly reduced; (ii) result in significant damage to organizational assets; (iii) result in significant financial loss; or (iv) result in significant harm to individuals that does not involve loss of life or serious life threatening injuries.
+
+The potential impact is high if— 
+
+• The loss of confidentiality, integrity, or availability could be expected to have a severe or catastrophic adverse effect on organizational operations, organizational assets, or individuals.  
+• A severe or catastrophic adverse effect means that, for example, the loss of confidentiality, integrity, or availability might: (i) cause a severe degradation in or loss of mission capability to an extent and duration that the organization is not able to perform one or more of its primary functions; (ii) result in major damage to organizational assets; (iii) result in major financial loss; or (iv) result in severe or catastrophic harm to individuals involving loss of life or serious life threatening injuries.  
+
+<div style="text-align:center;">Table 2-2. Sensitivity Categorization of Information Types</div>
+
+<!-- Sensitivity Categorization of Information Types Table goes -->
+<table border = "1">
+    <tr>
+      <td><strong>Information Type(Use only information types from NIST SP 800-60, Volumes I and II as amended)</strong></td>
+      <td><strong>NIST 800-60 identifier for Associated Information Type</strong></td>
+      <td><strong>Confidentiality</strong></td>
+      <td><strong>Integrity</strong></td>
+      <td><strong>Availability</strong></td>
+    </tr>
+    <tr>
+      <td>[[Information_Type]]</td>
+      <td>[[NIST_Identifier]]</td>
+      <td>[[Confidentiality_Level]]</td>
+      <td>[[Integrity_Level]]</td>
+      <td>[[Availability_Level]]</td>
+    </tr>
+    <tr>
+      <td>[[Information_Type]]</td>
+      <td>[[NIST_Identifier]]</td>
+      <td>[[Confidentiality_Level]]</td>
+      <td>[[Integrity_Level]]</td>
+      <td>[[Availability_Level]]</td>
+    </tr>
+    <tr>
+      <td>[[Information_Type]]</td>
+      <td>[[NIST_Identifier]]</td>
+      <td>[[Confidentiality_Level]]</td>
+      <td>[[Integrity_Level]]</td>
+      <td>[[Availability_Level]]</td>
+    </tr>
+</table>
+
+<h2>2.2 Security Objectives Categorization</h2>
+Based on the information provided in Table 2 2. Sensitivity Categorization of Information Types, for the Enter Information System Abbreviation, default to the high-water mark for the Information Types as identified in Table 2 3. Security Impact Level below.  
+
+<div style="text-align:center;">Table 2-3. Security Impact Level</div>
+
+<!-- Security Impact Level Table goes here -->
+<table border = "1">
+    <tr>
+      <td><strong>Security Objective</strong></td>
+      <td><strong>Low, Moderate or High</strong></td>
+    </tr>
+    <tr>
+      <td><strong>Confidentiality</strong></td>
+      <td>[[LOW_MODERATE_HIGH]]</td>
+    </tr>
+    <tr>
+      <td><strong>Integrity</strong></td>
+      <td>[[LOW_MODERATE_HIGH]]</td>
+    </tr>
+    <tr>
+      <td><strong>Availability</strong></td>
+      <td>[[LOW_MODERATE_HIGH]]</td>
+    </tr>
+</table>
+
+Through review and analysis, it has been determined that the baseline security categorization for the Enter Information System Abbreviation system is listed in the Table 2 4. Baseline Security Configuration that follows. 
+
+<div style="text-align:center;">Table 2-4. Baseline Security Configuration</div>
+
+<!-- Security Impact Level Table goes here -->
+<table border = "1">
+    <tr>
+      <td><strong>Information System Abbreviation Security Categorization</strong></td>
+      <td>[[LOW_MODERATE_HIGH]]</td>
+    </tr>
+</table>
+
+Using this categorization, in conjunction with the risk assessment and any unique security requirements, we have established the security controls for this system, as detailed in this SSP.  
+  
 
 
 
