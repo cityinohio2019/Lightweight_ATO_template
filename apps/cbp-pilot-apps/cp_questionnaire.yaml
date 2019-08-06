@@ -15,7 +15,7 @@ questions:
   prompt: "Will you leverage the template Three Phases (Activation and Notification,
     Recovery, and Reconstitution) statement used for CACE information systems?\n\nAgency
     boilerplate:\n\n> This plan has been developed to recover and reconstitute the
-    [[Information System Name]]; using a three-phased approach.  The approach ensures
+    {{project.system_info.system_name}}; using a three-phased approach.  The approach ensures
     that system recovery and reconstitution efforts are performed in a methodical
     sequence to maximize the effectiveness of the recovery and reconstitution efforts
     and minimize system outage time due to errors and omissions.  The three system
@@ -249,11 +249,11 @@ questions:
     to a full backup, with the exception that the files are\n>        not compressed
     in zip files and they cannot be protected with a password.  A mirror\n>        backup
     is most frequently used to create an exact copy of the source data.\n> \n> The
-    hardware and software components used to create the [[Information System Name]]
+    hardware and software components used to create the {{project.system_info.system_name}}
     backups are noted in Table 2‑2 Backup System Components.\n> \n> Table 2‑2 Backup
     System Components\n> \n>      {{q10_backup_system_components}}\n> \n> Table 2‑3
     Back-Up Storage Location shows the offsite storage facility location of current
-    backups of the [[Information System Name]] system software and data.\n> \n> Table
+    backups of the {{project.system_info.system_name}} system software and data.\n> \n> Table
     2‑3 Back-Up Storage Location\n> \n>      Site Name:\n>        Click here to enter
     text.\n>      Street Address:\n>        Click here to enter text.\n>      City,
     State, Zip Code:\n>        Click here to enter text.\n> \n> Personnel who are
@@ -279,10 +279,10 @@ questions:
     \ CSP Name recognizes different types of backups, which have different purposes,
     and those definitions are found in Table 2‑1 Backup Types.\n\nTable 2‑1 Backup
     System Components\n    \nThe hardware and software components used to create the
-    [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.\n\nTable
+    {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.\n\nTable
     2‑2 Backup System Components\n\n     {{q10_backup_system_components}}\n\nTable
     2‑3 Back-Up Storage Location shows the offsite storage facility location of current
-    backups of the [[Information System Name]] system software and data.\n\nTable
+    backups of the {{project.system_info.system_name}} system software and data.\n\nTable
     2‑3 Back-Up Storage Location\n\n     Site Name:\n       Click here to enter text.\n
     \    Street Address:\n       Click here to enter text.\n     City, State, Zip
     Code:\n       Click here to enter text.\n\nPersonnel who are authorized to retrieve
@@ -309,10 +309,10 @@ questions:
       \      not compressed in zip files and they cannot be protected with a password.
       \ A mirror\n       backup is most frequently used to create an exact copy of
       the source data.\n\nThe hardware and software components used to create the
-      [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.\n\nTable
+      {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.\n\nTable
       2‑2 Backup System Components\n\n     {{q10_backup_system_components}}\n\nTable
       2‑3 Back-Up Storage Location shows the offsite storage facility location of
-      current backups of the [[Information System Name]] system software and data.\n\nTable
+      current backups of the {{project.system_info.system_name}} system software and data.\n\nTable
       2‑3 Back-Up Storage Location\n\n     Site Name:\n       Click here to enter
       text.\n     Street Address:\n       Click here to enter text.\n     City, State,
       Zip Code:\n       Click here to enter text.\n\nPersonnel who are authorized
@@ -340,7 +340,7 @@ questions:
       \      not compressed in zip files and they cannot be protected with a password.
       \ A mirror\n       backup is most frequently used to create an exact copy of
       the source data.\n\nThe hardware and software components used to create the
-      [[Information System Name]] backups are noted in Table 2‑2 Backup System Components.\n\nTable
+      {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.\n\nTable
       2‑2 Backup System Components\n\n     System/Component:\n       Description\n\n
       \    Software Used:\n       Click here to enter text.\n\n     Hardware Used:\n
       \      Click here to enter text.\n\n     Frequency:\n       Click here to enter

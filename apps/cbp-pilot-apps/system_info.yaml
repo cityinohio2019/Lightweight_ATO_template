@@ -73,6 +73,7 @@ questions:
   prompt: >-
     General system description.
 
+
     Describe what the system does and its general purpose to your organization. (This
     is your main description of {% if system_short_name %} {{system_short_name}}{%
     else %}your IT System {% endif %}. We'll get a more technical description later.)

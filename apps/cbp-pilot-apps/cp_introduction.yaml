@@ -6,36 +6,36 @@ internal:
       Contingency Plan questionnaire (snippet)
 introduction:
   format: markdown
-  template: "Contingency Plan\n\nIn this module, we'll assist you in preparing a Contingency
-    Plan document\nprior to the occurence of a disruption the guidelines and procedures
-    for a \nservice disruption including:\n\n* notification and activation\n* recovery\n*
-    reconstitution\n"
+  template: "Contingency Plan\n\nIn this module, we'll assist you in preparing a Contingency\
+    \ Plan document\nprior to the occurence of a disruption the guidelines and procedures\
+    \ for a \nservice disruption including:\n\n* notification and activation\n* recovery\n\
+    * reconstitution\n"
 questions:
 - id: q01_pre
   title: Introduction and Purpose (pre)
-  prompt: "Will you leverage the template Introduction and Purpose statement used
-    for CACE information systems?\n\nAgency boilerplate:\n\n> Information systems
-    are vital to {{project.system_info.system_name}}\n> mission/business functions;
-    therefore, it is critical that services provided by\n> {{project.system_info.system_name}}
-    are able to operate effectively without excessive\n> interruption. This Information
-    Technology Contingency Plan (ITCP) establishes comprehensive\n> procedures to
-    recover {{project.system_info.system_name}} quickly and\n> effectively following
-    a service distruption\n\n> One of the goals of an IT Contingency Plan is to establish
-    procedures and mechanisms that\n> obviate the need to resort to performing IT
-    functions using manual methods. If manual methods\n> are the only alternative;
-    however, every effort should be made to continue IT functions and\n> processes
-    manually.\n\n> The nature of unprecedent disruptions can create confusion, and
-    often predisposes an\n> otherwise competent IT staff towards less efficient practices.
-    In order to maintain a normal level\n> of efficiency, it is important to descrease
-    real-time process engineering by documenting,\n> notification and activation guidelines
-    and procedures, recovery guidelines and procedures, and\n> reconstitutio guidelines
-    and procedures prior to the occurence of a disruption. During the \n> notification/activation
-    phase, appropriate personnel are apprised of current conditions and\n> damage
-    assessment begins. During the recovery phase, appropriate personnel take a course
-    of\n> action to recover the {{project.system_info.system_name}} components at
-    a \n> site other than the the one that experienced the disruption. In the final,
-    reconstitution phase,\n> actions are taken to restore IT system processing capabilities
-    to normal operations.\n"
+  prompt: "Will you leverage the template Introduction and Purpose statement used\
+    \ for CACE information systems?\n\nAgency boilerplate:\n\n> Information systems\
+    \ are vital to {{project.system_info.system_name}}\n> mission/business functions;\
+    \ therefore, it is critical that services provided by\n> {{project.system_info.system_name}}\
+    \ are able to operate effectively without excessive\n> interruption. This Information\
+    \ Technology Contingency Plan (ITCP) establishes comprehensive\n> procedures to\
+    \ recover {{project.system_info.system_name}} quickly and\n> effectively following\
+    \ a service distruption\n\n> One of the goals of an IT Contingency Plan is to\
+    \ establish procedures and mechanisms that\n> obviate the need to resort to performing\
+    \ IT functions using manual methods. If manual methods\n> are the only alternative;\
+    \ however, every effort should be made to continue IT functions and\n> processes\
+    \ manually.\n\n> The nature of unprecedent disruptions can create confusion, and\
+    \ often predisposes an\n> otherwise competent IT staff towards less efficient\
+    \ practices. In order to maintain a normal level\n> of efficiency, it is important\
+    \ to descrease real-time process engineering by documenting,\n> notification and\
+    \ activation guidelines and procedures, recovery guidelines and procedures, and\n\
+    > reconstitutio guidelines and procedures prior to the occurence of a disruption.\
+    \ During the \n> notification/activation phase, appropriate personnel are apprised\
+    \ of current conditions and\n> damage assessment begins. During the recovery phase,\
+    \ appropriate personnel take a course of\n> action to recover the {{project.system_info.system_name}}\
+    \ components at a \n> site other than the the one that experienced the disruption.\
+    \ In the final, reconstitution phase,\n> actions are taken to restore IT system\
+    \ processing capabilities to normal operations.\n"
   type: choice
   choices:
   - key: 'yes'
@@ -51,49 +51,51 @@ questions:
     endif %} {% if q01_pre == 'no' %} Write your Introduction and Purpose statement.
     {% endif %}
   type: longtext
-  default: "{% if q01_pre == 'yes_edit' %}\nInformation systems are vital to {{project.system_info.system_name}}\nmission/business
-    functions; therefore, it is critical that services provided by\n{{project.system_info.system_name}}
-    are able to operate effectively without excessive\ninterruption. This Information
-    Technology Contingency Plan (ITCP) establishes comprehensive\nprocedures to recover
-    {{project.system_info.system_name}} quickly and\neffectively following a service
-    distruption\n\nOne of the goals of an IT Contingency Plan is to establish procedures
-    and mechanisms that\nobviate the need to resort to performing IT functions using
-    manual methods. If manual methods\nare the only alternative; however, every effort
-    should be made to continue IT functions and\nprocesses manually.\n\nThe nature
-    of unprecedent disruptions can create confusion, and often predisposes an\notherwise
-    competent IT staff towards less efficient practices. In order to maintain a normal
-    level\nof efficiency, it is important to descrease real-time process engineering
-    by documenting,\nnotification and activation guidelines and procedures, recovery
-    guidelines and procedures, and\nreconstitutio guidelines and procedures prior
-    to the occurence of a disruption. During the \nnotification/activation phase,
-    appropriate personnel are apprised of current conditions and\ndamage assessment
-    begins. During the recovery phase, appropriate personnel take a course of\naction
-    to recover the {{project.system_info.system_name}} components at a \nsite other
-    than the the one that experienced the disruption. In the final, reconstitution
-    phase,\nactions are taken to restore IT system processing capabilities to normal
-    operations.\n{% endif %}\n"
+  default: "{% if q01_pre == 'yes_edit' %}\nInformation systems are vital to {{project.system_info.system_name}}\n\
+    mission/business functions; therefore, it is critical that services provided by\n\
+    {{project.system_info.system_name}} are able to operate effectively without excessive\n\
+    interruption. This Information Technology Contingency Plan (ITCP) establishes\
+    \ comprehensive\nprocedures to recover {{project.system_info.system_name}} quickly\
+    \ and\neffectively following a service distruption\n\nOne of the goals of an IT\
+    \ Contingency Plan is to establish procedures and mechanisms that\nobviate the\
+    \ need to resort to performing IT functions using manual methods. If manual methods\n\
+    are the only alternative; however, every effort should be made to continue IT\
+    \ functions and\nprocesses manually.\n\nThe nature of unprecedent disruptions\
+    \ can create confusion, and often predisposes an\notherwise competent IT staff\
+    \ towards less efficient practices. In order to maintain a normal level\nof efficiency,\
+    \ it is important to descrease real-time process engineering by documenting,\n\
+    notification and activation guidelines and procedures, recovery guidelines and\
+    \ procedures, and\nreconstitutio guidelines and procedures prior to the occurence\
+    \ of a disruption. During the \nnotification/activation phase, appropriate personnel\
+    \ are apprised of current conditions and\ndamage assessment begins. During the\
+    \ recovery phase, appropriate personnel take a course of\naction to recover the\
+    \ {{project.system_info.system_name}} components at a \nsite other than the the\
+    \ one that experienced the disruption. In the final, reconstitution phase,\nactions\
+    \ are taken to restore IT system processing capabilities to normal operations.\n\
+    {% endif %}\n"
   examples:
-  - example: "Information systems are vital to {{project.system_info.system_name}}\nmission/business
-      functions; therefore, it is critical that services provided by\n{{project.system_info.system_name}}
-      are able to operate effectively without excessive\ninterruption. This Information
-      Technology Contingency Plan (ITCP) establishes comprehensive\nprocedures to
-      recover {{project.system_info.system_name}} quickly and\neffectively following
-      a service distruption\n\nOne of the goals of an IT Contingency Plan is to establish
-      procedures and mechanisms that\nobviate the need to resort to performing IT
-      functions using manual methods. If manual methods\nare the only alternative;
-      however, every effort should be made to continue IT functions and\nprocesses
-      manually.\n\nThe nature of unprecedent disruptions can create confusion, and
-      often predisposes an\notherwise competent IT staff towards less efficient practices.
-      In order to maintain a normal level\nof efficiency, it is important to descrease
-      real-time process engineering by documenting,\nnotification and activation guidelines
-      and procedures, recovery guidelines and procedures, and\nreconstitutio guidelines
-      and procedures prior to the occurence of a disruption. During the \nnotification/activation
-      phase, appropriate personnel are apprised of current conditions and\ndamage
-      assessment begins. During the recovery phase, appropriate personnel take a course
-      of\naction to recover the {{project.system_info.system_name}} components at
-      a \nsite other than the the one that experienced the disruption. In the final,
-      reconstitution phase,\nactions are taken to restore IT system processing capabilities
-      to normal operations.\n"
+  - example: "Information systems are vital to {{project.system_info.system_name}}\n\
+      mission/business functions; therefore, it is critical that services provided\
+      \ by\n{{project.system_info.system_name}} are able to operate effectively without\
+      \ excessive\ninterruption. This Information Technology Contingency Plan (ITCP)\
+      \ establishes comprehensive\nprocedures to recover {{project.system_info.system_name}}\
+      \ quickly and\neffectively following a service distruption\n\nOne of the goals\
+      \ of an IT Contingency Plan is to establish procedures and mechanisms that\n\
+      obviate the need to resort to performing IT functions using manual methods.\
+      \ If manual methods\nare the only alternative; however, every effort should\
+      \ be made to continue IT functions and\nprocesses manually.\n\nThe nature of\
+      \ unprecedent disruptions can create confusion, and often predisposes an\notherwise\
+      \ competent IT staff towards less efficient practices. In order to maintain\
+      \ a normal level\nof efficiency, it is important to descrease real-time process\
+      \ engineering by documenting,\nnotification and activation guidelines and procedures,\
+      \ recovery guidelines and procedures, and\nreconstitutio guidelines and procedures\
+      \ prior to the occurence of a disruption. During the \nnotification/activation\
+      \ phase, appropriate personnel are apprised of current conditions and\ndamage\
+      \ assessment begins. During the recovery phase, appropriate personnel take a\
+      \ course of\naction to recover the {{project.system_info.system_name}} components\
+      \ at a \nsite other than the the one that experienced the disruption. In the\
+      \ final, reconstitution phase,\nactions are taken to restore IT system processing\
+      \ capabilities to normal operations.\n"
   impute:
   - condition: q01_pre == 'yes'
     value: >
@@ -319,7 +321,7 @@ questions:
     the scope of this plan.
 
 
-    > * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+    > * Disruption at the primary work site {{project.system_info.primary_agency_admin_site}}
 
     > * Disruption at the [VENDOR_PRIMARY_SITE]
 
@@ -364,7 +366,7 @@ questions:
     the scope of this plan.
 
 
-    * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+    * Disruption at the primary work site {{project.system_info.primary_agency_admin_site}}
 
     * Disruption at the [VENDOR_PRIMARY_SITE]
 
@@ -397,7 +399,7 @@ questions:
       the scope of this plan.
 
 
-      * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+      * Disruption at the primary work site {{project.system_info.primary_agency_admin_site}}
 
       * Disruption at the [VENDOR_PRIMARY_SITE]
 
@@ -429,7 +431,7 @@ questions:
       the scope of this plan.
 
 
-      * Disruption at the primary work site [[PRIMARY_WORK_SITE]]
+      * Disruption at the primary work site {{project.system_info.primary_agency_admin_site}}
 
       * Disruption at the [VENDOR_PRIMARY_SITE]
 
@@ -460,7 +462,7 @@ questions:
     and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
 
 
-    > The following assumptions have been made about the [[Information System Name]]
+    > The following assumptions have been made about the {{project.system_info.system_name}}
     when developing this Contingency Plan:
 
 
@@ -470,30 +472,31 @@ questions:
     > Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
 
-    > * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot
-    be recovered withing 48 hours.
+    > * The {{project.system_info.primary_agency_admin_site}} primary work site is
+    inoperable and cannot be recovered withing 48 hours.
 
-    > * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform
-    engineers) will be identified and trained in their Contingency planning roles.
+    > * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}}
+    platform engineers) will be identified and trained in their Contingency planning
+    roles.
 
-    > * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the
-    {{project.system_info.system_short_name}} Contingency Plan.
+    > * Key {{project.system_info.system_admin_short_name}} team member will be available
+    to activate the {{project.system_info.system_short_name}} Contingency Plan.
 
 
     > Disruption at {{project.system_info.system_hosting.text}}:
 
 
-    > * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable
-    power supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
-    and fire department assistance are, or may not be fully operational at the the
-    time of the service disruption.
+    > * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such
+    as generators, uninterruptable power supply (UPS), environmental controls, sprinkler
+    systems, fire extinguishers, and fire department assistance are, or may not be
+    fully operational at the the time of the service disruption.
 
-    > * Current backups of the {{project.system_info.system_short_name}} applicable software and data
-    are intact and avaialble at the offsite storage facility located within other
-    [[VENDOR_DATACENTER_ALTSITE]].
+    > * Current backups of the {{project.system_info.system_short_name}} applicable
+    software and data are intact and avaialble at the offsite storage facility located
+    within other [[VENDOR_DATACENTER_ALTSITE]].
 
-    > The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP
-    certified.
+    > The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+    are FedRAMP certified.
 
 
     > Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
@@ -516,31 +519,57 @@ questions:
     {% if q05_pre == 'yes_edit' %} Edit your Assumptions statement. {% endif %} {%
     if q05_pre == 'no' %} Write your Assumptions statement. {% endif %}
   type: longtext
-  default: |
+  default: >
     {% if q05_pre == 'yes_edit' %}
-    The following assumptions have been made about the [[Information System Name]] when developing this Contingency Plan:
+
+    The following assumptions have been made about the {{project.system_info.system_name}}
+    when developing this Contingency Plan:
+
 
     Section 6 of this ITCP will outline the table top exercise for {{project.system_info.system_short_name}}.
 
+
     Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
-    * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot be recovered withing 48 hours.
-    * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform engineers) will be identified and trained in their Contingency planning roles.
-    * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the {{project.system_info.system_short_name}} Contingency Plan.
+
+    * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable
+    and cannot be recovered withing 48 hours.
+
+    * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}}
+    platform engineers) will be identified and trained in their Contingency planning
+    roles.
+
+    * Key {{project.system_info.system_admin_short_name}} team member will be available
+    to activate the {{project.system_info.system_short_name}} Contingency Plan.
+
 
     Disruption at {{project.system_info.system_hosting.text}}:
 
-    * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers, and fire department assistance are, or may not be fully operational at the the time of the service disruption.
-    * Current backups of the {{project.system_info.system_short_name}} applicable software and data are intact and avaialble at the offsite storage facility located within other [[VENDOR_DATACENTER_ALTSITE]].
-    The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP certified.
 
-    Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect circuits:
+    * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as
+    generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler
+    systems, fire extinguishers, and fire department assistance are, or may not be
+    fully operational at the the time of the service disruption.
 
-    * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down with no other alternate telecommunications or connectivity.
+    * Current backups of the {{project.system_info.system_short_name}} applicable
+    software and data are intact and avaialble at the offsite storage facility located
+    within other [[VENDOR_DATACENTER_ALTSITE]].
+
+    The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+    are FedRAMP certified.
+
+
+    Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
+    circuits:
+
+
+    * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down
+    with no other alternate telecommunications or connectivity.
+
     {% endif %}
   examples:
   - example: >
-      The following assumptions have been made about the [[Information System Name]]
+      The following assumptions have been made about the {{project.system_info.system_name}}
       when developing this Contingency Plan:
 
 
@@ -550,30 +579,31 @@ questions:
       Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
 
-      * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot
-      be recovered withing 48 hours.
+      * The {{project.system_info.primary_agency_admin_site}} primary work site is
+      inoperable and cannot be recovered withing 48 hours.
 
-      * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform
-      engineers) will be identified and trained in their Contingency planning roles.
+      * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}}
+      platform engineers) will be identified and trained in their Contingency planning
+      roles.
 
-      * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the
-      {{project.system_info.system_short_name}} Contingency Plan.
+      * Key {{project.system_info.system_admin_short_name}} team member will be available
+      to activate the {{project.system_info.system_short_name}} Contingency Plan.
 
 
       Disruption at {{project.system_info.system_hosting.text}}:
 
 
-      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable
-      pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
-      and fire department assistance are, or may not be fully operational at the the
-      time of the service disruption.
+      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such
+      as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler
+      systems, fire extinguishers, and fire department assistance are, or may not
+      be fully operational at the the time of the service disruption.
 
-      * Current backups of the {{project.system_info.system_short_name}} applicable software and data
-      are intact and avaialble at the offsite storage facility located within other
-      [[VENDOR_DATACENTER_ALTSITE]].
+      * Current backups of the {{project.system_info.system_short_name}} applicable
+      software and data are intact and avaialble at the offsite storage facility located
+      within other [[VENDOR_DATACENTER_ALTSITE]].
 
-      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP
-      certified.
+      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+      are FedRAMP certified.
 
 
       Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
@@ -585,7 +615,7 @@ questions:
   impute:
   - condition: q05_pre == 'yes'
     value: >
-      The following assumptions have been made about the [[Information System Name]]
+      The following assumptions have been made about the {{project.system_info.system_name}}
       when developing this Contingency Plan:
 
 
@@ -595,30 +625,31 @@ questions:
       Disruption at the {{project.system_info.primary_agency_admin_site}}:
 
 
-      * The {{project.system_info.primary_agency_admin_site}} primary work site is inoperable and cannot
-      be recovered withing 48 hours.
+      * The {{project.system_info.primary_agency_admin_site}} primary work site is
+      inoperable and cannot be recovered withing 48 hours.
 
-      * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}} platform
-      engineers) will be identified and trained in their Contingency planning roles.
+      * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}}
+      platform engineers) will be identified and trained in their Contingency planning
+      roles.
 
-      * Key {{project.system_info.system_admin_short_name}} team member will be available to activate the
-      {{project.system_info.system_short_name}} Contingency Plan.
+      * Key {{project.system_info.system_admin_short_name}} team member will be available
+      to activate the {{project.system_info.system_short_name}} Contingency Plan.
 
 
       Disruption at {{project.system_info.system_hosting.text}}:
 
 
-      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as generators, uninterruptable
-      pwoer supply (UPS), environmental controls, sprinkler systems, fire extinguishers,
-      and fire department assistance are, or may not be fully operational at the the
-      time of the service disruption.
+      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such
+      as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler
+      systems, fire extinguishers, and fire department assistance are, or may not
+      be fully operational at the the time of the service disruption.
 
-      * Current backups of the {{project.system_info.system_short_name}} applicable software and data
-      are intact and avaialble at the offsite storage facility located within other
-      [[VENDOR_DATACENTER_ALTSITE]].
+      * Current backups of the {{project.system_info.system_short_name}} applicable
+      software and data are intact and avaialble at the offsite storage facility located
+      within other [[VENDOR_DATACENTER_ALTSITE]].
 
-      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities are FedRAMP
-      certified.
+      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+      are FedRAMP certified.
 
 
       Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
@@ -674,7 +705,6 @@ questions:
   - condition: q08_pre == 'yes'
     value: |
       {{project.system_info.system_description|safe}}
-
 - id: q08b_test_frequency
   title: Contingency Plan Testing
   prompt: |
@@ -689,4 +719,25 @@ questions:
     text: Annually
   - key: semi-annually
     text: Semi-Annually
-
+- id: primary_network_connection
+  title: Primary Network Connection
+  prompt: What is the primary network connection to administer the application?
+  type: choice
+  choices:
+  - key: network_1
+    text: Network 1
+  - key: network_2
+    text: Network 2
+  - key: network_3
+    text: Network 3
+  - key: not_listed
+    text: Not Listed
+- id: alt_network_connection
+  title: Alternative Network Connection
+  prompt: If it was not listed before, what will your alternative connection be?
+  type: text
+  help: It's important that you have a plan that accounts for the availability of
+    your network connectivity.
+  impute:
+  - condition: primary_network_connection != "not_listed"
+    value: ~
