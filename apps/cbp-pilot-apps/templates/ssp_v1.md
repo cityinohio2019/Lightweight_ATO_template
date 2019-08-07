@@ -618,7 +618,74 @@ A detailed and explicit definition of the system authorization boundary diagram 
 
 All personnel have their status categorized with a sensitivity level in accordance with PS-2.  Personnel (employees or contractors) of service providers are considered Internal Users.  All other users are considered External Users.  User privileges (authorization permission after authentication takes place) are described in Table 9 1. Personnel Roles and Privileges that follows.
 
-[[TBD]]
+<div class="table-caption">Table 9-1. Personnel Roles and Priviliges</div>
+
+<table class="table-ssp" border="1">
+    <tr>
+      <th class="th-header">Role</th>
+      <th class="th-header">Internal or External</th>
+      <th class="th-header">Priviliged (P), Non-Priviliged (NP), or No Logical Access (NLA)</th>
+      <th class="th-header">Sensitivity Level</th>
+      <th class="th-header">Authorized Priviliges</th>
+      <th class="th-header">Functions Performed</th>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+    <tr>
+      <td>[[ROLE]]</td>
+      <td>[[INTERNAL_EXTERNAL]]</td>
+      <td>[[P_NP_NLA]]<td>
+      <td>[[SENSITIVITY_LEVEL]]<td>
+      <td>[[AUTHORIZED_PRIVILEGES]]<td>
+      <td>[[FUNCTIONS_PERFORMED]]<td>
+    </tr>
+</table>
 
 <h3>9.4.  Network Architecture</h3>
 
@@ -626,31 +693,184 @@ The logical network topology is shown in Figure 9 2. Network Diagram mapping the
 The following Figure 9 2. Network Diagram(s) provides a visual depiction of the system network components that constitute Enter Information System Abbreviation.
 
 <h2>10. SYSTEM ENVIRONMENT AND INVENTORY</h2>
+Directions for attaching the FedRAMP Inventory Workbook may be found in the following section: Attachment 13, FedRAMP Inventory Workbook.
 
 <h3>10.1. Data Flow</h3>
+The data flow in and out of the system boundaries is represented in Figure 10 1. Data Flow Diagram below.
 
 <h3>10.2. Ports, Protocols and Services</h3>
 
 The Table 10 1. Ports, Protocols and Services below lists the ports, protocols and services enabled in this information system.  
 
-[[TBD]]
+<div class="table-caption">Table 10-1. Ports, Protocols and Services</div>
+
+<table class="table-ssp" border="1">
+    <tr>
+      <th class="th-header">Ports(TCP/UDP)*</th>
+      <th class="th-header">Protocols</th>
+      <th class="th-header">Services</th>
+      <th class="th-header">Purpose</th>
+      <th class="th-header">Used By</th>
+    </tr>
+    <tr>
+      <td>[[ENTER_PORT]]</td>
+      <td>[[ENTER_PROTOCOLS]]</td>
+      <td>[[ENTER_SERVICES]]<td>
+      <td>[[ENTER_PURPOSE]]<td>
+      <td>[[ENTER_USED_BY]]<td>
+    </tr>
+    <tr>
+      <td>[[ENTER_PORT]]</td>
+      <td>[[ENTER_PROTOCOLS]]</td>
+      <td>[[ENTER_SERVICES]]<td>
+      <td>[[ENTER_PURPOSE]]<td>
+      <td>[[ENTER_USED_BY]]<td>
+    </tr>
+    <tr>
+      <td>[[ENTER_PORT]]</td>
+      <td>[[ENTER_PROTOCOLS]]</td>
+      <td>[[ENTER_SERVICES]]<td>
+      <td>[[ENTER_PURPOSE]]<td>
+      <td>[[ENTER_USED_BY]]<td>
+    </tr>
+    <tr>
+      <td>[[ENTER_PORT]]</td>
+      <td>[[ENTER_PROTOCOLS]]</td>
+      <td>[[ENTER_SERVICES]]<td>
+      <td>[[ENTER_PURPOSE]]<td>
+      <td>[[ENTER_USED_BY]]<td>
+    </tr>
+    <tr>
+      <td>[[ENTER_PORT]]</td>
+      <td>[[ENTER_PROTOCOLS]]</td>
+      <td>[[ENTER_SERVICES]]<td>
+      <td>[[ENTER_PURPOSE]]<td>
+      <td>[[ENTER_USED_BY]]<td>
+    </tr>
+</table>
 
 <h3>11. SYSTEM INTERCONNECTIONS</h3>
 
-[[TBD]]
+<div class="table-caption">Table 11-1. System Interconnections</div>
+
+<table class="table-ssp" border="1">
+    <tr>
+      <th class="th-header">SP* IP Address and Interface</th>
+      <th class="th-header">External Organization Name and IP Address of System</th>
+      <th class="th-header">External Point of Contact and Phone Number</th>
+      <th class="th-header">Connection Security (IPSec, VPN, SSL, Certificates, Secure File Transfer, etc.)**</th>
+      <th class="th-header">Data Direction (incoming, outgoing, or both)</th>
+      <th class="th-header">Information Being Transmitted</th>
+      <th class="th-header">Port of Circuit Numbers</th>
+    </tr>
+    <tr>
+      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
+      <td>[[EXTERNAL_ORG_IP]]</td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
+      <td>[[CONNECTION_SECURITY]]<td>
+      <td>[[INCOMING_OUTGOING_BOTH]]<td>
+      <td>[[INFORMATION_TRANSMITTED]]<td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+    </tr>
+    <tr>
+      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
+      <td>[[EXTERNAL_ORG_IP]]</td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
+      <td>[[CONNECTION_SECURITY]]<td>
+      <td>[[INCOMING_OUTGOING_BOTH]]<td>
+      <td>[[INFORMATION_TRANSMITTED]]<td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+    </tr>
+      <tr>
+      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
+      <td>[[EXTERNAL_ORG_IP]]</td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
+      <td>[[CONNECTION_SECURITY]]<td>
+      <td>[[INCOMING_OUTGOING_BOTH]]<td>
+      <td>[[INFORMATION_TRANSMITTED]]<td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+    </tr>
+      <tr>
+      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
+      <td>[[EXTERNAL_ORG_IP]]</td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
+      <td>[[CONNECTION_SECURITY]]<td>
+      <td>[[INCOMING_OUTGOING_BOTH]]<td>
+      <td>[[INFORMATION_TRANSMITTED]]<td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+    </tr>
+</table>
 
 
 <h2>12. LAWS, REGULATIONS, STANDARDS AND GUIDANCE</h2>
+A summary of FedRAMP Laws and Regulations is included in Attachment 12, FedRAMP Laws and Regulations.
 
 <h3>12.1. Applicable Laws and Regulations</h3>
+The FedRAMP Laws and Regulations can be found on this web page: Templates.
+Table 12 1. Information System Name Laws and Regulations includes additional laws and regulations specific to Information System Name.
 
 <div class="table-caption">Table 12-1. Information System Name Laws and Regulations</div>
 
-[[TBD]]
+<table class="table-ssp" border="1">
+    <tr>
+      <th class="th-header">Identification Number</th>
+      <th class="th-header">Title</th>
+      <th class="th-header">Date</th>
+      <th class="th-header">Link</th>
+    </tr>
+    <tr>
+      <td>[[REFERENCE_ID]]</td>
+      <td>[[REFERENCE_TITLE]]</td>
+      <td>[[REF_DATE]]<td>
+      <td>[[REF_LINK]]<td>
+    </tr>
+    <tr>
+      <td>[[REFERENCE_ID]]</td>
+      <td>[[REFERENCE_TITLE]]</td>
+      <td>[[REF_DATE]]<td>
+      <td>[[REF_LINK]]<td>
+    </tr>
+    <tr>
+      <td>[[REFERENCE_ID]]</td>
+      <td>[[REFERENCE_TITLE]]</td>
+      <td>[[REF_DATE]]<td>
+      <td>[[REF_LINK]]<td>
+    </tr>
+</table>
 
 <h3>12.2. Applicable Standards and Guidance</h3>
+The FedRAMP Standards and Guidance be found on this web page: Templates
+Table 12 2. Information System Name Standards and Guidance includes in this section any additional standards and guidance specific to Information System Name.
 
 <div class="table-caption">Table 12-2. Information System Name Standards and Guidance</div>
+
+<table class="table-ssp" border="1">
+    <tr>
+      <th class="th-header">Identification Number</th>
+      <th class="th-header">Title</th>
+      <th class="th-header">Date</th>
+      <th class="th-header">Link</th>
+    </tr>
+    <tr>
+      <td>[[REFERENCE_ID]]</td>
+      <td>[[REFERENCE_TITLE]]</td>
+      <td>[[REF_DATE]]<td>
+      <td>[[REF_LINK]]<td>
+    </tr>
+    <tr>
+      <td>[[REFERENCE_ID]]</td>
+      <td>[[REFERENCE_TITLE]]</td>
+      <td>[[REF_DATE]]<td>
+      <td>[[REF_LINK]]<td>
+    </tr>
+    <tr>
+      <td>[[REFERENCE_ID]]</td>
+      <td>[[REFERENCE_TITLE]]</td>
+      <td>[[REF_DATE]]<td>
+      <td>[[REF_LINK]]<td>
+    </tr>
+</table>
+
 
 
 <!-- Testing links -->
