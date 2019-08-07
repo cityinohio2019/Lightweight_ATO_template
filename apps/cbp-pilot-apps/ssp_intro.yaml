@@ -16,4 +16,5 @@ questions:
   prompt: Enter some text.
 
 output:
+- templates/ssp_v1_tables.md
 - templates/ssp_v1.md
