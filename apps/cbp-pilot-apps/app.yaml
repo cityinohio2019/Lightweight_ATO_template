@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.7.2
+version: 0.1.7.3
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.7.2
+  template: IT System Questionnaires (Pilot) v0.1.7.3
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -215,12 +215,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.7.2
+    short: IT System Questionnaires (Pilot) v0.1.7.3
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.7.2
+  version: 0.1.7.3
 questions:
 - id: system_info
   title: System Profile
@@ -347,7 +347,7 @@ questions:
   title: Contingency Plan Introduction
   type: module
   module-id: cp_introduction
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -356,7 +356,7 @@ questions:
   title: Contingency Plan Concept of Operations
   type: module
   module-id: cp_questionnaire
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -365,7 +365,7 @@ questions:
   title: Contingency Plan Activation and Notification
   type: module
   module-id: cp_activation
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -374,7 +374,7 @@ questions:
   title: Contingency Plan Recovery
   type: module
   module-id: cp_recovery
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -383,7 +383,7 @@ questions:
   title: Contingency Plan Reconstitution
   type: module
   module-id: cp_reconstitution
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -393,7 +393,7 @@ questions:
   title: General Information
   type: module
   module-id: cp_general_info
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: 1 == 1
@@ -403,7 +403,7 @@ questions:
   title: Contingency Plan Document
   type: module
   module-id: cp_fedramp01
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -413,7 +413,7 @@ questions:
   title: 800-53r4 Controls
   type: module
   module-id: cp_controls_80053r4
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   group: Contingency Plan
   impute:
   - condition: 1 == 1
@@ -469,7 +469,7 @@ questions:
 deprecated-to-delete:
 - id: cp_q_set_1
   module-id: cp_q_set_1
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   title: Question Set 1
   type: module
   group: Contingency Plan
@@ -478,7 +478,7 @@ deprecated-to-delete:
   #   value: ~
 - id: cp_q_set_2
   module-id: cp_q_set_2
-  icon: cp_icon.png
+  icon: cp_icon_detour.png
   title: Question Set 2
   type: module
   group: Contingency Plan

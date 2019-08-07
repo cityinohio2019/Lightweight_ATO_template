@@ -587,17 +587,17 @@ The {{project.system_info.system_name_short}} Choose an item leverages a pre-exi
     <tr>
       <td>[[SYSTEM1]]</td>
       <td>[[SERVICEPROVIDER1]]</td>
-      <td>[[DATE]]<td>
+      <td>[[DATE]]</td>
     </tr>
     <tr>
       <td>[[SYSTEM1]]</td>
       <td>[[SERVICEPROVIDER1]]</td>
-      <td>[[DATE]]<td>
+      <td>[[DATE]]</td>
     </tr>
     <tr>
       <td>[[SYSTEM1]]</td>
       <td>[[SERVICEPROVIDER1]]</td>
-      <td>[[DATE]]<td>
+      <td>[[DATE]]</td>
     </tr>
 </table>
 
@@ -632,58 +632,58 @@ All personnel have their status categorized with a sensitivity level in accordan
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
     <tr>
       <td>[[ROLE]]</td>
       <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]<td>
-      <td>[[SENSITIVITY_LEVEL]]<td>
-      <td>[[AUTHORIZED_PRIVILEGES]]<td>
-      <td>[[FUNCTIONS_PERFORMED]]<td>
+      <td>[[P_NP_NLA]]</td>
+      <td>[[SENSITIVITY_LEVEL]]</td>
+      <td>[[AUTHORIZED_PRIVILEGES]]</td>
+      <td>[[FUNCTIONS_PERFORMED]]</td>
     </tr>
 </table>
 
@@ -715,37 +715,37 @@ The Table 10 1. Ports, Protocols and Services below lists the ports, protocols a
     <tr>
       <td>[[ENTER_PORT]]</td>
       <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]<td>
-      <td>[[ENTER_PURPOSE]]<td>
-      <td>[[ENTER_USED_BY]]<td>
+      <td>[[ENTER_SERVICES]]</td>
+      <td>[[ENTER_PURPOSE]]</td>
+      <td>[[ENTER_USED_BY]]</td>
     </tr>
     <tr>
       <td>[[ENTER_PORT]]</td>
       <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]<td>
-      <td>[[ENTER_PURPOSE]]<td>
-      <td>[[ENTER_USED_BY]]<td>
+      <td>[[ENTER_SERVICES]]</td>
+      <td>[[ENTER_PURPOSE]]</td>
+      <td>[[ENTER_USED_BY]]</td>
     </tr>
     <tr>
       <td>[[ENTER_PORT]]</td>
       <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]<td>
-      <td>[[ENTER_PURPOSE]]<td>
-      <td>[[ENTER_USED_BY]]<td>
+      <td>[[ENTER_SERVICES]]</td>
+      <td>[[ENTER_PURPOSE]]</td>
+      <td>[[ENTER_USED_BY]]</td>
     </tr>
     <tr>
       <td>[[ENTER_PORT]]</td>
       <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]<td>
-      <td>[[ENTER_PURPOSE]]<td>
-      <td>[[ENTER_USED_BY]]<td>
+      <td>[[ENTER_SERVICES]]</td>
+      <td>[[ENTER_PURPOSE]]</td>
+      <td>[[ENTER_USED_BY]]</td>
     </tr>
     <tr>
       <td>[[ENTER_PORT]]</td>
       <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]<td>
-      <td>[[ENTER_PURPOSE]]<td>
-      <td>[[ENTER_USED_BY]]<td>
+      <td>[[ENTER_SERVICES]]</td>
+      <td>[[ENTER_PURPOSE]]</td>
+      <td>[[ENTER_USED_BY]]</td>
     </tr>
 </table>
 
@@ -766,38 +766,38 @@ The Table 10 1. Ports, Protocols and Services below lists the ports, protocols a
     <tr>
       <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
       <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
-      <td>[[CONNECTION_SECURITY]]<td>
-      <td>[[INCOMING_OUTGOING_BOTH]]<td>
-      <td>[[INFORMATION_TRANSMITTED]]<td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
+      <td>[[CONNECTION_SECURITY]]</td>
+      <td>[[INCOMING_OUTGOING_BOTH]]</td>
+      <td>[[INFORMATION_TRANSMITTED]]</td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
     </tr>
     <tr>
       <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
       <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
-      <td>[[CONNECTION_SECURITY]]<td>
-      <td>[[INCOMING_OUTGOING_BOTH]]<td>
-      <td>[[INFORMATION_TRANSMITTED]]<td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
+      <td>[[CONNECTION_SECURITY]]</td>
+      <td>[[INCOMING_OUTGOING_BOTH]]</td>
+      <td>[[INFORMATION_TRANSMITTED]]</td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
     </tr>
       <tr>
       <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
       <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
-      <td>[[CONNECTION_SECURITY]]<td>
-      <td>[[INCOMING_OUTGOING_BOTH]]<td>
-      <td>[[INFORMATION_TRANSMITTED]]<td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
+      <td>[[CONNECTION_SECURITY]]</td>
+      <td>[[INCOMING_OUTGOING_BOTH]]</td>
+      <td>[[INFORMATION_TRANSMITTED]]</td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
     </tr>
       <tr>
       <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
       <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]<td>
-      <td>[[CONNECTION_SECURITY]]<td>
-      <td>[[INCOMING_OUTGOING_BOTH]]<td>
-      <td>[[INFORMATION_TRANSMITTED]]<td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]<td>
+      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
+      <td>[[CONNECTION_SECURITY]]</td>
+      <td>[[INCOMING_OUTGOING_BOTH]]</td>
+      <td>[[INFORMATION_TRANSMITTED]]</td>
+      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
     </tr>
 </table>
 
@@ -821,20 +821,20 @@ Table 12 1. Information System Name Laws and Regulations includes additional law
     <tr>
       <td>[[REFERENCE_ID]]</td>
       <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]<td>
-      <td>[[REF_LINK]]<td>
+      <td>[[REF_DATE]]</td>
+      <td>[[REF_LINK]]</td>
     </tr>
     <tr>
       <td>[[REFERENCE_ID]]</td>
       <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]<td>
-      <td>[[REF_LINK]]<td>
+      <td>[[REF_DATE]]</td>
+      <td>[[REF_LINK]]</td>
     </tr>
     <tr>
       <td>[[REFERENCE_ID]]</td>
       <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]<td>
-      <td>[[REF_LINK]]<td>
+      <td>[[REF_DATE]]</td>
+      <td>[[REF_LINK]]</td>
     </tr>
 </table>
 
@@ -854,20 +854,20 @@ Table 12 2. Information System Name Standards and Guidance includes in this sect
     <tr>
       <td>[[REFERENCE_ID]]</td>
       <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]<td>
-      <td>[[REF_LINK]]<td>
+      <td>[[REF_DATE]]</td>
+      <td>[[REF_LINK]]</td>
     </tr>
     <tr>
       <td>[[REFERENCE_ID]]</td>
       <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]<td>
-      <td>[[REF_LINK]]<td>
+      <td>[[REF_DATE]]</td>
+      <td>[[REF_LINK]]</td>
     </tr>
     <tr>
       <td>[[REFERENCE_ID]]</td>
       <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]<td>
-      <td>[[REF_LINK]]<td>
+      <td>[[REF_DATE]]</td>
+      <td>[[REF_LINK]]</td>
     </tr>
 </table>
 
