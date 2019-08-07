@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.7.1
+version: 0.1.7.2
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.7.1
+  template: IT System Questionnaires (Pilot) v0.1.7.2
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -215,16 +215,17 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.7.1
+    short: IT System Questionnaires (Pilot) v0.1.7.2
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.7.1
+  version: 0.1.7.2
 questions:
 - id: system_info
   title: System Profile
   type: module
+  icon: system_info.png
   module-id: system_info
   group: System Info
 - id: se_cace_elk
@@ -239,12 +240,13 @@ questions:
 - id: fisma_level
   title: Determine Your FISMA Level
   type: module
+  icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_intro
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -253,7 +255,7 @@ questions:
 - id: pta_purpose
   title: Purpose of the Information Collection
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_purpose
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -262,7 +264,7 @@ questions:
 - id: pta_poc_details
   title: PTA POC Details
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_poc_details
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -271,7 +273,7 @@ questions:
 - id: pta_ic_forms
   title: Questions
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_ic_forms
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -280,7 +282,7 @@ questions:
 - id: pta_info_description
   title: Type of Information Collected
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_info_description
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -289,7 +291,7 @@ questions:
 - id: pta_info_storage
   title: How Will DOS Store the Collected Information?
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_info_storage
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -298,7 +300,7 @@ questions:
 - id: pta_printable
   title: Privacy Threshold Analysis Document
   type: module
-  icon: pta_icon.png
+  icon: PTA_icon_new.png
   module-id: pta_printable
   group: PTA (Privacy Threshold Analysis)
   impute:
@@ -308,7 +310,7 @@ questions:
   title: Test Introduction
   type: module
   module-id: tp_introduction
-  icon: tp_icon.png
+  icon: test_plan_new.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -317,7 +319,7 @@ questions:
   title: Test Project Management
   type: module
   module-id: tp_project_management
-  icon: tp_icon.png
+  icon: test_plan_new.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -326,7 +328,7 @@ questions:
   title: Test Environment
   type: module
   module-id: tp_test_environment
-  icon: tp_icon.png
+  icon: test_plan_new.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -335,7 +337,7 @@ questions:
   title: Test Plan Document
   type: module
   module-id: tp_printable
-  icon: tp_icon.png
+  icon: test_plan_new.png
   group: Test Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
