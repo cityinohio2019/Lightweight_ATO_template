@@ -139,10 +139,6 @@ The overall information system sensitivity categorization is recorded in Table 2
       </table>
     {% endif %}
   {% endif %}
-
-
 {% endfor %}<!-- /for ctl in -->
-
-
 <!-- /Security Controls -->
 
