@@ -110,7 +110,7 @@ questions:
   type: text
   help: Think the name of the facility, location, or admin site.
 - id: vendor_datacenter
-  title: VENDOR DATACENTER
-  prompt: Where is the datacenter?
+  title: Vendor Datacenter
+  prompt: Where is the vendor datacenter?
   type: text
   help: US-EAST 1, for example

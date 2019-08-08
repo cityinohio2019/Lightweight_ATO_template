@@ -1171,6 +1171,7 @@ output:
     The SAMS ISCM CONOPS defines a frequency to provide organization-defined information
     system monitoring to organization-defined personnel or roles.
   title: NIST 800-53 rev4 SSP SI_4_g_3
+title: SAMS SYSTEM
 questions:
 - id: q1
   prompt: |-
@@ -1179,8 +1180,7 @@ questions:
      Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
   title: Overview
   type: interstitial
-- id: auditing_option
-  prompt: UPDATE CONTENT WILL YOU USE SAMS SYSTEM
-  title: Auditing
+- id: sams_system
+  title: SAMS System
+  prompt: Will you be using the SAMS system?
   type: yesno
-title: SAMS SYSTEM

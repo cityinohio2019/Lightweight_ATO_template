@@ -983,6 +983,7 @@ output:
     activities in accordance with applicable federal laws, Executive Orders, directives,
     policies, or regulations.
   title: NIST 800-53 rev4 SSP SI_4_f
+title: CISO (Policy, SOC, STP )
 questions:
 - id: q1
   prompt: |-
@@ -991,8 +992,23 @@ questions:
      Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
   title: Overview
   type: interstitial
-- id: auditing_option
-  prompt: UPDATE CONTENT WILL YOU USE CISO (Policy, SOC, STP )
-  title: Auditing
-  type: yesno
-title: CISO (Policy, SOC, STP )
+- id: content_option
+  title: Content Policy
+  prompt: What dictates the content policy followed by your CISO? Can that information
+    be found in...
+  type: choice
+  choices:
+  - key: policy_1
+    text: Internal Policy
+  - key: policy_2
+    text: SOC (Security Operations Center)
+  - key: policy_3
+    text: STP
+  - key: policy_4
+    text: CSIRT (Computer Security Incident Response Team)
+  - key: policy_5
+    text: Somewhere else
+- id: content_policy_info
+  title: Content Policy Information
+  prompt: Tell us a little more about your content policy.
+  type: longtext

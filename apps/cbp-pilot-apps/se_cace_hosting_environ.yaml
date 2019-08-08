@@ -1,4 +1,4 @@
-id: se_cace_auditing_splunk_elk
+id: se_cace_hosting_environ
 output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_j_2
@@ -114,21 +114,21 @@ output:
   template: |
     CACE protects information obtained from ELK from unauthorized deletion.
   title: NIST 800-53 rev4 SSP SI_4_d_3
-title: CACE – Auditing (Splunk, ELK)
+title: CACE - Hosting Environment
 questions:
 - id: q1
   prompt: |-
     Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).
 
-     Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
+     Let's get some information about your Hosting Environment in CACE, and we'll prepare draft controls that you will be inheriting.
   title: Overview
   type: interstitial
-- id: auditing_option
-  title: Auditing
-  prompt: What auditing software will you be using with CACE?
+- id: hosting_option
+  title: Hosting Environment
+  prompt: What hosting software will you be using with CACE?
   type: choice
   choices:
-  - key: audit_1
-    text: Splunk
-  - key: audit_1
-    text: Elk
+  - key: host_1
+    text: Host 1
+  - key: host_2
+    text: Host 2
