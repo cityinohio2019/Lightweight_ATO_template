@@ -985,30 +985,14 @@ output:
   title: NIST 800-53 rev4 SSP SI_4_f
 title: CISO (Policy, SOC, STP )
 questions:
-- id: q1
-  prompt: |-
-    Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).
-
-     Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
-  title: Overview
-  type: interstitial
 - id: content_option
   title: Content Policy
-  prompt: What dictates the content policy followed by your CISO? Can that information
-    be found in...
-  type: choice
-  choices:
-  - key: policy_1
-    text: Internal Policy
-  - key: policy_2
-    text: SOC (Security Operations Center)
-  - key: policy_3
-    text: STP
-  - key: policy_4
-    text: CSIRT (Computer Security Incident Response Team)
-  - key: policy_5
-    text: Somewhere else
-- id: content_policy_info
-  title: Content Policy Information
-  prompt: Tell us a little more about your content policy.
-  type: longtext
+  prompt: 
+    CBP CISO Policy inheritance.
+  prompt: |
+    CBP CISO Policies are inherited by all IT Systems hosted in CACE.
+
+    All System hosted in CACE inherit CBP CISO Policies.
+
+    Your System will inherit these controls.
+  type: interstitial

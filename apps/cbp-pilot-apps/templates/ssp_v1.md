@@ -915,7 +915,7 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
   <tr>
     <td class="td-c-name-part">{{c_name_part}}</td>
     <td>
-      {% for se in ["se_cace_elk", "se_cace_auditing_splunk_elk", "se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube", "se_ciso_policy_soc_stp", "se_sams_system"] %}
+      {% for se in ["se_cace_auditing_splunk_elk", "se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube", "se_ciso_policy_soc_stp", "se_system_level"] %}
         {% if project[se] %}
           {% for od in project[se].output_documents if not "test" in od %}
             {% if ctl_od_title == od %}

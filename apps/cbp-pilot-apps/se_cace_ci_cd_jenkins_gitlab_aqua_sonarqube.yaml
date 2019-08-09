@@ -3,7 +3,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_a_2
   template: |
-    The CACE CME manages the hosting environment for SAMS and its associated accounts.
+    The CACE CME manages the hosting environment for {{project.system_info.system_short_name}} and its associated accounts.
   title: NIST 800-53 rev4 SSP AC_2_a_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_b
@@ -18,12 +18,12 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_4_1
   template: |
-    CACE defines the control of information flow of SAMS through the implementation of network rules.
+    CACE defines the control of information flow of {{project.system_info.system_short_name}} through the implementation of network rules.
   title: NIST 800-53 rev4 SSP AC_4_1
 - format: markdown
   id: nist_80053rev4_ssp_AC_4_2
   template: |
-    CACE enforces information flow of SAMS through the implementation of network rules.
+    CACE enforces information flow of {{project.system_info.system_short_name}} through the implementation of network rules.
   title: NIST 800-53 rev4 SSP AC_4_2
 - format: markdown
   id: nist_80053rev4_ssp_CM_2_1
@@ -182,7 +182,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_8
   template: |
-    CACE is responsible for implementing encryption within the SAMS hosting environment for those components supporting the SAMS system.
+    CACE is responsible for implementing encryption within the {{project.system_info.system_short_name}} hosting environment for those components supporting the {{project.system_info.system_short_name}} system.
   title: NIST 800-53 rev4 SSP IA_2_8
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_12_1
@@ -416,24 +416,13 @@ output:
   title: NIST 800-53 rev4 SSP SI_4_a_2_3
 title: CACE - CI/CD (Jenkins, GitLab, Aqua, SonarQube)
 questions:
-- id: q1
-  prompt: |-
-    Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).
-
-     Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
-  title: Overview
-  type: interstitial
 - id: CICD_option
   title: CI/CD Software
-  prompt: What CI/CD software will you use with CACE?
-  type: choice
-  choices:
-  - key: CICD_1
-    text: Jenkins
-  - key: CICD_2
-    text: GitLab
-  - key: CICD_3
-    text: Aqua
-  - key: CICD_4
-    text: SonarQube
-  min: 0
+  prompt: |
+    CACE CI/CD used by all IT Systems hosted in CACE.
+
+    All System hosted in CACE are required to use the CACE CI/CD Pipeline for deployment.
+
+    Your System will inherit the controls from CACE's Jenkins, GitLab, AcquaSec, and SonarQube tools.
+
+  type: interstitial

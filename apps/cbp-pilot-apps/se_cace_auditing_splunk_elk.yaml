@@ -3,7 +3,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_j_2
   template: |
-    SAMS provides requirements to the CACE team to implement application specific log monitoring data pulls, dashboards and signatures.
+    {{project.system_info.system_short_name}} provides requirements to the CACE team to implement application specific log monitoring data pulls, dashboards and signatures.
   title: NIST 800-53 rev4 SSP AC_2_j_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_4_21_3
@@ -55,7 +55,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_a_3
   template: |
-    The SAMS ISSO utilizes ELK to review the logs.
+    The {{project.system_info.system_short_name}} ISSO utilizes ELK to review the logs.
   title: NIST 800-53 rev4 SSP AU_6_a_3
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_DHS_5_3_h
@@ -70,22 +70,22 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_2_a
   template: |
-    The SAMS ISSO utilizes ELK to monitor the information system to detect attacks.
+    The {{project.system_info.system_short_name}} ISSO utilizes ELK to monitor the information system to detect attacks.
   title: NIST 800-53 rev4 SSP SI_4_a_1_2_a
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_2_b
   template: |
-    The SAMS ISSO utilizes ELK to monitor the information system to detect indicators of potential attacks.
+    The {{project.system_info.system_short_name}} ISSO utilizes ELK to monitor the information system to detect indicators of potential attacks.
   title: NIST 800-53 rev4 SSP SI_4_a_1_2_b
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_b_2
   template: |
-    The SAMS ISSO identifies unauthorized use of the information system through ELK.
+    The {{project.system_info.system_short_name}} ISSO identifies unauthorized use of the information system through ELK.
   title: NIST 800-53 rev4 SSP SI_4_b_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_c_1
   template: |
-    ELK is a CACE tool used to monitor SAMS.
+    ELK is a CACE tool used to monitor {{project.system_info.system_short_name}}.
   title: NIST 800-53 rev4 SSP SI_4_c_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_4_a
@@ -116,13 +116,6 @@ output:
   title: NIST 800-53 rev4 SSP SI_4_d_3
 title: CACE – Auditing (Splunk, ELK)
 questions:
-- id: q1
-  prompt: |-
-    Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).
-
-     Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
-  title: Overview
-  type: interstitial
 - id: auditing_option
   title: Auditing
   prompt: What auditing software will you be using with CACE?
