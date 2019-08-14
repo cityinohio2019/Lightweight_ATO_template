@@ -1,11 +1,11 @@
 id: se_cace_elk
-title: CACE ELK Intro
+title: CACE ELK Service
 output:
 - id: nist_80053rev4_ssp_ac_6_9
   title: NIST 800-53 rev4 SSP AC-6 (9)
   format: markdown
   template: >
-    GREG ADDING TEXT CACE (ELK): ELK is implemented to audit the execution of privileged
+    (ELK): ELK is implemented to audit the execution of privileged
     functionality at the application level. The ISSO has configured ELK such that
     privileged functionality (e.g. ability to configure access permissions) has been
     identified, logged, and audited.
@@ -95,22 +95,3 @@ questions:
     text: CACE ELK
   - key: case_splunk
     text: CACE Splunk
-- id: cace_team
-  title: Primary CACE Team
-  prompt: Who is your Primary CACE Team?
-  type: text
-  choices:
-  - key: 'cace_team_option_1 '
-    text: ' CACE Team'
-  - key: 'cace_team_option_2 '
-    text: ' Other'
-- id: cace_facility
-  title: Primary CACE Facility
-  prompt: Where is {{cace_team}} based?
-  type: text
-  help: Think the name of the facility, location, or admin site.
-- id: vendor_datacenter
-  title: Vendor Datacenter
-  prompt: Where is the vendor datacenter?
-  type: text
-  help: US-EAST 1, for example

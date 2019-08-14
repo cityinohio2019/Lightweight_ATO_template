@@ -1,31 +1,31 @@
-id: se_sams_system
+id: se_system_level
 output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_11_a_2
   template: |
-    All sessions within the SAMS systems has been configured to lock after 15 minutes of inactivity.
+    All sessions within the {{project.system_info.system_short_name}} systems has been configured to lock after 15 minutes of inactivity.
   title: NIST 800-53 rev4 SSP AC_11_a_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_a_2
   template: >
-    SAMS has identified its user base as 1) application regular users, 2) application
+    {{project.system_info.system_short_name}} has identified its user base as 1) application regular users, 2) application
     privileged users and 3) developers. Developers have privileged access to the compute
     and database environments.
   title: NIST 800-53 rev4 SSP AC_2_a_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_b
   template: |
-    The Emerging Technology Team are the account managers for all SAMS accounts.
+    The Emerging Technology Team are the account managers for all {{project.system_info.system_short_name}} accounts.
   title: NIST 800-53 rev4 SSP AC_2_b
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_j_2
   template: |
-    The SAMS application team reviews accounts once per month.
+    The {{project.system_info.system_short_name}} application team reviews accounts once per month.
   title: NIST 800-53 rev4 SSP AC_2_j_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_c
   template: |
-    Conditions for role or group membership are described in the SAMS Account Management SOP.
+    Conditions for role or group membership are described in the {{project.system_info.system_short_name}} Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_c
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_d_1
@@ -63,27 +63,27 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_a
   template: |
-    Procedures for creating information system accounts and described in the SAMS Account Management SOP.
+    Procedures for creating information system accounts and described in the {{project.system_info.system_short_name}} Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_a
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_b
   template: |
-    Procedures for enabling information system accounts and described in the SAMS Account Management SOP.
+    Procedures for enabling information system accounts and described in the {{project.system_info.system_short_name}} Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_b
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_c
   template: |
-    Procedures for modifying information system accounts and described in the SAMS Account Management SOP.
+    Procedures for modifying information system accounts and described in the {{project.system_info.system_short_name}} Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_c
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_d
   template: |
-    Procedures for disabling information system accounts and described in the SAMS Account Management SOP.
+    Procedures for disabling information system accounts and described in the {{project.system_info.system_short_name}} Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_d
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_1_e
   template: |
-    Procedures for removing information system accounts and described in the SAMS Account Management SOP.
+    Procedures for removing information system accounts and described in the {{project.system_info.system_short_name}} Account Management SOP.
   title: NIST 800-53 rev4 SSP AC_2_f_1_e
 - format: markdown
   id: nist_80053rev4_ssp_AC_2_f_2_a
@@ -166,13 +166,13 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_4_1
   template: >
-    SAMS defines the control of information flow at the system level through access
+    {{project.system_info.system_short_name}} defines the control of information flow at the system level through access
     control policies via application accounts and database accounts.
   title: NIST 800-53 rev4 SSP AC_4_1
 - format: markdown
   id: nist_80053rev4_ssp_AC_4_2
   template: |
-    SAMS enforces information flow at the system level through access control policies via application accounts and database accounts.
+    {{project.system_info.system_short_name}} enforces information flow at the system level through access control policies via application accounts and database accounts.
   title: NIST 800-53 rev4 SSP AC_4_2
 - format: markdown
   id: nist_80053rev4_ssp_AC_6
@@ -206,24 +206,24 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_a_3
   template: >
-    The SAMS ISSO reviews and analyzes information system audit records for indications
-    of organization-defined inappropriate or unusual activity with the organization-defined
-    frequency.
+    The {{project.system_info.system_short_name}} ISSO reviews and analyzes information
+    system audit records for indications of organization-defined inappropriate or
+    unusual activity with the organization-defined frequency.
   title: NIST 800-53 rev4 SSP AU_6_a_3
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_DHS_5_4_6_f
   template: |
-    Not Applicable: Mail servers are not within the SAMS boundary.
+    Not Applicable: Mail servers are not within the {{project.system_info.system_short_name}} boundary.
   title: NIST 800-53 rev4 SSP AU_6_DHS_5_4_6_f
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_b_1
   template: |
-    The SAMS ISSO is to report analysis to the System Owner.
+    The {{project.system_info.system_short_name}} ISSO is to report analysis to the System Owner.
   title: NIST 800-53 rev4 SSP AU_6_b_1
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_b_2
   template: |
-    The SAMS ISSO report analysis to the System Owner.
+    The {{project.system_info.system_short_name}} ISSO report analysis to the System Owner.
   title: NIST 800-53 rev4 SSP AU_6_b_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_3_a
@@ -253,95 +253,107 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_b_3
   template: >
-    The ISSO develops the SAMS continuous monitoring strategy that includes establishment
-    of the organization-defined frequencies for monitoring.
+    The ISSO develops the {{project.system_info.system_short_name}} continuous monitoring
+    strategy that includes establishment of the organization-defined frequencies for
+    monitoring.
   title: NIST 800-53 rev4 SSP CA_7_b_3
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_b_4
   template: >
-    The ISSO implements the SAMS continuous monitoring strategy that includes establishment
-    of the organization-defined frequencies for monitoring.
+    The ISSO implements the {{project.system_info.system_short_name}} continuous monitoring
+    strategy that includes establishment of the organization-defined frequencies for
+    monitoring.
   title: NIST 800-53 rev4 SSP CA_7_b_4
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_a_1
-  template: |
-    The SAMS Continuous Monitoring (ISCM) CONOPS defines metrics to be used to implement continuous monitoring of SAMS.
+  template: >
+    The {{project.system_info.system_short_name}} Continuous Monitoring (ISCM) CONOPS
+    defines metrics to be used to implement continuous monitoring of SAMS.
   title: NIST 800-53 rev4 SSP CA_7_a_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_a_2
   template: |
-    The SAMS ISCM CONOPS defines how its metrics are monitored.
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines how its metrics are monitored.
   title: NIST 800-53 rev4 SSP CA_7_a_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_a_3
   template: |
-    The SAMS ISSO is responsible for implementing the SAMS ISCM.
+    The {{project.system_info.system_short_name}} ISSO is responsible for implementing the {{project.system_info.system_short_name}} ISCM.
   title: NIST 800-53 rev4 SSP CA_7_a_3
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_b_1
   template: |
-    Frequency of monitoring is defined in the SAMS ISCM CONOPS.
+    Frequency of monitoring is defined in the {{project.system_info.system_short_name}} ISCM CONOPS.
   title: NIST 800-53 rev4 SSP CA_7_b_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_d_1
-  template: |
-    The SAMS ISSO develops the continuous monitoring strategy that includes ongoing security status monitoring of ISCM metrics.
+  template: >
+    The {{project.system_info.system_short_name}} ISSO develops the continuous monitoring
+    strategy that includes ongoing security status monitoring of ISCM metrics.
   title: NIST 800-53 rev4 SSP CA_7_d_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_d_2
-  template: |
-    The SAMS ISSO implements the continuous monitoring strategy that includes ongoing security status monitoring of ISCM metrics.
+  template: >
+    The {{project.system_info.system_short_name}} ISSO implements the continuous monitoring
+    strategy that includes ongoing security status monitoring of ISCM metrics.
   title: NIST 800-53 rev4 SSP CA_7_d_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_e_1
   template: >
-    The SAMS ISSO develops the correlation and analysis of security-related information
-    generated by assessments and monitoring as part of the SAMS ISCM CONOPS.
+    The {{project.system_info.system_short_name}} ISSO develops the correlation and
+    analysis of security-related information generated by assessments and monitoring
+    as part of the {{project.system_info.system_short_name}} ISCM CONOPS.
   title: NIST 800-53 rev4 SSP CA_7_e_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_e_2
   template: >
-    The SAMS ISSO implements the correlation and analysis of security-related information
-    generated by assessments and monitoring as part of the SAMS ISCM CONOPS.
+    The {{project.system_info.system_short_name}} ISSO implements the correlation
+    and analysis of security-related information generated by assessments and monitoring
+    as part of the {{project.system_info.system_short_name}} ISCM CONOPS.
   title: NIST 800-53 rev4 SSP CA_7_e_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_f_1
   template: >
-    The SAMS ISSO develops a continuous monitoring strategy that includes response
-    actions to address results of the analysis of security-related information.
+    The {{project.system_info.system_short_name}} ISSO develops a continuous monitoring
+    strategy that includes response actions to address results of the analysis of
+    security-related information.
   title: NIST 800-53 rev4 SSP CA_7_f_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_f_2
   template: >
-    The SAMS ISSO implements a continuous monitoring strategy that includes response
-    actions to address results of the analysis of security-related information.
+    The {{project.system_info.system_short_name}} ISSO implements a continuous monitoring
+    strategy that includes response actions to address results of the analysis of
+    security-related information.
   title: NIST 800-53 rev4 SSP CA_7_f_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_g_1
   template: >
-    The SAMS ISCM CONOPS defines the personnel or roles to whom the security status
-    of the organization and information system are to be reported.
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines the personnel
+    or roles to whom the security status of the organization and information system
+    are to be reported.
   title: NIST 800-53 rev4 SSP CA_7_g_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_g_2
   template: >
-    The SAMS ISCM CONOPS defines the frequency to report the security status of the
-    organization and information system to organization-defined personnel or roles.
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines the frequency
+    to report the security status of the organization and information system to organization-defined
+    personnel or roles.
   title: NIST 800-53 rev4 SSP CA_7_g_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_g_3
   template: >
-    The SAMS ISSO develops a continuous monitoring strategy that includes reporting
-    the security status of the organization or information system to organizational-defined
-    personnel or roles with the organization-defined frequency.
+    The {{project.system_info.system_short_name}} ISSO develops a continuous monitoring
+    strategy that includes reporting the security status of the organization or information
+    system to organizational-defined personnel or roles with the organization-defined
+    frequency.
   title: NIST 800-53 rev4 SSP CA_7_g_3
 - format: markdown
   id: nist_80053rev4_ssp_CA_7_g_4
   template: >
-    The SAMS ISSO implements a continuous monitoring program that includes reporting
-    the security status of the organization and information system to organization-defined
-    personnel or roles with the organization-defined frequency in accordance with
-    the organizational continuous monitoring strategy.
+    The {{project.system_info.system_short_name}} ISSO implements a continuous monitoring
+    program that includes reporting the security status of the organization and information
+    system to organization-defined personnel or roles with the organization-defined
+    frequency in accordance with the organizational continuous monitoring strategy.
   title: NIST 800-53 rev4 SSP CA_7_g_4
 - format: markdown
   id: nist_80053rev4_ssp_CA_8_1
@@ -604,7 +616,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_8
   template: |
-    SAMS implements compliant encryption standards on the components within its system boundary.
+    {{project.system_info.system_short_name}} implements compliant encryption standards on the components within its system boundary.
   title: NIST 800-53 rev4 SSP IA_2_8
 - format: markdown
   id: nist_80053rev4_ssp_IR_4_a_1
@@ -1117,28 +1129,30 @@ output:
   title: NIST 800-53 rev4 SSP SI_2_c_4
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_1
-  template: |
-    The SAMS ISCM CONOPS defines monitoring objectives to detect attacks and indicators of potential attacks on SAMS.
+  template: >
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines monitoring objectives
+    to detect attacks and indicators of potential attacks on SAMS.
   title: NIST 800-53 rev4 SSP SI_4_a_1_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_2_a
   template: |
-    The SAMS ISSO monitors the information system to detect attacks.
+    The {{project.system_info.system_short_name}} ISSO monitors the information system to detect attacks.
   title: NIST 800-53 rev4 SSP SI_4_a_1_2_a
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_2_b
   template: |
-    The SAMS ISSO monitors the information system to detect indicators of potential attacks.
+    The {{project.system_info.system_short_name}} ISSO monitors the information system to detect indicators of potential attacks.
   title: NIST 800-53 rev4 SSP SI_4_a_1_2_b
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_b_1
-  template: |
-    The SAMS ISCM CONOPS defines techniques and methods to identify unauthorized use of the information system.
+  template: >
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines techniques and
+    methods to identify unauthorized use of the information system.
   title: NIST 800-53 rev4 SSP SI_4_b_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_b_2
   template: |
-    The SAMS ISSO identifies unauthorized use of the information system.
+    The {{project.system_info.system_short_name}} ISSO identifies unauthorized use of the information system.
   title: NIST 800-53 rev4 SSP SI_4_b_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_c_1
@@ -1148,39 +1162,46 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_4_a
   template: |
-    The SAMS ISSO provides system monitoring information to the defined personnel as needed.
+    The {{project.system_info.system_short_name}} ISSO provides system monitoring information to the defined personnel as needed.
   title: NIST 800-53 rev4 SSP SI_4_g_4_a
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_4_b
-  template: |
-    The SAMS ISSO provides system monitoring information to the defined personnel per the standard operating procedure defined frequencies.
+  template: >
+    The {{project.system_info.system_short_name}} ISSO provides system monitoring
+    information to the defined personnel per the standard operating procedure defined
+    frequencies.
   title: NIST 800-53 rev4 SSP SI_4_g_4_b
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_1
-  template: |
-    The SAMS ISCM CONOPS defines personnel or roles to whom information system monitoring information is to be provided.
+  template: >
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines personnel or
+    roles to whom information system monitoring information is to be provided.
   title: NIST 800-53 rev4 SSP SI_4_g_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_2
-  template: |
-    The SAMS ISCM CONOPS defines information system monitoring information to be provided to organization-defined personnel or roles.
+  template: >
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines information
+    system monitoring information to be provided to organization-defined personnel
+    or roles.
   title: NIST 800-53 rev4 SSP SI_4_g_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_g_3
   template: >
-    The SAMS ISCM CONOPS defines a frequency to provide organization-defined information
-    system monitoring to organization-defined personnel or roles.
+    The {{project.system_info.system_short_name}} ISCM CONOPS defines a frequency
+    to provide organization-defined information system monitoring to organization-defined
+    personnel or roles.
   title: NIST 800-53 rev4 SSP SI_4_g_3
-title: SAMS SYSTEM
+title: IT System Level Controls
 questions:
-- id: q1
+- id: system_level
+  title: System Level Controls
   prompt: |-
-    Welcome to the CACE (**C**BP **A**WS **C**loud **E**nvironment).
+    System Level Controls
 
-     Let's get some information about your IT System in CACE, and we'll prepare draft controls that you will be inheriting.
-  title: Overview
-  type: interstitial
-- id: sams_system
-  title: SAMS System
-  prompt: Will you be using the SAMS system?
+    Certain controls exist only at the level of your overall IT System and cannot be easily attributed to re-used system components.
+
+    In the future, this module will gather information about controls you manage at the System Level.
+    For purposes of this LATO Pilot, we will inherit some sample System Level controls to show these controls in the SSP.
+
+    Does this make sense? (Please answer "yes" to this question.  )
   type: yesno

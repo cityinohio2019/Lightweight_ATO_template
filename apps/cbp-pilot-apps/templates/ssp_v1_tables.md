@@ -116,7 +116,7 @@ The overall information system sensitivity categorization is recorded in Table 2
   <tr>
     <td style="width: 125px;background-color: rgb(219, 228, 244);font-weight:bold;">{{c_name_part}}</td>
     <td>
-      {% for se in ["se_cace_elk", "se_cace_auditing_splunk_elk", "se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube", "se_ciso_policy_soc_stp", "se_sams_system"] %}
+      {% for se in ["se_cace_elk", "se_cace_auditing_splunk_elk", "se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube", "se_ciso_policy_soc_stp", "se_system_level"] %}
         {% if project[se] %}
           {% for od in project[se].output_documents if not "test" in od %}
             {% if ctl_od_title == od %}
