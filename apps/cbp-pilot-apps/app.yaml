@@ -1,11 +1,11 @@
 id: app
 title: (CBP) IT System
 type: project
-version: 0.1.7.4
+version: 0.1.7.7
 icon: cbp_app_icon.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.7.4
+  template: IT System Questionnaires (Pilot) v0.1.7.7
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -215,12 +215,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.7.4
+    short: IT System Questionnaires (Pilot) v0.1.7.7
   source_url: https://github.com/GovReady/cbp-big-q-apps
   status: stub
   vendor: CBP
   vendor_url: ~
-  version: 0.1.7.4
+  version: 0.1.7.7
 questions:
 - id: system_info
   title: System Profile
@@ -305,6 +305,24 @@ questions:
   group: PTA (Privacy Threshold Analysis)
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pas_intro
+  title: Privacy Act Statement
+  type: module
+  icon: app.png
+  module-id: pas_intro
+  group: Privacy Act Statement (PAS)
+  impute:
+  - condition: project.pta_info_storage.PAS_upload_generate_choice != 'PAS_generate'
+    value: ~
+- id: pas_printable
+  title: Privacy Act Statement Document
+  type: module
+  icon: app.png
+  module-id: pas_printable
+  group: Privacy Act Statement (PAS)
+  impute:
+  - condition: project.pta_info_storage.PAS_upload_generate_choice != 'PAS_generate'
     value: ~
 - id: tp_introduction
   title: Test Introduction

@@ -149,7 +149,7 @@ format: html
   {% if privacy_act_statement %}
   <h2>Submitted Privacy Act Statement</h2>
   <div class="cell-full">
-    <p>The following Privact Act Statement has been submitted with this PTA.</p>
+    <p>The following Privacy Act Statement has been submitted with this PTA.</p>
     <p><a href="{{ privacy_act_statement.url }}">View Privacy Act Statement</a></p>
   </div>
 
