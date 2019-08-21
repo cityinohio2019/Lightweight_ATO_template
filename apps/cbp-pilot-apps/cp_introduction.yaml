@@ -6,10 +6,10 @@ internal:
       Contingency Plan questionnaire (snippet)
 introduction:
   format: markdown
-  template: "Contingency Plan\n\nIn this module, we'll assist you in preparing a Contingency\
-    \ Plan document\nprior to the occurence of a disruption the guidelines and procedures\
-    \ for a \nservice disruption including:\n\n* notification and activation\n* recovery\n\
-    * reconstitution\n"
+  template: "Contingency Plan\r\n\r\nIn this module, we'll assist you in preparing\
+    \ a Contingency Plan document\r\nprior to the occurence of a disruption the guidelines\
+    \ and procedures for a \r\nservice disruption including:\r\n\r\n* Notification\
+    \ and activation\r\n* Recovery\r\n* Reconstitution"
 questions:
 - id: q01_pre
   title: Introduction and Purpose (pre)
@@ -20,22 +20,22 @@ questions:
     \ are able to operate effectively without excessive\n> interruption. This Information\
     \ Technology Contingency Plan (ITCP) establishes comprehensive\n> procedures to\
     \ recover {{project.system_info.system_name}} quickly and\n> effectively following\
-    \ a service distruption\n\n> One of the goals of an IT Contingency Plan is to\
-    \ establish procedures and mechanisms that\n> obviate the need to resort to performing\
-    \ IT functions using manual methods. If manual methods\n> are the only alternative;\
+    \ a service disruption\n\n> One of the goals of an IT Contingency Plan is to establish\
+    \ procedures and mechanisms that\n> obviate the need to resort to performing IT\
+    \ functions using manual methods. If manual methods\n> are the only alternative;\
     \ however, every effort should be made to continue IT functions and\n> processes\
-    \ manually.\n\n> The nature of unprecedent disruptions can create confusion, and\
-    \ often predisposes an\n> otherwise competent IT staff towards less efficient\
+    \ manually.\n\n> The nature of unprecedented disruptions can create confusion,\
+    \ and often predisposes an\n> otherwise competent IT staff towards less efficient\
     \ practices. In order to maintain a normal level\n> of efficiency, it is important\
-    \ to descrease real-time process engineering by documenting,\n> notification and\
+    \ to decrease real-time process engineering by documenting,\n> notification and\
     \ activation guidelines and procedures, recovery guidelines and procedures, and\n\
-    > reconstitutio guidelines and procedures prior to the occurence of a disruption.\
+    > reconstitute guidelines and procedures prior to the occurance of a disruption.\
     \ During the \n> notification/activation phase, appropriate personnel are apprised\
     \ of current conditions and\n> damage assessment begins. During the recovery phase,\
     \ appropriate personnel take a course of\n> action to recover the {{project.system_info.system_name}}\
-    \ components at a \n> site other than the the one that experienced the disruption.\
+    \ components at a \n> site other than the one that experienced the disruption.\
     \ In the final, reconstitution phase,\n> actions are taken to restore IT system\
-    \ processing capabilities to normal operations.\n"
+    \ processing capabilities to normal operations."
   type: choice
   choices:
   - key: 'yes'
@@ -301,7 +301,7 @@ questions:
       * Technical Guide to Information Security Testing and Assessment [NIST SP 800-115]
 - id: q04_pre
   title: Scope (pre)
-  prompt: >
+  prompt: >-
     Will you leverage the template Information System Name and Identifier language
     used for CACE information systems?
 
@@ -335,7 +335,7 @@ questions:
     > * **Overall recovery and continuity of business operations.** The Business Resumption
     Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
 
-    > * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is
+    > * **Emergency evacuation of personnel.** The Occupant Emergency Plan (OEP) is
     appended to this plan. As stated, this appended plan addresses occupant emergencies
     and is not the information system Contingency Plan.
   type: choice
