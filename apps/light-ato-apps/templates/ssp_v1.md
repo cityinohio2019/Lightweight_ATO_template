@@ -85,7 +85,7 @@ title: SSP v1
 <center>
 
 <center>
-<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
+<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('app.png')}}">
 <h1 class="title">{{project.system_info.system_name}}<br/>System Security Plan</h1>
 </center>
 

@@ -1,6 +1,6 @@
-id: cbp_system_info
+id: system_info
 format: markdown
-title: CBP System Information
+title: System Information
 placement: action-buttons
 ...
 
@@ -33,7 +33,7 @@ placement: action-buttons
 <div style="text-align: center;">
   <table border=1 style="margin:auto; font-family: TimesNewRoman, Times, serif; text-align: center;">
     <tr>
-      <td>CBP Organization</td><td>{{system_org}}</td>
+      <td>Organization</td><td>{{system_org}}</td>
     </tr>
     <tr>
       <td>System Owner</td><td>{{system_owner}}</td>

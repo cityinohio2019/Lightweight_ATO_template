@@ -46,7 +46,7 @@ source: https://www.fedramp.gov/assets/resources/templates/SSP-A06-FedRAMP-ISCP-
 </style>
 
 <center>
-<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('U.S.-Customs-and-Border-Protection-CBP.png')}}">
+<img style="max-width:70%;height:auto;" src="{{static_asset_path_for('app.png')}}">
 <h1 class="title">{{project.system_info.system_name}}<br/>Contingency Plan</h1>
 </center>
 

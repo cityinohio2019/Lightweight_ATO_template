@@ -38,9 +38,9 @@ catalog:
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
     short: IT System Questionnaires (Pilot) v0.1.7.8
-  source_url: https://github.com/GovReady/cbp-big-q-apps
+  source_url: https://github.com/GovReady/apps
   status: stub
-  vendor: CBP
+  vendor: none
   vendor_url: ~
   version: 0.1.7.8
 questions:
@@ -257,7 +257,7 @@ questions:
   module-id: se_cace_hosting_environ
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'cbp_cace'
+  - condition: project.system_info.system_hosting != 'org_cace'
     value: ~
 - id: se_cace_auditing_splunk_elk
   title: CACE – Auditing (Splunk, ELK)
@@ -266,7 +266,7 @@ questions:
   module-id: se_cace_auditing_splunk_elk
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'cbp_cace'
+  - condition: project.system_info.system_hosting != 'org_cace'
     value: ~
 - id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
   title: CACE - CI/CD (Jenkins, GitLab, Aqua, SonarQube)
@@ -275,7 +275,7 @@ questions:
   module-id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'cbp_cace'
+  - condition: project.system_info.system_hosting != 'org_cace'
     value: ~
 - id: se_system_level
   title: System Level Controls
@@ -284,7 +284,7 @@ questions:
   module-id: se_system_level
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'cbp_cace'
+  - condition: project.system_info.system_hosting != 'org_cace'
     value: ~
 - id: se_ciso_policy_soc_stp
   title: CISO (Policy, SOC, STP)
@@ -293,7 +293,7 @@ questions:
   module-id: se_ciso_policy_soc_stp
   group: Organizational Policy
   impute:
-  - condition: project.system_info.system_hosting != 'cbp_cace'
+  - condition: project.system_info.system_hosting != 'org_cace'
     value: ~
 - id: ssp_intro
   module-id: ssp_intro

@@ -160,7 +160,7 @@ output:
   id: nist_80053rev4_ssp_AC_4_21_3
   template: >
     The information system separates information flows logically or physically using
-    DHS/CBP-defined mechanisms and/or techniques to accomplish DHS/CBP-defined required
+    defined mechanisms and/or techniques to accomplish defined required
     separations by types of information.
   title: NIST 800-53 rev4 SSP AC_4_21_3
 - format: markdown
@@ -373,40 +373,40 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CM_2_1
   template: |
-    The application utilizes CBP GitLab to develop and documents a current baseline configuration of the information system
+    The application utilizes GitLab to develop and documents a current baseline configuration of the information system
   title: NIST 800-53 rev4 SSP CM_2_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_2_2
   template: |
-    The application utilizes CBP GitLab to maintain and documents a current baseline configuration of the information system
+    The application utilizes GitLab to maintain and documents a current baseline configuration of the information system
   title: NIST 800-53 rev4 SSP CM_2_2
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_2_c
   template: |
-    The application utilizes CBP GitLab to centrally manage configurations.
+    The application utilizes GitLab to centrally manage configurations.
   title: NIST 800-53 rev4 SSP CM_6_1_2_c
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_a_3
   template: |
-    The application utilizes CBP GitLab to apply configuration settings.
+    The application utilizes GitLab to apply configuration settings.
   title: NIST 800-53 rev4 SSP CM_6_a_3
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_1_c
   template: >
-    The application utilizes CBP GitLab to manage and audit configuration settings.
+    The application utilizes GitLab to manage and audit configuration settings.
     Security waivers are utilized to document any out of scope deviations.
   title: NIST 800-53 rev4 SSP CM_6_c_1_c
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_2_a
   template: >
-    The application utilizes CBP GitLab to manage and approve configuration settings.
+    The application utilizes GitLab to manage and approve configuration settings.
     Security waivers are utilized to document and grant approval any out of scope
     deviations.
   title: NIST 800-53 rev4 SSP CM_6_c_2_a
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_2_b
   template: |
-    The application utilizes CBP GitLab to monitor application code as well as ELK to monitor configuration settings.
+    The application utilizes GitLab to monitor application code as well as ELK to monitor configuration settings.
   title: NIST 800-53 rev4 SSP CM_6_c_2_b
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_2_c
@@ -416,12 +416,12 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_4
   template: |
-    The application utilizes CBP GitLab to verify configuration settings which are managed and reviewed.
+    The application utilizes GitLab to verify configuration settings which are managed and reviewed.
   title: NIST 800-53 rev4 SSP CM_6_c_4
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_d_2
   template: |
-    The application utilizes CBP GitLab to control configuration changes which are managed and reviewed.
+    The application utilizes GitLab to control configuration changes which are managed and reviewed.
   title: NIST 800-53 rev4 SSP CM_6_d_2
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_a
@@ -448,7 +448,7 @@ output:
   id: nist_80053rev4_ssp_CM_8_a_4_1
   template: >
     The organization defines the information deemed necessary to achieve effective
-    information system component accountability within the DHS 4300A and CBP 1400-05D
+    information system component accountability within the DHS 4300A
     documents
   title: NIST 800-53 rev4 SSP CM_8_a_4_1
 - format: markdown
@@ -462,13 +462,13 @@ output:
   id: nist_80053rev4_ssp_CM_8_b_1
   template: >
     The organization defines the frequency to review and update information system
-    component inventory within the DHS 4300A and CBP 1400-05D documents
+    component inventory within the DHS 4300A documents
   title: NIST 800-53 rev4 SSP CM_8_b_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_8_b_2
   template: >
     The organization reviews and updates the information system components inventory
-    with the defined frequency in accordance with the DHS 4300A and CBP 1400-05D documents.
+    with the defined frequency in accordance with the DHS 4300A documents.
   title: NIST 800-53 rev4 SSP CM_8_b_2
 - format: markdown
   id: nist_80053rev4_ssp_CP_2_a_1
@@ -599,8 +599,8 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CP_4_a_3
   template: >
-    The information system shall tests the contingency plan with DHS/CBP-defined frequency,
-    using DHS/CBP-defined tests to determine the effectiveness of the plan and the
+    The information system shall tests the contingency plan with defined frequency,
+    using defined tests to determine the effectiveness of the plan and the
     organizational readiness to execute the plan
   title: NIST 800-53 rev4 SSP CP_4_a_3
 - format: markdown
@@ -697,12 +697,12 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_IR_6_b_2
   template: |
-    The information system staff shall report security incident information to DHS/CBP-defined authorities.
+    The information system staff shall report security incident information to defined authorities.
   title: NIST 800-53 rev4 SSP IR_6_b_2
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_1
   template: |
-    The information system develops a security plan that: is consistent with DHS/CBP's enterprise architecture.
+    The information system develops a security plan that: is consistent with enterprise architecture.
   title: NIST 800-53 rev4 SSP PL_2_a_1
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_9
@@ -713,12 +713,12 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_c_1
   template: |
-    The DHS/CBP CISO shall defines the frequency to review the security plan.
+    The CISO shall defines the frequency to review the security plan.
   title: NIST 800-53 rev4 SSP PL_2_c_1
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_c_2
   template: |
-    The information system  reviews the security plan according to DHS/CBP-defined frequency.
+    The information system  reviews the security plan according to defined frequency.
   title: NIST 800-53 rev4 SSP PL_2_c_2
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_2
@@ -898,15 +898,15 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_RA_5_a_2_a
   template: >
-    The information system,  in accordance with the DHS/CBP-defined frequency and/or
-    DHS/CBP-defined process for conducting random scans, scans for vulnerabilities
+    The information system,  in accordance with the defined frequency and/or
+    defined process for conducting random scans, scans for vulnerabilities
     in: the information system.
   title: NIST 800-53 rev4 SSP RA_5_a_2_a
 - format: markdown
   id: nist_80053rev4_ssp_RA_5_a_2_b
   template: >
-    The information system,  in accordance with the DHS/CBP-defined frequency and/or
-    DHS/CBP-defined process for conducting random scans, scans for vulnerabilities
+    The information system,  in accordance with the defined frequency and/or
+    defined process for conducting random scans, scans for vulnerabilities
     in: hosted applications.
   title: NIST 800-53 rev4 SSP RA_5_a_2_b
 - format: markdown
@@ -954,7 +954,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_RA_5_d_1
   template: |
-    The DHS/CBP CISO defines response times to remediate legitimate vulnerabilities in accordance with an DHS/CBP assessment of risk.
+    The CISO defines response times to remediate legitimate vulnerabilities in accordance with an assessment of risk.
   title: NIST 800-53 rev4 SSP RA_5_d_1
 - format: markdown
   id: nist_80053rev4_ssp_RA_5_e_1
@@ -967,14 +967,14 @@ output:
   id: nist_80053rev4_ssp_RA_5_e_2
   template: >
     The infromation system shares information obtained from the vulnerability scanning
-    process with DHS/CBP-defined personnel or roles to help eliminate similar vulnerabilities
+    process with defined personnel or roles to help eliminate similar vulnerabilities
     in other information systems (i.e., systemic weaknesses or deficiencies).
   title: NIST 800-53 rev4 SSP RA_5_e_2
 - format: markdown
   id: nist_80053rev4_ssp_RA_5_e_3
   template: >
     The information system shares information obtained from security control assessments
-    with HDS/CBP-defined personnel or roles to help eliminate similar vulnerabilities
+    with defined personnel or roles to help eliminate similar vulnerabilities
     in other information systems (i.e., systemic weaknesses or deficiencies).
   title: NIST 800-53 rev4 SSP RA_5_e_3
 - format: markdown
@@ -1058,7 +1058,7 @@ output:
   id: nist_80053rev4_ssp_SI_10_1
   template: >
     Information Input requiring validity checks are defined within the DHS 4300A and
-    CBP 1400-05D policy as well as within the System Security Plan.
+    policy as well as within the System Security Plan.
   title: NIST 800-53 rev4 SSP SI_10_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_10_2
@@ -1069,7 +1069,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SI_2_3_a
   template: >
-    The organization utilizes scorecards that are maintained by the CBP VAT team to
+    The organization utilizes scorecards that are maintained by the VAT team to
     assess systems within a timeframe for vulnerabilities and remediation
   title: NIST 800-53 rev4 SSP SI_2_3_a
 - format: markdown
@@ -1078,7 +1078,7 @@ output:
     The system installs updates and patches from vendors when they are available and
     documents any residual risks on a monthly basis. All remediations are documented
     and logged. The organization also utilizes scorecards that are maintained by the
-    CBP VAT team to assess systems within a defined timeframe for vulnerabilities
+    VAT team to assess systems within a defined timeframe for vulnerabilities
     and remediation
   title: NIST 800-53 rev4 SSP SI_2_3_b_2
 - format: markdown
@@ -1090,7 +1090,7 @@ output:
   id: nist_80053rev4_ssp_SI_2_b_1
   template: >
     The system utilizes SonarQube and Aqua for code and system flaw reporting. The
-    organization also employs scorecards that are maintained by the CBP VAT team to
+    organization also employs scorecards that are maintained by the VAT team to
     report flaws within IACS.
   title: NIST 800-53 rev4 SSP SI_2_b_1
 - format: markdown
@@ -1105,7 +1105,7 @@ output:
     The system installs updates and patches from vendors when they are available and
     documents any residual risks on a monthly basis. All remediations are documented
     and logged. The organization also utilizes scorecards that are maintained by the
-    CBP VAT team to assess systems within a defined timeframe for vulnerabilities
+    VAT team to assess systems within a defined timeframe for vulnerabilities
     and remediation
   title: NIST 800-53 rev4 SSP SI_2_c_1
 - format: markdown

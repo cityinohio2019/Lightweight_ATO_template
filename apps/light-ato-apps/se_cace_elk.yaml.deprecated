@@ -58,7 +58,7 @@ output:
   format: markdown
   template: "\nCACE (ELK): ELK has been configured such that whenever an audit processing\
     \ failure occurs on logs from the application layer error messages are automatically\
-    \ emailed to the CBP SOD. If audit capacity is reached the application logs are\
+    \ emailed to the SOD. If audit capacity is reached the application logs are\
     \ configured to overwrite the oldest data first. \n"
 - id: nist_80053rev4_ssp_au_12_dhs_5_3_g_test
   title: NIST 800-53 rev4 SSP AU-12 (DHS-5.3.g) Test

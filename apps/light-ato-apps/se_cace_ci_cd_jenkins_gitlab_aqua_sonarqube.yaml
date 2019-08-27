@@ -43,7 +43,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_2_c
   template: >
-    Information system components are defined per CBP 1400 policy. The information
+    Information system components are defined per policy. The information
     system components  that require configuration settings verification are documented
     within the system Security Plan as well
   title: NIST 800-53 rev4 SSP CM_6_1_2_c
@@ -52,7 +52,7 @@ output:
   template: >
     The organization defines and documents configuration settings for information
     technology products employed within the system any deviations from established
-    configuration settings inside the DHS 4300A and CBP 1400-05D documents
+    configuration settings inside the DHS 4300A documents
   title: NIST 800-53 rev4 SSP CM_6_a_3
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_1_c
@@ -131,7 +131,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_1_a
   template: |
-    The application utilizes CBP GitLab and Jenkins to implement configuration settings which adhere to CBP defined policies.
+    The application utilizes GitLab and Jenkins to implement configuration settings which adhere to defined policies.
   title: NIST 800-53 rev4 SSP CM_6_1_1_a
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_3
@@ -142,7 +142,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_d_1
   template: |
-    The application utilizes CBP GitLab to centrally manage and ensure configuration settings which adhere to CBP defined policies.
+    The application utilizes GitLab to centrally manage and ensure configuration settings which adhere to defined policies.
   title: NIST 800-53 rev4 SSP CM_6_d_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_a
@@ -152,22 +152,22 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_2_a
   template: |
-    The system prohibits restricts the use of restricted functions defined within DHS 4300A and CBP 1400-05D
+    The system prohibits restricts the use of restricted functions defined within DHS 4300A.
   title: NIST 800-53 rev4 SSP CM_7_b_2_a
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_2_b
   template: |
-    The system prohibits the use of restricted ports defined within DHS 4300A and CBP 1400-05D
+    The system prohibits the use of restricted ports defined within DHS 4300A.
   title: NIST 800-53 rev4 SSP CM_7_b_2_b
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_2_c
   template: |
-    The system prohibits the use of restricted protocols defined within DHS 4300A and CBP 1400-05D
+    The system prohibits the use of restricted protocols defined within DHS 4300A.
   title: NIST 800-53 rev4 SSP CM_7_b_2_c
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_2_d
   template: |
-    The system prohibits the use of restricted services defined within DHS 4300A and CBP 1400-05D
+    The system prohibits the use of restricted services defined within DHS 4300A.
   title: NIST 800-53 rev4 SSP CM_7_b_2_d
 - format: markdown
   id: nist_80053rev4_ssp_CM_8_DHS_4_12_c
@@ -207,7 +207,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SA_11_1
   template: |
-    The DHS/CBP CISO determine developer security policies and procedures.
+    The DHS CISO determine developer security policies and procedures.
   title: NIST 800-53 rev4 SSP SA_11_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_DHS_5_5_3_a
@@ -267,7 +267,7 @@ output:
   template: >
     The system implements the cryptographic uses and type of cryptography required
     for each use in accordance with applicable federal laws, Executive Orders, directives,
-    policies, regulations, and standards as defined within the DHS 4300A and CBP 1400-05D
+    policies, regulations, and standards as defined within the DHS 4300A.
     documents
   title: NIST 800-53 rev4 SSP SC_13_3
 - format: markdown
@@ -283,30 +283,30 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SC_23
   template: >
-    The system utilizes the CBP NOC, which provides network services as well as implements
+    The system utilizes the NOC, which provides network services as well as implements
     ACL's to prevent non-DHS networks from accessing the system.
   title: NIST 800-53 rev4 SSP SC_23
 - format: markdown
   id: nist_80053rev4_ssp_SC_23_3_2
   template: >
-    The system utilizes the CBP NOC, which provides network services as well as implements
+    The system utilizes the NOC, which provides network services as well as implements
     ACL's to prevent non-DHS networks from accessing the system.
   title: NIST 800-53 rev4 SSP SC_23_3_2
 - format: markdown
   id: nist_80053rev4_ssp_SC_23_3_3
   template: >
-    The system utilizes the CBP NOC, which provides network services as well as implements
+    The system utilizes the NOC, which provides network services as well as implements
     ACL's to prevent non-DHS networks from accessing the system.
   title: NIST 800-53 rev4 SSP SC_23_3_3
 - format: markdown
   id: nist_80053rev4_ssp_SC_24_4
   template: |
-    The system fails to the known-state for types of failures defined within the DHS 4300A and CBP 1400-05D documents
+    The system fails to the known-state for types of failures defined within the DHS 4300A. documents
   title: NIST 800-53 rev4 SSP SC_24_4
 - format: markdown
   id: nist_80053rev4_ssp_SC_24_5
   template: |
-    The system preserves the system state information in the event of a system failure as defined by the DHS 4300A and CBP 1400-05D documents
+    The system preserves the system state information in the event of a system failure as defined by the DHS 4300A. documents
   title: NIST 800-53 rev4 SSP SC_24_5
 - format: markdown
   id: nist_80053rev4_ssp_SC_28_1_3
@@ -355,13 +355,13 @@ output:
   id: nist_80053rev4_ssp_SC_8_1
   template: >
     The system protects the confidentiality and integrity of transmitted information
-    by leveraging the DHS OneNet circuit between CBP and AWS, which utilizes encryption
+    by leveraging the DHS OneNet circuit between and AWS, which utilizes encryption
   title: NIST 800-53 rev4 SSP SC_8_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_8_2
   template: >
     The system protects the confidentiality and integrity of transmitted information
-    by leveraging the DHS OneNet circuit between CBP and AWS, which utilizes encryption
+    by leveraging the DHS OneNet circuit between and AWS, which utilizes encryption
   title: NIST 800-53 rev4 SSP SC_8_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_10_2
