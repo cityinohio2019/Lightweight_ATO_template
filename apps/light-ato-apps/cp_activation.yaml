@@ -15,7 +15,7 @@ questions:
   title: Plan Distribution and Availability (pre)
   prompt: >
     Will you leverage template Plan Distribution and Availability language used for
-    CACE information systems?
+    AWS information systems?
 
 
     > During a disaster situation, the availability of the contingency plan is essential
@@ -95,7 +95,7 @@ questions:
 - id: q14_pre
   title: Line of Succession/Alternates Roles (pre)
   prompt: |
-    Will you leverage template Line of Succession/Alternates Roles language used for CACE information systems?
+    Will you leverage template Line of Succession/Alternates Roles language used for AWS information systems?
 
     DEFAULT_CONTENT
   type: choice
@@ -109,7 +109,7 @@ questions:
 - id: q16_pre
   title: Activation Criteria and Procedure (pre)
   prompt: "Will you leverage the template Activation Criteria and Procedure statement
-    used for CACE information systems?\n\n> The {{project.system_info.system_name}}
+    used for AWS information systems?\n\n> The {{project.system_info.system_name}}
     ISCP may be activated if one or more of the following criteria are met:\n> \n>
     1. The type of outage indicates {{project.system_info.system_name}} will be down
     for more than _Enter Number_ RTO hours.\n> 2. The facility housing {{project.system_info.system_name}}

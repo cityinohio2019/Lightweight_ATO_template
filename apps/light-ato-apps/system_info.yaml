@@ -97,8 +97,8 @@ questions:
   prompt: Where will the system be hosted?
   type: choice
   choices:
-  - key: org_cace
-    text: Org CACE
+  - key: org_host
+    text: Org Hosting
     help: Org's AWS Cloud Environment
   - key: org_ds1
     text: Org Data Center 1

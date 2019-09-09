@@ -250,32 +250,32 @@ questions:
   - condition: 1 == 1
     value: ~
 
-- id: se_cace_hosting_environ
-  title: CACE – Hosting Environment
+- id: se_aws_hosting_environ
+  title: AWS – Hosting Environment
   type: module
   icon: hosting_environment.png
-  module-id: se_cace_hosting_environ
+  module-id: se_aws_hosting_environ
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'org_cace'
+  - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
-- id: se_cace_auditing_splunk_elk
-  title: CACE – Auditing (Splunk, ELK)
+- id: se_aws_auditing_splunk_elk
+  title: AWS – Auditing (Splunk, ELK)
   type: module
   icon: hosting_environment_auditing.png
-  module-id: se_cace_auditing_splunk_elk
+  module-id: se_aws_auditing_splunk_elk
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'org_cace'
+  - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
-- id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
-  title: CACE - CI/CD (Jenkins, GitLab, Aqua, SonarQube)
+- id: se_aws_ci_cd_jenkins_gitlab_aqua_sonarqube
+  title: AWS - CI/CD (Jenkins, GitLab, Aqua, SonarQube)
   type: module
   icon: hosting_environment_cicd.png
-  module-id: se_cace_ci_cd_jenkins_gitlab_aqua_sonarqube
+  module-id: se_aws_ci_cd_jenkins_gitlab_aqua_sonarqube
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'org_cace'
+  - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
 - id: se_system_level
   title: System Level Controls
@@ -284,7 +284,7 @@ questions:
   module-id: se_system_level
   group: Hosting Environment
   impute:
-  - condition: project.system_info.system_hosting != 'org_cace'
+  - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
 - id: se_ciso_policy_soc_stp
   title: CISO (Policy, SOC, STP)
@@ -293,7 +293,7 @@ questions:
   module-id: se_ciso_policy_soc_stp
   group: Organizational Policy
   impute:
-  - condition: project.system_info.system_hosting != 'org_cace'
+  - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
 - id: ssp_intro
   module-id: ssp_intro

@@ -113,8 +113,8 @@ Table 1‑3 Information System Name and Title
 This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
 
 * Disruption at the primary work site {{project.system_info.primary_agency_admin_site}}
-* Disruption at the {{project.se_cace_elk.cace_facility}}
-* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the {{project.se_cace_elk.vendor_datacenter}}.
+* Disruption at the {{project.se_aws_elk.aws_facility}}
+* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the {{project.se_aws_elk.vendor_datacenter}}.
 
 This ITCP does not apply to the following situations:
 

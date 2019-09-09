@@ -14,7 +14,7 @@ questions:
 - id: q20_pre
   title: Sequence of Recovery Operations (pre)
   prompt: |
-    Will you leverage the template Sequence of Recovery Operations statement used for CACE information systems?
+    Will you leverage the template Sequence of Recovery Operations statement used for AWS information systems?
 
     Agency boilerplate:
 

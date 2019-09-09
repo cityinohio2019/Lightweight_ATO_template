@@ -49,7 +49,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_AC_6
   template: >
-    Privileged accounts are established via the CACE UAR form process, which enforces
+    Privileged accounts are established via the AWS form process, which enforces
     approved authorizations with access controls in place. The application layer utilizes
     entitlement roles managed by the ICAM to enforce the principle of least privilege.
   title: NIST 800-53 rev4 SSP AC_6
@@ -122,18 +122,18 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CA_3_c_2
   template: |
-    The CISO determines the frequency defined within DHS 4300A.
+    The CISO determines the frequency defined within organizational documentation.
   title: NIST 800-53 rev4 SSP CA_3_c_2
 - format: markdown
   id: nist_80053rev4_ssp_CA_3_c_1
   template: |
-    The system follows DHS 4300A to review and update the Interconnection Security Agreement
+    The system follows organizational documentation to review and update the Interconnection Security Agreement
   title: NIST 800-53 rev4 SSP CA_3_c_1
 - format: markdown
-  id: nist_80053rev4_ssp_CA_5_DHS_2_2_8_d
+  id: nist_80053rev4_ssp_CA_5_my_org_1
   template: |
     The ISSO in coordination with the system owner, and system staff, shall ensure that POA&MS are in compliance with requirements.
-  title: NIST 800-53 rev4 SSP CA_5_DHS_2_2_8_d
+  title: NIST 800-53 rev4 SSP CA_5_my_org_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_5_a_1
   template: >
@@ -220,15 +220,15 @@ output:
   id: nist_80053rev4_ssp_CM_6_1_1_b
   template: >
     The organization defines information system components for which any deviations
-    from establishes configuration settings must be identified inside the DHS 4300A
+    from establishes configuration settings must be identified inside organizational
     documents
   title: NIST 800-53 rev4 SSP CM_6_1_1_b
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_1_c
   template: >
     The organization defines information system components for which any deviations
-    from establishes configuration settings must be documented inside the DHS 4300A
-    and documents
+    from establishes configuration settings must be documented inside organizational
+    documents
   title: NIST 800-53 rev4 SSP CM_6_1_1_c
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_2_a
@@ -248,28 +248,25 @@ output:
   id: nist_80053rev4_ssp_CM_6_a_1
   template: >
     The organization defines information system components for which any deviations
-    from establishes configuration settings must be approved inside the DHS 4300A
-    and documents
+    from establishes configuration settings must be approved within organizational documents
   title: NIST 800-53 rev4 SSP CM_6_a_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_a_2
   template: >
     The organization defines operational requirements to support the identification
-    of any deviations from established configuration settings inside the DHS 4300A
-    documents
+    of any deviations from established configuration settings within organizational documents
   title: NIST 800-53 rev4 SSP CM_6_a_2
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_b
   template: >
     The organization defines operational requirements to support the documentation
-    of any deviations from established configuration settings inside the DHS 4300A
-    and documents
+    of any deviations from established configuration settings within organizational documents
   title: NIST 800-53 rev4 SSP CM_6_b
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_1
   template: >
     The organization defines operational requirements to support the approval of any
-    deviations from established configuration settings inside the DHS 4300A and documents
+    deviations from established configuration settings within organizational documents
   title: NIST 800-53 rev4 SSP CM_6_c_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_c_1_b
@@ -280,27 +277,27 @@ output:
   id: nist_80053rev4_ssp_CM_6_c_5
   template: >
     The organization defines security configuration checklists to be used to establish
-    and document configuration settings inside the DHS 4300A documents
+    and document configuration settings within organizational documents documents
   title: NIST 800-53 rev4 SSP CM_6_c_5
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_1_a
   template: |
-    The system defines prohibited or restricted functions as outlined within the DHS 4300A documents
+    The system defines prohibited or restricted functions as outlined within organizational documentation
   title: NIST 800-53 rev4 SSP CM_7_b_1_a
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_1_b
   template: |
-    The system defines prohibited or restricted ports as outlined within the DHS 4300A documents
+    The system defines prohibited or restricted ports as outlined within organizational documentation
   title: NIST 800-53 rev4 SSP CM_7_b_1_b
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_1_c
   template: |
-    The system defines prohibited or restricted protocols as outlined within the DHS 4300A documents
+    The system defines prohibited or restricted protocols as outlined within organizational documentation
   title: NIST 800-53 rev4 SSP CM_7_b_1_c
 - format: markdown
   id: nist_80053rev4_ssp_CM_7_b_1_d
   template: |
-    The system defines prohibited or restricted services as outlined within the DHS 4300A documents
+    The system defines prohibited or restricted services as outlined within organizational documentation
   title: NIST 800-53 rev4 SSP CM_7_b_1_d
 - format: markdown
   id: nist_80053rev4_ssp_CM_8_a_1
@@ -425,7 +422,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_CP_2_c
   template: |
-    The CISO shall determine the requirements for contingency planning coordination among DHS components.
+    The CISO shall determine the requirements for contingency planning coordination across the organization
   title: NIST 800-53 rev4 SSP CP_2_c
 - format: markdown
   id: nist_80053rev4_ssp_CP_2_d_1
@@ -433,12 +430,12 @@ output:
     The CISO shall determine the frequency to review the contingency plan.
   title: NIST 800-53 rev4 SSP CP_2_d_1
 - format: markdown
-  id: nist_80053rev4_ssp_CP_4_DHS_3_5_2_f
+  id: nist_80053rev4_ssp_CP_4_my_org_1
   template: >
     The CISO shall  ensure that CP testing is performed in accordance with
     the availability security objective based on whether the information system is
     categorized as High, moderate, or low impact.
-  title: NIST 800-53 rev4 SSP CP_4_DHS_3_5_2_f
+  title: NIST 800-53 rev4 SSP CP_4_my_org_1
 - format: markdown
   id: nist_80053rev4_ssp_CP_4_a_1
   template: >
@@ -461,29 +458,29 @@ output:
   id: nist_80053rev4_ssp_IA_2
   template: >
     All SAMS application accounts are authenticated against the ICAM using the
-    PIV card with PIN.  The PIV is assigned and credentials are verified by DHS.
+    PIV card with PIN.  The PIV is assigned and credentials are verified by the organization.
   title: NIST 800-53 rev4 SSP IA_2
 - format: markdown
-  id: nist_80053rev4_ssp_IA_2_DHS_5_1_a
+  id: nist_80053rev4_ssp_IA_2_my_org_1
   template: >
     All SAMS application implements multifactor authentication against the ICAM
     using the PIV card with PIN.  The PIV is assigned and credentials are verified
-    by DHS.
-  title: NIST 800-53 rev4 SSP IA_2_DHS_5_1_a
+    by the organization.
+  title: NIST 800-53 rev4 SSP IA_2_my_org_1
 - format: markdown
-  id: nist_80053rev4_ssp_IA_2_DHS_5_1_d
+  id: nist_80053rev4_ssp_IA_2_my_org_2
   template: >
     The system implements multifactor authentication by making use of the PIV card
     against the ICAM for authentication. Users must authenticate with their PIV
     and associated PIN to access the application.
-  title: NIST 800-53 rev4 SSP IA_2_DHS_5_1_d
+  title: NIST 800-53 rev4 SSP IA_2_my_org_2
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_1
   template: >
     The system implements multifactor authentication by making use of the PIV card
     against the ICAM for authentication. Users must authenticate with their PIV
     and associated PIN to access the application. PIV credentials are verified by
-    electronically by DHS systems
+    electronically by organizational systems
   title: NIST 800-53 rev4 SSP IA_2_1
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_9
@@ -500,40 +497,38 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_IR_6_b_1
   template: |
-    The DHS CISO  shall defines authorities to whom security incident information is to be reported.
+    The organization's CISO  shall defines authorities to whom security incident information is to be reported.
   title: NIST 800-53 rev4 SSP IR_6_b_1
 - format: markdown
   id: nist_80053rev4_ssp_MP_4
   template: >
     The system protects information system media until the media are destroyed or
     sanitized using approved equipment, techniques, and procedures as defined within
-    DHS 4300A documents
+organizational documentation
   title: NIST 800-53 rev4 SSP MP_4
 - format: markdown
   id: nist_80053rev4_ssp_MP_4_a_2
   template: >
     The system defines types of digital and/or non-digital media to be physically
-    controlled and securely stored within designated controlled areas within the DHS
-    4300A documents
+    controlled and securely stored within designated controlled areas within organizational documentation
   title: NIST 800-53 rev4 SSP MP_4_a_2
 - format: markdown
   id: nist_80053rev4_ssp_MP_4_a_3
   template: >
     The system defines controlled areas designated to physically control and securely
-    store organization-defined types of digital and/or non-digital media within the
-    DHS 400A documents
+    store organization-defined types of digital and/or non-digital media within organizational documentation
   title: NIST 800-53 rev4 SSP MP_4_a_3
 - format: markdown
   id: nist_80053rev4_ssp_MP_4_a_4
   template: >
     The system physically controls organization-defined types of digital and/or non-digital
-    media within controlled areas defined by the DHS 4300A documents
+    media within controlled areas defined by organizational documentation
   title: NIST 800-53 rev4 SSP MP_4_a_4
 - format: markdown
   id: nist_80053rev4_ssp_MP_4_b
   template: >
     The system securely stores organization-defined types of digital and/or non-digital
-    media within controlled areas defined within the DHS 4300A documents
+    media within controlled areas defined within organizational documentation
   title: NIST 800-53 rev4 SSP MP_4_b
 - format: markdown
   id: nist_80053rev4_ssp_PL_2_a_1
@@ -573,19 +568,19 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_PL_8_a_3
   template: >
-    The DHS/CISO Develops an information security architecture for the information
+    The CISO Develops an information security architecture for the information
     system that describes: any information security assumptions about, and dependencies
     on, external services.
   title: NIST 800-53 rev4 SSP PL_8_a_3
 - format: markdown
   id: nist_80053rev4_ssp_PL_8_b_1
   template: |
-    The DHS/CISO defines the frequency to review and update the information security architecture.
+    The CISO defines the frequency to review and update the information security architecture.
   title: NIST 800-53 rev4 SSP PL_8_b_1
 - format: markdown
   id: nist_80053rev4_ssp_PL_8_b_2
   template: >
-    The DHS/CISO reviews and updates the information security architecture with the
+    The CISO reviews and updates the information security architecture with the
     organization-defined frequency to reflect updates in the enterprise architecture.
   title: NIST 800-53 rev4 SSP PL_8_b_2
 - format: markdown
@@ -751,99 +746,99 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_1_a
   template: |
-    The system defines requirements for cryptographic key generation within the DHS 4300A documents
+    The system defines requirements for cryptographic key generation within organizational documentation
   title: NIST 800-53 rev4 SSP SC_12_1_a
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_1_b
   template: |
-    The system defines requirements for cryptographic key distribution within the DHS 4300A documents
+    The system defines requirements for cryptographic key distribution within organizational documentation
   title: NIST 800-53 rev4 SSP SC_12_1_b
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_1_c
   template: |
-    The system defines requirements for cryptographic key storage within the DHS 4300A documents
+    The system defines requirements for cryptographic key storage within organizational documentation
   title: NIST 800-53 rev4 SSP SC_12_1_c
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_1_d
   template: |
-    The system defines requirements for cryptographic key access within the DHS 4300A documents
+    The system defines requirements for cryptographic key access within organizational documentation
   title: NIST 800-53 rev4 SSP SC_12_1_d
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_1_e
   template: |
-    The system defines requirements for cryptographic key destruction within the DHS 4300A documents
+    The system defines requirements for cryptographic key destruction within organizational documentation
   title: NIST 800-53 rev4 SSP SC_12_1_e
 - format: markdown
   id: nist_80053rev4_ssp_SC_12_2
   template: >
-    The system uses DHS as their Principal Certificate Authority. New cryptographic
-    keys are established and managed by the DHS Root Certificate Authority (CA)
+    The system uses organization standards for their Principal Certificate Authority. New cryptographic
+    keys are established and managed by the Root Certificate Authority (CA)
   title: NIST 800-53 rev4 SSP SC_12_2
 - format: markdown
   id: nist_80053rev4_ssp_SC_13_1
   template: |
-    The system defines cryptographic uses within the DHS 4300A documents
+    The system defines cryptographic uses within organizational documentation
   title: NIST 800-53 rev4 SSP SC_13_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_13_2
   template: |
-    The system defines the type of cryptography required for each use within the DHS 4300A documents
+    The system defines the type of cryptography required for each use within organizational documentation
   title: NIST 800-53 rev4 SSP SC_13_2
 - format: markdown
   id: nist_80053rev4_ssp_SC_18_a
   template: |
-    The system defines acceptable and unacceptable mobile code and mobile code technologies within the DHS 4300A documents
+    The system defines acceptable and unacceptable mobile code and mobile code technologies within organizational documentation
   title: NIST 800-53 rev4 SSP SC_18_a
 - format: markdown
   id: nist_80053rev4_ssp_SC_18_b_1
   template: >
     The system stablishes usage restrictions for acceptable mobile code and mobile
-    code technologies within the DHS 4300A documents
+    code technologies within organizational documentation
   title: NIST 800-53 rev4 SSP SC_18_b_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_18_b_2
   template: >
     The system establishes implementation guidance for acceptable mobile code and
-    mobile code technologies within the DHS 4300A documents
+    mobile code technologies within organizational documentation
   title: NIST 800-53 rev4 SSP SC_18_b_2
 - format: markdown
   id: nist_80053rev4_ssp_SC_18_c_1
   template: |
-    The system authorizes the use of mobile code as defined within the DHS 4300A documents
+    The system authorizes the use of mobile code as defined within organizational documentation
   title: NIST 800-53 rev4 SSP SC_18_c_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_23_3_1
   template: >
     The system defines randomness requirements for generating a unique session identifier
-    for each session within the DHS 4300A documents
+    for each session within organizational documentation
   title: NIST 800-53 rev4 SSP SC_23_3_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_24_1
   template: >
     The system defines a known-state to which the information system is to fail in
-    the event of a system failure within the DHS 4300A documents
+    the event of a system failure within organizational documentation
   title: NIST 800-53 rev4 SSP SC_24_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_24_2
   template: >
     The system defines types of failures for which the information system is to fail
-    to an organization-defined known-state within the DHS 4300A documents
+    to an organization-defined known-state within organizational documentation
   title: NIST 800-53 rev4 SSP SC_24_2
 - format: markdown
   id: nist_80053rev4_ssp_SC_24_3
   template: |
-    The system defines system state information to be preserved in the event of a system failure within the DHS 4300A documents
+    The system defines system state information to be preserved in the event of a system failure within organizational documentation
   title: NIST 800-53 rev4 SSP SC_24_3
 - format: markdown
   id: nist_80053rev4_ssp_SC_28_1_1
   template: |
-    The system defines information requiring cryptographic protection within the DHS 4300A documents
+    The system defines information requiring cryptographic protection within organizational documentation
   title: NIST 800-53 rev4 SSP SC_28_1_1
 - format: markdown
   id: nist_80053rev4_ssp_SC_28_1_2
   template: >
     The system defines information system components with information requiring cryptographic
-    protection within the DHS 4300A documents
+    protection within organizational documentation
   title: NIST 800-53 rev4 SSP SC_28_1_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_10_1
@@ -869,53 +864,53 @@ output:
   id: nist_80053rev4_ssp_SI_2_3_b_1
   template: >
     The organization defines the time period within which to install security-relevant
-    firmware updates within the DHS 4300A documents
+    firmware updates within organizational documentation
   title: NIST 800-53 rev4 SSP SI_2_3_b_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_2_a_1
   template: |
-    The organization defines benchmarks for taking corrective actions within the DHS 4300A documents
+    The organization defines benchmarks for taking corrective actions within organizational documentation
   title: NIST 800-53 rev4 SSP SI_2_a_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_2_a_2
   template: |
-    The organization establishes benchmarks for taking corrective actions within the DHS 4300A documents
+    The organization establishes benchmarks for taking corrective actions within organizational documentation
   title: NIST 800-53 rev4 SSP SI_2_a_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_2_d
   template: >
     The organization defines the time period within which to install security-relevant
-    software updates within the DHS 4300A documents
+    software updates within organizational documentation
   title: NIST 800-53 rev4 SSP SI_2_d
 - format: markdown
   id: nist_80053rev4_ssp_SI_13_a_1
   template: >
     The system defines information system components for which mean time to failure
-    (MTTF) is determined within the DHS 4300A documents
+    (MTTF) is determined within organizational documentation
   title: NIST 800-53 rev4 SSP SI_13_a_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_13_a_2
   template: >
     The system determines MTTF for information system components in specific environments
-    of operation as defined by the DHS 4300A documents
+    of operation as defined by organizational documentation
   title: NIST 800-53 rev4 SSP SI_13_a_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_13_b_1
   template: >
     The system defines MTTF substitution criteria to be used as a means to exchange
-    active and standby components within the DHS 4300A documents
+    active and standby components within organizational documentation
   title: NIST 800-53 rev4 SSP SI_13_b_1
 - format: markdown
   id: nist_80053rev4_ssp_SI_13_b_2
   template: >
     The system provides substitute information system components at MTTF substitution
-    criteria defined within the DHS 4300A documents
+    criteria defined within organizational documentation
   title: NIST 800-53 rev4 SSP SI_13_b_2
 - format: markdown
   id: nist_80053rev4_ssp_SI_13_b_3
   template: >
     The system provides a means to exchange active and standby components at MTTF
-    substitution criteria defined within the DHS 4300A documents
+    substitution criteria defined within organizational documentation
   title: NIST 800-53 rev4 SSP SI_13_b_3
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_1
@@ -989,9 +984,9 @@ questions:
   prompt: 
     CISO Policy inheritance.
   prompt: |
-    CISO Policies are inherited by all IT Systems hosted in CACE.
+    CISO Policies are inherited by all IT Systems hosted in AWS.
 
-    All System hosted in CACE inherit CISO Policies.
+    All System hosted in AWS inherit CISO Policies.
 
     Your System will inherit these controls.
   type: interstitial

@@ -14,7 +14,7 @@ questions:
 - id: q01_pre
   title: Introduction and Purpose (pre)
   prompt: "Will you leverage the template Introduction and Purpose statement used\
-    \ for CACE information systems?\n\nAgency boilerplate:\n\n> Information systems\
+    \ for AWS information systems?\n\nAgency boilerplate:\n\n> Information systems\
     \ are vital to {{project.system_info.system_name}}\n> mission/business functions;\
     \ therefore, it is critical that services provided by\n> {{project.system_info.system_name}}\
     \ are able to operate effectively without excessive\n> interruption. This Information\
@@ -157,7 +157,7 @@ questions:
 - id: q02_pre
   title: Applicable Laws and Regulations (pre)
   prompt: |
-    Will you leverage the template applicable Laws and Regulations language used for CACE information systems?
+    Will you leverage the template applicable Laws and Regulations language used for AWS information systems?
 
     Agency boilerplate:
 
@@ -202,7 +202,7 @@ questions:
 - id: q03_pre
   title: Applicable Standards and Guidance (pre)
   prompt: |
-    Will you leverage the template Applicable Standards and Guidance language used for CACE information systems?
+    Will you leverage the template Applicable Standards and Guidance language used for AWS information systems?
 
     Agency boilerplate:
 
@@ -303,7 +303,7 @@ questions:
   title: Scope (pre)
   prompt: >-
     Will you leverage the template Information System Name and Identifier language
-    used for CACE information systems?
+    used for AWS information systems?
 
 
     Agency boilerplate:
@@ -451,7 +451,7 @@ questions:
 - id: q05_pre
   title: Assumptions (pre)
   prompt: >
-    Will you leverage template Assumptions language used for CACE infromation systems?
+    Will you leverage template Assumptions language used for AWS infromation systems?
 
 
     Agency boilerplate:
@@ -459,7 +459,7 @@ questions:
 
     > Will procedures be in place to maintain operations or assets from disruptions
     at primary work site, Amazon Web Services (AWS) U.S. East/West IaaS infrastructure
-    and data center facilities, or to DHS OneNet/Trusted Internet Connections (TIC)?
+    and data center facilities, or to Trusted Internet Connections (TIC)?
 
 
     > The following assumptions have been made about the {{project.system_info.system_name}}
@@ -486,7 +486,7 @@ questions:
     > Disruption at {{project.system_info.system_hosting.text}}:
 
 
-    > * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such
+    > * Preventive controls at the {{project.se_aws_elk.vendor_datacenter}}, such
     as generators, uninterruptable power supply (UPS), environmental controls, sprinkler
     systems, fire extinguishers, and fire department assistance are, or may not be
     fully operational at the the time of the service disruption.
@@ -495,7 +495,7 @@ questions:
     software and data are intact and avaialble at the offsite storage facility located
     within other [[VENDOR_DATACENTER_ALTSITE]].
 
-    > The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+    > The {{project.se_aws_elk.vendor_datacenter}} including its backup storage capabilities
     are FedRAMP certified.
 
 
@@ -546,7 +546,7 @@ questions:
     Disruption at {{project.system_info.system_hosting.text}}:
 
 
-    * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such as
+    * Preventive controls at the {{project.se_aws_elk.vendor_datacenter}}, such as
     generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler
     systems, fire extinguishers, and fire department assistance are, or may not be
     fully operational at the the time of the service disruption.
@@ -555,7 +555,7 @@ questions:
     software and data are intact and avaialble at the offsite storage facility located
     within other [[VENDOR_DATACENTER_ALTSITE]].
 
-    The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+    The {{project.se_aws_elk.vendor_datacenter}} including its backup storage capabilities
     are FedRAMP certified.
 
 
@@ -593,7 +593,7 @@ questions:
       Disruption at {{project.system_info.system_hosting.text}}:
 
 
-      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such
+      * Preventive controls at the {{project.se_aws_elk.vendor_datacenter}}, such
       as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler
       systems, fire extinguishers, and fire department assistance are, or may not
       be fully operational at the the time of the service disruption.
@@ -602,7 +602,7 @@ questions:
       software and data are intact and avaialble at the offsite storage facility located
       within other [[VENDOR_DATACENTER_ALTSITE]].
 
-      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+      The {{project.se_aws_elk.vendor_datacenter}} including its backup storage capabilities
       are FedRAMP certified.
 
 
@@ -639,7 +639,7 @@ questions:
       Disruption at {{project.system_info.system_hosting.text}}:
 
 
-      * Preventive controls at the {{project.se_cace_elk.vendor_datacenter}}, such
+      * Preventive controls at the {{project.se_aws_elk.vendor_datacenter}}, such
       as generators, uninterruptable pwoer supply (UPS), environmental controls, sprinkler
       systems, fire extinguishers, and fire department assistance are, or may not
       be fully operational at the the time of the service disruption.
@@ -648,7 +648,7 @@ questions:
       software and data are intact and avaialble at the offsite storage facility located
       within other [[VENDOR_DATACENTER_ALTSITE]].
 
-      The {{project.se_cace_elk.vendor_datacenter}} including its backup storage capabilities
+      The {{project.se_aws_elk.vendor_datacenter}} including its backup storage capabilities
       are FedRAMP certified.
 
 

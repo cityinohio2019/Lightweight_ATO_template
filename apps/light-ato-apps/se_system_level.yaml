@@ -152,10 +152,10 @@ output:
     Not Applicable
   title: NIST 800-53 rev4 SSP AC_2_k
 - format: markdown
-  id: nist_80053rev4_ssp_AC_3_DHS_5_1_1_d
+  id: nist_80053rev4_ssp_AC_3_my_org_1
   template: |
     Not Applicable
-  title: NIST 800-53 rev4 SSP AC_3_DHS_5_1_1_d
+  title: NIST 800-53 rev4 SSP AC_3_my_org_1
 - format: markdown
   id: nist_80053rev4_ssp_AC_4_21_3
   template: >
@@ -211,10 +211,10 @@ output:
     unusual activity with the organization-defined frequency.
   title: NIST 800-53 rev4 SSP AU_6_a_3
 - format: markdown
-  id: nist_80053rev4_ssp_AU_6_DHS_5_4_6_f
+  id: nist_80053rev4_ssp_AU_6_my_org_1
   template: |
     Not Applicable: Mail servers are not within the {{project.system_info.system_short_name}} boundary.
-  title: NIST 800-53 rev4 SSP AU_6_DHS_5_4_6_f
+  title: NIST 800-53 rev4 SSP AU_6_my_org_1
 - format: markdown
   id: nist_80053rev4_ssp_AU_6_b_1
   template: |
@@ -448,7 +448,7 @@ output:
   id: nist_80053rev4_ssp_CM_8_a_4_1
   template: >
     The organization defines the information deemed necessary to achieve effective
-    information system component accountability within the DHS 4300A
+    information system component accountability within organizational
     documents
   title: NIST 800-53 rev4 SSP CM_8_a_4_1
 - format: markdown
@@ -462,13 +462,13 @@ output:
   id: nist_80053rev4_ssp_CM_8_b_1
   template: >
     The organization defines the frequency to review and update information system
-    component inventory within the DHS 4300A documents
+    component inventory within the organizational documents
   title: NIST 800-53 rev4 SSP CM_8_b_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_8_b_2
   template: >
     The organization reviews and updates the information system components inventory
-    with the defined frequency in accordance with the DHS 4300A documents.
+    with the defined frequency in accordance with the organizational documents.
   title: NIST 800-53 rev4 SSP CM_8_b_2
 - format: markdown
   id: nist_80053rev4_ssp_CP_2_a_1
@@ -582,10 +582,10 @@ output:
     the organization, information system, or environment of operation.
   title: NIST 800-53 rev4 SSP CP_2_e_1
 - format: markdown
-  id: nist_80053rev4_ssp_CP_4_DHS_3_5_2_f
+  id: nist_80053rev4_ssp_CP_4_org_1
   template: |
     The information system shall ensure that testing is executed in compliance.
-  title: NIST 800-53 rev4 SSP CP_4_DHS_3_5_2_f
+  title: NIST 800-53 rev4 SSP CP_4_org_1
 - format: markdown
   id: nist_80053rev4_ssp_CP_4_a_1
   template: |
@@ -1023,20 +1023,20 @@ output:
     The information system documents approval for the continued use of unsupported system components required to satisfy mission/business needs.
   title: NIST 800-53 rev4 SSP SA_22_b_2
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_DHS_5_5_3_a
+  id: nist_80053rev4_ssp_SC_12_org_1
   template: |
-    The system certificates are requested from the DHS CA. DIMC certificates are used at the application layer and certificates are not shared
-  title: NIST 800-53 rev4 SSP SC_12_DHS_5_5_3_a
+    The system certificates are requested from the CA. DIMC certificates are used at the application layer and certificates are not shared
+  title: NIST 800-53 rev4 SSP SC_12_org_1
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_DHS_5_5_3_i
+  id: nist_80053rev4_ssp_SC_12_org_2
   template: |
-    The system certificates are requested from the DHS CA. DIMC certificates are used at the application layer and certificates are not shared
-  title: NIST 800-53 rev4 SSP SC_12_DHS_5_5_3_i
+    The system certificates are requested from the CA. DIMC certificates are used at the application layer and certificates are not shared
+  title: NIST 800-53 rev4 SSP SC_12_my_org_2
 - format: markdown
-  id: nist_80053rev4_ssp_SC_13_DHS_5_5_1_b
+  id: nist_80053rev4_ssp_SC_13_my_org_3
   template: |
     The system develops and maintains encryption plans for sensitive information systems
-  title: NIST 800-53 rev4 SSP SC_13_DHS_5_5_1_b
+  title: NIST 800-53 rev4 SSP SC_13_my_org_3
 - format: markdown
   id: nist_80053rev4_ssp_SC_18_c_2
   template: |
@@ -1057,7 +1057,7 @@ output:
 - format: markdown
   id: nist_80053rev4_ssp_SI_10_1
   template: >
-    Information Input requiring validity checks are defined within the DHS 4300A and
+    Information Input requiring validity checks are defined by organizational
     policy as well as within the System Security Plan.
   title: NIST 800-53 rev4 SSP SI_10_1
 - format: markdown
