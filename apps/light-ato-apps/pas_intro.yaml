@@ -17,16 +17,16 @@ questions:
     \ to all persons asked to provide personal information about\nthemselves, which\
     \ will go into a system of records (i.e., the information will be stored and\n\
     retrieved using the individual’s name or other personal identifier such as a Social\
-    \ Security\nNumber). Organization policy is to provide\
-    \ a Privacy Act\nStatement regardless of whether the collection is part of a system\
-    \ of records or not. All Privacy\nAct statements must be reviewed by the Privacy\
-    \ Office or component Privacy Officer"
+    \ Security\nNumber). Organization policy is to provide a Privacy Act\nStatement\
+    \ regardless of whether the collection is part of a system of records or not.\
+    \ All Privacy\nAct statements must be reviewed by the Privacy Office or component\
+    \ Privacy Officer"
   type: interstitial
 - id: pas_sorn
   title: 'PAS: Intro'
   prompt: "To help you fill out this Module: \n\nLocate the Privacy Act systems of\
-    \ records notice (SORN) that is applicable to the collection.If you need assistance\
-    \ finding this information, contact your Privacy POC,{{project.pta_poc_details.poc_name}}\
+    \ records notice (SORN) that is applicable to the collection. If you need assistance\
+    \ finding this information, contact your Privacy POC, \n {{project.pta_poc_details.poc_name}}\
     \ via telephone at {{project.pta_poc_details.poc_phone}} or by email via {{project.pta_poc_details.poc_email}}"
   type: interstitial
   help: If you need assistance, contact the component privacy officer.
@@ -46,23 +46,23 @@ questions:
 
     "Purpose" is the purpose(s) for collecting the information and how the agency will use it.
   type: longtext
-  default: Ex. Organization employees will use this information to conduct a security threat assessment
-    on airport employees and other personnel or applicants who work in or have unescorted
-    access to the Airport Operating Area (AOA), secured area, sterile area, Security
-    Identification Display Area (SIDA), or any area for which the airport has issued
-    a personnel identification media.
+  default: Ex. Organization employees will use this information to conduct a security
+    threat assessment on airport employees and other personnel or applicants who work
+    in or have unescorted access to the Airport Operating Area (AOA), secured area,
+    sterile area, Security Identification Display Area (SIDA), or any area for which
+    the airport has issued a personnel identification media.
 - id: pas_routine_uses
   title: 'PAS: Routine Uses'
   prompt: "Address who outside the agency will have access to the information  \n\n\
     Add the link to the applicable SORN in the description below."
   type: longtext
   default: >-
-    Ex. The information will be used by and disclosed to organization personnel and contractors
-    or other agents who need the information to assist in activities related to aviation
-    security. Additionally, the organization may share the information with facility operators,
-    law enforcement or other government agencies as necessary to respond to potential
-    or actual threats to transportation security, or pursuant to its published Privacy
-    Act system of records notice.
+    Ex. The information will be used by and disclosed to organization personnel and
+    contractors or other agents who need the information to assist in activities related
+    to aviation security. Additionally, the organization may share the information
+    with facility operators, law enforcement or other government agencies as necessary
+    to respond to potential or actual threats to transportation security, or pursuant
+    to its published Privacy Act system of records notice.
 
     <include SORN link>
   help: (i.e., To the Department of Veteran’s Affairs to verify eligibility of benefits).

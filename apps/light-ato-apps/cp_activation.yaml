@@ -10,7 +10,6 @@ introduction:
     In the following questions, we'll cover how the Contingency Plan
     is activated and how appropriate persons are notified.
 questions:
-
 - id: q13_pre
   title: Plan Distribution and Availability (pre)
   prompt: >
@@ -94,10 +93,8 @@ questions:
       the plan that is no longer needed and upon termination from CSP Name.
 - id: q14_pre
   title: Line of Succession/Alternates Roles (pre)
-  prompt: |
-    Will you leverage template Line of Succession/Alternates Roles language used for AWS information systems?
-
-    DEFAULT_CONTENT
+  prompt: Will you leverage template Line of Succession/Alternates Roles language
+    used for AWS information systems?
   type: choice
   choices:
   - key: 'yes'
@@ -108,13 +105,13 @@ questions:
     text: 'No'
 - id: q16_pre
   title: Activation Criteria and Procedure (pre)
-  prompt: "Will you leverage the template Activation Criteria and Procedure statement
-    used for AWS information systems?\n\n> The {{project.system_info.system_name}}
-    ISCP may be activated if one or more of the following criteria are met:\n> \n>
-    1. The type of outage indicates {{project.system_info.system_name}} will be down
-    for more than _Enter Number_ RTO hours.\n> 2. The facility housing {{project.system_info.system_name}}
-    is damaged and may not be available within _Enter Number_ RTO hours\n> 3. Other
-    criteria, as appropriate.\n"
+  prompt: "Will you leverage the template Activation Criteria and Procedure statement\
+    \ used for AWS information systems?\n\n> The {{project.system_info.system_name}}\
+    \ ISCP may be activated if one or more of the following criteria are met:\n> \n\
+    > 1. The type of outage indicates {{project.system_info.system_name}} will be\
+    \ down for more than _Enter Number_  RTO hours.\n> 2. The facility housing {{project.system_info.system_name}}\
+    \ is damaged and may not be available within _Enter Number_ RTO hours\n> 3. Other\
+    \ criteria, as appropriate."
   type: choice
   choices:
   - key: 'yes'
@@ -176,11 +173,10 @@ questions:
   type: text
 - id: q17_outage_assessment
   title: Outage Assessment Procedure
-  prompt: "Describe Outage Assessment procedures.\n\nOutline detailed procedures to
-    include how to determine the cause of the outage; identification of potential
-    for additional disruption or damage; assessment of affected physical area(s);
-    and determination of the physical infrastructure status, IS equipment functionality,
-    and inventory.  \n\nProcedures must include notation of items that will be needed
-    to be replaced and estimated time to restore service to normal operations."
+  prompt: "Describe Outage Assessment procedures.\n\nOutline detailed procedures to\
+    \ include how to determine the cause of the outage; identification of potential\
+    \ for additional disruption or damage; assessment of affected physical area(s);\
+    \ and determination of the physical infrastructure status, IS equipment functionality,\
+    \ and inventory.  \n\nProcedures must include notation of items that will be needed\
+    \ to be replaced and estimated time to restore service to normal operations."
   type: longtext
-

@@ -36,10 +36,10 @@ output:
     The ISSO  maintains, under configuration control, a current baseline configuration of the information system
   title: NIST 800-53 rev4 SSP CM_2_2
 - format: markdown
-  id: nist_80053rev4_ssp_CM_2_my_org_1
+  id: nist_80053rev4_ssp_CM_2_internal_policy_1
   template: |
     This control is not applicable. Network printers are facsimile machines are not within the system/application boundary
-  title: NIST 800-53 rev4 SSP CM_2_my_org_1
+  title: NIST 800-53 rev4 SSP CM_2_internal_policy_1
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_2_c
   template: >
@@ -85,48 +85,48 @@ output:
     AWS has established and documented configuration settings.  Any changes will have to be approved.
   title: NIST 800-53 rev4 SSP CM_6_d_2
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_1
+  id: nist_80053rev4_ssp_CM_6_internal_policy_1
   template: >
     This control is not applicable. There are no USGCB configurations for the OS,
     databases or other supporting software currently being utilized within the system
-  title: NIST 800-53 rev4 SSP CM_6_my_org_1
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_1
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_2
+  id: nist_80053rev4_ssp_CM_6_internal_policy_2
   template: |
     This control is not applicable. Network printers are facsimile machines are not within the system/application boundary
-  title: NIST 800-53 rev4 SSP CM_6_my_org_2
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_2
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_3
+  id: nist_80053rev4_ssp_CM_6_internal_policy_3
   template: |
     This control is not applicable. There are no multifunctional devices within the AWS boundary
-  title: NIST 800-53 rev4 SSP CM_6_my_org_3
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_3
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_4
+  id: nist_80053rev4_ssp_CM_6_internal_policy_4
   template: |
     This control is not applicable. There are no fax servers within the system boundary.
-  title: NIST 800-53 rev4 SSP CM_6_my_org_4
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_4
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_5
+  id: nist_80053rev4_ssp_CM_6_internal_policy_5
   template: >
     AWS has established and documented configuration settings for CentOS and containzerized
     versions of CentOS Linux by merging the CIS benchmarkswith hardening guidelines. AWS also uses hardening guidelines for other operating
     systems and databases.
-  title: NIST 800-53 rev4 SSP CM_6_my_org_5
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_5
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_6
+  id: nist_80053rev4_ssp_CM_6_internal_policy_6
   template: |
     Telnet is not utilized within the AWS boundary. SSH is used.
-  title: NIST 800-53 rev4 SSP CM_6_my_org_6
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_6
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_7
+  id: nist_80053rev4_ssp_CM_6_internal_policy_7
   template: |
     Unsecured FTP is not available within the AWS boundary. SSH is used.
-  title: NIST 800-53 rev4 SSP CM_6_my_org_7
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_7
 - format: markdown
-  id: nist_80053rev4_ssp_CM_6_my_org_8
+  id: nist_80053rev4_ssp_CM_6_internal_policy_8
   template: |
     Unsecured FTP is not available within the AWS boundary. SSH is used.
-  title: NIST 800-53 rev4 SSP CM_6_my_org_8
+  title: NIST 800-53 rev4 SSP CM_6_internal_policy_8
 - format: markdown
   id: nist_80053rev4_ssp_CM_6_1_1_a
   template: |
@@ -169,15 +169,15 @@ output:
     The system prohibits the use of restricted services defined within the documentation.
   title: NIST 800-53 rev4 SSP CM_7_b_2_d
 - format: markdown
-  id: nist_80053rev4_ssp_CM_8_my_org_1
+  id: nist_80053rev4_ssp_CM_8_internal_policy_1
   template: |
     This control is not applicable. Network printers, copiers and facsimile machines are not within the system/application boundary
-  title: NIST 800-53 rev4 SSP CM_8_my_org_1
+  title: NIST 800-53 rev4 SSP CM_8_internal_policy_1
 - format: markdown
-  id: nist_80053rev4_ssp_CM_8_my_org_2
+  id: nist_80053rev4_ssp_CM_8_internal_policy_2
   template: |
     This control is not applicable. Network printers, copiers and facsimile machines are not within the system/application boundary
-  title: NIST 800-53 rev4 SSP CM_8_my_org_2
+  title: NIST 800-53 rev4 SSP CM_8_internal_policy_2
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_8
   template: |
@@ -209,58 +209,58 @@ output:
     The CISO determine developer security policies and procedures.
   title: NIST 800-53 rev4 SSP SA_11_1
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_my_org_1
+  id: nist_80053rev4_ssp_SC_12_internal_policy_1
   template: |
     FPKI associate certificate issued and digital signature access for privileged accounts is implemented through AWS.
-  title: NIST 800-53 rev4 SSP SC_12_my_org_1
+  title: NIST 800-53 rev4 SSP SC_12_internal_policy_1
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_my_org_2
+  id: nist_80053rev4_ssp_SC_12_internal_policy_2
   template: |
     FPKI Subscriber private keys shall not be used multipole entity may use the group private keys through AWS.
-  title: NIST 800-53 rev4 SSP SC_12_my_org_2
+  title: NIST 800-53 rev4 SSP SC_12_internal_policy_2
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_my_org_3
+  id: nist_80053rev4_ssp_SC_12_internal_policy_3
   template: |
     This control is not applicable. There are no wireless devices within the system/application boundary
-  title: NIST 800-53 rev4 SSP SC_12_my_org_3
+  title: NIST 800-53 rev4 SSP SC_12_internal_policy_3
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_my_org_4
+  id: nist_80053rev4_ssp_SC_12_internal_policy_4
   template: |
     This control is not applicable. The system does not use NPE PKI certificates
-  title: NIST 800-53 rev4 SSP SC_12_my_org_4
+  title: NIST 800-53 rev4 SSP SC_12_internal_policy_4
 - format: markdown
-  id: nist_80053rev4_ssp_SC_12_my_org_5
+  id: nist_80053rev4_ssp_SC_12_internal_policy_5
   template: |
     The system requests certificates through the PKI team per organizational policy
-  title: NIST 800-53 rev4 SSP SC_12_my_org_5
+  title: NIST 800-53 rev4 SSP SC_12_internal_policy_5
 - format: markdown
-  id: nist_80053rev4_ssp_SC_13_my_org_6
+  id: nist_80053rev4_ssp_SC_13_internal_policy_6
   template: |
     The system develop and maintain encryption plan for sensitive information through AWS
-  title: NIST 800-53 rev4 SSP SC_13_my_org_6
+  title: NIST 800-53 rev4 SSP SC_13_internal_policy_6
 - format: markdown
-  id: nist_80053rev4_ssp_SC_13_my_org_7
+  id: nist_80053rev4_ssp_SC_13_internal_policy_7
   template: |
     The system protects sensitive PII by encrypting sensitive data
-  title: NIST 800-53 rev4 SSP SC_13_my_org_7
+  title: NIST 800-53 rev4 SSP SC_13_internal_policy_7
 - format: markdown
-  id: nist_80053rev4_ssp_SC_13_my_org_8
+  id: nist_80053rev4_ssp_SC_13_internal_policy_8
   template: |
     The system utilizes AWS KMS which is FIPS 140-2 compliant
-  title: NIST 800-53 rev4 SSP SC_13_my_org_8
+  title: NIST 800-53 rev4 SSP SC_13_internal_policy_8
 - format: markdown
-  id: nist_80053rev4_ssp_SC_13_my_org_9
+  id: nist_80053rev4_ssp_SC_13_internal_policy_9
   template: |
     The system supports the following cryptographic algorithms and associated key sizes:
     - SHA 1 and SHA 256
     - RSA 1024 and 2048
     - AES 128 and 256
-  title: NIST 800-53 rev4 SSP SC_13_my_org_9
+  title: NIST 800-53 rev4 SSP SC_13_internal_policy_9
 - format: markdown
-  id: nist_80053rev4_ssp_SC_13_my_org_10
+  id: nist_80053rev4_ssp_SC_13_internal_policy_10
   template: |
     The system utilizes AWS KMS which is FIPS 140-2 compliant
-  title: NIST 800-53 rev4 SSP SC_13_my_org_10
+  title: NIST 800-53 rev4 SSP SC_13_internal_policy_10
 - format: markdown
   id: nist_80053rev4_ssp_SC_13_3
   template: >

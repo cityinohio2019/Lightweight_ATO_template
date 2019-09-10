@@ -18,13 +18,13 @@ output:
     ELK is implemented to audit the execution of privileged functionality at the application level.
   title: NIST 800-53 rev4 SSP AC_6_9
 - format: markdown
-  id: nist_80053rev4_ssp_AU_12_my_org_1
+  id: nist_80053rev4_ssp_AU_12_internal_policy_1
   template: >
     AWS (ELK): ELK has been configured such that whenever an audit processing failure
     occurs on logs from the application layer error messages are automatically emailed
     to the SOD. If audit capacity is reached the application logs are configured
     to overwrite the oldest data first.
-  title: NIST 800-53 rev4 SSP AU_12_my_org_1
+  title: NIST 800-53 rev4 SSP AU_12_internal_policy_1
 - format: markdown
   id: nist_80053rev4_ssp_AU_12_a_2
   template: |
@@ -58,15 +58,15 @@ output:
     The {{project.system_info.system_short_name}} ISSO utilizes ELK to review the logs.
   title: NIST 800-53 rev4 SSP AU_6_a_3
 - format: markdown
-  id: nist_80053rev4_ssp_AU_6_my_org_2
+  id: nist_80053rev4_ssp_AU_6_internal_policy_2
   template: |
     ELK provides the system with an audit redution and generation capability.
-  title: NIST 800-53 rev4 SSP AU_6_my_org_2
+  title: NIST 800-53 rev4 SSP AU_6_internal_policy_2
 - format: markdown
-  id: nist_80053rev4_ssp_AU_6_my_org_3
+  id: nist_80053rev4_ssp_AU_6_internal_policy_3
   template: |
     ELK time stamps are configured by default and leverage the system's hosting environment.
-  title: NIST 800-53 rev4 SSP AU_6_my_org_3
+  title: NIST 800-53 rev4 SSP AU_6_internal_policy_3
 - format: markdown
   id: nist_80053rev4_ssp_SI_4_a_1_2_a
   template: |
@@ -123,5 +123,5 @@ questions:
   choices:
   - key: audit_1
     text: Splunk
-  - key: audit_1
+  - key: audit_2
     text: Elk

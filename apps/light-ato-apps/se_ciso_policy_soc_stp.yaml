@@ -130,10 +130,10 @@ output:
     The system follows organizational documentation to review and update the Interconnection Security Agreement
   title: NIST 800-53 rev4 SSP CA_3_c_1
 - format: markdown
-  id: nist_80053rev4_ssp_CA_5_my_org_1
+  id: nist_80053rev4_ssp_CA_5_internal_policy_1
   template: |
     The ISSO in coordination with the system owner, and system staff, shall ensure that POA&MS are in compliance with requirements.
-  title: NIST 800-53 rev4 SSP CA_5_my_org_1
+  title: NIST 800-53 rev4 SSP CA_5_internal_policy_1
 - format: markdown
   id: nist_80053rev4_ssp_CA_5_a_1
   template: >
@@ -430,12 +430,12 @@ output:
     The CISO shall determine the frequency to review the contingency plan.
   title: NIST 800-53 rev4 SSP CP_2_d_1
 - format: markdown
-  id: nist_80053rev4_ssp_CP_4_my_org_1
+  id: nist_80053rev4_ssp_CP_4_internal_policy_1
   template: >
     The CISO shall  ensure that CP testing is performed in accordance with
     the availability security objective based on whether the information system is
     categorized as High, moderate, or low impact.
-  title: NIST 800-53 rev4 SSP CP_4_my_org_1
+  title: NIST 800-53 rev4 SSP CP_4_internal_policy_1
 - format: markdown
   id: nist_80053rev4_ssp_CP_4_a_1
   template: >
@@ -461,19 +461,19 @@ output:
     PIV card with PIN.  The PIV is assigned and credentials are verified by the organization.
   title: NIST 800-53 rev4 SSP IA_2
 - format: markdown
-  id: nist_80053rev4_ssp_IA_2_my_org_1
+  id: nist_80053rev4_ssp_IA_2_internal_policy_1
   template: >
     All SAMS application implements multifactor authentication against the ICAM
     using the PIV card with PIN.  The PIV is assigned and credentials are verified
     by the organization.
-  title: NIST 800-53 rev4 SSP IA_2_my_org_1
+  title: NIST 800-53 rev4 SSP IA_2_internal_policy_1
 - format: markdown
-  id: nist_80053rev4_ssp_IA_2_my_org_2
+  id: nist_80053rev4_ssp_IA_2_internal_policy_2
   template: >
     The system implements multifactor authentication by making use of the PIV card
     against the ICAM for authentication. Users must authenticate with their PIV
     and associated PIN to access the application.
-  title: NIST 800-53 rev4 SSP IA_2_my_org_2
+  title: NIST 800-53 rev4 SSP IA_2_internal_policy_2
 - format: markdown
   id: nist_80053rev4_ssp_IA_2_1
   template: >
@@ -504,7 +504,7 @@ output:
   template: >
     The system protects information system media until the media are destroyed or
     sanitized using approved equipment, techniques, and procedures as defined within
-organizational documentation
+    organizational documentation
   title: NIST 800-53 rev4 SSP MP_4
 - format: markdown
   id: nist_80053rev4_ssp_MP_4_a_2

@@ -169,7 +169,3 @@ questions:
   impute:
   - condition: notice != 'yes'
     value: ~
-- id: q0
-  type: text
-  title: New Question Title
-  prompt: Enter some text.

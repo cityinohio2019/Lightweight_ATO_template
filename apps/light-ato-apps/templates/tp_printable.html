@@ -117,10 +117,10 @@ title: Test Plan Document
 
 <h3>4.1 Controls to be Tested</h3>
 
-  <div>
-  {{project.se_aws_elk}}{% if project.se_aws_elk %}
+<div>
+  {% if project.se_aws_auditing_splunk_elk %}
 
-    {% for od in project.se_aws_elk.output_documents %}
+    {% for od in project.se_aws_auditing_splunk_elk.output_documents %}
     {% set odl = od.split('_') %}
     {% set c_name = "{}-{}".format(odl[3].upper(), " ".join(odl[4:])) %}
     <table border=1 style="width: 80%; margin-bottom: 1em;">
@@ -133,7 +133,7 @@ title: Test Plan Document
       </td>
       <td>
       <div style="margin: 12px 0 0 0;">
-          {{project.se_aws_elk.output_documents[od]}}
+          {{project.se_aws_auditing_splunk_elk.output_documents[od]}}
       </div>
         <!-- <small style="color: #aaa;">{{od}}</small> -->
       </td></tr>
@@ -141,6 +141,7 @@ title: Test Plan Document
     {% endfor %}
     {% endif %}
   </div>
+
 
 <h3>4.2 Controls Not to be Tested</h3>
 
