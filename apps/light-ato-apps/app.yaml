@@ -44,18 +44,21 @@ catalog:
   vendor_url: ~
   version: 0.1.7.8
 questions:
+#System Info
 - id: system_info
   title: System Profile
   type: module
   icon: system_info.png
   module-id: system_info
   group: System Info
+#Determine Fisma Level
 - id: fisma_level
   title: Determine Your FISMA Level
   type: module
   icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
+#PTA
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
   type: module
@@ -119,6 +122,7 @@ questions:
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
+#PAS
 - id: pas_intro
   title: Privacy Act Statement
   type: module
@@ -137,6 +141,89 @@ questions:
   impute:
   - condition: project.pta_info_storage.PAS_upload_generate_choice != 'PAS_generate'
     value: ~
+#PIA
+- id: pia_intro
+  title: Privacy Impact Assessment (Overview)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_intro
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_authorities
+  title: Privacy Impact Assessment (Authorities & Requirements)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_authorities
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_info_characterization
+  title: Privacy Impact Assessment (Characterization of Information)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_info_characterization
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_info_usage
+  title: Privacy Impact Assessment (Information Usage)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_info_usage
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_notice
+  title: Privacy Impact Assessment (Notice)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_notice
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_retention
+  title: Privacy Impact Assessment (Retention)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_retention
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_info_sharing
+  title: Privacy Impact Assessment (Information Sharing)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_info_sharing
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_redress
+  title: Privacy Impact Assessment (Redress)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_redress
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_auditing_accountability
+  title: Privacy Impact Assessment (Auditing and Accountability)
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_auditing_accountability
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+#Test Plan
 - id: tp_introduction
   title: Test Introduction
   type: module
