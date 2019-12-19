@@ -175,4 +175,5 @@ questions:
     Reminder: Address the risk to privacy and mitigation efforts.
   type: longtext
 
-
+output:
+- templates/pia_characterization_info.md

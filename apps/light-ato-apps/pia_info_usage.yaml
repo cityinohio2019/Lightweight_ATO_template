@@ -91,5 +91,6 @@ questions:
         using the information.
   type: longtext
 
-
+output:
+- templates/pia_info_usage.md
 

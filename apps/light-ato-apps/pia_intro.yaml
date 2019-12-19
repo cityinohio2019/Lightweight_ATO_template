@@ -11,6 +11,18 @@ questions:
     A Privacy Impact Assessment (PIA) is a decision tool used by organizations to identify and mitigate privacy risks. It answers what personally identifiable information is being collected, why the information is being collected, and how that information will be collected, used, and stored.
   type: interstitial
 
+- id: contact_person
+  title: Contact Person for PIA
+  prompt: |
+    What is the name of the main point of contact for this PIA?
+  type: text
+
+- id: contact_person_phone
+  title: Contact Person's Phone
+  prompt: |
+    What is {{contact_person}}'s primary phone contact?
+  type: text
+
 - id: q2
   title: PIA Abstract
   prompt: |
@@ -77,3 +89,4 @@ questions:
 
 output:
 - templates/pia_intro.html
+- templates/pia_overview_content.md

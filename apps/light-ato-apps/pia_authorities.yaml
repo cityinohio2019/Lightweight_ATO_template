@@ -86,7 +86,8 @@ questions:
     If the information is covered by the Paperwork Reduction Act (PRA), provide the OMB Control number and the agency number for the collection.
   type: text   
 
-
+output:
+- templates/pia_authorities_content.md
 
 
 
