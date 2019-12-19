@@ -1,6 +1,6 @@
-id: pia_notice
+id: pia_retention
 format: html
-title: PIA Notice
+title: PIA Retention
 ...
 
 <style>
@@ -60,25 +60,19 @@ title: PIA Notice
 </style>
 
 <div>
-  <h2>Section 4.0 Notice</h2>
+  <h2>Section 5.0 Data Retention</h2>
 </div>
 
 <div class="dos-pta-form">
 
-  <h2>4.1 Notice Before Collection</h2>
+  <h2>5.1 Length and Reason for Retention</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q1}}</p>
+    <p>{{project.pia_retention.q1}}</p>
   </div>
 
-  <h2>4.2 User Consent</h2>
+  <h2>5.2 Related to Retention</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q2}}</p>
-  </div>
-
-
-  <h2>4.3 Related to Notice</h2>
-  <div class="cell-full">
-    <p>{{project.pia_info_usage.q3}}</p>
+    <p>{{project.pia_retention.q2}}</p>
   </div>
  
 </div>

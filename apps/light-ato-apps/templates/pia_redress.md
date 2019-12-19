@@ -1,10 +1,10 @@
-id: pia_notice
+id: pia_redress
 format: html
-title: PIA Notice
+title: PIA Redress
 ...
 
 <style>
-
+  
   h2 {
     font-family: TimesNewRoman, Times, serif;
     display: block;
@@ -60,25 +60,30 @@ title: PIA Notice
 </style>
 
 <div>
-  <h2>Section 4.0 Notice</h2>
+  <h2>Section 7.0 Redress</h2>
 </div>
 
 <div class="dos-pta-form">
 
-  <h2>4.1 Notice Before Collection</h2>
+  <h2>7.1 Redress Procedures</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q1}}</p>
+    <p>{{project.pia_redress.q1}}</p>
   </div>
 
-  <h2>4.2 User Consent</h2>
+  <h2>7.2 Correction Procedures</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q2}}</p>
+    <p>{{project.pia_redress.q2}}</p>
   </div>
 
-
-  <h2>4.3 Related to Notice</h2>
+  <h2>7.3 Notification and Correction</h2>
   <div class="cell-full">
-    <p>{{project.pia_info_usage.q3}}</p>
+    <p>{{project.pia_redress.q3}}</p>
   </div>
+
+  <h2>7.4 PIA, Related to Redress</h2>
+  <div class="cell-full">
+    <p>{{project.pia_redress.q4}}</p>
+  </div>
+
  
 </div>

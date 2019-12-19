@@ -1,10 +1,10 @@
-id: pia_notice
+id: pia_info_sharing
 format: html
-title: PIA Notice
+title: PIA Info Sharing
 ...
 
 <style>
-
+  
   h2 {
     font-family: TimesNewRoman, Times, serif;
     display: block;
@@ -60,25 +60,34 @@ title: PIA Notice
 </style>
 
 <div>
-  <h2>Section 4.0 Notice</h2>
+  <h2>Section 6.0 Information Sharing</h2>
 </div>
 
 <div class="dos-pta-form">
 
-  <h2>4.1 Notice Before Collection</h2>
+  <h2>6.1 External Sharing</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q1}}</p>
+    <p>{{project.pia_info_sharing.q1}}</p>
   </div>
 
-  <h2>4.2 User Consent</h2>
+  <h2>6.2 External Sharing, SORN</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q2}}</p>
+    <p>{{project.pia_info_sharing.q2}}</p>
   </div>
 
-
-  <h2>4.3 Related to Notice</h2>
+  <h2>6.3 Re-dissemination</h2>
   <div class="cell-full">
-    <p>{{project.pia_info_usage.q3}}</p>
+    <p>{{project.pia_info_sharing.q3}}</p>
+  </div>
+
+  <h2>6.4 Record of Discolsure</h2>
+  <div class="cell-full">
+    <p>{{project.pia_info_sharing.q4}}</p>
+  </div>
+
+  <h2>6.5 Related to Information Sharing</h2>
+  <div class="cell-full">
+    <p>{{project.pia_info_sharing.q5}}</p>
   </div>
  
 </div>

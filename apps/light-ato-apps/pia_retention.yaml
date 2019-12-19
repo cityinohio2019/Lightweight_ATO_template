@@ -48,3 +48,6 @@ questions:
     should align with the stated purpose and mission of the system.
 
   type: longtext
+
+output:
+- templates/pia_retention.md

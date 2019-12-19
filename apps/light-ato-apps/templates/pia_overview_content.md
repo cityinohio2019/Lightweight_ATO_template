@@ -4,6 +4,15 @@ title: PIA Overview and Abstract
 ...
 
 <style>
+
+  h2 {
+    font-family: TimesNewRoman, Times, serif;
+    display: block;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   .dos-pta-form {
     font-family: TimesNewRoman, Times, serif;
     width: 650px;
@@ -50,14 +59,18 @@ title: PIA Overview and Abstract
 
 </style>
 
+<div>
+  <h2>Overview</h2>
+</div>
+
 <div class="dos-pta-form">
 
-  <h2>Abstract</h2>
+  <h2>PIA Abstract</h2>
   <div class="cell-full">
     <p>{{project.pia_intro.q2}}
   </div>
 
-  <h2>Overview</h2>
+  <h2>Content Overview</h2>
   <div class="cell-full">
     <p>{{project.pia_intro.q4}}</p>
     <br>
@@ -70,3 +83,5 @@ title: PIA Overview and Abstract
 
  
 </div>
+
+<br>

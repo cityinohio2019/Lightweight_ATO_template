@@ -1,6 +1,6 @@
-id: pia_notice
+id: pia_auditing_accountability
 format: html
-title: PIA Notice
+title: PIA Auditing and Accountability
 ...
 
 <style>
@@ -60,25 +60,30 @@ title: PIA Notice
 </style>
 
 <div>
-  <h2>Section 4.0 Notice</h2>
+  <h2>Section 8.0 Auditing and Accountability</h2>
 </div>
 
 <div class="dos-pta-form">
 
-  <h2>4.1 Notice Before Collection</h2>
+  <h2>8.1 Information Used in Accordance with PIA</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q1}}</p>
+    <p>{{project.pia_auditing_accountability.q1}}
   </div>
 
-  <h2>4.2 User Consent</h2>
+  <h2>8.2 Privacy Training</h2>
   <div class="cell-full">
-    <p>{{project.pia_notice.q2}}</p>
+    <p>{{project.pia_auditing_accountability.q2}}
   </div>
 
-
-  <h2>4.3 Related to Notice</h2>
+  <h2>8.3 Determining Access</h2>
   <div class="cell-full">
-    <p>{{project.pia_info_usage.q3}}</p>
+    <p>{{project.pia_auditing_accountability.q3}}
   </div>
+
+  <h2>8.4 Approve Information Sharing</h2>
+  <div class="cell-full">
+    <p>{{project.pia_auditing_accountability.q4}}
+  </div>
+
  
 </div>

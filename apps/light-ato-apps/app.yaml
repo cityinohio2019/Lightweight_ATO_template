@@ -143,7 +143,7 @@ questions:
     value: ~
 #PIA
 - id: pia_intro
-  title: Privacy Impact Assessment (Overview)
+  title: PIA, Overview
   type: module
   icon: PTA_icon_new.png
   module-id: pia_intro
@@ -152,7 +152,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_authorities
-  title: Privacy Impact Assessment (Authorities & Requirements)
+  title: PIA, Authorities & Requirements
   type: module
   icon: PTA_icon_new.png
   module-id: pia_authorities
@@ -161,7 +161,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_info_characterization
-  title: Privacy Impact Assessment (Characterization of Information)
+  title: PIA, Characterization of Information
   type: module
   icon: PTA_icon_new.png
   module-id: pia_info_characterization
@@ -170,7 +170,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_info_usage
-  title: Privacy Impact Assessment (Information Usage)
+  title: PIA, Information Usage
   type: module
   icon: PTA_icon_new.png
   module-id: pia_info_usage
@@ -179,7 +179,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_notice
-  title: Privacy Impact Assessment (Notice)
+  title: PIA, Notice
   type: module
   icon: PTA_icon_new.png
   module-id: pia_notice
@@ -188,7 +188,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_retention
-  title: Privacy Impact Assessment (Retention)
+  title: PIA, Retention
   type: module
   icon: PTA_icon_new.png
   module-id: pia_retention
@@ -197,7 +197,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_info_sharing
-  title: Privacy Impact Assessment (Information Sharing)
+  title: PIA, Information Sharing
   type: module
   icon: PTA_icon_new.png
   module-id: pia_info_sharing
@@ -206,7 +206,7 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_redress
-  title: Privacy Impact Assessment (Redress)
+  title: PIA, Redress
   type: module
   icon: PTA_icon_new.png
   module-id: pia_redress
@@ -215,10 +215,19 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 - id: pia_auditing_accountability
-  title: Privacy Impact Assessment (Auditing and Accountability)
+  title: PIA, Auditing and Accountability
   type: module
   icon: PTA_icon_new.png
   module-id: pia_auditing_accountability
+  group: Privacy Impact Assessment (PIA)
+  impute:
+  - condition: project.system_info.system_personal_data != 'yes'
+    value: ~
+- id: pia_printable
+  title: PIA, Document
+  type: module
+  icon: PTA_icon_new.png
+  module-id: pia_printable
   group: Privacy Impact Assessment (PIA)
   impute:
   - condition: project.system_info.system_personal_data != 'yes'

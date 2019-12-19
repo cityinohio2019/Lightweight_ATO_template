@@ -4,6 +4,15 @@ title: PIA Info Usage
 ...
 
 <style>
+
+  h2 {
+    font-family: TimesNewRoman, Times, serif;
+    display: block;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
   .dos-pta-form {
     font-family: TimesNewRoman, Times, serif;
     width: 650px;
@@ -50,24 +59,28 @@ title: PIA Info Usage
 
 </style>
 
+<div>
+  <h2>Section 3.0 Uses of the Information</h2>
+</div>
+
 <div class="dos-pta-form">
 
-  <h2>Information Usage, Reasoning and Methods</h2>
+  <h2>3.1 Information Usage, Reasoning and Methods</h2>
   <div class="cell-full">
     <p>{{project.pia_info_usage.q1}}</p>
   </div>
 
-  <h2>Usage of Predictive and Querying Technology</h2>
+  <h2>3.2 Usage of Predictive and Querying Technology</h2>
   <div class="cell-full">
     <p>{{project.pia_info_usage.q2}}</p>
   </div>
 
-  <h2>Assigned Roles and Responsibilitiesy</h2>
+  <h2>3.3 Assigned Roles and Responsibilitiesy</h2>
   <div class="cell-full">
     <p>{{project.pia_info_usage.q3}}</p>
   </div>
 
-  <h2>PIA, Related to the Uses of Information</h2>
+  <h2>3.4 Related to the Uses of Information</h2>
   <div class="cell-full">
     <p>{{project.pia_info_usage.q4}}</p>
   </div>

@@ -70,4 +70,4 @@ questions:
   type: longtext
 
 output:
-- templates/pia_characterization_notice.md
+- templates/pia_notice.md

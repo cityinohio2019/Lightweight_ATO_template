@@ -4,6 +4,16 @@ title: PIA Authorities and Content
 ...
 
 <style>
+
+  h2 {
+    font-family: TimesNewRoman, Times, serif;
+    display: block;
+    font-size: 16pt;
+    font-weight: bold;
+    text-decoration: none;
+  }
+
+
   .dos-pta-form {
     font-family: TimesNewRoman, Times, serif;
     width: 650px;
@@ -50,32 +60,38 @@ title: PIA Authorities and Content
 
 </style>
 
+<div>
+  <h2>Section 1.0 Authorities and Other Requirements</h2>
+</div>
+
 <div class="dos-pta-form">
 
-  <h2>Specific Legal Authorities</h2>
+  <h2>1.1 Specific Legal Authorities</h2>
   <div class="cell-full">
     <p>{{project.pia_authorities.q1}}
   </div>
 
-  <h2>Applicable SORNs</h2>
+  <h2>1.2 Applicable SORNs</h2>
   <div class="cell-full">
     <p>{{project.pia_authorities.q2}}
   </div>
 
-  <h2>System Security Plan Information</h2>
+  <h2>1.3 System Security Plan Information</h2>
   <div class="cell-full">
     <p>{{project.pia_authorities.q3}}
   </div>
 
-  <h2>Records Retention Scheulde</h2>
+  <h2>1.4 Records Retention Scheulde</h2>
   <div class="cell-full">
     <p>{{project.pia_authorities.q4}}
   </div>
 
-  <h2>OMB Control Number</h2>
+  <h2>1.5 OMB Control Number</h2>
   <div class="cell-full">
     <p>{{project.pia_authorities.q5}}
   </div>
 
  
 </div>
+
+<br>

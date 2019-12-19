@@ -79,3 +79,6 @@ questions:
         their behavior. 
 
   type: longtext
+
+output:
+- templates/pia_redress.md

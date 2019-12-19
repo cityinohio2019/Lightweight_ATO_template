@@ -62,13 +62,10 @@ questions:
 - id: q4
   title: Record of Discolsure
   prompt: |
-    Under subsection (c) of the Privacy Act, DHS must retain an accounting
-    of what records were disclosed to whom, even for systems that are otherwise
-    exempt from certain provisions of the Act. A project may keep a paper or
-    electronic record of the date, nature, and purpose of each disclosure, and name
-    and address of the individual or agency to whom the disclosure is made. If the
-    project keeps a record, list what information is retained as part of the accounting
-    requirement. A separate system does not need to be created to meet the
+    List what information is retained as part of the accounting
+    requirement.
+
+    A separate system does not need to be created to meet the
     accounting requirement, but the program must be able to recreate the information
     noted above to demonstrate compliance. If the project does not, explain why not. 
 
@@ -88,3 +85,6 @@ questions:
     Discuss how the sharing of information outside of the Department is
     compatible with the stated purpose and use of the original collection.
   type: longtext
+
+output:
+- templates/pia_info_sharing.md
