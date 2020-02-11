@@ -46,10 +46,17 @@ catalog:
 questions:
 #System Info
 - id: system_info
-  title: System Profile
+  title: System Profile - Info
   type: module
   icon: system_info.png
   module-id: system_info
+  group: System Info
+#System Info POC
+- id: system_info_poc
+  title: System Profile - POC
+  type: module
+  icon: system_info.png
+  module-id: system_info_poc
   group: System Info
 #Determine Fisma Level
 - id: fisma_level

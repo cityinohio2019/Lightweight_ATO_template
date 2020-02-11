@@ -152,7 +152,7 @@ The security safeguards implemented for the Enter Information System Abbreviatio
       <th class="th-header">Information System Abbreviation</th>
     </tr>
     <tr>
-      <td>[[FedRAMP_Application_Number]]</td>
+      <td>{{project.fisma_level.application_number}}</td>
       <td>{{project.system_info.system_name}}</td>
       <td>{{project.system_info.system_short_name}}</td>
     </tr>
@@ -169,7 +169,7 @@ The overall information system sensitivity categorization is recorded in Table 2
 <table class="table-ssp" border="1">
     <tr>
       <th class="th-header">System Sensitivity Level</th>
-      <td>[[Security_Categorization_Level]]</td>
+      <td>{{project.fisma_level.fisma_level}}</td>
     </tr>
 </table>
 
@@ -280,27 +280,27 @@ The following individual is identified as the system owner or functional propone
     </tr>
     <tr>
       <td class="td-row-title">Name</td>
-      <td>[[Name]]</td>
+      <td>{{project.system_info.system_owner}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Title</td>
-      <td>[[TITLE]]</td>
+      <td>{{project.system_info_poc.system_owner_title}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>[[ORGANIZATION]]</td>
+      <td>{{project.system_info.system_org}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>[[PHONE]]</td>
+      <td>{{project.system_info_poc.system_owner_phone}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
-      <td>[[ADDRESS]]</td>
+      <td>{{project.system_info_poc.system_owner_email}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Address</td>
-      <td>[[EMAIL]]</td>
+      <td>{{project.system_info_poc.system_owner_address}}</td>
     </tr>
 </table>
 
@@ -316,27 +316,27 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Name</td>
-      <td>[[Name]]</td>
+      <td>{{project.system_info_poc.system_ao_name}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Title</td>
-      <td>[[TITLE]]</td>
+      <td>{{project.system_info_poc.system_ao_title}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>[[ORGANIZATION]]</td>
+      <td>{{project.system_info_poc.system_ao_org}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>[[PHONE]]</td>
+      <td>{{project.system_info_poc.system_ao_phone}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
-      <td>[[ADDRESS]]</td>
+      <td>{{project.system_info_poc.system_ao_email}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Address</td>
-      <td>[[EMAIL]]</td>
+      <td>{{project.system_info_poc.system_ao_address}}</td>
     </tr>
 </table>
 
@@ -350,27 +350,27 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Name</td>
-      <td>[[Name]]</td>
+      <td>{{project.system_info.system_pm}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Title</td>
-      <td>[[TITLE]]</td>
+      <td>{{project.system_info_poc.system_manager_title}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>[[ORGANIZATION]]</td>
+      <td>{{project.system_info.system_org}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>[[PHONE]]</td>
+      <td>{{project.system_info_poc.system_manager_phone}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
-      <td>[[ADDRESS]]</td>
+      <td>{{project.system_info_poc.system_manager_email}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Address</td>
-      <td>[[EMAIL]]</td>
+      <td>{{project.system_info_poc.system_manager_address}}</td>
     </tr>
 </table>
 
@@ -382,27 +382,27 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Name</td>
-      <td>[[Name]]</td>
+      <td>{{project.system_info_poc.system_tech_name}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Title</td>
-      <td>[[TITLE]]</td>
+      <td>{{project.system_info_poc.system_tech_title}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>[[ORGANIZATION]]</td>
+      <td>{{project.system_info.system_admin_team}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>[[PHONE]]</td>
+      <td>{{project.system_info_poc.system_tech_phone}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
-      <td>[[ADDRESS]]</td>
+      <td>{{project.system_info_poc.system_tech_email}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Address</td>
-      <td>[[EMAIL]]</td>
+      <td>{{project.system_info_poc.system_tech_address}}</td>
     </tr>
 </table>
 
@@ -416,27 +416,27 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Name</td>
-      <td>[[Name]]</td>
+      <td>{{project.system_info_poc.system_security_name}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Title</td>
-      <td>[[TITLE]]</td>
+      <td>{{project.system_info_poc.system_security_title}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>[[ORGANIZATION]]</td>
+      <td>{{project.system_info_poc.system_security_org}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>[[PHONE]]</td>
+      <td>{{project.system_info_poc.system_security_phone}}/td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
-      <td>[[ADDRESS]]</td>
+      <td>{{project.system_info_poc.system_security_email}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Address</td>
-      <td>[[EMAIL]]</td>
+      <td>{{project.system_info_poc.system_security_address}}</td>
     </tr>
 </table>
 
