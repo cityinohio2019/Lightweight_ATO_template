@@ -324,7 +324,7 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>{{project.system_info_poc.system_ao_org}</td>
+      <td>{{project.system_info_poc.system_ao_org}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
@@ -516,20 +516,17 @@ Information systems, particularly those based on cloud architecture models, are 
       <th class="th-header" colspan="3">Service Provider Architecture Layers</th>
     </tr>
     <tr>
-      <td>{% if {{project.system_info_type.info_system_saas}} == yes %}
-            {% "✓" %}</td>
+      <td>{% if project.system_info_type.info_system_saas == yes %}✓{% endif %} </td>
       <td>Software as a Service (SaaS)</td>
       <td>Major Application</td>
     </tr>
     <tr>
-      <td>{% if {{project.system_info_type.info_system_paas}} == yes %}
-            {% "✓" %}</td>
+      <td>{% if project.system_info_type.info_system_paas == yes %}✓{% endif %}</td>
       <td>Platform as a Service (PaaS)</td>
       <td>Major Application</td>
     </tr>
     <tr>
-      <td>{% if {{project.system_info_type.info_system_iaas}} == yes %}
-            {% "✓" %}</td>
+      <td>{% if project.system_info_type.info_system_iaas == yes %}✓{% endif %}</td>
       <td>Infrastructure as a Service (IaaS)</td>
       <td>General Support System</td>
     </tr>

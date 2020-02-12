@@ -2,6 +2,36 @@ id: system_info_type
 title: System Info Type
 questions:
 
+#Table 7-1
+- id: system_status
+  title: System Status
+  prompt: |
+    Operational Status
+
+    What is your system's life cycle phase?
+  type: choice
+  choices:
+  - key: operational
+    text: Operational (System is operating and in production)
+  - key: under_dev
+    text: Under Development (System is being designed, developed, or implemented)
+  - key: major_mod
+    text: Major Modification (System is undergoing major change, development, or transition)
+  - key: other
+    text: Other?
+
+- id: choice_other
+  title: Other System Status
+  prompt: |
+    You selected "Other" as your system status.
+
+    Could you explain?
+  type: longtext
+  impute:
+  - condition: system_status != 'other'
+    value: ~
+
+#Table 8-11
 - id: info_system_type_intro
   title: Information System Type
   type: interstitial
@@ -51,3 +81,63 @@ questions:
 
     If you feel your system is not any of these types, explain the system below. 
   type: longtext
+
+#Table 8-2
+- id: cloud_model
+  title: Cloud Deployment Model
+  prompt: |
+    Service Provider Cloud Deployment Model
+
+    What is your system's cloud deployment model?
+  type: choice
+  choices:
+  - key: public
+    text: Public (Cloud services and infrastructure supporting multiple organizations and agency clients)
+  - key: private
+    text: Private (Cloud services and infrastructure dedicated to a specific organization/agency and no other clients)
+  - key: govt_only
+    text: Government Only Community (Cloud services and infrastructure shared by several organizations/agencies with same policy and compliance considerations)
+  - key: hybrid
+    text: Hybrid (Need to explain)
+
+- id: choice_hybrid
+  title: Hybrid Cloud Deployment Model
+  prompt: |
+    You selected "Hybrid" as your system status.
+
+    Could you explain?
+  type: longtext
+  impute:
+  - condition: cloud_model != 'hybrid'
+    value: ~
+
+
+#Table 8-3
+- id: leveraged_authorizations
+  title: Leveraged Authorizations
+  prompt: |
+    Does your system have any leveraged authorizations?
+
+    An agency AO can leverage a P-ATO or other Agency ATO, including all supporting documentation,
+     when making a risk-based decision to grant an Agency ATO. Each Agency that is considering using 
+     the system should review the P-ATO/ATO letter as well as the package itself before deciding 
+     whether or not to use the system. 
+  type: yesno
+
+# - id: leveraged_authorizations_count
+#   title: Number of Leveraged Authorizations
+#   prompt: |
+#     How many leveraged authorizations can this system use?
+#   type: choice
+#   choices:
+#   - key: one
+#     text: One
+#   - key: two
+#     text: Two
+#   - key: three
+#     text: Three
+    
+#   impute:
+#   - condition: leveraged_authorizations != 'yes'
+#     value: ~
+
