@@ -516,22 +516,25 @@ Information systems, particularly those based on cloud architecture models, are 
       <th class="th-header" colspan="3">Service Provider Architecture Layers</th>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if {{project.system_info_type.info_system_saas}} == yes %}
+            {% "✓" %}</td>
       <td>Software as a Service (SaaS)</td>
       <td>Major Application</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if {{project.system_info_type.info_system_paas}} == yes %}
+            {% "✓" %}</td>
       <td>Platform as a Service (PaaS)</td>
       <td>Major Application</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if {{project.system_info_type.info_system_iaas}} == yes %}
+            {% "✓" %}</td>
       <td>Infrastructure as a Service (IaaS)</td>
       <td>General Support System</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{{project.system_info_type.info_system_other}}</td>
       <td>Other</td>
       <td>Other/Explain</td>
     </tr>

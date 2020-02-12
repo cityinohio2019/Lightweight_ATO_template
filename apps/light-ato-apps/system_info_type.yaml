@@ -1,0 +1,53 @@
+id: system_info_type
+title: System Info Type
+questions:
+
+- id: info_system_type_intro
+  title: Information System Type
+  type: interstitial
+  prompt: |
+    Information System Type
+
+    Information systems like {{project.system_info.system_name}} are made up of different service layers. This section will help the system owners determine if their system is a
+    cloud followed by more specific questions to help the system owner determine the type of cloud.
+
+- id: info_system_saas
+  title: Software as a Service
+  prompt: |
+    Is your System a SaaS?
+
+    SaaS systems are typically accessed online via a subscription rather than something that is bought and installed
+     on premises. Examples of SaaS are Google Apps, Salesforce, Dropbox, etc.
+
+    SaaS systems allow for the consumer to build anything other than servers. 
+  type: yesno
+
+- id: info_system_pass
+  title: Platform as a Service
+  prompt: |
+    Is your System a PaaS?
+
+    PaaS systems are typically hardware and saftware tools available over the internet.
+    Examples of PaaS are AWS Elastic Beanstalk, Windows Azure, OpenShift, Force.com, etc.
+
+    PaaS systems can build non-server things, databases, offers APIs or other developer toolkits.
+  type: yesno
+
+- id: info_system_iass
+  title: Infrastructure as a Service
+  prompt: |
+    Is your System a IaaS?
+
+    IaaS systems are cloud-based services, pay-as-you-go for services such as storage, networking, and virtualization.
+    Examples of IaaS are AWS EC2, Rackspace, Google Compute Engine (GCE) Digital Ocean, etc.
+
+    IaaS systems are the only system type that can build servers. 
+  type: yesno
+
+- id: info_system_other
+  title: Other System
+  prompt: |
+    Does your system fit outside the bounds of SaaS, PaaS, or IaaS?
+
+    If you feel your system is not any of these types, explain the system below. 
+  type: longtext

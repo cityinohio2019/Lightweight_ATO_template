@@ -58,6 +58,13 @@ questions:
   icon: system_info.png
   module-id: system_info_poc
   group: System Info
+#System Info Type
+- id: system_info_type
+  title: System Profile - Type
+  type: module
+  icon: system_info.png
+  module-id: system_info_type
+  group: System Info
 #Determine Fisma Level
 - id: fisma_level
   title: Determine Your FISMA Level
