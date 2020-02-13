@@ -52,7 +52,7 @@ questions:
     SaaS systems allow for the consumer to build anything other than servers. 
   type: yesno
 
-- id: info_system_pass
+- id: info_system_paas
   title: Platform as a Service
   prompt: |
     Is your System a PaaS?
@@ -63,7 +63,7 @@ questions:
     PaaS systems can build non-server things, databases, offers APIs or other developer toolkits.
   type: yesno
 
-- id: info_system_iass
+- id: info_system_iaas
   title: Infrastructure as a Service
   prompt: |
     Is your System a IaaS?

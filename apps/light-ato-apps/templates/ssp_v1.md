@@ -428,7 +428,7 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>{{project.system_info_poc.system_security_phone}}/td>
+      <td>{{project.system_info_poc.system_security_phone}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
@@ -449,27 +449,27 @@ The Authorizing Official (AO) or Designated Approving Authority (DAA) for this i
     </tr>
     <tr>
       <td class="td-row-title">Name</td>
-      <td>[[Name]]</td>
+      <td>{{project.system_info_poc.system_ao_poc_name}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Title</td>
-      <td>[[TITLE]]</td>
+      <td>{{project.system_info_poc.system_ao_poc_title}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Company / Organization</td>
-      <td>[[ORGANIZATION]]</td>
+      <td>{{project.system_info_poc.system_ao_poc_org}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Phone Number</td>
-      <td>[[PHONE]]</td>
+      <td>{{project.system_info_poc.system_ao_poc_phone}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Email Address</td>
-      <td>[[ADDRESS]]</td>
+      <td>{{project.system_info_poc.system_ao_poc_email}}</td>
     </tr>
     <tr>
       <td class="td-row-title">Address</td>
-      <td>[[EMAIL]]</td>
+      <td>{{project.system_info_poc.system_ao_poc_address}}</td>
     </tr>
 </table>
 
@@ -484,22 +484,22 @@ The system is currently in the life-cycle phase shown in Table 7 1. System Statu
       <th class="th-header" colspan="3">System Status</th>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.system_status == "operational" %} YES {% else %} NO {% endif %}</td>
       <td>Operational</td>
       <td>The system is operating and in production.</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.system_status == "under_dev" %} YES {% else %} NO {% endif %}</td>
       <td>Under Development</td>
       <td>The system is being designed, developed, or implemented</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.system_status == "major_mod" %} YES {% else %} NO {% endif %}</td>
       <td>Major Modification</td>
       <td>The system is undergoing a major change, development, or transition.</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.system_status == "other" %} {{project.system_info_type.choice_other}} {% else %} NO {% endif %}</td>
       <td>Other</td>
       <td>Other/Explain</td>
     </tr>
@@ -516,17 +516,17 @@ Information systems, particularly those based on cloud architecture models, are 
       <th class="th-header" colspan="3">Service Provider Architecture Layers</th>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.info_system_saas == yes %}✓{% endif %} </td>
+      <td>{{project.system_info_type.info_system_saas}}</td>
       <td>Software as a Service (SaaS)</td>
       <td>Major Application</td>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.info_system_paas == yes %}✓{% endif %}</td>
+      <td>{{project.system_info_type.info_system_paas}}</td>
       <td>Platform as a Service (PaaS)</td>
       <td>Major Application</td>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.info_system_iaas == yes %}✓{% endif %}</td>
+      <td>{{project.system_info_type.info_system_iaas}}</td>
       <td>Infrastructure as a Service (IaaS)</td>
       <td>General Support System</td>
     </tr>
@@ -550,22 +550,22 @@ Information systems are made up of different deployment models.  The deployment 
       <th class="th-header" colspan="3">Service Provider Cloud Deployment Model</th>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.cloud_model == "public" %} YES {% else %} NO {% endif %}</td>
       <td>Public</td>
       <td>Cloud services and infrastructure supporting multiple organizations and agency clients</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.cloud_model == "private" %} YES {% else %} NO {% endif %}</td>
       <td>Private</td>
       <td>Cloud services and infrastructure dedicated to a specific organization/agency and no other clients</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.cloud_model == "govt_only" %} YES {% else %} NO {% endif %}</td>
       <td>Government Only Community</td>
       <td>Cloud services and infrastructure shared by several organizations/agencies with same policy and compliance considerations</td>
     </tr>
     <tr>
-      <td>[ ]</td>
+      <td>{% if project.system_info_type.system_status == "hybrid" %} {{project.system_info_type.choice_hybrid}} {% else %} NO {% endif %}</td>
       <td>Hybrid</td>
       <td>Hybrid/Explain</td>
     </tr>
