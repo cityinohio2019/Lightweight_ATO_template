@@ -414,6 +414,16 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
+#certification
+- id: certification
+  module-id: certification
+  icon: ssp_icon.png
+  title: Certification Details
+  type: module
+  group: Certification
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
 
 deprecated-to-delete:
 - id: cp_q_set_1

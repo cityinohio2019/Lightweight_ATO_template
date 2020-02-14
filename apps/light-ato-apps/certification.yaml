@@ -1,0 +1,34 @@
+id: certification
+title: Certification Details
+questions:
+
+#Table 7-1
+- id: cert_intro
+  title: Certification Intro
+  prompt: |
+    Certifying the Status of {{project.system_info.system_name}}'s ATO
+
+    This module will ask certifying officials relevant questions assuming that the requisite information has been collected.
+
+  type: interstitial
+
+
+#information needed
+  1. Federal Agency Office
+  2. IT System
+  3. Security Categorization
+  4. Organization reviewing
+  5. 
+
+
+
+
+
+
+    # System needs an ATO, a certification memo have different per orgs. 
+    # Basically two or three sentences on a coverletter that has an authorizing signature.
+    # "I've reviewed this system, i'm granting it an ATO". 
+    # "I'm granting an ATO with conditions". A person is only going to be filled out. 
+    # Last things, are you granting certification or not. Resubmit, with conditions granted, or not. 
+    # Yes, we are going to certifiy this. We are going to certify with conditions, we are unable to certify and request a resubmit and then select what needs to addressed. This certification is good until, expiration date. 
+    # As of this date, until this date. 
