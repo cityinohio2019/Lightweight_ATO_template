@@ -12,13 +12,50 @@ questions:
 
   type: interstitial
 
+- id: cert_adjudicate
+  title: System Adjudication
+  prompt: |
+    Adjudicating {{project.system_info.system_name}}
+
+    After reviewing the documents, the Authorizing Official for this IT system can adjudicate on {{project.system_info.system_name}}:
+  choices:
+  - key: accept
+    text: I have reviewed this sytem, and I am granting it an ATO.
+  - key: conditions
+    text: I have reviewed this system, and I am granting an ATO with conditions.
+  - key: reject
+    text: I have reviewed this sytem, and I am unable to certify for an ATO. I request that you resubmit with the following recommendations.
+
+- id: choice_conditions
+  title: Accept with Conditions
+  prompt: |
+    You selected "Accepts with Conditions" in your System Adjudication.
+
+    Could you elaborate on what conditions will need to be met for an ATO?
+  type: longtext
+  impute:
+  - condition: cert_adjudicate != 'conditions'
+    value: ~
+
+- id: choice_reject
+  title: Accept and Recommendations
+  prompt: |
+    You selected "Reject and Resubmit" in your System Adjudication.
+
+    Could you elaborate on what recommendations will need to be met for an ATO?
+  type: longtext
+  impute:
+  - condition: cert_adjudicate != 'conditions'
+    value: ~
+
+
 
 #information needed
-  1. Federal Agency Office
-  2. IT System
-  3. Security Categorization
-  4. Organization reviewing
-  5. 
+  1. Federal Agency Office (imputed)
+  2. IT System (imputed)
+  3. Security Categorization (imputed)
+  4. Organization reviewing (imputed)
+  5. Authorizing Official Information
 
 
 
