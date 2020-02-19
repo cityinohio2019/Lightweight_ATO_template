@@ -2,7 +2,6 @@ id: certification
 title: Certification Details
 questions:
 
-#Table 7-1
 - id: cert_intro
   title: Certification Intro
   prompt: |
@@ -42,30 +41,17 @@ questions:
   prompt: |
     You selected "Reject and Resubmit" in your System Adjudication.
 
-    Could you elaborate on what recommendations will need to be met for an ATO?
+    Could you elaborate on what recommendations will need to be completed in order to resubmit?
   type: longtext
   impute:
-  - condition: cert_adjudicate != 'conditions'
+  - condition: cert_adjudicate != 'reject'
     value: ~
 
-
-
-#information needed
-  1. Federal Agency Office (imputed)
-  2. IT System (imputed)
-  3. Security Categorization (imputed)
-  4. Organization reviewing (imputed)
-  5. Authorizing Official Information
-
-
-
-
-
-
-    # System needs an ATO, a certification memo have different per orgs. 
-    # Basically two or three sentences on a coverletter that has an authorizing signature.
-    # "I've reviewed this system, i'm granting it an ATO". 
-    # "I'm granting an ATO with conditions". A person is only going to be filled out. 
-    # Last things, are you granting certification or not. Resubmit, with conditions granted, or not. 
-    # Yes, we are going to certifiy this. We are going to certify with conditions, we are unable to certify and request a resubmit and then select what needs to addressed. This certification is good until, expiration date. 
-    # As of this date, until this date. 
+- id: expiration_date
+  title: Expiration Date for Authorization
+  prompt: |
+    This certification is valid until:
+  type: date
+  impute:
+  - condition: cert_adjudicate == 'reject'
+    value: ~
