@@ -417,7 +417,7 @@ questions:
 #certification
 - id: certification
   module-id: certification
-  icon: ssp_icon.png
+  icon: certification.png
   title: Certification Details
   type: module
   group: Certification
