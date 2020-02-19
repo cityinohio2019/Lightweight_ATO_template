@@ -17,13 +17,14 @@ questions:
     Adjudicating {{project.system_info.system_name}}
 
     After reviewing the documents, the Authorizing Official for this IT system can adjudicate on {{project.system_info.system_name}}:
+  type: choice
   choices:
   - key: accept
-    text: I have reviewed this sytem, and I am granting it an ATO.
+    text: We are granting an Authority to Operate (ATO).
   - key: conditions
-    text: I have reviewed this system, and I am granting an ATO with conditions.
+    text: We are granting an Authority to Operate (ATO) with the following conditions.
   - key: reject
-    text: I have reviewed this sytem, and I am unable to certify for an ATO. I request that you resubmit with the following recommendations.
+    text: We are unable to certify for an Authority to Operate (ATO). We request that you resubmit with the following recommendations.
 
 - id: choice_conditions
   title: Accept with Conditions
@@ -55,3 +56,6 @@ questions:
   impute:
   - condition: cert_adjudicate == 'reject'
     value: ~
+
+output:
+- templates/certification.html
