@@ -1,11 +1,11 @@
 id: app
 title: PREVIEW(2) IT System
 type: project
-version: 0.2.1
+version: 0.2.2
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.2.1
+  template: IT System Questionnaires (Pilot) v0.2.2
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -37,12 +37,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.2.1
+    short: IT System Questionnaires (Pilot) v0.2.2
   source_url: https://github.com/GovReady/apps
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.2.1
+  version: 0.2.2
 questions:
 - id: system_info
   title: System Profile
