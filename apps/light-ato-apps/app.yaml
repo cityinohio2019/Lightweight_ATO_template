@@ -284,10 +284,46 @@ questions:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
 #Incident Response Plan
-- id: incident_response_plan
-  title: Incident Response Plan
+- id: irp_intro
+  title: Incident Response Plan (Intro)
   type: module
-  module-id: incident_response_plan
+  module-id: irp_intro
+  icon: app_old.png
+  group: Incident Response Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: irp_initiate
+  title: Incident Response Plan (Initiate)
+  type: module
+  module-id: irp_initiate
+  icon: app_old.png
+  group: Incident Response Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: irp_asses
+  title: Incident Response Plan (Assess)
+  type: module
+  module-id: irp_assess
+  icon: app_old.png
+  group: Incident Response Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: irp_remediate
+  title: Incident Response Plan (Remediate)
+  type: module
+  module-id: irp_remediate
+  icon: app_old.png
+  group: Incident Response Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: irp_retro
+  title: Incident Response Plan (Retrospective)
+  type: module
+  module-id: irp_retro
   icon: app_old.png
   group: Incident Response Plan
   impute:

@@ -1,6 +1,0 @@
-id: incident_response_plan
-title: Incident Response Plan
-questions: []
-output:
-- templates/incident_response_plan.md
-
