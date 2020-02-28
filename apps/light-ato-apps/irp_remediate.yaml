@@ -16,7 +16,7 @@ questions:
     In the case of suspicious activity, how will the team capture information on developing situations before making changes?
   examples:
     - example: |
-        The incident response team will continually update the revelvant activity ticket with the status of the situation.
+        The incident response team will continually update the relevant activity ticket with the status of the situation.
   type: longtext
 
 - id: q2
@@ -27,7 +27,7 @@ questions:
     How are activities regarding suspicious activities being documented, specifically, so an outside investigator may independently follow the work of the response team to validate the team’s work.
   examples:
     - example: |
-        The Incident Response team tracks suspicious activities within the team's shared incident drive. Within the team's shared incident drive, there are detailed common lanauge guides for third party teams.
+        The Incident Response team tracks suspicious activities within the team's shared incident drive. Within the team's shared incident drive, there are detailed common language guides for third party teams.
   type: longtext
 
 - id: q3
@@ -62,7 +62,7 @@ questions:
     What are the broad strokes of the team's containment strategy regarding compromised machines?
   examples:
     - example: |
-        When a system is supsected of being compromised, the Incident Response teams first ...        
+        When a system is suspected of being compromised, the Incident Response teams first ...        
   type: longtext
 
 - id: q6

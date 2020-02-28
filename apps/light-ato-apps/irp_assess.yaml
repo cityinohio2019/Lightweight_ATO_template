@@ -39,7 +39,7 @@ questions:
 
   examples:
     - example: |
-        {{project.system_info.system_org}} uses TidalWorks.0 for mailservices which recently reported a...
+        {{project.system_info.system_org}} uses TidalWorks.0 for mail services which recently reported a...
   type: longtext
 
 - id: q4
@@ -75,7 +75,7 @@ questions:
     When will the team activate an agency contingency plan?   
   examples:
     - example: |
-        The team will activiate an agency contingency plan if the incident regarding the IT system reaches a high impact level...      
+        The team will activate an agency contingency plan if the incident regarding the IT system reaches a high impact level...      
   type: longtext
 
 - id: q8

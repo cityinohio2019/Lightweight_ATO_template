@@ -302,7 +302,7 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
-- id: irp_asses
+- id: irp_assess
   title: Incident Response Plan (Assess)
   type: module
   module-id: irp_assess
@@ -324,6 +324,15 @@ questions:
   title: Incident Response Plan (Retrospective)
   type: module
   module-id: irp_retro
+  icon: app_old.png
+  group: Incident Response Plan
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+- id: irp_doc
+  title: Incident Response Plan (Document)
+  type: module
+  module-id: irp_doc
   icon: app_old.png
   group: Incident Response Plan
   impute:
