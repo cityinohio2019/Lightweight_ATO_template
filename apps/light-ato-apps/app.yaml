@@ -51,20 +51,19 @@ questions:
   icon: system_info.png
   module-id: system_info
   group: System Info
-#System Info POC
 - id: system_info_poc
   title: System Profile - POC
   type: module
   icon: system_info.png
   module-id: system_info_poc
   group: System Info
-#System Info Type
 - id: system_info_type
   title: System Profile - Type
   type: module
   icon: system_info.png
   module-id: system_info_type
   group: System Info
+
 #Determine Fisma Level
 - id: fisma_level
   title: Determine Your FISMA Level
@@ -72,6 +71,7 @@ questions:
   icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
+
 #PTA
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
@@ -136,6 +136,7 @@ questions:
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
+
 #PAS
 - id: pas_intro
   title: Privacy Act Statement
@@ -155,6 +156,7 @@ questions:
   impute:
   - condition: project.pta_info_storage.PAS_upload_generate_choice != 'PAS_generate'
     value: ~
+
 #PIA
 - id: pia_intro
   title: PIA, Overview
@@ -246,6 +248,7 @@ questions:
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
+
 #Test Plan
 - id: tp_introduction
   title: Test Introduction
@@ -283,6 +286,7 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
+
 #Incident Response Plan
 - id: irp_intro
   title: Incident Response Plan (Intro)
@@ -412,6 +416,7 @@ questions:
   impute:
   - condition: 1 == 1
     value: ~
+
 #Hosting
 - id: se_aws_hosting_environ
   title: AWS – Hosting Environment
@@ -458,6 +463,18 @@ questions:
   impute:
   - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
+
+#MOU
+- id: mou_intro
+  module-id: mou_intro
+  icon: app_old.png
+  title: MOU (Intro)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+
 #SSP
 - id: ssp_intro
   module-id: ssp_intro
