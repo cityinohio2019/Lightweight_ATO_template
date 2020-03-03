@@ -474,6 +474,33 @@ questions:
   impute:
   - condition: project.system_info.system_connection != 'yes'
     value: ~
+- id: mou_core
+  module-id: mou_core
+  icon: app_old.png
+  title: MOU (Core)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+- id: mou_end
+  module-id: mou_end
+  icon: app_old.png
+  title: MOU (Ending)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+- id: mou_doc
+  module-id: mou_doc
+  icon: app_old.png
+  title: MOU (Document)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
 
 #SSP
 - id: ssp_intro
@@ -485,6 +512,7 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
+
 #certification
 - id: certification
   module-id: certification

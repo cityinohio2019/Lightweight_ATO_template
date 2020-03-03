@@ -509,7 +509,7 @@ The system is currently in the life-cycle phase shown in Table 7 1. System Statu
 
 Information systems, particularly those based on cloud architecture models, are made up of different service layers.  Below are some questions that help the system owner determine if their system is a cloud followed by specific questions to help the system owner determine the type of cloud.
 
-<div class="table-caption">Table 8-11. Service Layers Represented in this SSP</div>
+<div class="table-caption">Table 8-1. Service Layers Represented in this SSP</div>
 
 <table class="table-ssp" border="1">
     <tr>
@@ -617,7 +617,7 @@ A detailed and explicit definition of the system authorization boundary diagram 
 
 All personnel have their status categorized with a sensitivity level in accordance with PS-2.  Personnel (employees or contractors) of service providers are considered Internal Users.  All other users are considered External Users.  User privileges (authorization permission after authentication takes place) are described in Table 9 1. Personnel Roles and Privileges that follows.
 
-<div class="table-caption">Table 9-1. Personnel Roles and Priviliges</div>
+<div class="table-caption">Table 9-1. Personnel Roles and Privileges</div>
 
 <table class="table-ssp" border="1">
     <tr>
