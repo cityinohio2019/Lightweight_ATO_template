@@ -93,7 +93,7 @@ questions:
   prompt: |
     Describe the purpose of the information being collected by the application, in way a non-technical person can understand.
 
-    This includes content 1, 2, 3, 4.
+    Describe the system’s direct contribution to a particular aspect of the organization’s mission. Describe the problem or issue the system addresses and how the system solves it. Describe who the users of the system are and what information these users access or manage in the system.
   type: longtext
 - id: updated_pta
   title: Update to Existing PTA?

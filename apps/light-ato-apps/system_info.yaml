@@ -1,5 +1,5 @@
 id: system_info
-title: System Info
+title: System Profile - Information
 internal:
   snippets:
   - snippet: |
@@ -145,10 +145,10 @@ questions:
 - id: system_personal_data
   title: System has personal data
   prompt: >-
-    IMPORTANT: Does the IT System store or process Personally Identifiable Information (PII)?
+    IMPORTANT: Does the IT System collect, store, or process Personally Identifiable Information (PII)?
 
 
-    Answer "Yes" if the {{system_name}} collects, stores, or processes information
+    Answer "Yes" if the {{system_name}} collects, stores, or processes Personally Identifiable Information (PII)
     about individuals. Answer  "No" if the system contains only publicly available
     information and no information about individuals.
   type: yesno
