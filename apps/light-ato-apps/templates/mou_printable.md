@@ -110,7 +110,68 @@ relationship between {{project.system_info.system_org}} and {{project.mou_intro.
 managerial and technical staff, in the absence of a common management authority. 
 
 <h2>AUTHORITY</h2>
+{{project.mou_intro.q7}}
 
 <h2>BACKGROUND</h2>
+{{project.mou_intro.q8}}
+<br></br>
+<strong>SYSTEM A</strong>
+- {{project.system_info.system_name}}
+- {{project.system_info.system_description}}
+- {{project.system_info.system_hosting}}
+- {{project.system_info.system_data}}
+
+<strong>SYSTEM B</strong>
+- {{project.mou_intro.q2}}
+- {{project.mou_intro.q4}}
+- {{project.mou_intro.q5}}
+- {{project.mou_intro.q6}}
+
+<h2>COMMUNICATIONS</h2>
+{{project.mou_core.q2}}
+- <strong>Security Incidents:</strong>{{project.mou_core.q3}}
+- <strong>Disasters and Other Contingencies:</strong>{{project.mou_core.q4}}
+- <strong>Material Changes to System Configuration:</strong>{{project.mou_core.q5}}
+- <strong>New Interconnections:</strong>{{project.mou_core.q6}}
+- <strong>Personnel Changes:</strong>{{project.mou_core.q7}}
+
+<h2>INTERCONNECTION SECURITY AGREEMENT</h2>
+{{project.mou_end.q2}}
+
+<h2>SECURITY</h2>
+{{project.mou_end.q3}}
+
+<h2>COST CONSIDERATIONS</h2>
+{{project.mou_end.q4}}
+
+<h2>TIMELINE</h2>
+{{project.mou_end.q5}}
+
+<h2>SIGNATORY AUTHORITY</h2>
+I agree to the terms of this Memorandum of Understanding.
+
+<table align="center" >
+  <tr>
+    <td style="text-align:center" colspan="2">{{project.mou_end.q6}}, {{project.system_info.system_org}}</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><input type="textfield"/><br />Signature</td>
+    <td style="text-align:center"><input type="textfield"/><br />Date</td>
+  </tr>
+</table>
+
+<br></br>
+
+<table align="center" >
+  <tr>
+    <td style="text-align:center"colspan="2">{{project.mou_end.q7}}, {{project.mou_intro.q3}}</td>
+  </tr>
+  <tr>
+    <td style="text-align:center"><input type="textfield"/><br />Signature</td>
+    <td style="text-align:center"><input type="textfield"/><br />Date</td>
+  </tr>
+</table>
+
+
 
 

@@ -58,3 +58,20 @@ questions:
       title and date. If one or both of the parties wish to terminate this agreement prematurely, they may do so upon 30 days' advanced notice or in
        the event of a security incident that necessitates an immediate response.
   type: longtext 
+
+- id: q6
+  title: Signing Official for {{project.system_info.system_org}}
+  prompt: |
+    Who will be signing the Memorandum of Understanding on behalf of {{project.system_info.system_org}}?
+  type: text
+
+- id: q7
+  title: Signing Official for {{project.mou_intro.q3}}
+  prompt: |
+    Who will be signing the Memorandum of Understanding on behalf of {{project.mou_intro.q3}}?
+  type: text
+
+
+
+
+    
