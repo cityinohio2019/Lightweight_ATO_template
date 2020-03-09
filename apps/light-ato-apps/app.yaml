@@ -249,6 +249,21 @@ questions:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
 
+#POAMS
+- id: poam_description
+  title: POAM Description
+  type: module
+  icon: PTA_icon_new.png
+  module-id: poam_description
+  group: Plan of Action and Milestones (POAM)
+- id: poam_progress
+  title: POAM Progress
+  type: module
+  icon: PTA_icon_new.png
+  module-id: poam_progress
+  group: Plan of Action and Milestones (POAM)
+
+
 #Test Plan
 - id: tp_introduction
   title: Test Introduction
