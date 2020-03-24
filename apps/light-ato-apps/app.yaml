@@ -72,6 +72,12 @@ questions:
   icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
+- id: information_types_01
+  title: Information Types
+  type: module
+  icon: fisma_icon.png
+  module-id: information_types_01
+  group: System Categorization
 #PTA
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
