@@ -197,61 +197,14 @@ The potential impact is high if—
 
 <div class="table-caption">Table 2-2. Sensitivity Categorization of Information Types</div>
 <!-- Sensitivity Categorization of Information Types Table goes -->
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Information Type(Use only information types from NIST SP 800-60, Volumes I and II as amended)</th>
-      <th class="th-header">NIST 800-60 identifier for Associated Information Type</th>
-      <th class="th-header">Confidentiality</th>
-      <th class="th-header">Integrity</th>
-      <th class="th-header">Availability</th>
-    </tr>
-    <tr>
-      <td>[[Information_Type]]</td>
-      <td>[[NIST_Identifier]]</td>
-      <td>[[Confidentiality_Level]]</td>
-      <td>[[Integrity_Level]]</td>
-      <td>[[Availability_Level]]</td>
-    </tr>
-    <tr>
-      <td>[[Information_Type]]</td>
-      <td>[[NIST_Identifier]]</td>
-      <td>[[Confidentiality_Level]]</td>
-      <td>[[Integrity_Level]]</td>
-      <td>[[Availability_Level]]</td>
-    </tr>
-    <tr>
-      <td>[[Information_Type]]</td>
-      <td>[[NIST_Identifier]]</td>
-      <td>[[Confidentiality_Level]]</td>
-      <td>[[Integrity_Level]]</td>
-      <td>[[Availability_Level]]</td>
-    </tr>
-</table>
+{{project.technical_information.info_type_table_01}}
 
 <h2>2.2 Security Objectives Categorization</h2>
 Based on the information provided in Table 2 2. Sensitivity Categorization of Information Types, for the Enter Information System Abbreviation, default to the high-water mark for the Information Types as identified in Table 2 3. Security Impact Level below. 
 
 <div class="table-caption">Table 2-3. Security Impact Level</div>
 
-<!-- Security Impact Level Table goes here -->
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Security Objective</th>
-      <th class="th-header">Low, Moderate or High</th>
-    </tr>
-    <tr>
-      <td class="td-row-title">Confidentiality</td>
-      <td>[[LOW_MODERATE_HIGH]]</td>
-    </tr>
-    <tr>
-      <td class="td-row-title">Integrity</td>
-      <td>[[LOW_MODERATE_HIGH]]</td>
-    </tr>
-    <tr>
-      <td class="td-row-title">Availability</td>
-      <td>[[LOW_MODERATE_HIGH]]</td>
-    </tr>
-</table>
+{{project.technical_information.security_impact_level}}
 
 Through review and analysis, it has been determined that the baseline security categorization for the Enter Information System Abbreviation system is listed in the Table 2 4. Baseline Security Configuration that follows.
 
@@ -577,28 +530,7 @@ The {{project.system_info.system_name}} Choose an item leverages a pre-existing 
 
 <div class="table-caption">Table 8-3. Leveraged Authorizations</div>
 
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Leveraged Information System Name</th>
-      <th class="th-header">Leveraged Service Provider Owner</th>
-      <th class="th-header">Date Granted</th>
-    </tr>
-    <tr>
-      <td>[[SYSTEM1]]</td>
-      <td>[[SERVICEPROVIDER1]]</td>
-      <td>[[DATE]]</td>
-    </tr>
-    <tr>
-      <td>[[SYSTEM1]]</td>
-      <td>[[SERVICEPROVIDER1]]</td>
-      <td>[[DATE]]</td>
-    </tr>
-    <tr>
-      <td>[[SYSTEM1]]</td>
-      <td>[[SERVICEPROVIDER1]]</td>
-      <td>[[DATE]]</td>
-    </tr>
-</table>
+{{project.system_info_type.leveraged_authorizations}}
 
 <h2>9.  GENERAL SYSTEM DESCRIPTION</h2>
 
@@ -619,72 +551,7 @@ All personnel have their status categorized with a sensitivity level in accordan
 
 <div class="table-caption">Table 9-1. Personnel Roles and Privileges</div>
 
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Role</th>
-      <th class="th-header">Internal or External</th>
-      <th class="th-header">Priviliged (P), Non-Priviliged (NP), or No Logical Access (NLA)</th>
-      <th class="th-header">Sensitivity Level</th>
-      <th class="th-header">Authorized Priviliges</th>
-      <th class="th-header">Functions Performed</th>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-    <tr>
-      <td>[[ROLE]]</td>
-      <td>[[INTERNAL_EXTERNAL]]</td>
-      <td>[[P_NP_NLA]]</td>
-      <td>[[SENSITIVITY_LEVEL]]</td>
-      <td>[[AUTHORIZED_PRIVILEGES]]</td>
-      <td>[[FUNCTIONS_PERFORMED]]</td>
-    </tr>
-</table>
+{{project.technical_information.security_impact_users}}
 
 <h3>9.4.  Network Architecture</h3>
 
@@ -703,102 +570,13 @@ The Table 10 1. Ports, Protocols and Services below lists the ports, protocols a
 
 <div class="table-caption">Table 10-1. Ports, Protocols and Services</div>
 
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Ports(TCP/UDP)*</th>
-      <th class="th-header">Protocols</th>
-      <th class="th-header">Services</th>
-      <th class="th-header">Purpose</th>
-      <th class="th-header">Used By</th>
-    </tr>
-    <tr>
-      <td>[[ENTER_PORT]]</td>
-      <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]</td>
-      <td>[[ENTER_PURPOSE]]</td>
-      <td>[[ENTER_USED_BY]]</td>
-    </tr>
-    <tr>
-      <td>[[ENTER_PORT]]</td>
-      <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]</td>
-      <td>[[ENTER_PURPOSE]]</td>
-      <td>[[ENTER_USED_BY]]</td>
-    </tr>
-    <tr>
-      <td>[[ENTER_PORT]]</td>
-      <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]</td>
-      <td>[[ENTER_PURPOSE]]</td>
-      <td>[[ENTER_USED_BY]]</td>
-    </tr>
-    <tr>
-      <td>[[ENTER_PORT]]</td>
-      <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]</td>
-      <td>[[ENTER_PURPOSE]]</td>
-      <td>[[ENTER_USED_BY]]</td>
-    </tr>
-    <tr>
-      <td>[[ENTER_PORT]]</td>
-      <td>[[ENTER_PROTOCOLS]]</td>
-      <td>[[ENTER_SERVICES]]</td>
-      <td>[[ENTER_PURPOSE]]</td>
-      <td>[[ENTER_USED_BY]]</td>
-    </tr>
-</table>
+{{project.technical_information.ports_protocols_services}}
 
 <h3>11. SYSTEM INTERCONNECTIONS</h3>
 
 <div class="table-caption">Table 11-1. System Interconnections</div>
 
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">SP* IP Address and Interface</th>
-      <th class="th-header">External Organization Name and IP Address of System</th>
-      <th class="th-header">External Point of Contact and Phone Number</th>
-      <th class="th-header">Connection Security (IPSec, VPN, SSL, Certificates, Secure File Transfer, etc.)**</th>
-      <th class="th-header">Data Direction (incoming, outgoing, or both)</th>
-      <th class="th-header">Information Being Transmitted</th>
-      <th class="th-header">Port of Circuit Numbers</th>
-    </tr>
-    <tr>
-      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
-      <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
-      <td>[[CONNECTION_SECURITY]]</td>
-      <td>[[INCOMING_OUTGOING_BOTH]]</td>
-      <td>[[INFORMATION_TRANSMITTED]]</td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
-    </tr>
-    <tr>
-      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
-      <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
-      <td>[[CONNECTION_SECURITY]]</td>
-      <td>[[INCOMING_OUTGOING_BOTH]]</td>
-      <td>[[INFORMATION_TRANSMITTED]]</td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
-    </tr>
-      <tr>
-      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
-      <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
-      <td>[[CONNECTION_SECURITY]]</td>
-      <td>[[INCOMING_OUTGOING_BOTH]]</td>
-      <td>[[INFORMATION_TRANSMITTED]]</td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
-    </tr>
-      <tr>
-      <td>[[SP_IP_ADDRESS_INTERFACE]]</td>
-      <td>[[EXTERNAL_ORG_IP]]</td>
-      <td>[[EXTERNAL_ORG_POC]][[EXTERNAL_ORG_PHONE]]</td>
-      <td>[[CONNECTION_SECURITY]]</td>
-      <td>[[INCOMING_OUTGOING_BOTH]]</td>
-      <td>[[INFORMATION_TRANSMITTED]]</td>
-      <td>[[PORT_CIRCUIT_NUMBERS]]</td>
-    </tr>
-</table>
+{{project.technical_information.system_interconnections}}
 
 
 <h2>12. LAWS, REGULATIONS, STANDARDS AND GUIDANCE</h2>
@@ -810,32 +588,7 @@ Table 12 1. Information System Name Laws and Regulations includes additional law
 
 <div class="table-caption">Table 12-1. Information System Name Laws and Regulations</div>
 
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Identification Number</th>
-      <th class="th-header">Title</th>
-      <th class="th-header">Date</th>
-      <th class="th-header">Link</th>
-    </tr>
-    <tr>
-      <td>[[REFERENCE_ID]]</td>
-      <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]</td>
-      <td>[[REF_LINK]]</td>
-    </tr>
-    <tr>
-      <td>[[REFERENCE_ID]]</td>
-      <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]</td>
-      <td>[[REF_LINK]]</td>
-    </tr>
-    <tr>
-      <td>[[REFERENCE_ID]]</td>
-      <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]</td>
-      <td>[[REF_LINK]]</td>
-    </tr>
-</table>
+{{project.technical_information.laws_regulations}}
 
 <h3>12.2. Applicable Standards and Guidance</h3>
 The FedRAMP Standards and Guidance be found on this web page: Templates
@@ -843,32 +596,7 @@ Table 12 2. Information System Name Standards and Guidance includes in this sect
 
 <div class="table-caption">Table 12-2. Information System Name Standards and Guidance</div>
 
-<table class="table-ssp" border="1">
-    <tr>
-      <th class="th-header">Identification Number</th>
-      <th class="th-header">Title</th>
-      <th class="th-header">Date</th>
-      <th class="th-header">Link</th>
-    </tr>
-    <tr>
-      <td>[[REFERENCE_ID]]</td>
-      <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]</td>
-      <td>[[REF_LINK]]</td>
-    </tr>
-    <tr>
-      <td>[[REFERENCE_ID]]</td>
-      <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]</td>
-      <td>[[REF_LINK]]</td>
-    </tr>
-    <tr>
-      <td>[[REFERENCE_ID]]</td>
-      <td>[[REFERENCE_TITLE]]</td>
-      <td>[[REF_DATE]]</td>
-      <td>[[REF_LINK]]</td>
-    </tr>
-</table>
+{{project.technical_information.standards_guidance}}
 
 
 

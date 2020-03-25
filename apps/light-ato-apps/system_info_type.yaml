@@ -111,18 +111,26 @@ questions:
   - condition: cloud_model != 'hybrid'
     value: ~
 
-
 #Table 8-3
 - id: leveraged_authorizations
-  title: Leveraged Authorizations
+  title: Leveraged Authorization
   prompt: |
     Does your system have any leveraged authorizations?
 
-    An agency AO can leverage a P-ATO or other Agency ATO, including all supporting documentation,
-     when making a risk-based decision to grant an Agency ATO. Each Agency that is considering using 
-     the system should review the P-ATO/ATO letter as well as the package itself before deciding 
-     whether or not to use the system. 
-  type: yesno
+    An agency AO can leverage a P-ATO or other Agency ATO, including all supporting documentation, 
+    when making a risk-based decision to grant an Agency ATO. Each Agency that is considering using  
+    the system should review the P-ATO/ATO letter as well as the package itself before deciding  
+    whether or not to use the system. 
+  type: datagrid
+  fields:
+    - key: Leveraged Information System Name
+      text: Leveraged Information System Name
+    - key: Leveraged Service Provider Owner
+      text: Leveraged Service Provider Owner
+    - key: Date Granted
+      text: Date Granted
+  min: 0
+  max: ~
 
 # - id: leveraged_authorizations_count
 #   title: Number of Leveraged Authorizations

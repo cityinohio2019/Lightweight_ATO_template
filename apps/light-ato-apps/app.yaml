@@ -1,5 +1,5 @@
 id: app
-title: IT System
+title: PREVIEW(2) IT System
 type: project
 version: 0.1.8.0
 icon: app.png
@@ -71,7 +71,12 @@ questions:
   icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
-
+- id: technical_information
+  title: Technical Information
+  type: module
+  icon: fisma_icon.png
+  module-id: technical_information
+  group: System Categorization
 #PTA
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
