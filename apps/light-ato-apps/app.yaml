@@ -51,20 +51,19 @@ questions:
   icon: system_info.png
   module-id: system_info
   group: System Info
-#System Info POC
 - id: system_info_poc
   title: System Profile - POC
   type: module
   icon: system_info.png
   module-id: system_info_poc
   group: System Info
-#System Info Type
 - id: system_info_type
   title: System Profile - Type
   type: module
   icon: system_info.png
   module-id: system_info_type
   group: System Info
+
 #Determine Fisma Level
 - id: fisma_level
   title: Determine Your FISMA Level
@@ -72,11 +71,11 @@ questions:
   icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
-- id: information_types_01
-  title: Information Types
+- id: technical_information
+  title: Technical Information
   type: module
   icon: fisma_icon.png
-  module-id: information_types_01
+  module-id: technical_information
   group: System Categorization
 #PTA
 - id: pta_intro
@@ -142,6 +141,7 @@ questions:
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
+
 #PAS
 - id: pas_intro
   title: Privacy Act Statement
@@ -161,6 +161,7 @@ questions:
   impute:
   - condition: project.pta_info_storage.PAS_upload_generate_choice != 'PAS_generate'
     value: ~
+
 #PIA
 - id: pia_intro
   title: PIA, Overview
@@ -252,6 +253,22 @@ questions:
   impute:
   - condition: project.system_info.system_personal_data != 'yes'
     value: ~
+
+#POAMS
+- id: poam_description
+  title: POAM Description
+  type: module
+  icon: PTA_icon_new.png
+  module-id: poam_description
+  group: Plan of Action and Milestones (POAM)
+- id: poam_progress
+  title: POAM Progress
+  type: module
+  icon: PTA_icon_new.png
+  module-id: poam_progress
+  group: Plan of Action and Milestones (POAM)
+
+
 #Test Plan
 - id: tp_introduction
   title: Test Introduction
@@ -289,6 +306,7 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
+
 #Incident Response Plan
 - id: irp_intro
   title: Incident Response Plan (Intro)
@@ -418,6 +436,7 @@ questions:
   impute:
   - condition: 1 == 1
     value: ~
+
 #Hosting
 - id: se_aws_hosting_environ
   title: AWS – Hosting Environment
@@ -464,6 +483,45 @@ questions:
   impute:
   - condition: project.system_info.system_hosting != 'org_aws'
     value: ~
+
+#MOU
+- id: mou_intro
+  module-id: mou_intro
+  icon: app_old.png
+  title: MOU (Intro)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+- id: mou_core
+  module-id: mou_core
+  icon: app_old.png
+  title: MOU (Core)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+- id: mou_end
+  module-id: mou_end
+  icon: app_old.png
+  title: MOU (Ending)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+- id: mou_doc
+  module-id: mou_doc
+  icon: app_old.png
+  title: MOU (Document)
+  type: module
+  group: Memorandum of Understanding
+  impute:
+  - condition: project.system_info.system_connection != 'yes'
+    value: ~
+
 #SSP
 - id: ssp_intro
   module-id: ssp_intro
@@ -474,6 +532,7 @@ questions:
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
+
 #certification
 - id: certification
   module-id: certification

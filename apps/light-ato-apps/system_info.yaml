@@ -189,6 +189,19 @@ questions:
   impute:
   - condition: operational_system == "no"
     value: ~
+- id: system_connection
+  title: Connection with another system?
+  prompt: >-
+    IMPORTANT: Does the IT System connect to a system outside of your organization?
+
+    Answer "Yes" if the {{system_name}} connects with another IT system in another organization.
+  type: yesno
+- id: mou_yes
+  title: Memorandum of Understanding
+  prompt: |-
+    We've added a 'Memorandum of Undestanding' because {{system_name}} connects to another organization's system.
+
+  type: interstitial
 - id: feedback_exists
   title: Feedback or Other Information
   prompt: Is there any information that you feel should be included in this assessment
