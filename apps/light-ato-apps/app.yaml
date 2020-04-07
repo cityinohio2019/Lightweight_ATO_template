@@ -262,7 +262,7 @@ questions:
   module-id: poam_description
   group: Plan of Action and Milestones (POAM)
 - id: poam_doc
-  title: POAM Report
+  title: POAM Document
   type: module
   icon: PTA_icon_new.png
   module-id: poam_doc

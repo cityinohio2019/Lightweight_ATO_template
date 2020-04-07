@@ -12,8 +12,8 @@ questions:
       The Plan of Action and Milestones (POA&M) report lists the significant security issues associated with the system and details the proposed plan and schedule for correcting and/or mitigating them.
       The following question is a repeatable module.
   
-  - id: poam_grid
-    title: Plan of Action and Milestones (POAM)
+  - id: poam_grid_01
+    title: Plan of Action and Milestones (POAM), Part I
     prompt: |
       Use this data grid to describe your IT System POAM
     type: datagrid
@@ -29,7 +29,17 @@ questions:
       - key: Estimated Cost
         text: Estimated Cost
       - key: Impacted Control Families
-        text: Impacted Control Familiies
+        text: Impacted Control Families
+    min: 0
+    max: ~
+
+ 
+  - id: poam_grid_02
+    title: Plan of Action and Milestones (POAM), Part II
+    prompt: |
+      Use this data grid to describe your IT System POAM
+    type: datagrid
+    fields:
       - key: Identified By
         text: Identified By
       - key: Remediation
@@ -38,5 +48,9 @@ questions:
         text: Scheduled Completion Date
       - key: Status in the Corrective Process Cycle
         text: Status in the Corrective Process Cycle
+      - key: Completed Milestones
+        text: Completed Milestones
+      - key: Actual Completion Date
+        text: Actual Completion Date
     min: 0
     max: ~
