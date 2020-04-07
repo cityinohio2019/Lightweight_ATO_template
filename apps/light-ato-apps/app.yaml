@@ -1,11 +1,11 @@
 id: app
 title: PREVIEW(2) IT System
 type: project
-version: 0.1.8.0
+version: 0.1.8.1
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.8.0
+  template: IT System Questionnaires (Pilot) v0.1.8.1
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -37,12 +37,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.8.0
+    short: IT System Questionnaires (Pilot) v0.1.8.1
   source_url: https://github.com/GovReady/apps
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.1.8.0
+  version: 0.1.8.1
 questions:
 #System Info
 - id: system_info
@@ -256,16 +256,16 @@ questions:
 
 #POAMS
 - id: poam_description
-  title: POAM Description
-  type: module
+  title: Description of the POAM
+  type: module-set
   icon: PTA_icon_new.png
   module-id: poam_description
   group: Plan of Action and Milestones (POAM)
-- id: poam_progress
-  title: POAM Progress
+- id: poam_doc
+  title: POAM Report
   type: module
   icon: PTA_icon_new.png
-  module-id: poam_progress
+  module-id: poam_doc
   group: Plan of Action and Milestones (POAM)
 
 
