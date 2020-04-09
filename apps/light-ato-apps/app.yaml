@@ -268,6 +268,28 @@ questions:
   module-id: poam_doc
   group: Plan of Action and Milestones (POAM)
 
+#RTM
+- id: rtm
+  title: RTM
+  type: module
+  icon: PTA_icon_new.png
+  module-id: rtm
+  group: RTM
+- id: rtm_doc
+  title: RTM Document
+  type: module
+  icon: PTA_icon_new.png
+  module-id: rtm_doc
+  group: RTM
+
+#Risk Assessment Report
+- id: risk_assessment_report_doc
+  title: Risk Assessment Report Document
+  type: module
+  icon: PTA_icon_new.png
+  module-id: risk_assessment_report_doc
+  group: Risk Assessment Report
+
 
 #Test Plan
 - id: tp_introduction
