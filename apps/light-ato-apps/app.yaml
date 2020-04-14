@@ -283,6 +283,12 @@ questions:
   group: RTM
 
 #Risk Assessment Report
+- id: risk_assessment_report
+  title: Risk Assessment Report 
+  type: module
+  icon: PTA_icon_new.png
+  module-id: risk_assessment_report
+  group: Risk Assessment Report
 - id: risk_assessment_report_doc
   title: Risk Assessment Report Document
   type: module
