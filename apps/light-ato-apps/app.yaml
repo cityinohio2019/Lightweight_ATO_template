@@ -1,11 +1,11 @@
 id: app
 title: PREVIEW(2) IT System
 type: project
-version: 0.1.8.1
+version: 0.1.8.2
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.8.1
+  template: IT System Questionnaires (Pilot) v0.1.8.2
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -37,12 +37,12 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.8.1
+    short: IT System Questionnaires (Pilot) v0.1.8.2
   source_url: https://github.com/GovReady/apps
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.1.8.1
+  version: 0.1.8.2
 questions:
 #System Info
 - id: system_info
@@ -561,13 +561,35 @@ questions:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
 
-#certification
-- id: certification
-  module-id: certification
+#ato letter
+- id: ato_letter
+  module-id: ato_letter
   icon: certification.png
-  title: Certification Details
+  title: ATO Letter
   type: module
-  group: Certification
+  group: ATO Letter
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+
+#security authorization package transmittal letter
+- id: sapt_letter
+  module-id: sapt_letter
+  icon: certification.png
+  title: Security Authorization Package Transmittal Letter
+  type: module
+  group: Security Authorization Package Transmittal Letter
+  impute:
+  - condition: project.system_info.operational_system != 'yes'
+    value: ~
+
+#certification
+- id: authorization_letter
+  module-id: authorization_letter
+  icon: certification.png
+  title: Authorization Letter
+  type: module
+  group: Authorization Letter
   impute:
   - condition: project.system_info.operational_system != 'yes'
     value: ~
