@@ -44,6 +44,45 @@ catalog:
   vendor_url: ~
   version: 0.1.8.2
 questions:
+
+#rmf
+- id: rmf_step_1
+  title: Step 1, Categorize Information Systems
+  type: module
+  icon: rmf_icon.png
+  module-id: rmf_step_1
+  group: Risk Management Framework Steps
+- id: rmf_step_2
+  title: Step 2, Select Security Controls
+  type: module
+  icon: rmf_icon.png
+  module-id: rmf_step_2
+  group: Risk Management Framework Steps
+- id: rmf_step_3
+  title: Step 3, Implement Security Controls
+  type: module
+  icon: rmf_icon.png
+  module-id: rmf_step_3
+  group: Risk Management Framework Steps
+- id: rmf_step_4
+  title: Step 4, Assess Security Controls
+  type: module
+  icon: rmf_icon.png
+  module-id: rmf_step_4
+  group: Risk Management Framework Steps
+- id: rmf_step_5
+  title: Step 5, Authorize Information System
+  type: module
+  icon: rmf_icon.png
+  module-id: rmf_step_5
+  group: Risk Management Framework Steps
+- id: rmf_step_6
+  title: Step 6, Monitor Security Controls
+  type: module
+  icon: rmf_icon.png
+  module-id: rmf_step_6
+  group: Risk Management Framework Steps
+
 #System Info
 - id: system_info
   title: System Profile - Info
