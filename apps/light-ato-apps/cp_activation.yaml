@@ -103,6 +103,50 @@ questions:
     text: Yes, but I will edit the template language.
   - key: 'no'
     text: 'No'
+- id: q14
+  title: Line of Succession/Alternates Roles
+  prompt: >
+    {% if q14_pre == 'yes_edit' %} Edit your Line of Succession/Alternates Roles statement.
+    {% endif %} {% if q14_pre == 'no' %} Write your Activation Criteria and Procedure
+    statement. {% endif %}
+  type: longtext
+  default: |
+    {% if q14_pre == 'yes_edit' %}
+
+      The {{project.system_info.system_org}} sets forth an order of succession, in coordination with
+      the order set forth by the organization to ensure that decision-making authority for the
+      {{project.system_info.system_name}} ISCP is uninterrupted.
+
+      In order to preserve the continuity of operations, individuals designated as key personnel
+      have been assigned an individual who can assume the key personnel’s position if the key
+      personnel is not able to perform their duties. Alternate key personnel are named in a line
+      of succession and are notified and trained to assume their alternate role, should the need
+      arise. 
+
+    {% endif %}
+  examples:
+  - example: |
+      The {{project.system_info.system_org}} sets forth an order of succession, in coordination with
+      the order set forth by the organization to ensure that decision-making authority for the
+      {{project.system_info.system_name}} ISCP is uninterrupted.
+
+      In order to preserve the continuity of operations, individuals designated as key personnel
+      have been assigned an individual who can assume the key personnel’s position if the key
+      personnel is not able to perform their duties. Alternate key personnel are named in a line
+      of succession and are notified and trained to assume their alternate role, should the need
+      arise. 
+  impute:
+  - condition: q14_pre == 'yes'
+    value: |
+      The {{project.system_info.system_org}} sets forth an order of succession, in coordination with
+      the order set forth by the organization to ensure that decision-making authority for the
+      {{project.system_info.system_name}} ISCP is uninterrupted.
+
+      In order to preserve the continuity of operations, individuals designated as key personnel
+      have been assigned an individual who can assume the key personnel’s position if the key
+      personnel is not able to perform their duties. Alternate key personnel are named in a line
+      of succession and are notified and trained to assume their alternate role, should the need
+      arise. 
 - id: q16_pre
   title: Activation Criteria and Procedure (pre)
   prompt: "Will you leverage the template Activation Criteria and Procedure statement\

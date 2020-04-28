@@ -63,9 +63,9 @@ questions:
     \ functions and\nprocesses manually.\n\nThe nature of unprecedent disruptions\
     \ can create confusion, and often predisposes an\notherwise competent IT staff\
     \ towards less efficient practices. In order to maintain a normal level\nof efficiency,\
-    \ it is important to descrease real-time process engineering by documenting,\n\
+    \ it is important to decrease real-time process engineering by documenting,\n\
     notification and activation guidelines and procedures, recovery guidelines and\
-    \ procedures, and\nreconstitutio guidelines and procedures prior to the occurence\
+    \ procedures, and\nreconstitution guidelines and procedures prior to the occurrence\
     \ of a disruption. During the \nnotification/activation phase, appropriate personnel\
     \ are apprised of current conditions and\ndamage assessment begins. During the\
     \ recovery phase, appropriate personnel take a course of\naction to recover the\
@@ -209,7 +209,7 @@ questions:
     > * Computer Security Incident Handling Guide [NIST SP 800-61, Revision 1]
     > * Contingency Planning Guide for Federal Information Systems [NIST SP 800-34, Revision 1]
     > * Guide for Developing the Risk Management Framework to Federal Information Systems: A Security Life Cycle Approach [NIST SP 800-37, Revision 1]
-    > * Guide to Test, Training, and Excercise Programs for IT Plans and Capabilities [NIST SP 800-84]
+    > * Guide to Test, Training, and Exercise Programs for IT Plans and Capabilities [NIST SP 800-84]
     > * Information Security Continuous Monitoring for Federal Information Systems and Organizations [NIST SP 800-137]
     > * Recommended Security Controls for Federal Information Systems [NIST SP 800-53, Revision 3]
     > * Risk Management Guide for Information Technology Systems [NIST 800-30]
@@ -309,12 +309,12 @@ questions:
     Agency boilerplate:
 
 
-    > This ISCP has been developed for ISA which is classified as a [[SYSTEM_LEVEL]]
+    > This ISCP has been developed for ISA which is classified as a {{project.fisma_level.fisma_level}} 
     impact system, in accordance with Federal Information Processing Standards (FIPS)
     199.  FIPS 199 provides guidelines on determining potential impact to organizational
     operations and assets, and individuals through a formula that examines three security
     objectives: confidentiality, integrity, and availability.  The procedures in this
-    ISCP have been developed for a impact system and are designed to recover the ISA
+    ISCP have been developed for an impact system and are designed to recover the ISA
     within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or
     purchase of new equipment, short-term disruptions lasting less than _Enter Number_,
     or loss of data at the primary facility or at the user-desktop levels is outside
@@ -325,7 +325,7 @@ questions:
 
     > * Disruption at the [VENDOR_PRIMARY_SITE]
 
-    > * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct
+    > * Disruption to the {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct
     circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 
@@ -354,12 +354,12 @@ questions:
   default: >
     {% if q04_pre == 'yes_edit' %}
 
-    This ISCP has been developed for ISA which is classified as a impact system, in
+    This ISCP has been developed for ISA which is classified as an impact system, in
     accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199
     provides guidelines on determining potential impact to organizational operations
     and assets, and individuals through a formula that examines three security objectives:
     confidentiality, integrity, and availability.  The procedures in this ISCP have
-    been developed for a impact system and are designed to recover the ISA within
+    been developed for an impact system and are designed to recover the ISA within
     Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase
     of new equipment, short-term disruptions lasting less than _Enter Number_, or
     loss of data at the primary facility or at the user-desktop levels is outside
@@ -370,7 +370,7 @@ questions:
 
     * Disruption at the [VENDOR_PRIMARY_SITE]
 
-    * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits
+    * Disruption to the {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct circuits
     that connect users to the {{project.system_info.system_hosting.text}}.
 
 
@@ -380,19 +380,19 @@ questions:
     * **Overall recovery and continuity of business operations.** The Business Resumption
     Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
 
-    * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is
+    * **Emergency evacuation of personnel.** The Occupant Emergency Plan (OEP) is
     appended to this plan. As stated, this appended plan addresses occupant emergencies
     and is not the information system Contingency Plan.
 
     {% endif %}
   examples:
   - example: >
-      This ISCP has been developed for ISA which is classified as a impact system,
+      This ISCP has been developed for ISA which is classified as an impact system,
       in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS
       199 provides guidelines on determining potential impact to organizational operations
       and assets, and individuals through a formula that examines three security objectives:
       confidentiality, integrity, and availability.  The procedures in this ISCP have
-      been developed for a impact system and are designed to recover the ISA within
+      been developed for an impact system and are designed to recover the ISA within
       Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase
       of new equipment, short-term disruptions lasting less than _Enter Number_, or
       loss of data at the primary facility or at the user-desktop levels is outside
@@ -403,7 +403,7 @@ questions:
 
       * Disruption at the [VENDOR_PRIMARY_SITE]
 
-      * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct
+      * Disruption to the {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct
       circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 
@@ -413,18 +413,18 @@ questions:
       * **Overall recovery and continuity of business operations.** The Business Resumption
       Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
 
-      * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is
+      * **Emergency evacuation of personnel.** The Occupant Emergency Plan (OEP) is
       appended to this plan. As stated, this appended plan addresses occupant emergencies
       and is not the information system Contingency Plan.
   impute:
   - condition: q04_pre == 'yes'
     value: >
-      This ISCP has been developed for ISA which is classified as a impact system,
+      This ISCP has been developed for ISA which is classified as an impact system,
       in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS
       199 provides guidelines on determining potential impact to organizational operations
       and assets, and individuals through a formula that examines three security objectives:
       confidentiality, integrity, and availability.  The procedures in this ISCP have
-      been developed for a impact system and are designed to recover the ISA within
+      been developed for an impact system and are designed to recover the ISA within
       Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase
       of new equipment, short-term disruptions lasting less than _Enter Number_, or
       loss of data at the primary facility or at the user-desktop levels is outside
@@ -435,7 +435,7 @@ questions:
 
       * Disruption at the [VENDOR_PRIMARY_SITE]
 
-      * Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct
+      * Disruption to the {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct
       circuits that connect users to the {{project.system_info.system_hosting.text}}.
 
 
@@ -445,7 +445,7 @@ questions:
       * **Overall recovery and continuity of business operations.** The Business Resumption
       Plan (BRP) and Continuity of Operations (COOP) Plans are appended to this plan.
 
-      * **Emergency evacuation of personnel.** The Occumant Emergency Plan (OEP) is
+      * **Emergency evacuation of personnel.** The Occupant Emergency Plan (OEP) is
       appended to this plan. As stated, this appended plan addresses occupant emergencies
       and is not the information system Contingency Plan.
 - id: q05_pre
@@ -473,7 +473,7 @@ questions:
 
 
     > * The {{project.system_info.primary_agency_admin_site}} primary work site is
-    inoperable and cannot be recovered withing 48 hours.
+    inoperable and cannot be recovered within 48 hours.
 
     > * Key {{project.system_info.system_admin_team}} team members (e.g., {{project.system_info.system_short_name}}
     platform engineers) will be identified and trained in their Contingency planning
@@ -487,23 +487,23 @@ questions:
 
 
     > * Preventive controls at the {{project.se_aws_elk.vendor_datacenter}}, such
-    as generators, uninterruptable power supply (UPS), environmental controls, sprinkler
+    as generators, uninterruptible power supply (UPS), environmental controls, sprinkler
     systems, fire extinguishers, and fire department assistance are, or may not be
     fully operational at the the time of the service disruption.
 
     > * Current backups of the {{project.system_info.system_short_name}} applicable
-    software and data are intact and avaialble at the offsite storage facility located
+    software and data are intact and available at the offsite storage facility located
     within other [[VENDOR_DATACENTER_ALTSITE]].
 
     > The {{project.se_aws_elk.vendor_datacenter}} including its backup storage capabilities
     are FedRAMP certified.
 
 
-    > Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
+    > Disruption to {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct connect
     circuits:
 
 
-    > * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go
+    > * The {{project.system_info.system_org}} [[NETWORK_CONNECTION]] redundant circuits go
     down with no other alternate telecommunications or connectivity.
   type: choice
   choices:
@@ -559,11 +559,11 @@ questions:
     are FedRAMP certified.
 
 
-    Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
+    Disruption to {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct connect
     circuits:
 
 
-    * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go down
+    * The {{project.system_info.system_org}} [[NETWORK_CONNECTION]] redundant circuits go down
     with no other alternate telecommunications or connectivity.
 
     {% endif %}
@@ -606,11 +606,11 @@ questions:
       are FedRAMP certified.
 
 
-      Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
+      Disruption to {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct connect
       circuits:
 
 
-      * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go
+      * The {{project.system_info.system_org}} [[NETWORK_CONNECTION]] redundant circuits go
       down with no other alternate telecommunications or connectivity.
   impute:
   - condition: q05_pre == 'yes'
@@ -652,17 +652,19 @@ questions:
       are FedRAMP certified.
 
 
-      Disruption to [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct connect
+      Disruption to {{project.system_info.system_org}} [[NETWORK_CONNECTION]] direct connect
       circuits:
 
 
-      * The [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] redundant circuits go
+      * The {{project.system_info.system_org}} [[NETWORK_CONNECTION]] redundant circuits go
       down with no other alternate telecommunications or connectivity.
 - id: q06_pre
   title: All potential disruptions listed?
   prompt: |
     Have all potential disruptions been included and addressed in the ITCP?
   type: yesno
+  help: |
+    ITCP means Information Technology Contingency Plan
 - id: q06
   title: Additional potential disruptions
   prompt: |
