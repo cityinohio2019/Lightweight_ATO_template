@@ -62,23 +62,24 @@ source: https://www.fedramp.gov/assets/resources/templates/SSP-A06-FedRAMP-ISCP-
   </table>
 </div>
 
-# Cover Page
+* * *
 
+## Table of Contents
 
-# FedRAMP page
+*   [Contingency Plan](#cp)
+    *   [Section 1: Introduction and Purpose](#intro)
+    *   [Section 2: Concept of Operations](#conops)
+    *   [Section 3: Activation and Notification](#activationnotification)
+    *   [Section 4: Recovery](#recovery)
+    *   [Section 5: Reconstitution](#reconstitution)
+    *   [Section 6: Contingency Plan Testing](#cptesting)
 
-
-[Table of Contents]
+* * *
 
 
 CONTINGENCY PLAN APPROVALS
 
-<table border="1">
-  <tr><th> Name </th><th> Click here to enter text.  </th><th> Date </th><th> s </th></tr>
-  <tr><td> Name </td><td> Click here to enter text.  </td><td> Date </td><td>s</td></tr>
-  <tr><td> Title </td><td> Click here to enter text. </td><td> Date </td><td>s</td></tr>
-  <tr><td> Cloud Service Provider </td><td> Click here to enter text. </td><td> Date </td><td>s</td></tr>
-</table>
+{{project.cp_introduction.approvals}}
 
 # 1. Introduction and Purpose
 
@@ -105,16 +106,16 @@ Table 1‑3 Information System Name and Title
 
 <table border="1">
   <tr><th> Unique Identifier </th><th> Information System Name </th><th> Information System Abbreviation </th></tr>
-  <tr><td> [[SYSTEM_ID]]     </td><td> {{project.system_info.system_name}} </td><td> {{project.system_info.system_short_name}} </td></tr>
+  <tr><td> {{project.fisma_level.application_number}}     </td><td> {{project.system_info.system_name}} </td><td> {{project.system_info.system_short_name}} </td></tr>
 </table>
 
 ## 1.4 Scope
 
-This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.  The procedures in this ISCP have been developed for a impact system and are designed to recover the ISA within Recovery Time Objective (RTO) _Enter Number_ hours.  The replacement or purchase of new equipment, short-term disruptions lasting less than _Enter Number_, or loss of data at the primary facility or at the user-desktop levels is outside the scope of this plan.
+This ISCP has been developed for ISA which is classified as a impact system, in accordance with Federal Information Processing Standards (FIPS) 199.  FIPS 199 provides guidelines on determining potential impact to organizational operations and assets, and individuals through a formula that examines three security objectives: confidentiality, integrity, and availability.
 
 * Disruption at the primary work site {{project.system_info.primary_agency_admin_site}}
-* Disruption at the {{project.se_aws_elk.aws_facility}}
-* Disruption to the [[PARENT_AGENCY_ACRONYM]] [[NETWORK_CONNECTION]] direct circuits that connect users to the {{project.se_aws_elk.vendor_datacenter}}.
+* Disruption at the vendor site
+* Disruption to the organizational network connection that direct circuits that connect users to the vendor site
 
 This ITCP does not apply to the following situations:
 
@@ -148,12 +149,6 @@ This section provides details about the {{project.system_info.system_name}}, an 
 
 {{project.cp_questionnaire.q09}}
 
-[DIAGRAM 1 - TO DO]
-
-[DIAGRAM 2 - TO DO]
-
-[DIAGRAM 3 - TO DO]
-
 ## 2.3 Data Backup Readiness Information
 
 A common understanding of data backup definitions is necessary in order to ensure that data restoration is successful.  CSP Name recognizes different types of backups, which have different purposes, and those definitions are found in Table 2‑1 Backup Types.
@@ -168,25 +163,26 @@ Table 2‑1 Backup System Components
 <tr><td>Mirror Backup</td><td>Mirror backup is identical to a full backup, with the exception that the files are not compressed in zip files and they cannot be protected with a password.  A mirror backup is most frequently used to create an exact copy of the source data.</td></tr>
 </table>
 
-The hardware and software components used to create the {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.
-
-Table 2‑2 Backup System Components
+</br>
 
 The hardware and software components used to create the {{project.system_info.system_name}} backups are noted in Table 2‑2 Backup System Components.
+
+</br>
 
 Table 2‑2 Backup System Components
 
 {{project.cp_questionnaire.q10_backup_system_components|safe}}
 
+</br>
 
 Table 2‑3 Back-Up Storage Location shows the offsite storage facility location of current backups of the {{project.system_info.system_name}} system software and data.
 
+</br>
+
 Table 2‑3 Back-Up Storage Location
-<table border="1">
-<tr><td>Site Name</td><td>Click here to enter text.</td></tr>
-<tr><td>Street Address</td><td>Click here to enter text.</td></tr>
-<tr><td>City, State, Zip Code</td><td>Click here to enter text.</td></tr>
-</table>
+
+{{project.cp_questionnaire.q10_backup_storage_location|safe}}
+
 Personnel who are authorized to retrieve backups from the offsite storage location, and may authorize the delivery of backups, are noted in D.1Appendix – Alternate Storage Site Information.
 
 
@@ -197,30 +193,39 @@ CSP Name recognizes different types of alternate sites, which are defined in Tab
 Table 2‑4 Alternative Site Types
 
 <table border="1">
-<tr></td>Type of Site  </td><td>Description |
-<tr></td>Cold Sites    </td><td>Cold Sites are typically facilities with adequate space and infrastructure (electric power, telecommunications connections, and environmental controls) to support information system recovery activities.</td></tr>
-<tr></td>Warm Sites    </td><td>Warm Sites are partially equipped office spaces that contain some or all of the system hardware, software, telecommunications, and power sources.</td></tr>
-<tr></td>Hot Sites     </td><td>Hot Sites are facilities appropriately sized to support system requirements and configured with the necessary system hardware, supporting infrastructure, and support personnel.</td></tr>
-<tr></td>Mirrored Sites</td><td>Mirrored Sites are fully redundant facilities with automated real-time information mirroring.  Mirrored sites are identical to the primary site in all technical respects.</td></tr>
+  <tr>
+    <th class="tg-lboi">Type of Site</th>
+    <th class="tg-lboi">Descriptions</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Cold Sites</td>
+    <td class="tg-0lax">Cold Sites are typically facilities with adequate space and infrastructure (electric power, telecommunications connections, and environmental controls) to support information system recovery activities.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Warm Sites</td>
+    <td class="tg-0lax">Warm Sites are partially equipped office spaces that contain some or all of the system hardware, software, telecommunications, and power sources.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Hot Sites</td>
+    <td class="tg-0lax">Hot Sites are facilities appropriately sized to support system requirements and configured with the necessary system hardware, supporting infrastructure, and support personnel.</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">Mirrored Sites</td>
+    <td class="tg-0lax">Mirrored Sites are fully redundant facilities with automated real-time information mirroring.  Mirrored sites are identical to the primary site in all technical respects.</td>
+  </tr>
 </table>
 
 Alternate facilities have been established for the {{project.system_info.system_name}} as noted in Table 2‑4 Alternative Site Types.
 
+</br>
+
 Table 2‑5 Primary and Alternative Site Locations
 
-<table border="1">
-<tr></td>Designation   </td><td>Site Name</td><td>Site Type</td><td>Addres</td></tr>
-<tr></td>Primary Site  </td><td>         </td><td>         </td><td>      </td></tr>
-<tr></td>Alternate Site</td><td>         </td><td>         </td><td>      </td></tr>
-<tr></td>Alternate Site</td><td>         </td><td>         </td><td>      </td></tr>
-</table>
+{{project.cp_questionnaire.q10_primary_alternate_site|safe}}
 
 ## 2.5 Roles and Responsibilities
 
 CSP Name establishes multiple roles and responsibilities for responding to outages, disruptions, and disasters for the {{project.system_info.system_name}}.  Individuals who are assigned roles for recovery operations collectively make up the Contingency Plan Team and are trained annually in their duties.  Contingency Plan Team members are chosen based on their skills and knowledge.
-
-Instruction: Describe each team and role responsible for executing or supporting system recovery and reconstitution.  Include responsibilities for each team/role including leadership roles.  FedRAMP has established default roles and a small set of default responsibilities which must be edited and modified to match the actual organizational role names, responsibilities, and associated duties for the organization.
-Delete this instruction from your final version of this document.
 
 The Contingency Plan Team consists of personnel who have been selected to perform the roles and responsibilities described in the sections that follow.  All team leads are considered key personnel.
 
@@ -232,11 +237,11 @@ The Contingency Plan Team consists of personnel who have been selected to perfor
 
 {{project.cp_questionnaire.q12cpc}}
 
-### 2.5.8 Security Coordinator (SC)
+### 2.5.3 Security Coordinator (SC)
 
 {{project.cp_questionnaire.q12sc}}
 
-### 2.5.9 Plan Distribution and Availability
+### 2.5.4 Plan Distribution and Availability
 
 {{project.cp_activation.q13}}
 
@@ -244,7 +249,7 @@ The Contingency Plan Team consists of personnel who have been selected to perfor
 
 The CSP Name sets forth an order of succession, in coordination with the order set forth by the organization to ensure that decision-making authority for the {{project.system_info.system_name}} ISCP is uninterrupted.
 
-In order to preserve the continuity of operations, individuals designated as key personnel have been assigned an individual who can assume the key personnel&#39;s position if the key personnel is not able to perform their duties.  Alternate key personnel are named in a line of succession and are notified and trained to assume their alternate role, should the need arise.  The line of succession for key personnel can be found in BAppendix – Key Personnel and Team Member Contact List.
+In order to preserve the continuity of operations, individuals designated as key personnel have been assigned an individual who can assume the key personnel&#39;s position if the key personnel is not able to perform their duties.  Alternate key personnel are named in a line of succession and are notified and trained to assume their alternate role, should the need arise.  The line of succession for key personnel can be found in Appendix B – Key Personnel and Team Member Contact List.
 
 # 3 Activation and Notification
 
@@ -258,14 +263,11 @@ At the completion of the Activation and Notification Phase, key {{project.system
 
 Personnel/roles listed in Table 3‑1 Personnel Authorized to Activate the ISCP are authorized to activate the ISCP.
 
+</br>
+
 Table 3‑1 Personnel Authorized to Activate the ISCP
 
-
-<table border="1">
-<tr><th>Name</th><th>Title and ISCP Role</th><th>Contact Information</th></tr>
-<tr><td>Click here to enter text.</td><td>Click here to enter text.</td><td>Click here to enter text.</td></tr>
-<tr><td>Click here to enter text.</td><td>Click here to enter text.</td><td>Click here to enter text.</td></tr>
-</table>
+{{project.cp_activation.q13_activation_personnel}}
 
 
 ## 3.2 Notification Instructions
@@ -280,7 +282,7 @@ Following notification, a thorough outage assessment is necessary to determine t
 
 {{project.cp_activation.q17_outage_assessment}}
 
-## 4 Recovery
+# 4 Recovery
 
 The recovery phase provides formal recovery operations that begin after the ISCP has been activated, outage assessments have been completed (if possible), personnel have been notified, and appropriate teams have been mobilized.  Recovery phase activities focus on implementing recovery strategies to restore system capabilities, repair damage, and resume operational capabilities at the original or an alternate location.  At the completion of the recovery phase, {{project.system_info.system_name}} will be functional and capable of performing the functions identified in Section 4.1 Sequence of Recovery Operations of the plan.
 
@@ -321,7 +323,6 @@ that data files or databases have been recovered completely at the permanent loc
 {{project.cp_reconstitution.q25_data_validation_testing}}
 
 ## 5.2 Functional Validation
-Testing
 
 Functionality testing is a process for verifying that all system functionality\nhas
 been tested, and the system is ready to return to normal operations.
@@ -356,14 +357,12 @@ readying the system for a possible future contingency event.
 
 {{project.cp_reconstitution.cp_cleanup}}
 
+</br>
+
 Table
 5‑1 Cleanup Roles and Responsibilities
 
-<table border="1">
-<tr><th> Role </th><th> Cleanup Responsibilities </th></tr>
-<tr><td> TBD </td><td> TBD </td></tr>
-<tr><td> TBD </td><td> TBD </td></tr>
-</table>
+{{project.cp_reconstitution.cp_cleanup_roles}}
 
 ## 5.6 Returning Backup Media
 
@@ -394,22 +393,38 @@ effort.  Information on lessons learned must be included in the annual update
 to the ISCP.  It is the responsibility of each ISCP team or person to document
 their actions during the recovery event.
 
-[[FIX]]
-
-Table 5‑2 Event Documentation
-Responsibility lists the responsibility of each\nISCP team or person to document
-their actions during the recovery event.
+Table 5‑2 lists the responsibility of each ISCP team or person to document their actions during the recovery event.
 
 Table 5‑2 Event Documentation Responsibility
 
-| Role Name | Documentation Responsibility |
-| --------- | ---------------------------- |
-| {{project.cp_reconstitution.cp_role_activity_log}} | Activity log |
-| {{project.cp_reconstitution.cp_role_testing}} | Functionality and data testing results |
-| {{project.cp_reconstitution.cp_role_lessons_learned}} | Lessons learned |
-| {{project.cp_reconstitution.cp_role_after_action_report}} | After Action Report |
+<table class="tg">
+  <tr>
+    <th class="tg-lboi">Role Name</th>
+    <th class="tg-lboi">Documentation Responsibility</th>
+  </tr>
+  <tr>
+    <td class="tg-0lax">{{project.cp_reconstitution.cp_role_activity_log}}</td>
+    <td class="tg-0lax">Activity Log</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">{{project.cp_reconstitution.cp_role_testing}}</td>
+    <td class="tg-0lax">Functionality and Data Testing Results</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">{{project.cp_reconstitution.cp_role_lessons_learned}}</td>
+    <td class="tg-0lax">Lessons Learned</td>
+  </tr>
+  <tr>
+    <td class="tg-0lax">{{project.cp_reconstitution.cp_role_after_action_report}}</td>
+    <td class="tg-0lax">After Action Report</td>
+  </tr>
+</table>
 
 
 # 6 Contingency Plan Testing
 
-Contingency Plan operational tests of the {{project.system_info.system_name}} are performed {{project.cp_introduction.q08b_test_frequency.text|lower}}.  A Contingency Plan Test Report is documented after each annual test.  A template for the Contingency Plan Test Report is found in GAppendix – Contingency Plan Test Report.
+Contingency Plan operational tests of the {{project.system_info.system_name}} are performed {{project.cp_introduction.q08b_test_frequency}}.  
+
+</br>
+
+A Contingency Plan Test Report is documented after each annual test.  A template for the Contingency Plan Test Report is found in Appendix G – Contingency Plan Test Report.

@@ -437,25 +437,9 @@ The system is currently in the life-cycle phase shown in Table 7 1. System Statu
       <th class="th-header" colspan="3">System Status</th>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.system_status == "operational" %} YES {% else %} NO {% endif %}</td>
-      <td>Operational</td>
-      <td>The system is operating and in production.</td>
+      <td>{% if project.system_info_technical.system_status == "operational" %}Operational (System is operating and in production) {% endif %} {% if project.system_info_technical.system_status == "under_dev" %} Under Development (System is being designed, developed, or implemented) {% endif %} {% if project.system_info_technical.system_status == "major_mod" %} Major Modification (System is undergoing a major change, development, or transition){% endif %} {% if project.system_info_technical.system_status == "other" %} Other ({{project.system_info_technical.choice_other}}){% endif %} </td>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.system_status == "under_dev" %} YES {% else %} NO {% endif %}</td>
-      <td>Under Development</td>
-      <td>The system is being designed, developed, or implemented</td>
-    </tr>
-    <tr>
-      <td>{% if project.system_info_type.system_status == "major_mod" %} YES {% else %} NO {% endif %}</td>
-      <td>Major Modification</td>
-      <td>The system is undergoing a major change, development, or transition.</td>
-    </tr>
-    <tr>
-      <td>{% if project.system_info_type.system_status == "other" %} {{project.system_info_type.choice_other}} {% else %} NO {% endif %}</td>
-      <td>Other</td>
-      <td>Other/Explain</td>
-    </tr>
 </table>
 
 <h2>8.  INFORMATION SYSTEM TYPE</h2>
@@ -466,28 +450,14 @@ Information systems, particularly those based on cloud architecture models, are 
 
 <table class="table-ssp" border="1">
     <tr>
-      <th class="th-header" colspan="3">Service Provider Architecture Layers</th>
+      <th class="th-header" colspan="3">System Status</th>
     </tr>
     <tr>
-      <td>{{project.system_info_type.info_system_saas}}</td>
-      <td>Software as a Service (SaaS)</td>
-      <td>Major Application</td>
+      <td>{{project.system_info_technical.cloud_service_model.text}}
+      {% if project.system_info_technical.cloud_service_model == "other" %}
+    {{project.system_info_technical.cloud_service_model_other.text}}{% endif %} </td>
     </tr>
     <tr>
-      <td>{{project.system_info_type.info_system_paas}}</td>
-      <td>Platform as a Service (PaaS)</td>
-      <td>Major Application</td>
-    </tr>
-    <tr>
-      <td>{{project.system_info_type.info_system_iaas}}</td>
-      <td>Infrastructure as a Service (IaaS)</td>
-      <td>General Support System</td>
-    </tr>
-    <tr>
-      <td>{{project.system_info_type.info_system_other}}</td>
-      <td>Other</td>
-      <td>Other/Explain</td>
-    </tr>
 </table>
 
 Note: Refer to NIST SP 800-145 for information on cloud computing architecture models.  
@@ -500,28 +470,13 @@ Information systems are made up of different deployment models.  The deployment 
 
 <table class="table-ssp" border="1">
     <tr>
-      <th class="th-header" colspan="3">Service Provider Cloud Deployment Model</th>
+      <th class="th-header" colspan="3">System Status</th>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.cloud_model == "public" %} YES {% else %} NO {% endif %}</td>
-      <td>Public</td>
-      <td>Cloud services and infrastructure supporting multiple organizations and agency clients</td>
+      <td>{{project.system_info_technical.cloud_model.text}}
+      {% if project.system_info_technical.cloud_model == "hybrid" %} {{project.system_info_technical.choice_hybrid.text}}{% endif %} </td>
     </tr>
     <tr>
-      <td>{% if project.system_info_type.cloud_model == "private" %} YES {% else %} NO {% endif %}</td>
-      <td>Private</td>
-      <td>Cloud services and infrastructure dedicated to a specific organization/agency and no other clients</td>
-    </tr>
-    <tr>
-      <td>{% if project.system_info_type.cloud_model == "govt_only" %} YES {% else %} NO {% endif %}</td>
-      <td>Government Only Community</td>
-      <td>Cloud services and infrastructure shared by several organizations/agencies with same policy and compliance considerations</td>
-    </tr>
-    <tr>
-      <td>{% if project.system_info_type.system_status == "hybrid" %} {{project.system_info_type.choice_hybrid}} {% else %} NO {% endif %}</td>
-      <td>Hybrid</td>
-      <td>Hybrid/Explain</td>
-    </tr>
 </table>
 
 <h3>8.3. Leveraged Authorizations</h3>
@@ -530,7 +485,7 @@ The {{project.system_info.system_name}} Choose an item leverages a pre-existing 
 
 <div class="table-caption">Table 8-3. Leveraged Authorizations</div>
 
-{{project.system_info_type.leveraged_authorizations}}
+{{project.system_info_technical.leveraged_authorizations}}
 
 <h2>9.  GENERAL SYSTEM DESCRIPTION</h2>
 
@@ -551,7 +506,7 @@ All personnel have their status categorized with a sensitivity level in accordan
 
 <div class="table-caption">Table 9-1. Personnel Roles and Privileges</div>
 
-{{project.technical_information.security_impact_users}}
+{{project.system_info_technical.security_impact_users}}
 
 <h3>9.4.  Network Architecture</h3>
 
@@ -570,13 +525,13 @@ The Table 10 1. Ports, Protocols and Services below lists the ports, protocols a
 
 <div class="table-caption">Table 10-1. Ports, Protocols and Services</div>
 
-{{project.technical_information.ports_protocols_services}}
+{{project.system_info_technical.ports_protocols_services}}
 
 <h3>11. SYSTEM INTERCONNECTIONS</h3>
 
 <div class="table-caption">Table 11-1. System Interconnections</div>
 
-{{project.technical_information.system_interconnections}}
+{{project.system_info_technical.system_interconnections}}
 
 
 <h2>12. LAWS, REGULATIONS, STANDARDS AND GUIDANCE</h2>
@@ -588,7 +543,7 @@ Table 12 1. Information System Name Laws and Regulations includes additional law
 
 <div class="table-caption">Table 12-1. Information System Name Laws and Regulations</div>
 
-{{project.technical_information.laws_regulations}}
+{{project.system_info_technical.laws_regulations}}
 
 <h3>12.2. Applicable Standards and Guidance</h3>
 The FedRAMP Standards and Guidance be found on this web page: Templates
@@ -596,7 +551,7 @@ Table 12 2. Information System Name Standards and Guidance includes in this sect
 
 <div class="table-caption">Table 12-2. Information System Name Standards and Guidance</div>
 
-{{project.technical_information.standards_guidance}}
+{{project.system_info_technical.standards_guidance}}
 
 
 

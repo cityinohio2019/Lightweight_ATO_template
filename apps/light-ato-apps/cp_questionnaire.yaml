@@ -194,34 +194,67 @@ questions:
       phase also addresses recovery effort documentation, activity log finalization,
       incorporation of lessons learned into plan updates, and readying resources for
       any future events.
+
 - id: q10_backup_system_components
   title: Backup System Components
-  type: longtext
   prompt: |
     Describe the hardware and software used to create backups.
 
     Briefly outline the major hardware and software components used to back up the {{project.system_info.system_short_name}} IT System.
 
     You do not need to describe how backups of any sub-systems or general service systems used by {{project.system_info.system_short_name}}.
-  default: |
-    <pre>System/Component:
-      Description
+  type: datagrid
+  fields:
+    - key: System/Component
+      text: System/Component
+    - key: Software Used
+      text: Software Used
+    - key: Hardware Used
+      text: Hardware Used
+    - key: Frequency
+      text: Frequency
+    - key: Backup Type
+      text: Backup Type
+    - key: Retention Period
+      text: Retention Period
+  min: 0
+  max: ~
 
-    Software Used:
-      UPDATE WITH A DESCRIPTION OF SOFTWARE USED
+- id: q10_backup_storage_location
+  title: Backup System Components
+  prompt: |
+    Enter information on back-up storage locations.
 
-    Hardware Used:
-      UPDATE WITH A DESCRIPTION OF HARDWARE USED
+    Back-Up Storage Location shows the offsite storage facility location of current backups of the {{project.system_info.system_short_name}} system software and data.
+  type: datagrid
+  fields:
+    - key: Site Name
+      text: Site Name
+    - key: Street Adress
+      text: Street Adress
+    - key: City, State, Zip Code
+      text: City, State, Zip Code
+  min: 0
+  max: ~
 
-    Frequency:
-      UPDATE WITH DESCRIPTION OF FREQUENCY
+- id: q10_primary_alternate_site
+  title: Primary and Alternative Site Locations
+  prompt: |
+    Enter information on Primary and Alternative Site Locations.
 
-    Backup Type:
-      UPDATE WITH DESCRIPTION OF BACKUP TYPE
+    The site names should be either Primary Site or Alternate Site.
+  type: datagrid
+  fields:
+    - key: Site Name
+      text: Site Name
+    - key: Site Type
+      text: Site Type
+    - key: Address
+      text: Address
+  min: 0
+  max: ~
 
-    Retention Period:
-      UPDATE WITH DESCRIPTION OF RETENTION PERIOD
-    </pre>
+
 - id: q10_pre
   title: Data Backup Readines Information (pre)
   prompt: "Will you leverage the template Data Backup Readines Information statement\

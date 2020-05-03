@@ -37,6 +37,23 @@ questions:
     text: Yes, but I will edit the template language.
   - key: 'no'
     text: 'No'
+    
+- id: q13_activation_personnel
+  title: Personnel Authorized to Activate the ISCP
+  prompt: |
+    Enter information on the personnel who are authorized to activate the IT system
+
+  type: datagrid
+  fields:
+    - key: Name
+      text: Name
+    - key: Title and ISCP Role
+      text: Title and ISCP Role
+    - key: Contact Information
+      text: Contact Information
+  min: 0
+  max: ~
+
 - id: q13
   title: Plan Distribution and Availability
   prompt: >

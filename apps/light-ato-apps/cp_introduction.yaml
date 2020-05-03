@@ -11,6 +11,24 @@ introduction:
     \ and procedures for a \r\nservice disruption including:\r\n\r\n* Notification\
     \ and activation\r\n* Recovery\r\n* Reconstitution"
 questions:
+- id: approvals
+  title: Contingency Plan Approvals
+  prompt: |
+    List Approvals
+
+    Use this data grid to list this Contingency Plan's approvals.
+  type: datagrid
+  fields:
+    - key: Name
+      text: Name
+    - key: Description
+      text: Description
+    - key: Date
+      text: Date
+  min: 0
+  max: ~
+
+  type: datagrid
 - id: q01_pre
   title: Introduction and Purpose (pre)
   prompt: "Will you leverage the template Introduction and Purpose statement used\
