@@ -266,17 +266,17 @@ questions:
 
 #RTM
 - id: rtm
-  title: RTM
+  title: RTM Questions
   type: module
   icon: PTA_icon_new.png
   module-id: rtm
-  group: RTM
+  group: Requirements Traceability Matrix (RTM)
 - id: rtm_doc
   title: RTM Document
   type: module
   icon: PTA_icon_new.png
   module-id: rtm_doc
-  group: RTM
+  group: Requirements Traceability Matrix (RTM)
 
 #Risk Assessment Report
 - id: risk_assessment_report
