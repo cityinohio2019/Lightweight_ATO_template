@@ -1,13 +1,13 @@
-id: certification
-title: Certification Details
+id: authorization_letter
+title: Authorization Letter
 questions:
 
 - id: cert_intro
-  title: Certification Intro
+  title: Authorization Intro
   prompt: |
     Certifying the Status of {{project.system_info.system_name}}'s ATO
 
-    This module will ask certifying officials relevant questions assuming that the requisite information has been collected.
+    This module will ask authorizing officials relevant questions assuming that the requisite information has been collected.
 
   type: interstitial
 
