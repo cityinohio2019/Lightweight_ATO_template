@@ -1,11 +1,11 @@
 id: app
 title: PREVIEW(2) IT System
 type: project
-version: 0.1.8.2
+version: 0.1.8.3
 icon: app.png
 introduction:
   format: markdown
-  template: IT System Questionnaires (Pilot) v0.1.8.2
+  template: IT System Questionnaires (Pilot) v0.1.8.3
 output:
 - id: fisma_ssp_template
   format: markdown
@@ -37,31 +37,32 @@ catalog:
       ==================
 
       Edit this Markdown file to provide a long description of your compliance app. The contents of this file will be displayed in the GovReady-Q Compliance Apps Catalog.
-    short: IT System Questionnaires (Pilot) v0.1.8.2
+    short: IT System Questionnaires (Pilot) v0.1.8.3
   source_url: https://github.com/GovReady/apps
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.1.8.2
+  version: 0.1.8.3
 questions:
+
 #System Info
 - id: system_info
-  title: System Profile - Info
+  title: System Profile - Information
   type: module
   icon: system_info.png
   module-id: system_info
   group: System Info
 - id: system_info_poc
-  title: System Profile - POC
+  title: System Profile - Point of Contact
   type: module
   icon: system_info.png
   module-id: system_info_poc
   group: System Info
-- id: system_info_type
-  title: System Profile - Type
+- id: system_info_technical
+  title: System Profile - Technical
   type: module
   icon: system_info.png
-  module-id: system_info_type
+  module-id: system_info_technical
   group: System Info
 
 #Determine Fisma Level
@@ -71,12 +72,7 @@ questions:
   icon: fisma_icon.png
   module-id: fisma_level
   group: System Categorization
-- id: technical_information
-  title: Technical Information
-  type: module
-  icon: fisma_icon.png
-  module-id: technical_information
-  group: System Categorization
+
 #PTA
 - id: pta_intro
   title: Privacy Threshold Analysis (PTA) Overview
@@ -258,29 +254,29 @@ questions:
 - id: poam_description
   title: Description of the POAM
   type: module-set
-  icon: PTA_icon_new.png
+  icon: poam.png
   module-id: poam_description
   group: Plan of Action and Milestones (POAM)
 - id: poam_doc
   title: POAM Document
   type: module
-  icon: PTA_icon_new.png
+  icon: poam.png
   module-id: poam_doc
   group: Plan of Action and Milestones (POAM)
 
 #RTM
 - id: rtm
-  title: RTM
+  title: RTM Questions
   type: module
   icon: PTA_icon_new.png
   module-id: rtm
-  group: RTM
+  group: Requirements Traceability Matrix (RTM)
 - id: rtm_doc
   title: RTM Document
   type: module
   icon: PTA_icon_new.png
   module-id: rtm_doc
-  group: RTM
+  group: Requirements Traceability Matrix (RTM)
 
 #Risk Assessment Report
 - id: risk_assessment_report
@@ -340,7 +336,7 @@ questions:
   title: Incident Response Plan (Intro)
   type: module
   module-id: irp_intro
-  icon: app_old.png
+  icon: irp.png
   group: Incident Response Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -349,7 +345,7 @@ questions:
   title: Incident Response Plan (Initiate)
   type: module
   module-id: irp_initiate
-  icon: app_old.png
+  icon: irp.png
   group: Incident Response Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -358,7 +354,7 @@ questions:
   title: Incident Response Plan (Assess)
   type: module
   module-id: irp_assess
-  icon: app_old.png
+  icon: irp.png
   group: Incident Response Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -367,7 +363,7 @@ questions:
   title: Incident Response Plan (Remediate)
   type: module
   module-id: irp_remediate
-  icon: app_old.png
+  icon: irp.png
   group: Incident Response Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -376,7 +372,7 @@ questions:
   title: Incident Response Plan (Retrospective)
   type: module
   module-id: irp_retro
-  icon: app_old.png
+  icon: irp.png
   group: Incident Response Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -385,7 +381,7 @@ questions:
   title: Incident Response Plan (Document)
   type: module
   module-id: irp_doc
-  icon: app_old.png
+  icon: irp.png
   group: Incident Response Plan
   impute:
   - condition: project.system_info.operational_system != 'yes'
@@ -515,7 +511,7 @@ questions:
 #MOU
 - id: mou_intro
   module-id: mou_intro
-  icon: app_old.png
+  icon: mou.png
   title: MOU (Intro)
   type: module
   group: Memorandum of Understanding
@@ -524,7 +520,7 @@ questions:
     value: ~
 - id: mou_core
   module-id: mou_core
-  icon: app_old.png
+  icon: mou.png
   title: MOU (Core)
   type: module
   group: Memorandum of Understanding
@@ -533,7 +529,7 @@ questions:
     value: ~
 - id: mou_end
   module-id: mou_end
-  icon: app_old.png
+  icon: mou.png
   title: MOU (Ending)
   type: module
   group: Memorandum of Understanding
@@ -542,7 +538,7 @@ questions:
     value: ~
 - id: mou_doc
   module-id: mou_doc
-  icon: app_old.png
+  icon: mou.png
   title: MOU (Document)
   type: module
   group: Memorandum of Understanding

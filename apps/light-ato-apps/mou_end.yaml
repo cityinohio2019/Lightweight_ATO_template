@@ -71,6 +71,14 @@ questions:
     Who will be signing the Memorandum of Understanding on behalf of {{project.mou_intro.q3}}?
   type: text
 
+- id: q8
+  title: Date
+  prompt: |
+    Final Date?
+
+    What date will this MOU be submitted?
+  type: date
+
 
 
 

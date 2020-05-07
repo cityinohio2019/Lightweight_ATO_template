@@ -40,6 +40,7 @@ questions:
       the project to be identified as a “privacy sensitive system” in the PTA, such as the
       project requires PII or the technology is privacy sensitive. 
   type: longtext
+  default: See System Description:{{project.system_info.system_description}}
 
 - id: q3
   title: PIA Overview

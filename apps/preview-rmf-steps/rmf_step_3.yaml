@@ -1,0 +1,26 @@
+id: rmf_step_3
+title: Step 3, Implement Security Controls
+questions:
+
+- id: intro
+  title: Step 3, Implement Security Controls
+  prompt: |
+    Step 3, Implement Security Controls
+
+    Purpose
+
+    The purpose of the Implement step is to implement the controls in the security and privacy plans
+    for the system and for the organization and to document in a baseline configuration, the specific
+    details of the control implementation.
+
+    Step 3, Implement Security Controls contains the following tasks:
+
+    Task I-1
+
+
+    Task I-2
+
+
+
+
+  type: interstitial

@@ -1,0 +1,41 @@
+id: rmf_step_6
+title: RMF Step 6
+questions:
+
+- id: intro
+  title: Step 6, Monitor Security Controls
+  prompt: |
+    Step 6, Monitor Security Controls
+
+    Purpose
+
+    The purpose of the Monitor step is to maintain an ongoing situational awareness about the
+    security and privacy posture of the information system and the organization in support of risk
+    management decisions.
+
+    Step 6, Monitor Security Controls contains the following tasks:
+
+    Task M-1
+
+
+    Task M-2
+
+
+    Task M-3
+
+
+    Task M-4
+
+
+    Task M-5
+
+
+    Task M-6
+
+
+    Task M-7
+
+
+
+  type: interstitial
+
