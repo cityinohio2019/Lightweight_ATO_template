@@ -1,0 +1,37 @@
+id: rmf_step_4
+title: Step 4, Assess Security Controls
+questions:
+
+- id: intro
+  title: Step 4, Assess Security Controls
+  prompt: |
+    Step 4, Assess Security Controls
+
+    Purpose
+
+    The purpose of the Assess step is to determine if the controls selected for implementation are
+    implemented correctly, operating as intended, and producing the desired outcome with respect
+    to meeting the security and privacy requirements for the system and the organization.
+
+    Step 4, Assess Security Controls
+
+    Task A-1
+
+
+    Task A-2
+
+
+    Task A-3
+
+
+    Task A-4
+
+
+    Task A-5
+
+
+    Task A-6
+
+
+
+  type: interstitial

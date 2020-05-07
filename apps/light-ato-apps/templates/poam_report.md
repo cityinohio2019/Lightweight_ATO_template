@@ -26,7 +26,6 @@ title: POAM Report
 * * *
 
 ## 1. POA&M
-<br></br>
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.1 Introduction
 The Plan of Action and Milestones (POA&M) report lists the significant security issues associated with the system and details the proposed plan and schedule for correcting and/or mitigating them.
 
@@ -45,6 +44,15 @@ The POA&M information is presented as a table in section 1.2. The columns of the
 <br></br>
 
 ### &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 1.2 Plan of Action and Milestone Table
+<br>
+
+{% set count = [ ] %}
+{% for poam in project.poam_description %}
+{% set __ = count.append(1) %}
+<strong>POA&M {{count|length}}</strong>
+{{poam.poam_grid_01}}{{poam.poam_grid_02}}
+<br></br><br></br>
+{% endfor %}
 
 
 

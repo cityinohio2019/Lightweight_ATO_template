@@ -13,25 +13,20 @@ output:
   title: System Information
   placement: action-buttons
   template: |2
-
     <style>
       table {
         min-width: 450px;
       }
-
       td {
         padding: 8px;
       }
     </style>
-
     <div style="width: 650px; margin: auto; font-family: TimesNewRoman, Times, serif; ">
-
     <div style="font-weight: bold;">
       <p style="text-align: center;">
         SYSTEM INFORMATION
       </p>
     </div>
-
     <div>
       <p>{{system_short_name}} is a {{system_type.text}} hosted in the {{system_hosting.text}} environment.
       </p>
@@ -39,7 +34,6 @@ output:
         {{system_description}}
       </p>
     </div>
-
     <div style="text-align: center;">
       <table border=1 style="margin:auto; font-family: TimesNewRoman, Times, serif; text-align: center;">
         <tr>
@@ -53,7 +47,6 @@ output:
         </tr>
       </table>
     </div>
-
     </div>
 questions:
 - id: system_name
@@ -65,15 +58,12 @@ questions:
   title: System Short Name
   prompt: |-
     What is the system's nickname or abbreviation?
-
     Great! The full name of IT System is "**{{system_name}}**." What about a short name,  acronym or nickname  for your IT System?
   type: text
 - id: system_description
   title: System Description
   prompt: >-
     General system description.
-
-
     Describe what the system does and its general purpose to your organization. (This
     is your main description of {% if system_short_name %} {{system_short_name}}{%
     else %}your IT System {% endif %}. We'll get a more technical description later.)
@@ -97,7 +87,7 @@ questions:
   prompt: Where will the system be hosted?
   type: choice
   choices:
-  - key: org_host
+  - key: org_aws
     text: Org Hosting
     help: Org's AWS Cloud Environment
   - key: org_ds1
@@ -146,8 +136,6 @@ questions:
   title: System has personal data
   prompt: >-
     IMPORTANT: Does the IT System collect, store, or process Personally Identifiable Information (PII)?
-
-
     Answer "Yes" if the {{system_name}} collects, stores, or processes Personally Identifiable Information (PII)
     about individuals. Answer  "No" if the system contains only publicly available
     information and no information about individuals.
@@ -156,11 +144,8 @@ questions:
   title: System Data
   prompt: >-
     Describe the data your IT System collects, stores, or processes.
-
-
     Describe in general terms the data that the {{system_name}} handles. Summarize
     why the information is being collected or processed.
-
     {% if system_personal_data == "yes" %}Be sure to summarize what kind of personal
     data the system collects and why. {% endif %}
   type: longtext
@@ -168,7 +153,6 @@ questions:
   title: PTA Needed
   prompt: |
     We've added a PTA (Privacy Threshold Analysis) task for you.
-
     Because {{system_name}} interacts with personal data, a PTA will need to be completed.
     We've added a PTA to your tasks.
   type: interstitial
@@ -179,10 +163,8 @@ questions:
   title: Other plans
   prompt: |-
     We've added these tasks for you because of your production plans:
-
     * Test Plan
     * Contingency Plan
-
     Because {{system_name}} will either be in production or use production data
     during development, you will need to complete a Test Plan and Contingency Plan.
   type: interstitial
@@ -193,15 +175,16 @@ questions:
   title: Connection with another system?
   prompt: >-
     IMPORTANT: Does the IT System connect to a system outside of your organization?
-
     Answer "Yes" if the {{system_name}} connects with another IT system in another organization.
   type: yesno
 - id: mou_yes
   title: Memorandum of Understanding
   prompt: |-
     We've added a 'Memorandum of Undestanding' because {{system_name}} connects to another organization's system.
-
   type: interstitial
+  impute:
+  - condition: system_connection == "no"
+    value: ~
 - id: feedback_exists
   title: Feedback or Other Information
   prompt: Is there any information that you feel should be included in this assessment
@@ -220,14 +203,12 @@ questions:
   title: Module Complete?
   prompt: |-
     Congratulations on reaching the end of this module! Here are some highlights:
-
         System Name: "{{system_name}}"
         Operational? "{{operational_system}}"
         Has personal data? "{{system_personal_data}}"
         System Description:
         {{system_description}}
     <h1><em>Mark this module as complete?</em></h1>
-
     Selecting "Yes" will mark the module as finished.
   type: choice
   choices:

@@ -8,121 +8,6 @@ introduction:
   format: markdown
   template: |
     In the following questions, we'll summarize the Reconstitution Phase of your Contingency Plan.
-output:
-- id: cp_reconstitution
-  format: markdown
-  title: Contingency Plan Reconstitution
-  template: |
-    # 5 Reconstitution
-
-    Reconstitution is the process by which recovery
-    activities are completed and normal system operations are resumed.  If the original
-    facility is unrecoverable, the activities in this phase can also be applied to
-    preparing a new permanent location to support system processing requirements.
-    A determination must be made whether the system has undergone significant change
-    and will require reassessment and reauthorization.  The phase consists of two
-    major activities: (1) validating successful reconstitution and (2) deactivation
-    of the plan.
-
-    Concurrent processing is the process of running a system at two
-    separate locations concurrently until there is a level of assurance that the
-    recovered system is operating correctly and securely.
-
-    ## 5.1 Data Validation Testing
-
-    Validation data testing is the process of testing and validating data
-    to ensure\nthat data files or databases have been recovered completely at the
-    permanent location.
-
-    {{q25_data_validation_testing}}
-
-    ## 5.2 Functional Validation
-    Testing
-
-    Functionality testing is a process for verifying that all system functionality\nhas
-    been tested, and the system is ready to return to normal operations.
-
-    {{q26_functional_validation_testing}}
-
-    ## 5.3 Recovery Declaration
-
-    Upon successfully completing testing and validation,
-    the {{role_approve_recovery}} will formally declare recovery efforts complete,
-    and that {{project.system_info.system_name}} is in normal operations.  {{project.system_info.system_name}}
-    business and technical POCs will be notified of the declaration by the Contingency
-    Plan Coordinator.  The recovery declaration statement notifies the Contingency
-    Plan Team and executive management that the {{project.system_info.system_name}}
-    has returned to normal operations.
-
-    ## 5.4 User Notification
-
-    After the recovery
-    declaration statement is made, notifications are sent to userand customers.
-    Notifications to customers are made in accordance with predeterminenotification
-    procedures.
-
-    {{cp_user_notification}}
-
-    ## 5.5 Cleanup
-
-    Cleanup is the process
-    of cleaning up or dismantling any temporary recovery locations, restocking supplies
-    used, returning manuals or other documentation to their original locations, and
-    readying the system for a possible future contingency event.
-
-    {{cp_cleanup}}
-
-    Table
-    5‑1 Cleanup Roles and Responsibilities
-
-    | Role | Cleanup Responsibilities |
-    |---- | ------------------------ |
-    | Click here to enter text. | Click here to enter text. |
-    | Click here to enter text. | Click here to enter text. |
-
-    ## 5.6 Returning Backup Media
-
-    It is important that all backup and installation
-    media used during recovery be returned to the off-site data storage location.
-
-    The following procedures must be followed to return backup and installation media\nto
-    its offsite data storage location.
-
-    {{cp_returning_backup}}
-
-    ## 5.7 Backing-Up
-    Restored Systems
-
-    As soon as reasonable following recovery, the system must
-    be fully backed up and a new copy of the current operational system stored for
-    future recovery efforts.  This full backup is then kept with other system backups.
-
-    The procedures for conducting a full system backup are:
-
-    {{cp_backingup_restored_systems}}
-
-    ## 5.8 Event Documentation
-
-    It is important that all recovery events be well-documented,
-    including actions taken and problems encountered during the recovery and reconstitution
-    effort.  Information on lessons learned must be included in the annual update
-    to the ISCP.  It is the responsibility of each ISCP team or person to document
-    their actions during the recovery event.
-
-    [[FIX]]
-
-    Table 5‑2 Event Documentation
-    Responsibility lists the responsibility of each\nISCP team or person to document
-    their actions during the recovery event.
-
-    Table 5‑2 Event Documentation Responsibility
-
-    | Role Name | Documentation Responsibility |
-    | --------- | ---------------------------- |
-    | {{cp_role_activity_log}} | Activity log |
-    | {{cp_role_testing}} | Functionality and data testing results |
-    | {{cp_role_lessons_learned}} | Lessons learned |
-    | {{cp_role_after_action_report}} | After Action Report |
 questions:
 - id: q24_pre
   title: Reconstitution (pre)
@@ -202,6 +87,21 @@ questions:
 
     Describe cleanup procedures and tasks including cleanup roles and responsibilities.
   type: longtext
+
+- id: cp_cleanup_roles
+  title: Cleanup, Roles and Responsibilities
+  prompt: |
+    Enter information on the roles who are responsible for cleanup.
+
+  type: datagrid
+  fields:
+    - key: Role
+      text: Role
+    - key: Cleanup Responsibilities
+      text: Cleanup Responsibilities
+  min: 0
+  max: ~
+
 - id: cp_returning_backup
   title: Returning Backup Assets
   prompt: "How will you return backups to appropriate state and location after recovery?\n\
