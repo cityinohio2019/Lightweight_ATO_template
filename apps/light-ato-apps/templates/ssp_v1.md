@@ -565,60 +565,50 @@ Security controls that are representative of the sensitivity of Enter Informatio
 
 Systems that are categorized as FIPS 199 Low use the controls designated as Low, systems categorized as FIPS 199 Moderate use the controls designated as Moderate and systems categorized as FIPS 199 High use the controls designated as High.  
 
-{% set meta = {"current_family": "", "current_control": "", "current_control_part": ""} %}
-{% for ctl in ["AC_11_a_1", "AC_11_a_2", "AC_23_1", "AC_23_2", "AC_23_3", "AC_2_a_1", "AC_2_a_2", "AC_2_b", "AC_2_c", "AC_2_d_1", "AC_2_d_2", "AC_2_d_3", "AC_2_d_4", "AC_2_e_1", "AC_2_e_2", "AC_2_f_1_a", "AC_2_f_1_b", "AC_2_f_1_c", "AC_2_f_1_d", "AC_2_f_1_e", "AC_2_f_2_a", "AC_2_f_2_b", "AC_2_f_2_c", "AC_2_f_2_d", "AC_2_f_2_e", "AC_2_g", "AC_2_h_1", "AC_2_h_2", "AC_2_h_3", "AC_2_i_1", "AC_2_i_2", "AC_2_i_3", "AC_2_j_1", "AC_2_j_2", "AC_2_k", "AC_3", "AC_3_my_org_1", "AC_4_1", "AC_4_2", "AC_4_21_1", "AC_4_21_2", "AC_4_21_3", "AC_6", "ac_6_9", "ac_6_9_test", "AU_12_a_1", "au_12_a_2", "au_12_a_2_test", "AU_12_b_1", "au_12_b_2", "au_12_b_2_test", "au_12_c", "au_12_c_test", "au_12_my_org_1", "au_12_my_org_2", "AU_2_a_1", "au_2_a_2", "au_2_a_2_test", "AU_2_b", "AU_2_c", "AU_2_d_1", "AU_2_d_2", "AU_2_d_3", "AU_6_a_1", "AU_6_a_2", "AU_6_a_3", "AU_6_b_1", "AU_6_b_2", "AU_6_my_org_1", "AU_6_my_org_2", "AU_6_my_org_3", "CA_3_a", "CA_3_b_1", "CA_3_b_2", "CA_3_b_3", "CA_3_c_1", "CA_3_c_2", "CA_5_a_1", "CA_5_a_2", "CA_5_b_1", "CA_5_b_2_a", "CA_5_b_2_b", "CA_5_b_2_c", "CA_5_my_org_1", "CA_7_a_1", "CA_7_a_2", "CA_7_a_3", "CA_7_b_1", "CA_7_b_2", "CA_7_b_3", "CA_7_b_4", "CA_7_c_1", "CA_7_c_2", "CA_7_d_1", "CA_7_d_2", "CA_7_e_1", "CA_7_e_2", "CA_7_f_1", "CA_7_f_2", "CA_7_g_1", "CA_7_g_2", "CA_7_g_3", "CA_7_g_4", "CA_8_1", "CA_8_2", "CA_8_3", "CM_2_1", "CM_2_2", "CM_2_my_org_1", "CM_6_1_1_a", "CM_6_1_1_b", "CM_6_1_1_c", "CM_6_1_2_a", "CM_6_1_2_b", "CM_6_1_2_c", "CM_6_a_1", "CM_6_a_2", "CM_6_a_3", "CM_6_b", "CM_6_c_1", "CM_6_c_1_b", "CM_6_c_1_c", "CM_6_c_2_a", "CM_6_c_2_b", "CM_6_c_2_c", "CM_6_c_3", "CM_6_c_4", "CM_6_c_5", "CM_6_d_1", "CM_6_d_2", "CM_6my_org_1", "CM_6_my_org_2", "CM_6_my_org_3", "CM_6_my_org_4", "CM_6_my_org_5", "CM_6_my_org_6", "CM_6_my_org_7", "CM_6_my_org_8", "CM_7_a", "CM_7_b_1_a", "CM_7_b_1_b", "CM_7_b_1_c", "CM_7_b_1_d", "CM_7_b_2_a", "CM_7_b_2_b", "CM_7_b_2_c", "CM_7_b_2_d", "CM_8_a_1", "CM_8_a_2", "CM_8_a_3", "CM_8_a_4_1", "CM_8_a_4_2", "CM_8_b_1", "CM_8_b_2", "CM_8_my_org_1", "CM_8_my_org_2", "CP_2_a_1", "CP_2_a_2_1", "CP_2_a_2_2", "CP_2_a_2_3", "CP_2_a_3_1", "CP_2_a_3_2", "CP_2_a_3_3", "CP_2_a_4", "CP_2_a_5", "CP_2_a_6_1", "CP_2_a_6_2", "CP_2_b_1", "CP_2_b_2", "CP_2_c", "CP_2_d_1", "CP_2_d_2", "CP_2_e_1", "CP_2_e_2", "CP_2_f_1", "CP_2_f_2", "CP_4_a_1", "CP_4_a_2", "CP_4_a_3", "CP_4_b", "CP_4_C", "CP_4_my_org_1", "IA_2", "IA_2_1", "IA_2_12_1", "IA_2_12_2", "IA_2_2", "IA_2_8", "IA_2_9", "IA_2_my_org_1", "IA_2_my_org_2", "IR_4_a_1", "IR_4_a_2", "IR_4_a_3", "IR_4_a_4", "IR_4_a_5", "IR_4_b", "IR_4_c_1_a", "IR_4_c_1_b", "IR_4_c_1_c", "IR_4_c_2_a", "IR_4_c_2_b", "IR_4_c_2_c", "IR_5_1", "IR_5_2", "IR_6_a_1", "IR_6_a_2", "IR_6_b_1", "IR_6_b_2", "MP_4", "MP_4_a_1", "MP_4_a_2", "MP_4_a_3", "MP_4_a_4", "MP_4_b", "PL_2_a_1", "PL_2_a_2", "PL_2_a_3", "PL_2_a_4", "PL_2_a_5", "PL_2_a_6", "PL_2_a_7", "PL_2_a_8", "PL_2_a_9", "PL_2_b_1", "PL_2_b_2", "PL_2_c_1", "PL_2_c_2", "PL_2_d_1", "PL_2_d_2", "PL_2_d_3", "PL_2_e_1", "PL_2_e_2", "PL_8_a_1", "PL_8_a_2", "PL_8_a_3", "PL_8_b_1", "PL_8_b_2", "PL_8_c_1", "PL_8_c_2", "PL_8_c_3", "RA_2_a", "RA_2_b", "RA_2_c", "RA_3_a_1", "RA_3_a_2", "RA_3_b_1", "RA_3_b_2_a", "RA_3_b_2_b", "RA_3_b_2_c", "RA_3_c_1", "RA_3_c_2", "RA_3_d_1", "RA_3_d_2", "RA_3_e_1", "RA_3_e_2_a", "RA_3_e_2_b", "RA_3_e_2_c", "RA_5_a_1_a", "RA_5_a_1_b", "RA_5_a_2_a", "RA_5_a_2_b", "RA_5_a_3_a", "RA_5_a_3_b", "RA_5_b_1_1", "RA_5_b_1_2", "RA_5_b_1_3", "RA_5_b_2_1", "RA_5_b_2_2", "RA_5_b_3", "RA_5_c_1", "RA_5_c_2", "RA_5_d_1", "RA_5_d_2", "RA_5_e_1", "RA_5_e_2", "RA_5_e_3", "SA_11_1", "SA_22_a", "SA_22_b_1", "SA_22_b_2", "SA_9_a_1", "SA_9_a_2", "SA_9_a_3", "SA_9_b_1", "SA_9_b_2", "SA_9_c_1", "SA_9_c_2", "SC_12_1_a", "SC_12_1_b", "SC_12_1_c", "SC_12_1_d", "SC_12_1_e", "SC_12_2", "SC_12_my_org_1", "SC_12_my_org_2", "SC_12_my_org_3", "SC_12_my_org_4", "SC_12_my_org_5", "SC_13_1", "SC_13_2", "SC_13_3", "SC_13_my_org_1", "SC_13_my_org_2", "SC_13_my_org_3", "SC_13_my_org_4", "SC_13_my_org_5", "SC_18_a", "SC_18_b_1", "SC_18_b_2", "SC_18_c_1", "SC_18_c_2", "SC_18_c_3", "SC_23", "SC_23_3_1", "SC_23_3_2", "SC_23_3_3", "SC_24_1", "SC_24_2", "SC_24_3", "SC_24_4", "SC_24_5", "SC_28_1_1", "SC_28_1_2", "SC_28_1_3", "SC_7_a_1", "SC_7_a_2", "SC_7_a_3", "SC_7_a_4", "SC_7_b_1", "SC_7_b_2", "SC_7_C", "SC_8_1", "SC_8_2", "SI_10_1", "SI_10_2", "SI_13_a_1", "SI_13_a_2", "SI_13_b_1", "SI_13_b_2", "SI_13_b_3", "SI_2_3_a", "SI_2_3_b_1", "SI_2_3_b_2", "SI_2_a_1", "SI_2_a_2", "SI_2_a_3", "SI_2_b_1", "SI_2_b_2", "SI_2_c_1", "SI_2_c_2", "SI_2_c_3", "SI_2_c_4", "SI_2_d", "SI_4_a_1_1", "SI_4_a_1_2_a", "SI_4_a_1_2_b", "SI_4_a_2_1", "SI_4_a_2_2", "SI_4_a_2_3", "SI_4_b_1", "SI_4_b_2", "SI_4_c_1", "SI_4_c_2", "SI_4_d_1", "SI_4_d_2", "SI_4_d_3", "SI_4_e", "SI_4_f", "SI_4_g_1", "SI_4_g_2", "SI_4_g_3", "SI_4_g_4_a", "SI_4_g_4_b"]
-   if "test" not in ctl %}
-  {# Are we changing families? #}
-  {% if ctl.split("_")[0].upper() != meta["current_family"].upper() %}
-    {% set var_ignore = meta.update({"current_family": ctl.split("_")[0].upper()}) %}
-    <h3 style="margin-bottom: 30px;">{{meta["current_family"]|upper}}</h3>
+<!--Control catalog here-->
+
+{% set meta = {"current_family_title": "", "current_control": "", "current_control_part": "", "control_count": 0, "current_parts": []} %}
+
+<!--
+{% for cl in control_catalog.keys() %}
+{{cl}},
+{% endfor %}
+-->
+
+
+{% set selected_controls = ["ac-1", "ac-2", "ac-2.1", "ac-2.2", "ac-2.3", "ac-2.4", "ac-2.5", "ac-2.6", "ac-2.7", "ac-2.8", "ac-2.9", "ac-2.10", "ac-2.11", "ac-2.12", "ac-2.13", "ac-3", "ac-3.1", "ac-3.2", "ac-3.3", "ac-3.4", "ac-3.5", "ac-3.6", "ac-3.7", "ac-3.8", "ac-3.9", "ac-3.10", "ac-4", "ac-4.1", "ac-4.2", "ac-4.3", "ac-4.4", "ac-4.5", "ac-4.6", "ac-4.7", "ac-4.8", "ac-4.9", "ac-4.10", "ac-4.11", "ac-4.12", "ac-4.13", "ac-4.14", "ac-4.15", "ac-4.16", "ac-4.17", "ac-4.18", "ac-4.19", "ac-4.20", "ac-4.21", "ac-4.22", "ac-5", "ac-6", "ac-6.1", "ac-6.2", "ac-6.3", "ac-6.4", "ac-6.5", "ac-6.6", "ac-15", "ac-16", "at-1", "at-2", "at-2.1", "at-2.2", "at-3", "at-3.1", "at-3.2", "at-3.3", "at-3.4", "at-4", "at-5", "au-1", "au-2", "au-2.1", "au-2.2", "au-2.3", "au-2.4", "au-3", "au-3.1", "au-3.2", "au-4", "au-6.10", "au-7", "au-7.1", "au-7.2", "au-8", "au-8.1", "au-8.2", "au-9", "au-9.1", "au-9.2", "au-9.3", "au-9.4", "ca-1", "ca-2", "ca-2.1", "ca-2.2", "ca-2.3", "ca-3", "ca-9", "ca-9.1", "cm-1", "cm-2", "cm-2.1", "cm-2.2", "cm-2.3", "cm-2.4", "cm-2.5", "cm-2.6", "cm-2.7", "cm-3", "cm-3.1", "cm-3.2", "cm-3.3", "cm-3.4", "cm-3.5", "cm-3.6", "cm-8.9", "cm-9", "cm-9.1", "cm-10", "cm-10.1", "cm-11", "cm-11.1", "cm-11.2", "cp-1", "cp-2", "cp-2.1", "cp-2.2", "cp-3", "cp-3.1", "cp-3.2", "cp-4", "cp-13", "ia-1", "ia-2", "ia-2.1", "ia-2.2", "ia-2.13", "ia-3", "ia-3.1", "ia-3.2", "ia-3.3", "ia-3.4", "ia-4", "ia-4.1", "ia-4.2", "ia-4.3", "ia-4.4", "ia-4.5", "ia-4.6", "ia-4.7", "ia-5", "ia-5.1", "ia-5.2", "ia-5.3", "ia-5.4", "ia-5.5", "ia-5.6", "ia-5.7", "ia-5.8", "ia-5.9", "ia-5.10", "ir-1", "ir-2", "ir-2.1", "ir-2.2", "ir-3", "ir-3.1", "ir-3.2", "ir-4", "ir-4.1", "ir-7.2", "ir-8", "ir-9", "ir-9.1", "ir-9.2", "ir-9.3", "ir-9.4", "ir-10", "ma-1", "ma-2", "ma-2.1", "ma-2.2", "ma-3", "ma-6.3", "mp-1", "mp-2", "mp-2.1", "mp-2.2", "mp-3", "mp-4", "mp-4.1", "mp-4.2", "mp-5", "mp-8.4", "pe-1", "pe-2", "pe-2.1", "pe-2.2", "pe-2.3", "pe-3", "pe-3.1", "pe-3.2", "pe-3.3", "pe-3.4", "pe-3.5", "pe-3.6", "pe-4", "pe-5", "pe-20", "pl-1", "pl-2", "pl-2.1", "pl-2.2", "pl-8.2", "pl-9", "ps-1", "ps-2", "ps-3", "ps-3.1", "ps-3.2", "ps-3.3", "ps-7", "ps-8", "ra-1", "ra-2", "ra-3", "ra-4", "ra-5", "ra-5.1", "ra-6", "sa-1", "sa-2", "sa-3", "sa-4", "sa-4.1", "sa-4.2", "sa-11.1", "sa-11.2", "sa-12", "sa-12.1", "sa-12.2", "sa-12.3", "sa-12.4", "sa-17.7", "sa-18", "sa-18.1", "sa-18.2", "sa-19", "sa-19.1", "sa-19.2", "sa-19.3", "sa-19.4", "sa-20", "sa-21", "sa-21.1", "sa-22", "sa-22.1", "sc-1", "sc-2", "sc-2.1", "sc-3", "sc-3.1", "sc-3.2", "sc-3.3", "sc-3.4", "sc-3.5", "sc-4", "sc-4.1", "sc-4.2", "sc-5", "sc-11.1", "sc-12", "sc-12.1", "sc-12.2", "sc-12.3", "sc-12.4", "sc-12.5", "sc-13", "sc-13.1", "sc-13.2", "sc-13.3", "sc-13.4", "sc-14", "sc-15", "sc-15.1", "sc-15.2", "sc-15.3", "sc-15.4", "sc-16", "sc-16.1", "sc-17", "sc-18", "sc-18.1", "sc-18.2", "sc-18.3", "sc-18.4", "sc-18.5", "sc-19", "sc-20", "sc-20.1", "sc-20.2", "sc-21", "sc-21.1", "sc-22", "sc-23", "sc-23.1", "sc-23.2", "sc-23.3", "sc-23.4", "sc-23.5", "sc-24", "sc-25", "sc-26", "sc-26.1", "sc-27", "sc-28", "sc-28.1", "sc-28.2", "sc-29", "sc-29.1", "sc-30", "sc-30.1", "sc-30.2", "sc-42.2", "sc-42.3", "sc-43", "sc-44", "si-1", "si-2", "si-2.1", "si-2.2", "si-2.3", "si-2.4", "si-2.5", "si-2.6", "si-3", "si-3.1", "si-3.2", "si-3.3", "si-3.4", "si-3.5", "si-3.6", "si-3.7", "si-3.8", "si-3.9", "si-3.10", "si-4", "si-4.1", "si-4.2", "si-4.3", "si-4.4", "si-4.5", "si-4.6", "si-4.7", "si-4.8", "si-4.9", "si-4.10", "si-4.11", "si-4.12", "si-4.13", "si-4.14", "si-4.15", "si-6.2", "si-6.3", "si-7", "si-7.1", "si-7.2", "si-7.3", "si-7.4", "si-7.5", "si-7.6", "si-7.7", "si-7.8", "si-13.4", "si-13.5", "si-14", "si-14.1", "si-15", "si-16", "si-17", "pm-1", "pm-2", "pm-3", "pm-4", "pm-13", "pm-14", "pm-15", "pm-16"] %}
+
+
+{% for control in selected_controls %}
+  {% set var_ignore = meta.update({"control_count": meta['control_count'] + 1}) %}
+
+  {% if meta['current_family_title'] != control_catalog[control.lower()]['family_title'] %}
+    {# When current current control family changes print the new control family and update the current control family #}
+    <h2>{{control_catalog[control.lower()]['family_id']|upper}} - {{control_catalog[control.lower()]['family_title']}}</h2>
+    {% set var_ignore = meta.update({"current_family_title": control_catalog[control.lower()]['family_title']}) %}
   {% endif %}
-  {% set ctl_od_title = "nist_80053rev4_ssp_{}".format(ctl) %}
-  {% set odl = ctl_od_title.split('_') %}
-  {% set c_name = "{}-{}".format(odl[3].upper(), "".join(odl[4])) %}
-  {# Are we changing control name? #}
-  {% if c_name.upper() != meta["current_control"].upper() %}
-    {# Close previous control table if this is not first time through loop #}
-    {% if not loop.first %}
-      </table>
-    {% endif %}
-    {% set var_ignore = meta.update({"current_control": c_name}) %}
-      <h4 style="">{{meta["current_control"]|upper}}</h4>
-        <p>CONTROL DESCRIPTION HERE</p>
-      <table class="table-ssp">
-        <tr>
-          <td colspan="2" class="td-header">
-          {{meta["current_control"]|upper}}: What is the solution and how is it implemented?
-        </td></tr>
-  {% endif %}
-  {% set c_name_part = "{}-{}".format(odl[3].upper(), " ".join(odl[4:])) %}
-  <tr>
-    <td class="td-c-name-part">{{c_name_part}}</td>
-    <td>
-      {% for se in ["se_aws_auditing_splunk_elk", "se_aws_ci_cd_jenkins_gitlab_aqua_sonarqube", "se_ciso_policy_soc_stp", "se_system_level"] %}
-        {% if project[se] %}
-          {% for od in project[se].output_documents if not "test" in od %}
-            {% if ctl_od_title == od %}
-              {% set odl = od.split('_') %}
-              {% set c_name_part = "{}-{}".format(odl[3].upper(), " ".join(odl[4:])) %}
-             <div class="soft" style="font-style: italic;">{{project[se]}}</div>
-              <quote>
-                {{project[se].output_documents[od]}}
-              </quote>
-            {% endif %}
-          {% endfor %}<!-- /for od in -->
+  <div>
+    <h4>
+      {{control}} - 
+      {% if control.lower() in control_catalog %}
+      | {{control_catalog[control.lower()]['title']}}
+    </h4>
+    <p style="white-space: pre;">
+      {{control_catalog[control.lower()]['description']}}
+    </p>
+    <div>
+      <i>Implementation Statement</i>
+        {% if control in system.control_implementation_as_dict %}
+          <p style="white-space: pre-wrap;">{{ system.control_implementation_as_dict[control]['combined_smt'] }}</p>
         {% else %}
-          <div style="color:#aaa;">&nbsp;{{se}} not completed</div>
+          <p style="white-space: pre-wrap;">No implementation statement available</p>
         {% endif %}
-      {% endfor %}<!-- /for se in -->
-      </td>
-  </tr>
-  {% if not loop.last %}
-    {% if loop.nextitem.split("_")[0].upper() != meta["current_family"].upper() %}
-      </table>
     {% endif %}
-  {% endif %}
-{% endfor %}<!-- /for ctl in -->
+  </div>
+{% endfor %}
+
+<!-- security controls -->
+
 <!-- /Testing Links -->
 
 
