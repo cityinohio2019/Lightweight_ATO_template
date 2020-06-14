@@ -569,17 +569,7 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
 
 {% set meta = {"current_family_title": "", "current_control": "", "current_control_part": "", "control_count": 0, "current_parts": []} %}
 
-<!--
-{% for cl in control_catalog.keys() %}
-{{cl}},
-{% endfor %}
--->
-
-
-{% set selected_controls = ["ac-1", "ac-2", "ac-2.1", "ac-2.2", "ac-2.3", "ac-2.4", "ac-2.5", "ac-2.6", "ac-2.7", "ac-2.8", "ac-2.9", "ac-2.10", "ac-2.11", "ac-2.12", "ac-2.13", "ac-3", "ac-3.1", "ac-3.2", "ac-3.3", "ac-3.4", "ac-3.5", "ac-3.6", "ac-3.7", "ac-3.8", "ac-3.9", "ac-3.10", "ac-4", "ac-4.1", "ac-4.2", "ac-4.3", "ac-4.4", "ac-4.5", "ac-4.6", "ac-4.7", "ac-4.8", "ac-4.9", "ac-4.10", "ac-4.11", "ac-4.12", "ac-4.13", "ac-4.14", "ac-4.15", "ac-4.16", "ac-4.17", "ac-4.18", "ac-4.19", "ac-4.20", "ac-4.21", "ac-4.22", "ac-5", "ac-6", "ac-6.1", "ac-6.2", "ac-6.3", "ac-6.4", "ac-6.5", "ac-6.6", "ac-15", "ac-16", "at-1", "at-2", "at-2.1", "at-2.2", "at-3", "at-3.1", "at-3.2", "at-3.3", "at-3.4", "at-4", "at-5", "au-1", "au-2", "au-2.1", "au-2.2", "au-2.3", "au-2.4", "au-3", "au-3.1", "au-3.2", "au-4", "au-6.10", "au-7", "au-7.1", "au-7.2", "au-8", "au-8.1", "au-8.2", "au-9", "au-9.1", "au-9.2", "au-9.3", "au-9.4", "ca-1", "ca-2", "ca-2.1", "ca-2.2", "ca-2.3", "ca-3", "ca-9", "ca-9.1", "cm-1", "cm-2", "cm-2.1", "cm-2.2", "cm-2.3", "cm-2.4", "cm-2.5", "cm-2.6", "cm-2.7", "cm-3", "cm-3.1", "cm-3.2", "cm-3.3", "cm-3.4", "cm-3.5", "cm-3.6", "cm-8.9", "cm-9", "cm-9.1", "cm-10", "cm-10.1", "cm-11", "cm-11.1", "cm-11.2", "cp-1", "cp-2", "cp-2.1", "cp-2.2", "cp-3", "cp-3.1", "cp-3.2", "cp-4", "cp-13", "ia-1", "ia-2", "ia-2.1", "ia-2.2", "ia-2.13", "ia-3", "ia-3.1", "ia-3.2", "ia-3.3", "ia-3.4", "ia-4", "ia-4.1", "ia-4.2", "ia-4.3", "ia-4.4", "ia-4.5", "ia-4.6", "ia-4.7", "ia-5", "ia-5.1", "ia-5.2", "ia-5.3", "ia-5.4", "ia-5.5", "ia-5.6", "ia-5.7", "ia-5.8", "ia-5.9", "ia-5.10", "ir-1", "ir-2", "ir-2.1", "ir-2.2", "ir-3", "ir-3.1", "ir-3.2", "ir-4", "ir-4.1", "ir-7.2", "ir-8", "ir-9", "ir-9.1", "ir-9.2", "ir-9.3", "ir-9.4", "ir-10", "ma-1", "ma-2", "ma-2.1", "ma-2.2", "ma-3", "ma-6.3", "mp-1", "mp-2", "mp-2.1", "mp-2.2", "mp-3", "mp-4", "mp-4.1", "mp-4.2", "mp-5", "mp-8.4", "pe-1", "pe-2", "pe-2.1", "pe-2.2", "pe-2.3", "pe-3", "pe-3.1", "pe-3.2", "pe-3.3", "pe-3.4", "pe-3.5", "pe-3.6", "pe-4", "pe-5", "pe-20", "pl-1", "pl-2", "pl-2.1", "pl-2.2", "pl-8.2", "pl-9", "ps-1", "ps-2", "ps-3", "ps-3.1", "ps-3.2", "ps-3.3", "ps-7", "ps-8", "ra-1", "ra-2", "ra-3", "ra-4", "ra-5", "ra-5.1", "ra-6", "sa-1", "sa-2", "sa-3", "sa-4", "sa-4.1", "sa-4.2", "sa-11.1", "sa-11.2", "sa-12", "sa-12.1", "sa-12.2", "sa-12.3", "sa-12.4", "sa-17.7", "sa-18", "sa-18.1", "sa-18.2", "sa-19", "sa-19.1", "sa-19.2", "sa-19.3", "sa-19.4", "sa-20", "sa-21", "sa-21.1", "sa-22", "sa-22.1", "sc-1", "sc-2", "sc-2.1", "sc-3", "sc-3.1", "sc-3.2", "sc-3.3", "sc-3.4", "sc-3.5", "sc-4", "sc-4.1", "sc-4.2", "sc-5", "sc-11.1", "sc-12", "sc-12.1", "sc-12.2", "sc-12.3", "sc-12.4", "sc-12.5", "sc-13", "sc-13.1", "sc-13.2", "sc-13.3", "sc-13.4", "sc-14", "sc-15", "sc-15.1", "sc-15.2", "sc-15.3", "sc-15.4", "sc-16", "sc-16.1", "sc-17", "sc-18", "sc-18.1", "sc-18.2", "sc-18.3", "sc-18.4", "sc-18.5", "sc-19", "sc-20", "sc-20.1", "sc-20.2", "sc-21", "sc-21.1", "sc-22", "sc-23", "sc-23.1", "sc-23.2", "sc-23.3", "sc-23.4", "sc-23.5", "sc-24", "sc-25", "sc-26", "sc-26.1", "sc-27", "sc-28", "sc-28.1", "sc-28.2", "sc-29", "sc-29.1", "sc-30", "sc-30.1", "sc-30.2", "sc-42.2", "sc-42.3", "sc-43", "sc-44", "si-1", "si-2", "si-2.1", "si-2.2", "si-2.3", "si-2.4", "si-2.5", "si-2.6", "si-3", "si-3.1", "si-3.2", "si-3.3", "si-3.4", "si-3.5", "si-3.6", "si-3.7", "si-3.8", "si-3.9", "si-3.10", "si-4", "si-4.1", "si-4.2", "si-4.3", "si-4.4", "si-4.5", "si-4.6", "si-4.7", "si-4.8", "si-4.9", "si-4.10", "si-4.11", "si-4.12", "si-4.13", "si-4.14", "si-4.15", "si-6.2", "si-6.3", "si-7", "si-7.1", "si-7.2", "si-7.3", "si-7.4", "si-7.5", "si-7.6", "si-7.7", "si-7.8", "si-13.4", "si-13.5", "si-14", "si-14.1", "si-15", "si-16", "si-17", "pm-1", "pm-2", "pm-3", "pm-4", "pm-13", "pm-14", "pm-15", "pm-16"] %}
-
-
-{% for control in selected_controls %}
+{% for control in system.root_element.selected_controls_oscal_ctl_ids %}
   {% set var_ignore = meta.update({"control_count": meta['control_count'] + 1}) %}
 
   {% if meta['current_family_title'] != control_catalog[control.lower()]['family_title'] %}
@@ -588,27 +578,20 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
     {% set var_ignore = meta.update({"current_family_title": control_catalog[control.lower()]['family_title']}) %}
   {% endif %}
   <div>
-    <h4>
-      {{control}} - 
-      {% if control.lower() in control_catalog %}
-      | {{control_catalog[control.lower()]['title']}}
-    </h4>
-    <p style="white-space: pre;">
-      {{control_catalog[control.lower()]['description']}}
-    </p>
+    {% if control.lower() in control_catalog %}
+    <h3>{{control|upper}} - {{control_catalog[control.lower()]['title']}}</h3>
+    <div style="white-space: pre;">{{control_catalog[control.lower()]['description']}}</div>
     <div>
       <i>Implementation Statement</i>
         {% if control in system.control_implementation_as_dict %}
-          <p style="white-space: pre-wrap;">{{ system.control_implementation_as_dict[control]['combined_smt'] }}</p>
+          <div style="white-space: pre-line; word-break: keep-all;">{{ system.control_implementation_as_dict[control]['combined_smt'] }}</div>
         {% else %}
-          <p style="white-space: pre-wrap;">No implementation statement available</p>
+          <div style="white-space: pre-line; word-break: keep-all;">No implementation statement available</div>
         {% endif %}
+    </div>
     {% endif %}
   </div>
 {% endfor %}
 
-<!-- security controls -->
-
-<!-- /Testing Links -->
-
+<!-- /13. MINIMUM SECURITY CONTROLS -->
 

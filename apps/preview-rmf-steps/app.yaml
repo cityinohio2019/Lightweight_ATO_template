@@ -1,14 +1,14 @@
 id: app
 title: Risk Management Steps
 type: project
-version: 0.0.0.1
+version: 0.0.0.2
 icon: rmf_icon.png
 introduction:
   format: markdown
   template: Risk Management Steps v0.0.0.1
 
 catalog:
-  category: Draft
+  category: Preview
   description:
     long: |
       Risk Management Steps
@@ -20,7 +20,7 @@ catalog:
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.0.0.1
+  version: 0.0.0.2
 questions:
 
 #rmf
