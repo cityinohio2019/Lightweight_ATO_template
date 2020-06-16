@@ -82,16 +82,25 @@ questions:
     help: Primarily mobile application with backend
   - key: cots
     text: COTS
+  - key: other
+    text: Other
 - id: system_hosting
   title: System Hosting
   prompt: Where will the system be hosted?
   type: choice
   choices:
-  - key: org_aws
-    text: Org Hosting
-    help: Org's AWS Cloud Environment
   - key: org_ds1
-    text: Org Data Center 1
+    text: In an organization on premises data center
+  - key: aws
+    text: AWS Cloud
+    help: Amazon AWS Cloud
+  - key: azure
+    text: Azure
+    help: Microsoft Azure Cloud
+  - key: Google Cloud
+    text: Google Cloud Services
+  - key: Other Cloud
+    text: Other Cloud Service Provider
 - id: operational_system
   title: Is Operational System
   prompt: Do you plan to operate this system in production or to use production data
