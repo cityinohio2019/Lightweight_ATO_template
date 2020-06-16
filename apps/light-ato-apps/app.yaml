@@ -1,7 +1,7 @@
 id: app
-title: PREVIEW(2) IT System
+title: IT System
 type: project
-version: 0.1.8.5.1
+version: 0.1.8.5.4
 icon: app.png
 introduction:
   format: markdown
@@ -30,7 +30,7 @@ output:
     {% endif %}
 
 catalog:
-  category: Preview
+  category: IT System Template
   description:
     long: |
       New Compliance App
@@ -42,7 +42,7 @@ catalog:
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.1.8.5.1
+  version: 0.1.8.5.4
 questions:
 
 #System Info
