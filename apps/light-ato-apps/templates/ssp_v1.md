@@ -579,14 +579,14 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
   {% endif %}
   <div>
     {% if control.lower() in control_catalog %}
-    <h3>{{control|upper}} - {{control_catalog[control.lower()]['title']}}</h3>
+    <div style="font-size: 1.2em; margin: 1em 0 1em 0;">{{control|upper}} - {{control_catalog[control.lower()]['title']}}</div>
     <div style="white-space: pre;">{{control_catalog[control.lower()]['description']}}</div>
     <div>
-      <i>Implementation Statement</i>
+      <h4>What is the solution and how is it implemented?</h4>
         {% if control in system.control_implementation_as_dict %}
-          <div style="white-space: pre-line; word-break: keep-all;">{{ system.control_implementation_as_dict[control]['combined_smt'] }}</div>
+          <div style="white-space: pre-line; word-break: keep-all;">{{ system.control_implementation_as_dict[control]['combined_smt']|safe }}</div>
         {% else %}
-          <div style="white-space: pre-line; word-break: keep-all;">No implementation statement available</div>
+          <div style="white-space: pre-line; word-break: keep-all;">No statement available.</div>
         {% endif %}
     </div>
     {% endif %}
