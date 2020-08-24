@@ -128,16 +128,16 @@ title: RTM Report
       { "components" :
         { "9d194268-a9d1-4c38-839f-9c4aa57bf71e" :
           { "component-type" : "software",
-            "title" : "XYZ Vulnerability Scanning Tool",
+            "title" : "{{project.oscal_template.component_name}}",
             "description" : "",
             "properties" :
             [
               { "name" : "vendor",
-                "value" : "Vendor Name" },
+                "value" : "{{project.oscal_template.vendor_name}}" },
               { "name" : "name",
-                "value" : "Tool Name" },
+                "value" : "{{project.oscal_template.tool_name}}" },
               { "name" : "version",
-                "value" : "1.2.3" } ],
+                "value" : "{{project.oscal_template.tool_version}}" } ],
             "status" :
             { "state" : "operational" },
             "remarks" : "This is a scanning tool referenced as a source by a POA&M entry." },

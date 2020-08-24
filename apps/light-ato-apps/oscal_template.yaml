@@ -1,7 +1,27 @@
 id: oscal_template
 title: OSCAL Template (Document)
 
+questions:
+  - id: component_name
+    title: Component Name
+    prompt: |
+      What is component name?
+    type: text
+  - id: vendor_name
+    title: Vendor Name
+    prompt: |
+      What is vendor name?
+    type: text
+  - id: tool_name
+    title: Tool Name
+    prompt: |
+      What is tool name?
+    type: text
+  - id: tool_version
+    title: Tool Version
+    prompt: |
+      What is tool version?
+    type: text
+
 output:
 - templates/oscal_template.json
-
-questions: []
