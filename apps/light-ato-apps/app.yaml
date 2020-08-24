@@ -45,6 +45,13 @@ catalog:
   version: 0.2.0
 questions:
 
+#OSCAL Template
+- id: oscal_template
+  title: OSCAL Template
+  type: module
+  module-id: oscal_template
+  group: OSCAL Template
+
 #System Info
 - id: system_info
   title: System Profile - Information

@@ -1,0 +1,7 @@
+id: oscal_template
+title: OSCAL Template (Document)
+
+output:
+- templates/oscal_template.json
+
+questions: []
