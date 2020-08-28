@@ -437,7 +437,7 @@ The system is currently in the life-cycle phase shown in Table 7 1. System Statu
       <th class="th-header" colspan="3">System Status</th>
     </tr>
     <tr>
-      <td>{% if project.system_info_technical.system_status == "operational" %}Operational (System is operating and in production) {% endif %} {% if project.system_info_technical.system_status == "under_dev" %} Under Development (System is being designed, developed, or implemented) {% endif %} {% if project.system_info_technical.system_status == "major_mod" %} Major Modification (System is undergoing a major change, development, or transition){% endif %} {% if project.system_info_technical.system_status == "other" %} Other ({{project.system_info_technical.choice_other}}){% endif %} </td>
+      <td>{{ project.system_info_technical.system_status.text }}</td>
     </tr>
     <tr>
 </table>
