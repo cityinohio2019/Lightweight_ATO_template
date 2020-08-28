@@ -580,7 +580,7 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
   <div>
     {% if control.lower() in control_catalog %}
     <div style="font-size: 1.2em; margin: 1em 0 1em 0;">{{control|upper}} - {{control_catalog[control.lower()]['title']}}</div>
-    <div style="white-space: pre;">{{control_catalog[control.lower()]['description']}}</div>
+    <div style="white-space: pre-wrap;">{{control_catalog[control.lower()]['description']}}</div>
     <div>
       <h4>What is the solution and how is it implemented?</h4>
         {% if control in system.control_implementation_as_dict %}
