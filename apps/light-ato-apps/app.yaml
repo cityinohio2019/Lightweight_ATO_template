@@ -1,7 +1,7 @@
 id: app
 title: IT System
 type: project
-version: 0.2.1
+version: 0.2.2
 icon: app.png
 introduction:
   format: markdown
@@ -42,15 +42,8 @@ catalog:
   status: stub
   vendor: none
   vendor_url: ~
-  version: 0.2.1
+  version: 0.2.2
 questions:
-
-#OSCAL Template
-- id: oscal_template
-  title: OSCAL Template
-  type: module
-  module-id: oscal_template
-  group: OSCAL Template
 
 #System Info
 - id: system_info
