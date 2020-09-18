@@ -15,4 +15,5 @@ questions:
 
 output:
 - templates/ssp_v1.md
-- templates/oscal_template.json
+- templates/ssp_v1_oscal_json.md
+- templates/ssp_v1_oscal_xml.md

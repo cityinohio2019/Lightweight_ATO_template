@@ -31,7 +31,7 @@ title: SSP v1
       padding: 4px;
     }
 
-    td.td-header, th.th-header {
+    td.td-header, th.th-header, th {
       color: white;
       background-color: rgb(31, 58, 105);
       text-align:center;
