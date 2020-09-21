@@ -593,5 +593,9 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
   </div>
 {% endfor %}
 
+{% if system.root_element.selected_controls_oscal_ctl_ids|length == 0 %}
+<i>Control requirements have not yet been assigned to this system.</i>
+{% endif %}
+
 <!-- /13. MINIMUM SECURITY CONTROLS -->
 
