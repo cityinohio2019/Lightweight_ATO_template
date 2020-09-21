@@ -31,7 +31,7 @@ title: SSP v1
       padding: 4px;
     }
 
-    td.td-header, th.th-header {
+    td.td-header, th.th-header, th {
       color: white;
       background-color: rgb(31, 58, 105);
       text-align:center;
@@ -437,7 +437,7 @@ The system is currently in the life-cycle phase shown in Table 7 1. System Statu
       <th class="th-header" colspan="3">System Status</th>
     </tr>
     <tr>
-      <td>{% if project.system_info_technical.system_status == "operational" %}Operational (System is operating and in production) {% endif %} {% if project.system_info_technical.system_status == "under_dev" %} Under Development (System is being designed, developed, or implemented) {% endif %} {% if project.system_info_technical.system_status == "major_mod" %} Major Modification (System is undergoing a major change, development, or transition){% endif %} {% if project.system_info_technical.system_status == "other" %} Other ({{project.system_info_technical.choice_other}}){% endif %} </td>
+      <td>{{ project.system_info_technical.system_status.text }}</td>
     </tr>
     <tr>
 </table>
@@ -580,7 +580,7 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
   <div>
     {% if control.lower() in control_catalog %}
     <div style="font-size: 1.2em; margin: 1em 0 1em 0;">{{control|upper}} - {{control_catalog[control.lower()]['title']}}</div>
-    <div style="white-space: pre;">{{control_catalog[control.lower()]['description']}}</div>
+    <div style="white-space: pre-wrap;">{{control_catalog[control.lower()]['description']}}</div>
     <div>
       <h4>What is the solution and how is it implemented?</h4>
         {% if control in system.control_implementation_as_dict %}
@@ -592,6 +592,10 @@ Systems that are categorized as FIPS 199 Low use the controls designated as Low,
     {% endif %}
   </div>
 {% endfor %}
+
+{% if system.root_element.selected_controls_oscal_ctl_ids|length == 0 %}
+<i>Control requirements have not yet been assigned to this system.</i>
+{% endif %}
 
 <!-- /13. MINIMUM SECURITY CONTROLS -->
 
