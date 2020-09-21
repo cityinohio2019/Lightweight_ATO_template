@@ -1,0 +1,20 @@
+id: test_app
+title: Test test_app
+questions:
+
+- id: test_app_intro
+  title: Is this a test app?
+  prompt: |
+    Is this app for testing?
+
+  type: yesno
+
+- id: test_app_text
+  title: Enter Text On Testing
+  prompt: |
+    What do you know about testing?
+
+  type: text
+  impute:
+  - condition: project.test_app.test_app_intro != 'yes'
+    value: ~
