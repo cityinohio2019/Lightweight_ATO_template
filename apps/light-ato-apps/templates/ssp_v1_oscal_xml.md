@@ -655,7 +655,7 @@ title: SSP OSCAL XML
         </user>
 
 <!-- List components -->
-        {% for component in system.get_producer_elements %}
+        {% for component in system.producer_elements %}
         <component uuid="{{ component.uuid }}" component-type="{{ component.element_type }} [system, validation, software, os, service, policy, interconnection]">
           <title>{{ component.name }}</title>
           <description>

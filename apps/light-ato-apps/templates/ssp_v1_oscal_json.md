@@ -742,17 +742,14 @@ title: SSP OSCAL JSON
                 "functions-performed" : 
                 [ "Approves access requests for administrative accounts." ] } ] } },
         "components" : 
-          {
-
-            {% for component in system.get_producer_elements %}
+          { {% set meta = {"component_count": 0} %}{% for component in system.producer_elements %}{% set var_ignore = meta.update({"component_count": meta['component_count'] + 1}) %}
             "{{ component.uuid }}" : 
-              { "component-type" : "{{ component.element_type }} [system, validation, software, os, service, policy, interconnection]",
+              { "component-type" : "{{ component.element_type }}",
                 "title" : "{{ component.name }}",
                 "description" : "{% if component.description %}{{ component.description|safe}}{% else %}<p>None.</p>{% endif %}",
                 "status" : 
-                { "state" : "operational" } },
-            {% endfor %}
-
+                { "state" : "operational" } 
+              }{% if meta['component_count'] != system.producer_elements|length %},{% else %}{% endif %}{% endfor %}
           },
         "system-inventory" : 
         { "inventory-items" : 
@@ -1026,25 +1023,29 @@ title: SSP OSCAL JSON
 
         "implemented-requirements" : 
         [ 
-          {% set meta = {"current_family_title": "", "current_control": "", "current_control_part": "", "control_count": 0, "current_parts": []} %}
+          {% set meta = {"current_family_title": "", "current_control": "", "current_control_part": "", "control_count": 0, "smt_count": 0, "current_parts": []} %}
           {% for control in system.root_element.selected_controls_oscal_ctl_ids %}{% set var_ignore = meta.update({"control_count": meta['control_count'] + 1}) %}
             {% if control.lower() in control_catalog %}
             { "uuid" : "{{ system.control_implementation_as_dict[control]['elementcontrol_uuid'] }}",
-              "control-id": {{ control.lower() }}",
+              "control-id": "{{ control.lower() }}",
               "statements":
-              { "{{ control.lower() }}_stmt" : 
-              { "uuid" : "{{ system.control_implementation_as_dict[control]['combined_smt_uuid'] }}",
-                "title": "{{ control_catalog[control.lower()]['title'] }}",
-                "description" : "{#control_catalog[control.lower()]['description']|safe#}",
-                "by-components" :{% if control in system.control_implementation_as_dict %}{% for smt in system.control_implementation_as_dict[control]['control_impl_smts'] %}
-                { "{{ smt.producer_element.uuid }}" : 
-                  { "uuid" : "{{ smt.uuid }}",
-                    "component-name": "{{ smt.producer_element.name }}",
-                    "description" : "{{ smt.body|safe }}"
-                  }{% if forloop.last %}{% else %}},{% endif %}
-                }{% endfor %}{% else %}
-                {% endif %}
-              },
+              { "{{ control.lower() }}_stmt" :
+                { "uuid" : "{{ system.control_implementation_as_dict[control]['combined_smt_uuid'] }}",
+                  "title": "{{ control_catalog[control.lower()]['title'] }}",
+                  "description" : "{#control_catalog[control.lower()]['description']|safe#}",
+                  "by-components" :{% if control in system.control_implementation_as_dict %}[
+                    {% set var_ignore = meta.update({"smt_count": 0}) %}{% for smt in system.control_implementation_as_dict[control]['control_impl_smts'] %}{% set var_ignore = meta.update({"smt_count": meta['smt_count'] + 1}) %}
+                  { "{{ smt.producer_element.uuid }}" : 
+                    { "uuid" : "{{ smt.uuid }}",
+                      "component-name": "{{ smt.producer_element.name }}",
+                      "description" : "{{ smt.body|safe }}"
+                    }
+                  }{% if meta['smt_count'] != system.control_implementation_as_dict[control]['control_impl_smts']|length %},{% else %}{% endif %}
+                  {% endfor %}]{% else %}
+                  {% endif %}
+                }
+              }
+            }{% if meta['control_count'] != system.root_element.selected_controls_oscal_ctl_ids|length %},{% else %}{% endif %}
             {% endif %}
           {% endfor %}
 
