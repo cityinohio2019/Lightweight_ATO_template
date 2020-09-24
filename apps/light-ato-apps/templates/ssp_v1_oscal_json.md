@@ -742,14 +742,14 @@ title: SSP OSCAL JSON
                 "functions-performed" : 
                 [ "Approves access requests for administrative accounts." ] } ] } },
         "components" : 
-          { {% set meta = {"component_count": 0} %}{% for component in system.producer_elements %}{% set var_ignore = meta.update({"component_count": meta['component_count'] + 1}) %}
+          { {% for component in system.producer_elements %}
             "{{ component.uuid }}" : 
               { "component-type" : "{{ component.element_type }}",
                 "title" : "{{ component.name }}",
                 "description" : "{% if component.description %}{{ component.description|safe}}{% else %}<p>None.</p>{% endif %}",
                 "status" : 
                 { "state" : "operational" } 
-              }{% if meta['component_count'] != system.producer_elements|length %},{% else %}{% endif %}{% endfor %}
+              }{% if loop.last %}{% else %},{% endif %}{% endfor %}
           },
         "system-inventory" : 
         { "inventory-items" : 
@@ -1022,9 +1022,8 @@ title: SSP OSCAL JSON
       { "description" : "FedRAMP SSP Template Section 13\\n\\nThis description field is required by OSCAL. FedRAMP does not require any specific\n            information here.",
 
         "implemented-requirements" : 
-        [ 
-          {% set meta = {"current_family_title": "", "current_control": "", "current_control_part": "", "control_count": 0, "smt_count": 0, "current_parts": []} %}
-          {% for control in system.root_element.selected_controls_oscal_ctl_ids %}{% set var_ignore = meta.update({"control_count": meta['control_count'] + 1}) %}
+        [
+          {% for control in system.root_element.selected_controls_oscal_ctl_ids %}
             {% if control.lower() in control_catalog %}
             { "uuid" : "{{ system.control_implementation_as_dict[control]['elementcontrol_uuid'] }}",
               "control-id": "{{ control.lower() }}",
@@ -1034,21 +1033,20 @@ title: SSP OSCAL JSON
                   "title": "{{ control_catalog[control.lower()]['title'] }}",
                   "description" : "{#control_catalog[control.lower()]['description']|safe#}",
                   "by-components" :{% if control in system.control_implementation_as_dict %}[
-                    {% set var_ignore = meta.update({"smt_count": 0}) %}{% for smt in system.control_implementation_as_dict[control]['control_impl_smts'] %}{% set var_ignore = meta.update({"smt_count": meta['smt_count'] + 1}) %}
-                  { "{{ smt.producer_element.uuid }}" : 
-                    { "uuid" : "{{ smt.uuid }}",
-                      "component-name": "{{ smt.producer_element.name }}",
-                      "description" : "{{ smt.body|safe }}"
-                    }
-                  }{% if meta['smt_count'] != system.control_implementation_as_dict[control]['control_impl_smts']|length %},{% else %}{% endif %}
-                  {% endfor %}]{% else %}
+                    {% for smt in system.control_implementation_as_dict[control]['control_impl_smts'] %}
+                      { "{{ smt.producer_element.uuid }}" : 
+                        { "uuid" : "{{ smt.uuid }}",
+                          "component-name": "{{ smt.producer_element.name }}",
+                          "description" : "{{ smt.body|safe }}"
+                        }
+                      }{% if loop.last %}{% else %},{% endif %}
+                    {% endfor %}]
                   {% endif %}
                 }
               }
-            }{% if meta['control_count'] != system.root_element.selected_controls_oscal_ctl_ids|length %},{% else %}{% endif %}
+            }{% if loop.last %}{% else %},{% endif %}
             {% endif %}
           {% endfor %}
-
         ]
       },
 
