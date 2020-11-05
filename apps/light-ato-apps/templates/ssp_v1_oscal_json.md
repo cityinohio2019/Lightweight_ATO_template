@@ -1037,7 +1037,7 @@ title: SSP OSCAL JSON
                       { "{{ smt.producer_element.uuid }}" : 
                         { "uuid" : "{{ smt.uuid }}",
                           "component-name": "{{ smt.producer_element.name }}",
-                          "description" : "{{ smt.body|safe }}"
+                          "description" : "{{ smt.body|safe|replace('\r\n', '\\n')|replace('\n', '\\n')|replace('\t', ' ') }}"
                         }
                       }{% if loop.last %}{% else %},{% endif %}
                     {% endfor %}]
