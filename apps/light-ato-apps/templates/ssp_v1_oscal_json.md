@@ -1,6 +1,6 @@
 id: ssp_v1_oscal_json
 format: json
-title: SSP OSCAL JSON
+title: SSP v1 (OSCAL/JSON)
 ...
 
   { "system-security-plan" : 
@@ -23,7 +23,7 @@ title: SSP OSCAL JSON
                 "%loop": {
                   "key": "{{ smt.producer_element.uuid }}", 
                   "value": { "uuid" : "{{ smt.uuid }}",
-                    "component-name": "{{   smt.producer_element.name|safe }}",
+                    "component-name": "{{ smt.producer_element.name|safe }}",
                     "description" : "{{ smt.body|safe }}"
                   }
                 }

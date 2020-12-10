@@ -1,6 +1,6 @@
 id: ssp_v1_oscal_xml
-format: oscal_xml
-title: SSP OSCAL XML
+format: xml
+title: SSP v1 (OSCAL/XML)
 ...
   <?xml version="1.0" encoding="UTF-8"?>
   <system-security-plan xmlns="http://csrc.nist.gov/ns/oscal/1.0"
